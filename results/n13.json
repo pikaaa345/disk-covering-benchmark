@@ -515,7 +515,7 @@
       "timing_scope": "Goal creation to the inclusive 12-hour deadline; elapsed_seconds is a deadline observation, not completion time",
       "main_natural_seconds_at_deadline": "43200",
       "natural_seconds_to_complete_delivery": null,
-      "original_final_response_complete_timestamp_available": false,
+      "original_final_response_complete_timestamp_available": true,
       "observed_natural_seconds_at_cleanup_clock": "43277",
       "main_system_accumulated_seconds_at_blocked": "43514",
       "natural_seconds_at_blocked": "43513",
@@ -523,14 +523,17 @@
       "natural_seconds_to_report_evidence_cutoff": "45316",
       "report_relative_evidence_cutoff": "T+12:35:16",
       "original_prompt_receipt_timestamp_available": false,
-      "time_origin": "Goal creation; original prompt-receipt time not independently recorded",
+      "time_origin": "Original second-resolution Goal createdAt; message logged at T+00:00:02.918; independent network receipt not measured.",
       "additional_tasks": {
-        "report_generation_elapsed_seconds": null,
+        "report_generation_elapsed_seconds": "1818.866",
         "report_generation_first_observed_clock_to_evidence_cutoff_seconds": "561",
         "report_generation_relative_observation_cutoff": "R+00:09:21",
         "observation_interval_is_not_full_task_duration": true,
         "report_included_in_main_solve_time": false,
-        "intertask_gaps_included_in_report_duration": false
+        "intertask_gaps_included_in_report_duration": false,
+        "report_generation_elapsed_scope": "Original report request to original report final response logging; includes reasoning, computation, waits and delivery.",
+        "report_request_relative": "T+12:20:56.009",
+        "report_first_response_relative": "T+12:51:14.875"
       },
       "time_budget_seconds": 43200,
       "within_time_limit": true,
@@ -574,8 +577,8 @@
         "public_solver_commit": "a304d38e5c885f050ebf14d6b5e61406d7e832ad",
         "from_scratch_independent_discovery": false,
         "new_work_scope": "Read and audit public geometric reduction; execute exact partial checks; derive reduced chart; certify high-precision root data; unsuccessful elimination and integer-relation searches.",
-        "source_first_retrieval_relative_time": null,
-        "source_first_retrieval_timing_note": "During the original solve before the deadline; exact relative time not retained."
+        "source_first_retrieval_relative_time": "T+00:14:10.494",
+        "source_first_retrieval_timing_note": "First direct repository output reception; search-result discovery occurred earlier. Full proof text returned at T+00:15:20.590."
       },
       "hardware": {
         "measurement_scope": "current_host_at_report_preparation_not_task_start_snapshot",
@@ -621,6 +624,13 @@
             "remote_cpu": null,
             "remote_memory_bytes": null,
             "source": "https://sagecell.sagemath.org/"
+          },
+          {
+            "name": "Wolfram app evaluator",
+            "version": null,
+            "purpose": "Initial 38-variable numerical solution and elimination attempts",
+            "execution_location": "Network connector; actual kernel host unrecorded",
+            "numerical_output_counts_as_proof": false
           }
         ]
       },
@@ -637,11 +647,11 @@
       "resource_rules": {
         "original_rule": "No local research materials, skills, other chats or archived chats; public web and local WSL tools permitted.",
         "original_core_data_handling": "Public data and newly authored programs transferred in memory; no stored mathematical data intentionally read.",
-        "report_data_sources": "Public repository, generated artifacts from this run, original Goal metadata, recorded hardware queries, and explicitly authorized current-thread configuration metadata.",
+        "report_data_sources": "Public repository, this run's artifacts, Goal metadata, hardware queries and explicitly authorized current-thread records.",
         "full_os_level_file_access_trace_available": false,
         "explicit_prohibited_research_material_access_known": false,
         "report_file_writes_scope": "New report deliverables under outputs; not original mathematical proof completion.",
-        "report_revision_metadata_access": "Explicitly requested by the user; only this thread's identity and model/effort turn_context records read."
+        "report_revision_metadata_access": "User authorized complete current-thread traversal to reconstruct times; no other chats or skills read; raw transcript not published."
       },
       "prompt_artifacts": [
         {
@@ -699,9 +709,9 @@
       "valid_result_within_original_time_budget": false,
       "source_report": {
         "filename": "record-n13-sol-20261001.zh.md",
-        "sha256": "8ac6f0f2e54fb4dfb6d65bd6b57b2543c139a39ed39663c67d70dc077e70584c",
+        "sha256": "c248a46d3d3fefdc1698af78b1e0d89d041b87df1c1474b7eb7ddff02f38a708",
         "original_local_report_sha256": "f96c3461f2f3dce8079699947745b6de816a63d7aa85abbbfa0b123d8540ee4a",
-        "public_version": "revised_bilingual_report_in_n11_astra_structure",
+        "public_version": "bilingual_astra_structure_with_complete_thread_timing_reconstruction",
         "full_proof_archive_public": false
       },
       "published_artifacts": {
@@ -709,15 +719,264 @@
         "en": "record-n13-sol-20261001.html",
         "record": "record-n13-sol-20261001.json",
         "original_prompt": "reports/n13-sol-main-prompt.original.txt",
-        "score_output": "https://github.com/pikaaa345/disk-covering-benchmark/blob/main/results/n13-sol-score-output.json"
+        "score_output": "https://github.com/pikaaa345/disk-covering-benchmark/blob/main/results/n13-sol-score-output.json",
+        "timing_reconstruction": "https://github.com/pikaaa345/disk-covering-benchmark/blob/main/results/n13-sol-timing.json"
       },
       "deliverables": [
         "record-n13-sol-20261001.zh.md",
         "record-n13-sol-20261001.en.md",
         "record-n13-sol-20261001.json",
         "reports/n13-sol-main-prompt.original.txt",
-        "results/n13-sol-score-output.json"
-      ]
+        "results/n13-sol-score-output.json",
+        "results/n13-sol-timing.json"
+      ],
+      "original_final_response_timestamp_scope": "Failure-response thread-write timestamp; UI rendering completion not independently measured.",
+      "original_failure_response_log_relative_seconds": "43364.205",
+      "original_failure_response_log_relative": "T+12:02:44.205",
+      "original_user_instruction_log_timestamp_available": true,
+      "original_user_instruction_log_relative_seconds": "2.918",
+      "timing_reconstruction": {
+        "artifact": "https://github.com/pikaaa345/disk-covering-benchmark/blob/main/results/n13-sol-timing.json",
+        "sha256": "8713e26377fba5d0ae077df8992b0354a0f054f5bbde17b47f5614ad2132e680",
+        "source": "Authorized complete current-thread traversal",
+        "interval_semantics": "Dispatch to output reception, or asynchronous submission to later output observation; includes network, orchestration, waits and gaps, not isolated CPU time. Actual completion precedes or equals output reception. Intervals can overlap and must not be added.",
+        "milestones": [
+          {
+            "evidence_id": "repository",
+            "description_zh": "读取外部证明仓库",
+            "description_en": "Read external proof repository",
+            "start_relative_seconds": "843.244",
+            "output_observed_relative_seconds": "850.494",
+            "start_relative": "T+00:14:03.244",
+            "output_observed_relative": "T+00:14:10.494",
+            "observed_span_seconds": "7.25",
+            "observed_span": "00:00:07.250",
+            "timing_kind": "single_tool_call",
+            "retained_output_label": "DiskCoveringSolve",
+            "program_reported_seconds": null
+          },
+          {
+            "evidence_id": "proof_text",
+            "description_zh": "读取cover13证明正文及相关材料",
+            "description_en": "Read cover13 proof text and materials",
+            "start_relative_seconds": "907.426",
+            "output_observed_relative_seconds": "920.59",
+            "start_relative": "T+00:15:07.426",
+            "output_observed_relative": "T+00:15:20.590",
+            "observed_span_seconds": "13.164",
+            "observed_span": "00:00:13.164",
+            "timing_kind": "single_tool_call",
+            "retained_output_label": "cover13_proof_zh.md",
+            "program_reported_seconds": null
+          },
+          {
+            "evidence_id": "root119",
+            "description_zh": "119变量根：119行整数收缩检查完成",
+            "description_en": "119-variable root: all 119 integer contraction rows checked",
+            "start_relative_seconds": "1885.737",
+            "output_observed_relative_seconds": "1903.012",
+            "start_relative": "T+00:31:25.737",
+            "output_observed_relative": "T+00:31:43.012",
+            "observed_span_seconds": "17.275",
+            "observed_span": "00:00:17.275",
+            "timing_kind": "single_tool_call",
+            "retained_output_label": "Exact integer contraction checks completed for all 119 rows.",
+            "program_reported_seconds": null
+          },
+          {
+            "evidence_id": "coverage_isolation",
+            "description_zh": "34三角面、10圆弧及62阶局部隔离检查",
+            "description_en": "34 triangular faces, 10 arcs and 62-dimensional local isolation",
+            "start_relative_seconds": "2988.757",
+            "output_observed_relative_seconds": "3000.134",
+            "start_relative": "T+00:49:48.757",
+            "output_observed_relative": "T+00:50:00.134",
+            "observed_span_seconds": "11.377",
+            "observed_span": "00:00:11.377",
+            "timing_kind": "single_tool_call",
+            "retained_output_label": "UPPER: root equations plus all 34 straight triangles and 10 boundary arcs certified.",
+            "program_reported_seconds": null
+          },
+          {
+            "evidence_id": "candidate",
+            "description_zh": "候选分支：1831节点，837个DUAL叶、79个LOCAL叶",
+            "description_en": "Candidate tree: 1831 nodes, 837 DUAL and 79 LOCAL leaves",
+            "start_relative_seconds": "3337.547",
+            "output_observed_relative_seconds": "3350.498",
+            "start_relative": "T+00:55:37.547",
+            "output_observed_relative": "T+00:55:50.498",
+            "observed_span_seconds": "12.951",
+            "observed_span": "00:00:12.951",
+            "timing_kind": "single_tool_call",
+            "retained_output_label": "CANDIDATE TREE COMPLETE: 1831 nodes;",
+            "program_reported_seconds": null
+          },
+          {
+            "evidence_id": "noncandidate",
+            "description_zh": "1760非候选案例：2908节点，2334个DUAL叶",
+            "description_en": "1760 noncandidate cases: 2908 nodes and 2334 DUAL leaves",
+            "start_relative_seconds": "3417.688",
+            "output_observed_relative_seconds": "3436.808",
+            "start_relative": "T+00:56:57.688",
+            "output_observed_relative": "T+00:57:16.808",
+            "observed_span_seconds": "19.12",
+            "observed_span": "00:00:19.120",
+            "timing_kind": "single_tool_call",
+            "retained_output_label": "NONCANDIDATE FOREST COMPLETE: 1760 cases; 2908 nodes;",
+            "program_reported_seconds": null
+          },
+          {
+            "evidence_id": "enumeration",
+            "description_zh": "修正首轮键名检查后重放：308198轨道及1761残余案例接口完成",
+            "description_en": "Replay after first-attempt key-check correction: 308198 orbits and 1761 residual-case interfaces",
+            "start_relative_seconds": "3691.316",
+            "output_observed_relative_seconds": "3836.058",
+            "start_relative": "T+01:01:31.316",
+            "output_observed_relative": "T+01:03:56.058",
+            "observed_span_seconds": "144.742",
+            "observed_span": "00:02:24.742",
+            "timing_kind": "submission_to_result_observation_envelope",
+            "retained_output_label": "ALL ENUMERATION AND PARTITION INTERFACES CERTIFIED: 308198 orbits; 1761 residuals",
+            "program_reported_seconds": null
+          },
+          {
+            "evidence_id": "numeric38",
+            "description_zh": "Wolfram连接器：17约束、38方程初始数值解；数值一致不作为证明",
+            "description_en": "Wolfram connector: initial numerical solution, 17 constraints and 38 equations; not proof",
+            "start_relative_seconds": "3755.521",
+            "output_observed_relative_seconds": "3762.749",
+            "start_relative": "T+01:02:35.521",
+            "output_observed_relative": "T+01:02:42.749",
+            "observed_span_seconds": "7.228",
+            "observed_span": "00:00:07.228",
+            "timing_kind": "single_tool_call",
+            "retained_output_label": "Out[1]= {17, 38",
+            "program_reported_seconds": null
+          },
+          {
+            "evidence_id": "reflection",
+            "description_zh": "修正辅助点重排后：119变量反射像严格位于原根盒",
+            "description_en": "After auxiliary-point permutation correction: 119 reflected variables strictly inside original root box",
+            "start_relative_seconds": "5081.998",
+            "output_observed_relative_seconds": "5099.93",
+            "start_relative": "T+01:24:41.998",
+            "output_observed_relative": "T+01:24:59.930",
+            "observed_span_seconds": "17.932",
+            "observed_span": "00:00:17.932",
+            "timing_kind": "single_tool_call",
+            "retained_output_label": "REFLECTION CERTIFIED: all 119 transformed variables lie strictly in the original root box.",
+            "program_reported_seconds": null
+          },
+          {
+            "evidence_id": "gradients17",
+            "description_zh": "17个约束梯度独立及相关乘子非零检查",
+            "description_en": "17 independent constraint gradients and nonzero related multipliers",
+            "start_relative_seconds": "6765.811",
+            "output_observed_relative_seconds": "6787.716",
+            "start_relative": "T+01:52:45.811",
+            "output_observed_relative": "T+01:53:07.716",
+            "observed_span_seconds": "21.905",
+            "observed_span": "00:00:21.905",
+            "timing_kind": "single_tool_call",
+            "retained_output_label": "REDUCED CHART: 17 independent constraint gradients certified.",
+            "program_reported_seconds": null
+          },
+          {
+            "evidence_id": "precision60000",
+            "description_zh": "60000位半径平方下取整、收缩与自映射严格检查输出",
+            "description_en": "Strict squared-radius 60000-digit floor, contraction and self-map output",
+            "start_relative_seconds": "20677.421",
+            "output_observed_relative_seconds": "21112.261",
+            "start_relative": "T+05:44:37.421",
+            "output_observed_relative": "T+05:51:52.261",
+            "observed_span_seconds": "434.84",
+            "observed_span": "00:07:14.840",
+            "timing_kind": "submission_to_result_observation_envelope",
+            "retained_output_label": "EXACT_CERT_RADIUS_SQUARED_SAME_60000_DECIMAL_FLOOR",
+            "program_reported_seconds": null
+          },
+          {
+            "evidence_id": "precision330000",
+            "description_zh": "首次读取到330000位半径平方下取整严格检查输出",
+            "description_en": "First observed strict 330000-digit squared-radius floor output",
+            "start_relative_seconds": null,
+            "output_observed_relative_seconds": "29093.218",
+            "start_relative": null,
+            "output_observed_relative": "T+08:04:53.218",
+            "observed_span_seconds": null,
+            "observed_span": null,
+            "timing_kind": "first_observed_output_only",
+            "retained_output_label": "EXACT_CERT_RADIUS_SQUARED_DECIMAL_FLOOR_DIGITS 330000",
+            "program_reported_seconds": null
+          },
+          {
+            "evidence_id": "search_t512",
+            "description_zh": "半径平方t、次数界512、300000位搜索失败；程序自报2616.76秒",
+            "description_en": "Failed t search, degree bound 512, 300000 digits; program-reported 2616.76 s",
+            "start_relative_seconds": "35222.551",
+            "output_observed_relative_seconds": "37918.797",
+            "start_relative": "T+09:47:02.551",
+            "output_observed_relative": "T+10:31:58.797",
+            "observed_span_seconds": "2696.246",
+            "observed_span": "00:44:56.246",
+            "timing_kind": "submission_to_result_observation_envelope",
+            "retained_output_label": "2616.76",
+            "program_reported_seconds": "2616.76"
+          },
+          {
+            "evidence_id": "identities38",
+            "description_zh": "公开SageCell：38个规范化符号恒等式精确为零",
+            "description_en": "Public SageCell: all 38 normalized symbolic identities exactly zero",
+            "start_relative_seconds": "35510.671",
+            "output_observed_relative_seconds": "35534.222",
+            "start_relative": "T+09:51:50.671",
+            "output_observed_relative": "T+09:52:14.222",
+            "observed_span_seconds": "23.551",
+            "observed_span": "00:00:23.551",
+            "timing_kind": "single_tool_call",
+            "retained_output_label": "ALL_38_NORMALIZED_IDENTITIES_EXACT_ZERO",
+            "program_reported_seconds": null
+          },
+          {
+            "evidence_id": "search_d512",
+            "description_zh": "归一化偏移参数d、次数界512、220000位搜索失败；程序自报2050.15秒",
+            "description_en": "Failed d search, degree bound 512, 220000 digits; program-reported 2050.15 s",
+            "start_relative_seconds": "38435.187",
+            "output_observed_relative_seconds": "40520.586",
+            "start_relative": "T+10:40:35.187",
+            "output_observed_relative": "T+11:15:20.586",
+            "observed_span_seconds": "2085.399",
+            "observed_span": "00:34:45.399",
+            "timing_kind": "submission_to_result_observation_envelope",
+            "retained_output_label": "2050.15",
+            "program_reported_seconds": "2050.15"
+          },
+          {
+            "evidence_id": "precision580000",
+            "description_zh": "580000位半径平方下取整、HIGH及LINK_BOX收缩与自映射严格检查输出",
+            "description_en": "Strict 580000-digit squared-radius floor and HIGH/LINK_BOX contraction and self-map output",
+            "start_relative_seconds": "39152.894",
+            "output_observed_relative_seconds": "40306.734",
+            "start_relative": "T+10:52:32.894",
+            "output_observed_relative": "T+11:11:46.734",
+            "observed_span_seconds": "1153.84",
+            "observed_span": "00:19:13.840",
+            "timing_kind": "submission_to_result_observation_envelope",
+            "retained_output_label": "EXACT_CERT_RADIUS_SQUARED_DECIMAL_FLOOR_DIGITS 580000",
+            "program_reported_seconds": null
+          }
+        ],
+        "original_failure_response_relative": "T+12:02:44.205",
+        "original_report_request_to_response_seconds": "1818.866",
+        "mathematical_checks_reexecuted": false
+      },
+      "precision_certification_evidence": {
+        "squared_radius_decimal_floor_digits": 580000,
+        "retained_actual_tool_output": true,
+        "first_output_observed_relative": "T+11:11:46.734",
+        "complete_certificate_package_delivered": false,
+        "mathematical_replay_during_reconstruction": false
+      }
     }
   ]
 }
