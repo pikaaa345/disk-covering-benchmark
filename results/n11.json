@@ -80,6 +80,36 @@
           "sha256": "70aa652abcb6f94b0616a6eeffbb1980b79370d28fc5e2914de599765168dbaa"
         }
       ]
+    },
+    {
+      "model": "deepseek-v4-pro/max",
+      "elapsed_seconds": "39447.149",
+      "timing_scope": "first_goal_create_to_final_substantive_assistant_message_includes_interruption_intervals",
+      "score": "0",
+      "runs": 1,
+      "status": "failed_incorrect_proof",
+      "original_budget_seconds": "43200",
+      "within_original_budget": true,
+      "valid_completion_within_budget": false,
+      "report_url": "record-n11-deepseek-v4-pro-max-20261002.zh.html",
+      "report_url_en": "record-n11-deepseek-v4-pro-max-20261002.html",
+      "report_json_url": "record-n11-deepseek-v4-pro-max-20261002.json",
+      "test_date_utc": "2026-10-02",
+      "cost_cny": null,
+      "hardware": {
+        "cpu": "AMD Ryzen 9 8945HX with Radeon Graphics",
+        "memory_generation": "DDR5",
+        "memory_gib": 32,
+        "memory_bytes": 34359738368,
+        "snapshot_scope": "queried_during_report_preparation_not_at_task_start"
+      },
+      "prompt_artifacts": [
+        {
+          "kind": "goal_objective",
+          "original_text_url": "reports/n11-deepseek-main-prompt.original.txt",
+          "sha256": "2baffa2d41229eab1d48003c64f53975c0696961a6236219373a7090bb7ff892"
+        }
+      ]
     }
   ]
 }

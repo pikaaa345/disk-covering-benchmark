@@ -1,15 +1,18 @@
-# Historical n=11 records
+# n=11 test records
 
 [中文](README.md) · **English**
 
-These are historical demonstrations with checked record fields, not a formal leaderboard under the current strict prompt. Mathematical proofs were not rerun for this publication. Model labels use “name/reasoning setting”.
+The table includes two historical demonstrations and an independently reviewed incorrect DeepSeek submission; it is not a formal comparable leaderboard. Historical global proofs were not rerun; the exact DeepSeek coverage counterexample was replayed. Model labels use “name/reasoning setting”.
 
 | Model | Test date (UTC) | Recorded natural elapsed time | Score (higher is better) |
 |---|---|---|---:|
 | [gpt-6 astra/max](https://pikaaa345.github.io/disk-covering-benchmark/record-n11-astra-20260930.html) | 2026-09-30 | Main task 5h 34m 29.011s + independent minimal-polynomial stage 13m 46.178s; total 5h 48m 15.189s | 205 |
 | [gpt-6.1 sol/max](https://pikaaa345.github.io/disk-covering-benchmark/record-n11-sol-20260930.html) | 2026-09-30 | Goal creation to completion: 6h 17m 28s | 193 |
+| [deepseek-v4-pro/max](https://pikaaa345.github.io/disk-covering-benchmark/record-n11-deepseek-v4-pro-max-20261002.html) | 2026-10-02 | Goal creation to final submission: 10 h 57 min 27.149 s; incorrect proof submitted within its deadline | 0 |
 
 The timing endpoints differ. The original main tasks preceded the current minimal-polynomial requirement: SOL's historical report did not certify irreducibility, while Astra's report included a separate additional minimal-polynomial stage. Both runs missed their original 60-minute limit; completion during continuation does not change that timeout outcome. This table therefore does not establish that both models passed the same formal contract, or that the difference is stable across runs.
+
+DeepSeek had a 12-hour deadline and submitted within it. Its exact centers and radius leave a rigorously uncovered point, and its global lower bound is unproved, so it scored 0. The report identifies the affected sections, programs and reversed bound. The complete session and answer-containing evidence remain local. Its hardware was queried during preparation of this report.
 
 **n=11 reference hash:** published on the problem page; historical runs have not been rerun against this reference. [Public test reports](../docs/records.html) now describe the original inputs, hardware, main stages and acceptance status. The full originals and proof packages contain mathematical answers and remain unpublished.
 
