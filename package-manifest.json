@@ -1,0 +1,53 @@
+{
+  "schema": "diskcover-public-source-package-v1",
+  "artifact_type": "tools-and-testing-materials",
+  "artifact_identity": "disk-covering-benchmark-downloads",
+  "human_entrypoints": {
+    "en": "README.md",
+    "zh-CN": "README.zh.md"
+  },
+  "agent_entrypoint": "AGENT_INSTALL.md",
+  "task_index": "benchmark.json",
+  "runtime": {
+    "python_minimum": "3.9",
+    "dependencies": "standard library only",
+    "package_manager_required": false
+  },
+  "targets": [
+    {
+      "os": "Windows",
+      "architecture": "x64",
+      "verification": "clean extraction and synthetic tools checks executed"
+    },
+    {
+      "os": "Linux",
+      "architecture": "runtime-dependent",
+      "verification": "not executed"
+    },
+    {
+      "os": "macOS",
+      "architecture": "runtime-dependent",
+      "verification": "not executed"
+    }
+  ],
+  "network_after_download": false,
+  "administrator_required": false,
+  "gui_required": false,
+  "installation": "none; extract into a user-owned directory",
+  "validation_command": "python -B tools/check_tools.py",
+  "checker": "tools/diskcover_answer.py",
+  "score_calculator": "tools/score.py",
+  "protocol": "diskcover-minpoly-v1",
+  "scoring_version": "diskcover-log-score-v1",
+  "checksum_files": [
+    "SHA256SUMS",
+    "SHA256SUMS.txt"
+  ],
+  "uninstall": "Remove only your own extraction after preserving locally created answers and proofs.",
+  "limitations": [
+    "No private solver, reference answers or complete proof packages are included.",
+    "Synthetic tools checks do not verify coverage or global optimality.",
+    "Linux and macOS were not executed for this package."
+  ],
+  "website_source_included": false
+}

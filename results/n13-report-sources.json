@@ -1,0 +1,127 @@
+{
+  "schema": "diskcover-report-source-snapshots-v1",
+  "benchmark_commit": "b6cde6540abcf4dfc54a77979e5a7517d3f971cb",
+  "benchmark_commit_scope": "post_hoc_report_validation_not_original_start",
+  "sources": [
+    {
+      "path": "website/reports/n11-history.json",
+      "url": "https://raw.githubusercontent.com/pikaaa345/disk-covering-benchmark/b6cde6540abcf4dfc54a77979e5a7517d3f971cb/website/reports/n11-history.json",
+      "sha256": "19a29cc2a0a1b46a4ba7ab4662c869570c45c24554a79c3e31f803929a6f7fc7",
+      "git_blob_sha": "199dce540b27e7cc21f6003288cdcf374e4972b3",
+      "bytes": 17699,
+      "git_blob_matches_tree": true
+    },
+    {
+      "path": "website/reports/n12-astra-20261001-history.json",
+      "url": "https://raw.githubusercontent.com/pikaaa345/disk-covering-benchmark/b6cde6540abcf4dfc54a77979e5a7517d3f971cb/website/reports/n12-astra-20261001-history.json",
+      "sha256": "193b903702d85f14b8b3e1d45e8b265ea525997a162c76dd856e9dc928a69759",
+      "git_blob_sha": "ad9ef8396f8f2ede90c238a8310626a472ef19d2",
+      "bytes": 4361,
+      "git_blob_matches_tree": true
+    },
+    {
+      "path": "results/README.md",
+      "url": "https://raw.githubusercontent.com/pikaaa345/disk-covering-benchmark/b6cde6540abcf4dfc54a77979e5a7517d3f971cb/results/README.md",
+      "sha256": "5152f4c38a5a97aa28259165463d1b5ce3ec03918af9dfe817aa84cad03692e2",
+      "git_blob_sha": "8c0bc25e50958274cd92ce76487015767dfac155",
+      "bytes": 5099,
+      "git_blob_matches_tree": true
+    },
+    {
+      "path": "website/data/n13.json",
+      "url": "https://raw.githubusercontent.com/pikaaa345/disk-covering-benchmark/b6cde6540abcf4dfc54a77979e5a7517d3f971cb/website/data/n13.json",
+      "sha256": "229a43a33f540daf46f01108bce6eab0a7d439cf8370d54249b9e1debb06eea1",
+      "git_blob_sha": "ca2e134db4071fa987d6448d696a6b558a5bc830",
+      "bytes": 535,
+      "git_blob_matches_tree": true
+    },
+    {
+      "path": "benchmark.json",
+      "url": "https://raw.githubusercontent.com/pikaaa345/disk-covering-benchmark/b6cde6540abcf4dfc54a77979e5a7517d3f971cb/benchmark.json",
+      "sha256": "644df2d9a1d30f460d6df2a9bcd9492ed1a3c7321249026e2df203322a94405e",
+      "git_blob_sha": "8a56236951135ce9f887dfdb179d31275c8036fe",
+      "bytes": 23126,
+      "git_blob_matches_tree": true
+    },
+    {
+      "path": "docs/guide.zh.html",
+      "url": "https://raw.githubusercontent.com/pikaaa345/disk-covering-benchmark/b6cde6540abcf4dfc54a77979e5a7517d3f971cb/docs/guide.zh.html",
+      "sha256": "9f2b183755424f7f643c89f2ae704db18f61f2a69403ce38677c1ee7f18045b4",
+      "git_blob_sha": "a8b8a60557516e68f5b00694fa3ddea34f151209",
+      "bytes": 15436,
+      "git_blob_matches_tree": null
+    },
+    {
+      "path": "tools/score.py",
+      "url": "https://raw.githubusercontent.com/pikaaa345/disk-covering-benchmark/b6cde6540abcf4dfc54a77979e5a7517d3f971cb/tools/score.py",
+      "sha256": "4b2a1eb4640e6524772c8d8592bf6b41ba292dc3e3520829b679016d3fb32977",
+      "git_blob_sha": "e3bd8527c8c51c3839b203fdec362061114d0e81",
+      "bytes": 4586,
+      "git_blob_matches_tree": true
+    },
+    {
+      "path": "tasks/n13.md",
+      "url": "https://raw.githubusercontent.com/pikaaa345/disk-covering-benchmark/b6cde6540abcf4dfc54a77979e5a7517d3f971cb/tasks/n13.md",
+      "sha256": "40a8449594a695b1aabc1b21e894606fd7e70bb4191b252d02f44e09759e07c7",
+      "git_blob_sha": "0018a686bfa214e76a296ef2216c993a4f1f8e62",
+      "bytes": 2719,
+      "git_blob_matches_tree": true
+    },
+    {
+      "path": "results/n12.json",
+      "url": "https://raw.githubusercontent.com/pikaaa345/disk-covering-benchmark/b6cde6540abcf4dfc54a77979e5a7517d3f971cb/results/n12.json",
+      "sha256": "03ca5728a7e050de898594827ca39a194979bc201754c65aeb1d8749b1146df8",
+      "git_blob_sha": "2ed859938d4581bce8d3eed6780b34dc12e807a0",
+      "bytes": 10091,
+      "git_blob_matches_tree": true
+    },
+    {
+      "path": "results/n11.json",
+      "url": "https://raw.githubusercontent.com/pikaaa345/disk-covering-benchmark/b6cde6540abcf4dfc54a77979e5a7517d3f971cb/results/n11.json",
+      "sha256": "a47170af922d34ac21c6f52620945bd07a9d818d8366ce1449ef71f18dcbb0e6",
+      "git_blob_sha": "98d888adebe56923fb0bd1cbc38bd3dbf9a1a6b6",
+      "bytes": 3351,
+      "git_blob_matches_tree": true
+    },
+    {
+      "path": "prompts/research-work-report.txt",
+      "url": "https://raw.githubusercontent.com/pikaaa345/disk-covering-benchmark/b6cde6540abcf4dfc54a77979e5a7517d3f971cb/prompts/research-work-report.txt",
+      "sha256": "f1934b3c315809bc2d19af03f6a9bc13c9802b27690d739bcc9293c56a4a7e32",
+      "git_blob_sha": "2b0ee5c11f54a265cc45abab171e93e119f8008b",
+      "bytes": 5405,
+      "git_blob_matches_tree": true
+    },
+    {
+      "path": "docs/scoring.zh.html",
+      "url": "https://raw.githubusercontent.com/pikaaa345/disk-covering-benchmark/b6cde6540abcf4dfc54a77979e5a7517d3f971cb/docs/scoring.zh.html",
+      "sha256": "f2d310599ec005885fd434f1af0a1f7ae8145efba59fc63ce0727f7bd05f83d8",
+      "git_blob_sha": "5432eb3fff738c68b21ee483af0f944d4de59160",
+      "bytes": 12542,
+      "git_blob_matches_tree": null
+    },
+    {
+      "path": "website/reports/n12-history.json",
+      "url": "https://raw.githubusercontent.com/pikaaa345/disk-covering-benchmark/b6cde6540abcf4dfc54a77979e5a7517d3f971cb/website/reports/n12-history.json",
+      "sha256": "03ca5728a7e050de898594827ca39a194979bc201754c65aeb1d8749b1146df8",
+      "git_blob_sha": "2ed859938d4581bce8d3eed6780b34dc12e807a0",
+      "bytes": 10091,
+      "git_blob_matches_tree": true
+    }
+  ],
+  "mathematical_proof_source": {
+    "url": "https://github.com/VonEquinox/DiskCoveringSolve/tree/089584973f41e6374ce110f6e5b5ee456df19352/cover13",
+    "commit": "089584973f41e6374ce110f6e5b5ee456df19352",
+    "used_during_original_solve": true,
+    "replayed_again_for_this_report": false
+  },
+  "memory_type_standard": {
+    "url": "https://www.dmtf.org/sites/default/files/standards/documents/DSP0134_3.8.0.pdf",
+    "version": "3.8.0",
+    "table": 77,
+    "raw_type": 34,
+    "interpretation": "DDR5"
+  },
+  "source_materials_obtained_in_memory": true,
+  "preexisting_local_research_files_read_for_report": false,
+  "report_files_not_a_mathematical_proof_package": true
+}

@@ -1,0 +1,85 @@
+{
+  "schema": "diskcover-public-history-v1",
+  "n": 11,
+  "reference_time_seconds": "21600",
+  "scoring_version": "diskcover-log-score-v1",
+  "score_formula": "round_half_up(200 + 100 * log2(reference_time_seconds / elapsed_seconds))",
+  "score_rounding": "decimal_ROUND_HALF_UP_integer",
+  "records_comparable": false,
+  "records": [
+    {
+      "model": "gpt-6 astra/max",
+      "elapsed_seconds": "20895.189",
+      "components_seconds": [
+        "20069.011",
+        "826.178"
+      ],
+      "timing_scope": "sum_of_main_and_independent_required_followup_natural_intervals_excluding_gap",
+      "demo_score": "205",
+      "minimal_polynomial_status": "reported_in_followup_not_replayed_here",
+      "runs": 1,
+      "status": "historical_demo_not_formal_pass",
+      "original_budget_seconds": "3600",
+      "within_original_budget": false,
+      "report_url": "record-n11-astra-20260930.zh.html",
+      "cost_cny": null,
+      "hardware": {
+        "cpu": "AMD Ryzen 9 8945HX with Radeon Graphics",
+        "memory_generation": "DDR5",
+        "memory_gib": 32,
+        "memory_bytes": 34359738368,
+        "snapshot_scope": "queried_during_original_sol_report_preparation_not_at_task_start",
+        "astra_scope": "shared_publisher_machine_reference_from_sol_report_no_separate_astra_snapshot"
+      },
+      "test_date_utc": "2026-09-30",
+      "report_url_en": "record-n11-astra-20260930.html",
+      "report_json_url": "record-n11-astra-20260930.json",
+      "prompt_artifacts": [
+        {
+          "kind": "main",
+          "original_text_url": "reports/n11-astra-main-prompt.original.txt",
+          "sha256": "d761c10aed4fd064342bdef7775b2e533de7c519cd63b09d7a2351a34f5c19cf"
+        },
+        {
+          "kind": "followup",
+          "original_text_url": "reports/n11-astra-followup-prompt.original.txt",
+          "sha256": "52d9329a252304ebae2cad738fa157dc0243a1f10ba84dab968b19ded71e1e30"
+        }
+      ]
+    },
+    {
+      "model": "gpt-6.1 sol/max",
+      "elapsed_seconds": "22648",
+      "components_seconds": [
+        "22648"
+      ],
+      "timing_scope": "goal_creation_to_completion_natural_interval",
+      "demo_score": "193",
+      "minimal_polynomial_status": "irreducibility_not_certified_in_historical_report",
+      "runs": 1,
+      "status": "historical_demo_not_formal_pass",
+      "original_budget_seconds": "3600",
+      "within_original_budget": false,
+      "report_url": "record-n11-sol-20260930.zh.html",
+      "cost_cny": null,
+      "hardware": {
+        "cpu": "AMD Ryzen 9 8945HX with Radeon Graphics",
+        "memory_generation": "DDR5",
+        "memory_gib": 32,
+        "memory_bytes": 34359738368,
+        "snapshot_scope": "queried_during_original_sol_report_preparation_not_at_task_start",
+        "astra_scope": "shared_publisher_machine_reference_from_sol_report_no_separate_astra_snapshot"
+      },
+      "test_date_utc": "2026-09-30",
+      "report_url_en": "record-n11-sol-20260930.html",
+      "report_json_url": "record-n11-sol-20260930.json",
+      "prompt_artifacts": [
+        {
+          "kind": "main",
+          "original_text_url": "reports/n11-sol-main-prompt.original.txt",
+          "sha256": "70aa652abcb6f94b0616a6eeffbb1980b79370d28fc5e2914de599765168dbaa"
+        }
+      ]
+    }
+  ]
+}

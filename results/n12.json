@@ -1,0 +1,231 @@
+{
+  "schema": "diskcover-public-test-reports-v1",
+  "n": 12,
+  "report_scope": "Retrospective single-run records with answers withheld; the publisher clarified that the file ban covers only local materials existing before the test.",
+  "records_comparable": false,
+  "records": [
+    {
+      "record_id": "n12-astra-20261001",
+      "model": "gpt-6 astra/max",
+      "model_id": "gpt-6-astra",
+      "reasoning_effort": "max",
+      "test_date_utc": "2026-10-01",
+      "status": "post_hoc_reported_result_under_clarified_resource_rule",
+      "runs": 1,
+      "elapsed_seconds": "3175.402",
+      "timing_scope": "first complete problem received through final answer fully recorded",
+      "goal_counter_seconds_supplemental_only": 2705,
+      "audit_followup_seconds": "997.186",
+      "report_followup_seconds_at_check_cutoff": "1747.02885",
+      "time_budget_seconds": 43200,
+      "within_time_limit": true,
+      "score": 477,
+      "score_scope": "benchmark_score",
+      "strict_original_task_score": 477,
+      "strict_original_task_acceptance": "accepted_on_reviewed_evidence_under_clarified_resource_rule",
+      "formal_ranking": false,
+      "completion_independently_verified": false,
+      "answer_protocol": "diskcover-minpoly-v1",
+      "score_protocol": "diskcover-log-score-v1",
+      "reference_seconds": "21600",
+      "benchmark_commit_for_post_hoc_validation": "f106832febe525afe740a3d4504b57d51d75189b",
+      "benchmark_commit_at_original_start": null,
+      "answer_check": {
+        "matches_reference": true,
+        "exit_code": 0,
+        "sha256": "35d604a5ea1b1fe5c52c30337743c1a8142b69827023284f9597e1ca9cb8f947"
+      },
+      "tools_self_check": {
+        "synthetic_checks_passed": 39,
+        "mathematical_solver_executed": false
+      },
+      "mathematics": {
+        "submission": "complete_proof_and_certificates_submitted",
+        "original_three_stage_replay_passed": true,
+        "prior_audit_three_stage_replay_passed": true,
+        "geometry_replayed_again_in_this_report_task": false,
+        "independent_external_proof_review": false
+      },
+      "provenance": {
+        "used_existing_public_construction_and_solver_certificates": true,
+        "public_solver_commit": "089584973f41e6374ce110f6e5b5ee456df19352",
+        "from_scratch_independent_discovery": false,
+        "starting_materials": "user problem and environment facts; public sources subsequently retrieved"
+      },
+      "hardware": {
+        "measurement_scope": "current_host_at_report_preparation_not_task_start_snapshot",
+        "cpu": "AMD Ryzen 9 8945HX with Radeon Graphics",
+        "physical_memory_bytes": 34359738368,
+        "physical_memory_gib": 32,
+        "memory_generation": "DDR5"
+      },
+      "software": {
+        "os": "Ubuntu WSL2",
+        "python": "3.12.3",
+        "kernel": "6.6.87.2",
+        "sympy": "1.14.0",
+        "numpy": "2.2.6",
+        "scipy": "1.15.3",
+        "mpmath": "1.3.0"
+      },
+      "resources": {
+        "money_budget": null,
+        "money_spent": null,
+        "money_evidence": "not recorded",
+        "goal_token_counter": 319768,
+        "billed_tokens": null,
+        "time_budget_seconds": 43200
+      },
+      "subagents_used_in_original_solve": false,
+      "prompt_artifacts": [
+        {
+          "kind": "main",
+          "original_text_url": "reports/n12-astra-main-prompt.original.txt",
+          "sha256": "7281808b304f0ece5b719eac624ca0070ce543ddcf2d296953897bb594e6e9a2"
+        }
+      ],
+      "limitations": [
+        "Existing public construction and certificates were used; not a from-scratch independent discovery.",
+        "Fingerprint match and successful replay are not external mathematical certification.",
+        "No frozen opening benchmark version, opening hardware snapshot or monetary cost evidence."
+      ],
+      "answer_disclosure": "fingerprint_only_no_mathematical_answers_or_private_chats",
+      "resource_rule_clarification": {
+        "clarified_by": "publisher",
+        "clarification_date": "2026-10-02",
+        "prohibited": "local_materials_existing_before_test_start",
+        "new_downloaded_or_generated_task_files_permitted": true,
+        "audit_scope": "existing_review_of_explicit_accesses; no new OS trace or mathematical replay",
+        "reviewed_preexisting_material_access_violation_found": false
+      }
+    },
+    {
+      "record_id": "n12-sol-20261001",
+      "model": "gpt-6.1 sol/max",
+      "model_id": "gpt-6.1-sol",
+      "reasoning_effort": "max",
+      "test_date_utc": "2026-10-01",
+      "status": "retrospective_reported_result_under_clarified_resource_rule",
+      "runs": 1,
+      "elapsed_seconds": "5457.272",
+      "main_natural_seconds": "5457.272",
+      "main_system_accumulated_seconds": "4603",
+      "system_timing_endpoint": "goal_marked_complete_before_final_response",
+      "timing_scope": "full_original_prompt_receipt_to_final_mathematical_delivery_response",
+      "original_budget_seconds": "43200",
+      "within_original_time_budget": true,
+      "additional_tasks": {
+        "audit_natural_seconds": "1618.486",
+        "website_fingerprint_completion_natural_seconds": "935.636",
+        "website_report_generation_natural_seconds": "2076.241122",
+        "website_report_generation_relative_cutoff": "V+00:34:36",
+        "included_in_main_time": false,
+        "intertask_gaps_included": false,
+        "future_contract_with_later_endpoint_requires_retiming": true
+      },
+      "acceptance": {
+        "full_original_contract": "accepted_on_reviewed_evidence_under_clarified_resource_rule",
+        "positive_score_is_conditional": false,
+        "unconditional_full_contract_score": "398",
+        "restriction_issue": "Resolved by publisher: only pre-task local materials are prohibited.",
+        "os_level_complete_file_access_trace_available": false,
+        "formal_leaderboard_submission": false
+      },
+      "answer_check": {
+        "protocol": "diskcover-minpoly-v1",
+        "reference_commit": "f106832febe525afe740a3d4504b57d51d75189b",
+        "live_homepage_matches_pinned_version": true,
+        "sha256": "35d604a5ea1b1fe5c52c30337743c1a8142b69827023284f9597e1ca9cb8f947",
+        "matches_reference": true,
+        "exit_code": 0,
+        "official_synthetic_self_checks_passed": 39,
+        "synthetic_self_check_executes_math_solver": false,
+        "decimal_rounding": "certified_by_exact_rational_root_box_endpoints",
+        "answer_data_disclosed": false
+      },
+      "verification": {
+        "original_full_exact_replay": true,
+        "original_replay_seconds": "49.107513189315796",
+        "audit_replay_from_immutable_original_zip": true,
+        "audit_replay_seconds": "102.0668716430664",
+        "same_assistant_separate_execution_not_external_referee": true,
+        "full_math_pipeline_rerun_during_website_evaluation": false,
+        "full_math_pipeline_rerun_during_publication": false,
+        "original_archive_file_count": 124,
+        "audit_manifest_hashes_checked": 123,
+        "coverage_faces_checked": 31,
+        "arc_caps_checked": 9,
+        "labeled_triangulations": 2831335,
+        "topology_orbits": 38208,
+        "farkas_exclusions": 38076,
+        "energy_tree_exclusions": 131,
+        "candidate_convexity_certificates": 1,
+        "energy_tree_nodes": 5291,
+        "original_conversation_records_reviewed": 467,
+        "tool_orchestration_calls_reviewed": 34,
+        "returned_records_reviewed": 33,
+        "mathematical_reductions_are_in_private_full_proof": true
+      },
+      "hardware": {
+        "cpu": "AMD Ryzen 9 8945HX with Radeon Graphics",
+        "memory_generation": "DDR5",
+        "memory_gib": 32,
+        "snapshot_scope": "current_query_during_website_report_preparation_not_at_original_task_start"
+      },
+      "tools": {
+        "execution_location": "local_Ubuntu_WSL",
+        "remote_mathematical_compute_used": false,
+        "sage": "10.7",
+        "sage_python": "3.12.13",
+        "sympy": "1.14.0",
+        "official_checker_python": "3.12.3",
+        "numpy": "2.4.3",
+        "scipy": "1.17.1",
+        "numpy_scipy_scope": "environment_queries_and_source_dependencies_not_float_optimization_acceptance",
+        "exact_core": [
+          "integer_arithmetic",
+          "fractions.Fraction",
+          "rational_polynomials",
+          "finite_fields"
+        ],
+        "tools_were_preinstalled": true
+      },
+      "source_reuse": {
+        "public_existing_proof_and_code_used": true,
+        "url": "https://github.com/VonEquinox/DiskCoveringSolve/tree/089584973f41e6374ce110f6e5b5ee456df19352/cover12",
+        "commit": "089584973f41e6374ce110f6e5b5ee456df19352",
+        "downloaded_files": 48,
+        "original_blob_and_sha_checks": true,
+        "independent_discovery_from_scratch_claimed": false,
+        "new_work_scope": "radius_minimal_polynomial_and_association_certificates_independent_finite_checks_strengthened_bounds_and_full_delivery"
+      },
+      "actual_cost": null,
+      "cost_budget": null,
+      "prompt_artifacts": [
+        {
+          "kind": "main",
+          "original_text_url": "reports/n12-sol-main-prompt.original.txt",
+          "sha256": "afbd6fc6c7067dc5c7728ccf85f5a229d0c9c379196e3640d18f453956a30b25"
+        }
+      ],
+      "source_report": {
+        "filename": "测试报告.md",
+        "sha256": "a5699323143b1f46d2805a7fd9e2f54e9e0dbe651d97ef6986fda3c432f50f8c",
+        "public_version": "answer_withheld_summary",
+        "full_report_and_proof_archive_public": false
+      },
+      "report_urls": {
+        "zh": "record-n12-sol-20261001.zh.html",
+        "en": "record-n12-sol-20261001.html"
+      },
+      "resource_rule_clarification": {
+        "clarified_by": "publisher",
+        "clarification_date": "2026-10-02",
+        "prohibited": "local_materials_existing_before_test_start",
+        "new_downloaded_or_generated_task_files_permitted": true,
+        "audit_scope": "existing_review_of_explicit_accesses; no new OS trace or mathematical replay",
+        "reviewed_preexisting_material_access_violation_found": false
+      }
+    }
+  ]
+}
