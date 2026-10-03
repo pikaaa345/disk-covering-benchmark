@@ -1,0 +1,148 @@
+name: One-time guarded successful-record color publication
+on:
+  push:
+    branches: [main]
+    paths: [.github/workflows/publish-success-algorithm-colors.yml]
+permissions: {}
+concurrency:
+  group: diskcover-pages-publication
+  cancel-in-progress: false
+jobs:
+  publish:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main' && github.event.before == 'a0d7c2454bb098590d1e50c775a909c5740deae8' && github.run_number == 1 && github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+      pages: write
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      SNAPSHOT: 851396c0f76b2e6ee991d6c3bc9e0cd270c9f4f9
+      EXPECTED: 8ca2e0d823b0c63907c0c097793ca7f815794a4c
+      CANDIDATE: publication-success-algorithm-colors-20261003
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: publication-success-algorithm-colors-20261003
+          fetch-depth: 2
+      - name: Publish snapshot with an atomic branch lease
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse HEAD)" = "$SNAPSHOT"
+          test "$(git rev-parse HEAD^)" = "0df9d9d0f68f09a4c22040f4ff286559cef30713"
+          gh api "repos/$GITHUB_REPOSITORY/pages" > /tmp/pages-config.json
+          python3 - <<'PY'
+          import json
+          p=json.load(open('/tmp/pages-config.json'))
+          assert p['source']=={'branch':'gh-pages','path':'/docs'},p.get('source')
+          print(json.dumps({'pages_source_verified':p['source']}))
+          PY
+          current="$(gh api "repos/$GITHUB_REPOSITORY/git/ref/heads/gh-pages" --jq '.object.sha')"
+          if [ "$current" != "$SNAPSHOT" ]; then
+            test "$current" = "$EXPECTED"
+            git push "--force-with-lease=refs/heads/gh-pages:$EXPECTED" origin HEAD:refs/heads/gh-pages
+          fi
+          test "$(gh api "repos/$GITHUB_REPOSITORY/git/ref/heads/gh-pages" --jq '.object.sha')" = "$SNAPSHOT"
+          gh api --method POST "repos/$GITHUB_REPOSITORY/pages/builds"
+      - name: Verify successful Pages build and anonymous public bytes
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import os,json,subprocess,time,hashlib,urllib.request
+          repo=os.environ['GITHUB_REPOSITORY'];sha=os.environ['SNAPSHOT']
+          def api(endpoint):
+              return json.loads(subprocess.check_output(['gh','api','repos/'+repo+'/'+endpoint]))
+          for _ in range(120):
+              b=api('pages/builds/latest')
+              if b.get('commit')==sha and b.get('status')=='built':break
+              if b.get('commit')==sha and b.get('status')=='errored':raise RuntimeError(b)
+              time.sleep(5)
+          else:raise RuntimeError('Pages did not successfully build the approved snapshot')
+          expected={"assets/n11.svg":"c097adb97df4fdb7dd15c93b6510fff1ee31b0f4b8074652ea17afc9ae7f988d","assets/n12.svg":"13c6501e5b99758c6a5f498c6009212ee57efd7d0ebe8fbbd6f0659c5f662922","assets/n14.svg":"7d73318b1acd2172abe8393c2c74a13bf1beb2778a71ee9dcc2190ac75659ab2","assets/n16.svg":"6b159e4b3d00a57a42878e471a9065be78cf0c74c232fa6f0ecdc908db34783f","assets/n19.svg":"8c0499b5a184756b905e93f0daf372f93164b1b851cad0721957b90ee37ec6d1","assets/n22.svg":"fc678068ca071f51b5a1174767c26706e9a5067d0f4809062940d7185aa09da7","assets/n25.svg":"ddece71f71ab0e3ee0caf70063949a350b33d6044a58dfbf4435ab52f80ad6d7","assets/n26.svg":"23bdd53b11c84d5178c16a2b1bb06910bbc657c3b2b04b2334fe45853ad4d332","index-page-2.en.html":"b2e612dc84b41e0be11f07babb45cccc9f15629d469258639e2d322b0535a466","index-page-2.html":"b2e612dc84b41e0be11f07babb45cccc9f15629d469258639e2d322b0535a466","index-page-2.zh.html":"f4e5b310ad485472e5e1c2660903739922a47521b84c02b5ec9c6870c8658004","index.en.html":"92df2a992628b003a3a19c8b315a355d146aa43e8393ee4a7ff78917765e21a6","index.html":"92df2a992628b003a3a19c8b315a355d146aa43e8393ee4a7ff78917765e21a6","index.zh.html":"bfac7568c28ec0995bd2add64fb917a1f0654218ef8307f4e39d456ce72075e4","n11.html":"e2472aecd3ffd91223f70bca0f03e1d482e8b01fbf4c44c274e543d6a960e26c","n11.zh.html":"aa6d85c8a27d07903af30d5049d09ee75ddbb54c22094a677b43f7583b810e07","n13.html":"57c39571f5c3ff84ca0913200286aa90b0f71527c88e0d382c3a8bfa19c51e55","n25.html":"fdce4397bb742ccda4cc0d0623bc757dfca221f15fc1790f5f610fda8487b6d8","n26.zh.html":"7e0a17ead0bdf457eca60bac354c906f5c9ba94d7b98fe44b1332785b44d7996","app.js":"b60701c00ed6e5838e67b902fa1423eaf15a2eb4e2a339264a1e140874d8a291"}
+          base='https://pikaaa345.github.io/disk-covering-benchmark/'
+          for _ in range(60):
+              checks=[]
+              try:
+                  for filename,digest in expected.items():
+                      request=urllib.request.Request(base+filename+'?verification='+sha,headers={'Cache-Control':'no-cache'})
+                      with urllib.request.urlopen(request,timeout=20) as response:
+                          raw=response.read()
+                          assert response.status==200
+                      assert hashlib.sha256(raw).hexdigest()==digest,filename
+                      checks.append(filename)
+                  break
+              except Exception:
+                  time.sleep(5)
+          else:raise RuntimeError('Anonymous site bytes do not match the approved files')
+          assert api('git/ref/heads/gh-pages')['object']['sha']==sha
+          print(json.dumps({'pages_commit':sha,'pages_status':'built','anonymous_verified_files':checks}))
+          PY
+          git push "--force-with-lease=refs/heads/$CANDIDATE:$SNAPSHOT" origin ":refs/heads/$CANDIDATE"
+  cleanup:
+    needs: publish
+    if: github.run_number == 1 && github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      actions: write
+      deployments: write
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      SNAPSHOT: 851396c0f76b2e6ee991d6c3bc9e0cd270c9f4f9
+    steps:
+      - name: Freeze and remove only completed obsolete Pages records
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import os,json,subprocess
+          repo=os.environ['GITHUB_REPOSITORY'];sha=os.environ['SNAPSHOT']
+          def api(path,method='GET',fields=None):
+              cmd=['gh','api','--method',method,'repos/'+repo+'/'+path]
+              for k,v in (fields or {}).items():cmd+=['-f',k+'='+str(v)]
+              out=subprocess.check_output(cmd)
+              return json.loads(out) if out.strip() else None
+          def guard():
+              assert api('git/ref/heads/gh-pages')['object']['sha']==sha
+          def all_pages(path,key=None):
+              result=[]
+              for page in range(1,100):
+                  data=api(path+('&' if '?' in path else '?')+'per_page=100&page='+str(page))
+                  rows=data[key] if key else data
+                  result+=rows
+                  if len(rows)<100:return result
+              raise RuntimeError('Pagination limit')
+          guard()
+          runs=all_pages('actions/runs','workflow_runs')
+          oldruns=[r for r in runs if (r['path']=='dynamic/pages/pages-build-deployment' or r['id'] in {37094423498}) and r['status']=='completed' and r['head_sha']!=sha]
+          keep=[r['id'] for r in runs if r not in oldruns]
+          deployments=all_pages('deployments?environment=github-pages')
+          current=[d for d in deployments if d['sha']==sha]
+          assert current,'Current deployment must be retained'
+          newest=max(d['id'] for d in current)
+          olddeploy=[]
+          for d in deployments:
+              if d['sha']==sha or d['id']>=newest:continue
+              statuses=api('deployments/'+str(d['id'])+'/statuses?per_page=1')
+              if statuses and statuses[0]['state'] in {'success','failure','error','inactive'}:olddeploy.append(d)
+          oldids={r['id'] for r in oldruns}
+          artifacts=all_pages('actions/artifacts','artifacts')
+          oldart=[a for a in artifacts if a.get('workflow_run',{}).get('id') in oldids]
+          frozen={'runs':[r['id'] for r in oldruns],'artifacts':[a['id'] for a in oldart],'deployments':[d['id'] for d in olddeploy],'retained_runs':keep,'retained_deployments':[d['id'] for d in deployments if d not in olddeploy]}
+          print(json.dumps({'frozen_cleanup_targets':frozen}))
+          for a in oldart:
+              guard();api('actions/artifacts/'+str(a['id']),'DELETE')
+          for r in oldruns:
+              guard();live=api('actions/runs/'+str(r['id']))
+              assert live['status']=='completed' and live['head_sha']!=sha and (live['path']=='dynamic/pages/pages-build-deployment' or live['id'] in {37094423498})
+              api('actions/runs/'+str(r['id']),'DELETE')
+          for d in olddeploy:
+              guard();live=api('deployments/'+str(d['id']))
+              assert live['sha']!=sha and live['environment']=='github-pages'
+              api('deployments/'+str(d['id'])+'/statuses','POST',{'state':'inactive'})
+              api('deployments/'+str(d['id']),'DELETE')
+          print(json.dumps({'removed':{k:frozen[k] for k in ['runs','artifacts','deployments']},'current_snapshot_retained':sha}))
+          PY
