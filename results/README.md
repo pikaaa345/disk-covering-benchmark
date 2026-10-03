@@ -60,3 +60,11 @@ n=11 参考哈希：**已发布于题目页**；历史测试尚未对照当前�
 | 26 | DGC v62-G · MinPoly v15 | 760 | [运行报告](https://pikaaa345.github.io/disk-covering-benchmark/record-n26-algorithm-run-20261001.zh.html) |
 
 n=25仍为候选上界，n=26的全局证明来源复核未完成。分数不代表这两题已完成严格验收。报告列出CPU、内存、证明引擎、代数引擎、阶段计时和最新32核复测。
+
+## n=25 模型测试
+
+| 模型 | 测试日期（UTC） | 评测窗口 | 分数 |
+|---|---|---|---:|
+| [gpt-6 astra/max](https://pikaaa345.github.io/disk-covering-benchmark/record-n25-astra-20261002.zh.html) | 2026-10-02 | 12小时，未完成 | 0 |
+
+候选指纹匹配参考上界；完整全局最优性证明未完成，匹配不改变零分。[机器记录](n25.json)。

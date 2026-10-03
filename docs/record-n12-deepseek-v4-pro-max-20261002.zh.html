@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="zh-CN" data-page="record-n12-deepseek-v4-pro-max-20261002">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>n=12 · deepseek-v4-pro/max 测试报告 · 单位圆盘覆盖测试</title>
+  <script src="language.js"></script>
+  <script src="navigation.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="alternate" hreflang="zh-CN" href="record-n12-deepseek-v4-pro-max-20261002.zh.html"><link rel="alternate" hreflang="en" href="record-n12-deepseek-v4-pro-max-20261002.html">
+  <link rel="alternate" type="application/json" href="record-n12-deepseek-v4-pro-max-20261002.json">
+  <script src="vendor/marked.js" defer></script>
+  <script src="vendor/dompurify.js" defer></script>
+  <script src="math-config.js" defer></script>
+  <script src="vendor/mathjax-tex-svg-full.js" defer></script>
+  <script src="prompt-render.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header" data-menu-open="false"><div class="site-header-inner"><a class="site-brand" href="index.zh.html" title="返回网站首页" aria-label="返回网站首页"><svg class="site-brand-mark" viewBox="0 0 32 32" aria-hidden="true" fill="none"><circle cx="16" cy="16" r="14.3" stroke="currentColor" stroke-width="1.5"/><g stroke="currentColor" stroke-width="1.1" opacity=".65"><circle cx="11" cy="12" r="8"/><circle cx="21" cy="12" r="8"/><circle cx="16" cy="21" r="8"/></g></svg><span class="site-brand-copy"><span class="site-brand-title">AI圆盘测试</span><span class="site-brand-subtitle">模型研究级数学能力测试</span></span></a><button class="site-menu-toggle" type="button" aria-controls="site-menu" aria-expanded="false" aria-label="打开导航菜单" data-open-label="打开导航菜单" data-close-label="关闭导航菜单" hidden><svg class="menu-icon-open" viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14"/></svg><svg class="menu-icon-close" viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15"/></svg><span>菜单</span></button><div class="site-menu-panel" id="site-menu"><nav class="site-navigation" aria-label="主要导航"><a class="site-nav-link" href="index.zh.html">题目</a><a class="site-nav-link" href="guide.zh.html">测试指南</a><a class="site-nav-link" href="scoring.zh.html">评分</a><a class="site-nav-link" href="records.zh.html" aria-current="true">测试记录</a><a class="site-nav-link" href="about.zh.html">关于项目</a></nav><div class="site-header-actions"><a class="repository-link" href="https://github.com/pikaaa345/disk-covering-benchmark" aria-label="打开 GitHub 仓库">GitHub 仓库<svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13"/></svg></a><nav class="language-switch" aria-label="语言"><a href="record-n12-deepseek-v4-pro-max-20261002.html?lang=en" data-language="en" lang="en">English</a><a href="record-n12-deepseek-v4-pro-max-20261002.zh.html?lang=zh" data-language="zh" lang="zh-CN" aria-current="page">中文</a></nav></div></div></div></header>
+<main>
+  <script id="page-config" type="application/json">{"language":"zh","referenceSha256":null}</script>
+  <p class="back"><a href="index.zh.html">单位圆盘覆盖测试</a> · <a href="n12.zh.html">n = 12</a></p>
+  <div class="prompt-heading"><h1>n=12 · deepseek-v4-pro/max 测试报告</h1><div><button id="copy-prompt" class="copy">复制全文</button><span id="copy-status" class="status" role="status"></span></div></div>
+  <div id="prompt-markdown" class="markdown-body" data-article="true" data-format="markdown"><pre class="prompt-fallback"># n=12 · deepseek-v4-pro/max 测试报告
+
+[返回 n=12](n12.zh.html) · [测试记录目录](records.zh.html)
+
+**成绩：0 分。验收：失败，提交的最优半径错误。** 测试发生于 2026-10-03（UTC），对应纽约日期 2026-10-02；记录编号采用纽约日期。最终提交出现在原 12 小时时限内，但存在半径严格更小的十二圆全盘覆盖，因此提交的根不是题目要求的最优半径。
+
+本报告由 Codex 读取 DeepSeek Harness 原始会话与交付物，并使用指定数学研究项目的资产整理。没有要求 DeepSeek 生成报告。公开正文保留验收理由，不公开半径、多项式系数、圆心或反例构型；完整原对话、实际答案和精确反例留在本地私有评估 ZIP。本次成绩只反映一次运行。
+
+### 任务与完成情况
+
+原题要求最优半径本身的本原、正首项、不可约整系数最小多项式及有理根隔离区间；唯一指定的十二个有序代数圆心；整个闭单位圆盘的严格覆盖；对任意十二圆构型的严格全局下界；实际使用的代码、输入、证书和核验结果。
+
+| 要求 | 审核结论 |
+|---|---|
+| 最小多项式及根隔离 | 提交的三次多项式本原、正首项、不可约性和根隔离论证正确；但其指定根严格大于一个已精确认证的可行半径，因此不是最优半径的最小多项式。 |
+| 具体构型 | 固定根及旋转顺序能够唯一指定十二个有序圆心。唯一指定某构型不等于该构型最优。 |
+| 全盘覆盖证明 | 原提交给出接触恒等式、有限检查和放宽半径的程序输出；若干分类仍用普通高精度浮点值代替严格包围，未完整达到所宣称的证明标准。本审核没有把这一缺口解释为该构型一定漏覆盖。 |
+| 全局最优性 | 未证明，而且提交的全局下界被独立精确认证的更小半径覆盖直接否定。 |
+| 计算机辅助材料 | 实际文件和运行输出存在，关键脚本已保存；它们不能推出原题全部结论。 |
+
+按现行规则，错误提交计零分；不会仅凭在时限内提交、Goal 标为 complete 或给出正确的候选代数式按成功用时换分。
+
+### 任务与时间
+
+计时从首次 `goal/change: create`（seq10）起，到最后正式 `assistant/message`（seq1193）止。所有阶段均采用自然经过时间。
+
+| 口径 | 记录 |
+|---|---|
+| 开始至最终提交 | **2 小时 13 分 36 秒（8015.612 秒）** |
+| 开始至最后一轮结束 | 8015.654 秒；晚于提交约 0.04 秒 |
+| 四轮开始至结束的区间之和 | 1 小时 20 分 49 秒（4849.269 秒）；包含工具等待，不是系统累计工时或纯推理时间 |
+| 自然时间与上述区间和的差额 | 约 52 分 46 秒；原记录存在传输错误后的恢复间隔，以及 blocked 后等待用户指令的间隔 |
+| 系统累计任务时间 / Goal 累计时间 | 均不可取得；不以四轮区间和替代 |
+| Goal blocked | T+01:32:26；模型称全局最优性未完成 |
+| Goal complete | T+02:13:27；按用户结束指令改变系统状态，未产生完整数学证明 |
+| 原时限 | 12 小时；最终提交在时限内，完整正确结果未完成 |
+| 归档与独立评估 | 是测试结束后的追加工作；其工作会话、快照、打包与核验时间另存，不计入原测试耗时 |
+
+第一轮在 T+00:53:51 左右发生 `TRANSPORT` 错误，T+01:14:59 左右恢复；另有 9 条重试事件。第三轮结束后 Goal 处于 blocked，用户在 T+02:04:57 左右要求继续判断，第四轮最终结束。日志确认这些节点，不能据此分配纯计算、提供商处理或全部等待耗时。不能用最后一轮的约 559 秒作为本题用时。
+
+### 计算条件
+
+| 项目 | 记录 |
+|---|---|
+| CPU | AMD Ryzen 9 8945HX with Radeon Graphics |
+| 内存 | DDR5，32 GB |
+| 硬件证据 | 报告整理时的 Windows CIM 查询；不是开题时的硬件快照 |
+| 执行位置 | 本机 Windows 和本机 WSL；未见关键远程计算记录 |
+| 模型 | `deepseek-v4-pro`，`reasoningEffort=max`，`provider=deepseek-official` |
+| 模型依据 | seq22、983、1108 的原始请求配置相同；未观察到求解模型切换 |
+| Harness | DeepSeek Harness，`agentPreset=standard`；标题与用户截图匹配 |
+
+T+00:02:34 左右的原环境输出确认 WSL **Python 3.12.3、SymPy 1.14.0、mpmath 1.3.0、NumPy 2.5.3、GCC 13.3.0** 可用。SymPy用于接触恒等式，mpmath用于高精度求解与整数关系，NumPy/SciPy用于数值几何、优化及 HiGHS 线性规划。SciPy 版本由原交付说明记录为 1.18.1，其开题前安装时间没有单独核实。pypdf 在任务内执行了安装命令；图片处理库的版本和预装时间未完整记录。没有把本次评估所用的 Python 3.13.13 当成原求解环境，也没有将报告后的知识库读取写成 DeepSeek 在测试期间的资源访问。
+
+### Token 与费用
+
+| 字段 | 161 条带 usage 的模型消息之和 |
+|---|---:|
+| inputTokens | 163,009 |
+| cacheReadTokens | 36,592,640 |
+| outputTokens | 382,409 |
+| cacheWriteTokens | 0 |
+| totalTokens | **37,138,058** |
+| Goal 独立 token 计量 | 不可取得 |
+| 提供商确认费用 | 不可取得；未估算 |
+
+本日志的 `inputTokens` 不含缓存读取；总数等于输入、缓存读取和输出之和。反复读取上下文计入累计输入，不能写成生成了三千七百万 token。原截图的 37.1M 是取整显示，保存值与其相符；缓存命中率按保存字段计算约 99.56%。标题生成、后台检索、失败请求等是否另有账单计量未确认，保存值不是完整费用认证。本次整理未发起新的 DeepSeek 请求。
+
+### 实际输入
+
+[下载实际 Goal 输入](reports/n12-deepseek-main-prompt.original.txt)。原 UTF-8 字节及 SHA-256 保存在档案；下方仅规范阅读排版，不替换成后来的网页题面。
+
+原限制禁止测试前已有的本地资料、技能、chat 和 archived chat，允许网络与本地 WSL 工具。新下载或本次生成的材料和禁止的既有资料分开；本次已由数学反例判零分，没有完成操作系统级文件访问审计，不宣称所有资源限制已获认证。
+
+&lt;details&gt;
+&lt;summary&gt;展开原始题面&lt;/summary&gt;
+
+“Optimal Covering of the Unit Disk with 12 Disks
+Let
+$$
+D=\{x\in\mathbb R^2:\|x\|_2\le1\},\qquad
+R_D(C)=\max_{x\in D}\min_{1\le i\le12}\|x-c_i\|_2,
+$$
+where $C=(c_1,\ldots,c_{12})\in(\mathbb R^2)^{12}$, and define
+$$
+r_D(12)=\inf_{C\in(\mathbb R^2)^{12}}R_D(C).
+$$
+
+The covering disks are closed. They may overlap and extend beyond $D$; their centers are not initially restricted to lie in $D$.
+
+Determine $r_D(12)$ and satisfy all of the following requirements:
+
+1. **Minimal polynomial and root isolation:** Explicitly list every coefficient of the normalized integer representation $P(t)\in\mathbb Z[t]$ of the minimal polynomial of the optimal radius $r_D(12)$ over $\mathbb Q$. Require $P$ to be nonconstant and primitive, with positive leading coefficient, and prove that it is irreducible in $\mathbb Q[t]$. Give specific rational numbers $0\le a&lt;b$, prove $P(a)P(b)\ne0$, and prove that $P$ has exactly one real root $\alpha$ in $(a,b)$. Use the configuration and proofs below to establish $r_D(12)=\alpha$.
+2. **Explicit configuration:** Give a definite ordered tuple of centers $C_*=(c_1^*,\ldots,c_{12}^*)$, specified exactly by radicals, polynomials and rational isolating intervals, or other explicitly supplied finite algebraic data whose uniqueness is proved. Uniqueness here means that the submitted data uniquely specify these center coordinates; it does not require a proof that the optimal configuration is unique.
+3. **Coverage:** Rigorously prove
+   $$
+   \forall x\in D,\quad\exists i\in\{1,\ldots,12\},\quad
+   \|x-c_i^*\|_2\le\alpha.
+   $$
+   If continuous coverage is reduced to a finite set of checks, prove that the reduction is sufficient and rigorously complete every required check.
+4. **Global optimality:** Rigorously prove
+   $$
+   \forall C\in(\mathbb R^2)^{12},\quad R_D(C)\ge\alpha,
+   $$
+   and hence $R_D(C_*)=r_D(12)=\alpha$. Do not restrict symmetry, contact relations or combinatorial structure without proof. Every normalization, classification, enumeration or pruning step must be proved not to omit a potentially better configuration. Handle coincident centers, redundant disks and other relevant degeneracies.
+5. **Computer-assisted proof:** If the proof relies on computation, deliver the complete code actually used, inputs, certificates, necessary environment information and actual verification results. Explain why those results imply the mathematical statements above.
+
+**Final submission:** Explicitly list every coefficient of $P(t)$ and the rational root-isolating interval $(a,b)$, together with the configuration, complete proof and necessary verification materials. Submit the minimal polynomial of the optimal radius itself. A polynomial for its square or another auxiliary quantity, or an elimination polynomial without a proof of irreducibility, does not satisfy the requirement.
+
+Any rigorous method is allowed. Merely proving existence or algebraicity, or supplying unfinished enumeration, a solution algorithm or a numerical candidate, does not count as completion. Successful numerical optimization, a program printing “passed”, or floating-point results without rigorous error control cannot replace a proof. Checking only finitely many sample points, the boundary, or a numerical image cannot replace a proof that the entire closed unit disk is covered.”限制：不允许使用任何本地资料、技能、chat、archived chat等资料、可以使用网络、本地的WSL当中的工具（但是绝对不能访问其中任何已经存储的资料或文件），一旦违反任何一条规则即视为任务失败。任务限时12小时，超时没有得到完整且正确的结果也视为失败。完成时间越短越好。
+
+&lt;/details&gt;
+
+### 主要阶段
+
+| 相对自然时间 | 主要工作 | 当时结果 |
+|---|---|---|
+| T+00:00—00:12:23 | 网络检索、WSL环境查询、论文及图片提取、读取外部构型SVG | 取得已知三重旋转构型，未取得本题完整全局最优性证明。 |
+| T+00:12:23—00:32:41 | 数值几何、接触方程、Jacobian修正、高精度Newton与整数关系 | 得到三次候选关系和代数圆心，进行符号接触检查。 |
+| T+00:32:41—00:48:18 | 三元组、边界和对径点检查；LP尝试；C分支界 | 接触恒等式有精确计算，分类仍含浮点步骤；C输出只针对放宽后的半径。 |
+| T+00:48:18—01:23:18 | LP结果、传输错误及恢复、文献检索和交付整理 | 将有限网格LP结果解释为连续问题障碍，首份报告承认缺全局最优性。 |
+| T+01:23:18—01:32:38 | 自动续轮、重查说明及符号计算 | Goal被标为blocked；随后等待用户指令。 |
+| T+02:04:57—02:13:36 | 用户要求继续判断或结束；最后修订与提交 | 依据记录构型和紧接触结构表达相信候选最优，仍未证明要求4。 |
+
+### 来源与本次新增工作
+
+原记录读取了 [Friedman 构型目录](https://erich-friedman.github.io/packing/circovcir/)、[Fejes Tóth 的较小规模覆盖论文](https://library.slmath.org/books/Book52/files/18fejes.pdf)及 [Dounreay 构型资料](https://gitlab.com/parclytaxel/Dounreay)，并参考其他问题目录的状态标签。外部图和已知构型不是模型独立发现的构型；本次新增工作包括构型重建、接触方程、数值求解、候选关系、符号恒等式及程序。
+
+“目录没有写已证明”“没有检索到证明”“长期未被超越”都不能证明全球文献不存在更优构型或该题无法完成。模型关于首次发现、二十九年纪录及公开问题状态的断言未被本报告认证。事后才读取的数学项目资产属于独立评估依据，没有计入模型本次求解成果。
+
+### 验证、错误与验收
+
+**决定性反例：有严格更好的可行覆盖。** 本审核从数学项目的一个已保存十二圆记录提取十二个具体有理圆心，选择有理半径 $\beta$，重新构造所有必要的连续覆盖检查点，用 Python `Fraction` 精确分数和二次根式的有符号比较核验整个闭单位圆盘的覆盖。共检查 293 个去重后的点、2,071 次精确距离比较，结果为 `ACCEPT`。检查点来自完整的 Voronoi 极值归约，包含内部三圆心外心、所有两圆心垂直平分线与单位圆的交点、圆周光滑段极值和退化处理，不是有限采样。
+
+随后精确计算得到 $P(\beta)&lt;0$。原提交已经正确证明 $P$ 严格递增，且 $P(\alpha)=0$，所以
+
+$$r_D(12)\le\beta&lt;\alpha.$$
+
+这直接否定“所提交的根就是最优半径”，也否定所需的 $\forall C:R_D(C)\ge\alpha$。该结论不依赖原数学项目的全局分类或最优性声明，只需要本次明确给出的有理覆盖及精确检查；没有在本报告中认证真正全局最优值。
+
+**原提交另有三个证据问题。** §5.2 从 $m\,2\arcsin r\ge2\pi$ 只能推出 $\arcsin r\ge\pi/m$；当 $m\ge9$ 时，不能推出所写的 $\pi/9$ 下界。只有另证 $m\le9$ 才能使用该加强，而原题允许十二个边界圆盘。否定这一证明不等于否定其下界数值本身。
+
+§5.3 的有限需求点、有限候选圆心 LP 不自动成为整个连续圆盘的分数覆盖证书。未覆盖的连续位置和中心限制的方向均须处理；小于十二的有限网格目标值不能证明连续问题的整体性间隙，更不能证明所有 LP/dual 路线无效。
+
+§4.2 的高精度小残差和正差距缺少严格包围保证。§4.3 即使有效，也只处理放宽后的半径，不能推出精确半径的覆盖；其 `sup_sq` 中负差值统一向上舍入后再取绝对值可能缩小距离上界，中心十进制端点也没有完整的精确包围证明。因此没有将该输出直接认定为严格证书。
+
+**审核与保存范围。** 已读取最终提交、直接支撑程序、原模型配置与usage，并实际执行上述精确更优覆盖检查。没有重新运行整个原优化、Newton、PSLQ、LP或C分支界。原报告、代码、输出、源快照、反例有理输入、核验器与结果都保留。数学项目原记录的自审与条件范围也保留，没有自动转换成独立同行审稿或无条件最优定理。
+
+### 可下载记录
+
+[机器记录](record-n12-deepseek-v4-pro-max-20261002.json) · [中文 Markdown](record-n12-deepseek-v4-pro-max-20261002.zh.md) · [English](record-n12-deepseek-v4-pro-max-20261002.html)。完整评估 ZIP 含私人会话、答案和反例，继续保存在本地。
+</pre></div>
+  <pre id="test-prompt" hidden># n=12 · deepseek-v4-pro/max 测试报告
+
+[返回 n=12](n12.zh.html) · [测试记录目录](records.zh.html)
+
+**成绩：0 分。验收：失败，提交的最优半径错误。** 测试发生于 2026-10-03（UTC），对应纽约日期 2026-10-02；记录编号采用纽约日期。最终提交出现在原 12 小时时限内，但存在半径严格更小的十二圆全盘覆盖，因此提交的根不是题目要求的最优半径。
+
+本报告由 Codex 读取 DeepSeek Harness 原始会话与交付物，并使用指定数学研究项目的资产整理。没有要求 DeepSeek 生成报告。公开正文保留验收理由，不公开半径、多项式系数、圆心或反例构型；完整原对话、实际答案和精确反例留在本地私有评估 ZIP。本次成绩只反映一次运行。
+
+### 任务与完成情况
+
+原题要求最优半径本身的本原、正首项、不可约整系数最小多项式及有理根隔离区间；唯一指定的十二个有序代数圆心；整个闭单位圆盘的严格覆盖；对任意十二圆构型的严格全局下界；实际使用的代码、输入、证书和核验结果。
+
+| 要求 | 审核结论 |
+|---|---|
+| 最小多项式及根隔离 | 提交的三次多项式本原、正首项、不可约性和根隔离论证正确；但其指定根严格大于一个已精确认证的可行半径，因此不是最优半径的最小多项式。 |
+| 具体构型 | 固定根及旋转顺序能够唯一指定十二个有序圆心。唯一指定某构型不等于该构型最优。 |
+| 全盘覆盖证明 | 原提交给出接触恒等式、有限检查和放宽半径的程序输出；若干分类仍用普通高精度浮点值代替严格包围，未完整达到所宣称的证明标准。本审核没有把这一缺口解释为该构型一定漏覆盖。 |
+| 全局最优性 | 未证明，而且提交的全局下界被独立精确认证的更小半径覆盖直接否定。 |
+| 计算机辅助材料 | 实际文件和运行输出存在，关键脚本已保存；它们不能推出原题全部结论。 |
+
+按现行规则，错误提交计零分；不会仅凭在时限内提交、Goal 标为 complete 或给出正确的候选代数式按成功用时换分。
+
+### 任务与时间
+
+计时从首次 `goal/change: create`（seq10）起，到最后正式 `assistant/message`（seq1193）止。所有阶段均采用自然经过时间。
+
+| 口径 | 记录 |
+|---|---|
+| 开始至最终提交 | **2 小时 13 分 36 秒（8015.612 秒）** |
+| 开始至最后一轮结束 | 8015.654 秒；晚于提交约 0.04 秒 |
+| 四轮开始至结束的区间之和 | 1 小时 20 分 49 秒（4849.269 秒）；包含工具等待，不是系统累计工时或纯推理时间 |
+| 自然时间与上述区间和的差额 | 约 52 分 46 秒；原记录存在传输错误后的恢复间隔，以及 blocked 后等待用户指令的间隔 |
+| 系统累计任务时间 / Goal 累计时间 | 均不可取得；不以四轮区间和替代 |
+| Goal blocked | T+01:32:26；模型称全局最优性未完成 |
+| Goal complete | T+02:13:27；按用户结束指令改变系统状态，未产生完整数学证明 |
+| 原时限 | 12 小时；最终提交在时限内，完整正确结果未完成 |
+| 归档与独立评估 | 是测试结束后的追加工作；其工作会话、快照、打包与核验时间另存，不计入原测试耗时 |
+
+第一轮在 T+00:53:51 左右发生 `TRANSPORT` 错误，T+01:14:59 左右恢复；另有 9 条重试事件。第三轮结束后 Goal 处于 blocked，用户在 T+02:04:57 左右要求继续判断，第四轮最终结束。日志确认这些节点，不能据此分配纯计算、提供商处理或全部等待耗时。不能用最后一轮的约 559 秒作为本题用时。
+
+### 计算条件
+
+| 项目 | 记录 |
+|---|---|
+| CPU | AMD Ryzen 9 8945HX with Radeon Graphics |
+| 内存 | DDR5，32 GB |
+| 硬件证据 | 报告整理时的 Windows CIM 查询；不是开题时的硬件快照 |
+| 执行位置 | 本机 Windows 和本机 WSL；未见关键远程计算记录 |
+| 模型 | `deepseek-v4-pro`，`reasoningEffort=max`，`provider=deepseek-official` |
+| 模型依据 | seq22、983、1108 的原始请求配置相同；未观察到求解模型切换 |
+| Harness | DeepSeek Harness，`agentPreset=standard`；标题与用户截图匹配 |
+
+T+00:02:34 左右的原环境输出确认 WSL **Python 3.12.3、SymPy 1.14.0、mpmath 1.3.0、NumPy 2.5.3、GCC 13.3.0** 可用。SymPy用于接触恒等式，mpmath用于高精度求解与整数关系，NumPy/SciPy用于数值几何、优化及 HiGHS 线性规划。SciPy 版本由原交付说明记录为 1.18.1，其开题前安装时间没有单独核实。pypdf 在任务内执行了安装命令；图片处理库的版本和预装时间未完整记录。没有把本次评估所用的 Python 3.13.13 当成原求解环境，也没有将报告后的知识库读取写成 DeepSeek 在测试期间的资源访问。
+
+### Token 与费用
+
+| 字段 | 161 条带 usage 的模型消息之和 |
+|---|---:|
+| inputTokens | 163,009 |
+| cacheReadTokens | 36,592,640 |
+| outputTokens | 382,409 |
+| cacheWriteTokens | 0 |
+| totalTokens | **37,138,058** |
+| Goal 独立 token 计量 | 不可取得 |
+| 提供商确认费用 | 不可取得；未估算 |
+
+本日志的 `inputTokens` 不含缓存读取；总数等于输入、缓存读取和输出之和。反复读取上下文计入累计输入，不能写成生成了三千七百万 token。原截图的 37.1M 是取整显示，保存值与其相符；缓存命中率按保存字段计算约 99.56%。标题生成、后台检索、失败请求等是否另有账单计量未确认，保存值不是完整费用认证。本次整理未发起新的 DeepSeek 请求。
+
+### 实际输入
+
+[下载实际 Goal 输入](reports/n12-deepseek-main-prompt.original.txt)。原 UTF-8 字节及 SHA-256 保存在档案；下方仅规范阅读排版，不替换成后来的网页题面。
+
+原限制禁止测试前已有的本地资料、技能、chat 和 archived chat，允许网络与本地 WSL 工具。新下载或本次生成的材料和禁止的既有资料分开；本次已由数学反例判零分，没有完成操作系统级文件访问审计，不宣称所有资源限制已获认证。
+
+&lt;details&gt;
+&lt;summary&gt;展开原始题面&lt;/summary&gt;
+
+“Optimal Covering of the Unit Disk with 12 Disks
+Let
+$$
+D=\{x\in\mathbb R^2:\|x\|_2\le1\},\qquad
+R_D(C)=\max_{x\in D}\min_{1\le i\le12}\|x-c_i\|_2,
+$$
+where $C=(c_1,\ldots,c_{12})\in(\mathbb R^2)^{12}$, and define
+$$
+r_D(12)=\inf_{C\in(\mathbb R^2)^{12}}R_D(C).
+$$
+
+The covering disks are closed. They may overlap and extend beyond $D$; their centers are not initially restricted to lie in $D$.
+
+Determine $r_D(12)$ and satisfy all of the following requirements:
+
+1. **Minimal polynomial and root isolation:** Explicitly list every coefficient of the normalized integer representation $P(t)\in\mathbb Z[t]$ of the minimal polynomial of the optimal radius $r_D(12)$ over $\mathbb Q$. Require $P$ to be nonconstant and primitive, with positive leading coefficient, and prove that it is irreducible in $\mathbb Q[t]$. Give specific rational numbers $0\le a&lt;b$, prove $P(a)P(b)\ne0$, and prove that $P$ has exactly one real root $\alpha$ in $(a,b)$. Use the configuration and proofs below to establish $r_D(12)=\alpha$.
+2. **Explicit configuration:** Give a definite ordered tuple of centers $C_*=(c_1^*,\ldots,c_{12}^*)$, specified exactly by radicals, polynomials and rational isolating intervals, or other explicitly supplied finite algebraic data whose uniqueness is proved. Uniqueness here means that the submitted data uniquely specify these center coordinates; it does not require a proof that the optimal configuration is unique.
+3. **Coverage:** Rigorously prove
+   $$
+   \forall x\in D,\quad\exists i\in\{1,\ldots,12\},\quad
+   \|x-c_i^*\|_2\le\alpha.
+   $$
+   If continuous coverage is reduced to a finite set of checks, prove that the reduction is sufficient and rigorously complete every required check.
+4. **Global optimality:** Rigorously prove
+   $$
+   \forall C\in(\mathbb R^2)^{12},\quad R_D(C)\ge\alpha,
+   $$
+   and hence $R_D(C_*)=r_D(12)=\alpha$. Do not restrict symmetry, contact relations or combinatorial structure without proof. Every normalization, classification, enumeration or pruning step must be proved not to omit a potentially better configuration. Handle coincident centers, redundant disks and other relevant degeneracies.
+5. **Computer-assisted proof:** If the proof relies on computation, deliver the complete code actually used, inputs, certificates, necessary environment information and actual verification results. Explain why those results imply the mathematical statements above.
+
+**Final submission:** Explicitly list every coefficient of $P(t)$ and the rational root-isolating interval $(a,b)$, together with the configuration, complete proof and necessary verification materials. Submit the minimal polynomial of the optimal radius itself. A polynomial for its square or another auxiliary quantity, or an elimination polynomial without a proof of irreducibility, does not satisfy the requirement.
+
+Any rigorous method is allowed. Merely proving existence or algebraicity, or supplying unfinished enumeration, a solution algorithm or a numerical candidate, does not count as completion. Successful numerical optimization, a program printing “passed”, or floating-point results without rigorous error control cannot replace a proof. Checking only finitely many sample points, the boundary, or a numerical image cannot replace a proof that the entire closed unit disk is covered.”限制：不允许使用任何本地资料、技能、chat、archived chat等资料、可以使用网络、本地的WSL当中的工具（但是绝对不能访问其中任何已经存储的资料或文件），一旦违反任何一条规则即视为任务失败。任务限时12小时，超时没有得到完整且正确的结果也视为失败。完成时间越短越好。
+
+&lt;/details&gt;
+
+### 主要阶段
+
+| 相对自然时间 | 主要工作 | 当时结果 |
+|---|---|---|
+| T+00:00—00:12:23 | 网络检索、WSL环境查询、论文及图片提取、读取外部构型SVG | 取得已知三重旋转构型，未取得本题完整全局最优性证明。 |
+| T+00:12:23—00:32:41 | 数值几何、接触方程、Jacobian修正、高精度Newton与整数关系 | 得到三次候选关系和代数圆心，进行符号接触检查。 |
+| T+00:32:41—00:48:18 | 三元组、边界和对径点检查；LP尝试；C分支界 | 接触恒等式有精确计算，分类仍含浮点步骤；C输出只针对放宽后的半径。 |
+| T+00:48:18—01:23:18 | LP结果、传输错误及恢复、文献检索和交付整理 | 将有限网格LP结果解释为连续问题障碍，首份报告承认缺全局最优性。 |
+| T+01:23:18—01:32:38 | 自动续轮、重查说明及符号计算 | Goal被标为blocked；随后等待用户指令。 |
+| T+02:04:57—02:13:36 | 用户要求继续判断或结束；最后修订与提交 | 依据记录构型和紧接触结构表达相信候选最优，仍未证明要求4。 |
+
+### 来源与本次新增工作
+
+原记录读取了 [Friedman 构型目录](https://erich-friedman.github.io/packing/circovcir/)、[Fejes Tóth 的较小规模覆盖论文](https://library.slmath.org/books/Book52/files/18fejes.pdf)及 [Dounreay 构型资料](https://gitlab.com/parclytaxel/Dounreay)，并参考其他问题目录的状态标签。外部图和已知构型不是模型独立发现的构型；本次新增工作包括构型重建、接触方程、数值求解、候选关系、符号恒等式及程序。
+
+“目录没有写已证明”“没有检索到证明”“长期未被超越”都不能证明全球文献不存在更优构型或该题无法完成。模型关于首次发现、二十九年纪录及公开问题状态的断言未被本报告认证。事后才读取的数学项目资产属于独立评估依据，没有计入模型本次求解成果。
+
+### 验证、错误与验收
+
+**决定性反例：有严格更好的可行覆盖。** 本审核从数学项目的一个已保存十二圆记录提取十二个具体有理圆心，选择有理半径 $\beta$，重新构造所有必要的连续覆盖检查点，用 Python `Fraction` 精确分数和二次根式的有符号比较核验整个闭单位圆盘的覆盖。共检查 293 个去重后的点、2,071 次精确距离比较，结果为 `ACCEPT`。检查点来自完整的 Voronoi 极值归约，包含内部三圆心外心、所有两圆心垂直平分线与单位圆的交点、圆周光滑段极值和退化处理，不是有限采样。
+
+随后精确计算得到 $P(\beta)&lt;0$。原提交已经正确证明 $P$ 严格递增，且 $P(\alpha)=0$，所以
+
+$$r_D(12)\le\beta&lt;\alpha.$$
+
+这直接否定“所提交的根就是最优半径”，也否定所需的 $\forall C:R_D(C)\ge\alpha$。该结论不依赖原数学项目的全局分类或最优性声明，只需要本次明确给出的有理覆盖及精确检查；没有在本报告中认证真正全局最优值。
+
+**原提交另有三个证据问题。** §5.2 从 $m\,2\arcsin r\ge2\pi$ 只能推出 $\arcsin r\ge\pi/m$；当 $m\ge9$ 时，不能推出所写的 $\pi/9$ 下界。只有另证 $m\le9$ 才能使用该加强，而原题允许十二个边界圆盘。否定这一证明不等于否定其下界数值本身。
+
+§5.3 的有限需求点、有限候选圆心 LP 不自动成为整个连续圆盘的分数覆盖证书。未覆盖的连续位置和中心限制的方向均须处理；小于十二的有限网格目标值不能证明连续问题的整体性间隙，更不能证明所有 LP/dual 路线无效。
+
+§4.2 的高精度小残差和正差距缺少严格包围保证。§4.3 即使有效，也只处理放宽后的半径，不能推出精确半径的覆盖；其 `sup_sq` 中负差值统一向上舍入后再取绝对值可能缩小距离上界，中心十进制端点也没有完整的精确包围证明。因此没有将该输出直接认定为严格证书。
+
+**审核与保存范围。** 已读取最终提交、直接支撑程序、原模型配置与usage，并实际执行上述精确更优覆盖检查。没有重新运行整个原优化、Newton、PSLQ、LP或C分支界。原报告、代码、输出、源快照、反例有理输入、核验器与结果都保留。数学项目原记录的自审与条件范围也保留，没有自动转换成独立同行审稿或无条件最优定理。
+
+### 可下载记录
+
+[机器记录](record-n12-deepseek-v4-pro-max-20261002.json) · [中文 Markdown](record-n12-deepseek-v4-pro-max-20261002.zh.md) · [English](record-n12-deepseek-v4-pro-max-20261002.html)。完整评估 ZIP 含私人会话、答案和反例，继续保存在本地。
+</pre>
+</main></body>
+</html>

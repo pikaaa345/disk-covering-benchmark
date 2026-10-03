@@ -4,28 +4,28 @@
   "language": "en",
   "stage": "intro_and_self_test",
   "repository": "https://github.com/pikaaa345/disk-covering-benchmark",
-  "human_entrypoint": "README.md",
-  "agent_entrypoint": "AGENTS.en.md",
+  "human_entrypoint": "about.html",
+  "agent_entrypoint": "agents.html",
   "protocol": "diskcover-minpoly-v1",
-  "answer_protocol": "docs/answer-protocol.en.txt",
-  "fingerprint_script": "tools/diskcover_answer.py",
-  "score_script": "tools/score.py",
-  "self_check": "tools/check_tools.py",
-  "report_prompt": "prompts/research-work-report.en.txt",
+  "answer_protocol": "protocol.en.txt",
+  "fingerprint_script": "diskcover_answer.py",
+  "score_script": "score.py",
+  "self_check": "check_tools.py",
+  "report_prompt": "report-prompt.en.txt",
   "public_submissions_open": false,
   "scoring_contract_frozen": false,
   "default_demo_reference_seconds": "21600",
   "tasks": [
     {
       "n": 11,
-      "prompt": "tasks/n11.en.md",
+      "prompt": "prompts/n11.en.md",
       "reference_sha256": "835618182f47e61482895149e99df7c6d3af52b1570816a6f01f4c5d2c831d44",
       "reference_status": "published",
-      "historical_records": "results/n11.json",
+      "historical_records": "https://raw.githubusercontent.com/pikaaa345/disk-covering-benchmark/main/results/n11.json",
       "page_url": "https://pikaaa345.github.io/disk-covering-benchmark/n11.html?lang=en",
       "localized_prompts": {
-        "zh-CN": "tasks/n11.md",
-        "en": "tasks/n11.en.md"
+        "zh-CN": "prompts/n11.md",
+        "en": "prompts/n11.en.md"
       },
       "localized_pages": {
         "zh-CN": "https://pikaaa345.github.io/disk-covering-benchmark/n11.zh.html?lang=zh",
@@ -43,12 +43,12 @@
     },
     {
       "n": 12,
-      "prompt": "tasks/n12.en.md",
-      "historical_records": "results/n12.json",
+      "prompt": "prompts/n12.en.md",
+      "historical_records": "https://raw.githubusercontent.com/pikaaa345/disk-covering-benchmark/main/results/n12.json",
       "page_url": "https://pikaaa345.github.io/disk-covering-benchmark/n12.html?lang=en",
       "localized_prompts": {
-        "zh-CN": "tasks/n12.md",
-        "en": "tasks/n12.en.md"
+        "zh-CN": "prompts/n12.md",
+        "en": "prompts/n12.en.md"
       },
       "localized_pages": {
         "zh-CN": "https://pikaaa345.github.io/disk-covering-benchmark/n12.zh.html?lang=zh",
@@ -68,14 +68,14 @@
     },
     {
       "n": 13,
-      "prompt": "tasks/n13.en.md",
+      "prompt": "prompts/n13.en.md",
       "reference_sha256": null,
       "reference_status": "not_published",
-      "historical_records": null,
+      "historical_records": "https://raw.githubusercontent.com/pikaaa345/disk-covering-benchmark/main/results/n13.json",
       "page_url": "https://pikaaa345.github.io/disk-covering-benchmark/n13.html?lang=en",
       "localized_prompts": {
-        "zh-CN": "tasks/n13.md",
-        "en": "tasks/n13.en.md"
+        "zh-CN": "prompts/n13.md",
+        "en": "prompts/n13.en.md"
       },
       "localized_pages": {
         "zh-CN": "https://pikaaa345.github.io/disk-covering-benchmark/n13.zh.html?lang=zh",
@@ -93,12 +93,12 @@
     },
     {
       "n": 14,
-      "prompt": "tasks/n14.en.md",
+      "prompt": "prompts/n14.en.md",
       "historical_records": null,
       "page_url": "https://pikaaa345.github.io/disk-covering-benchmark/n14.html?lang=en",
       "localized_prompts": {
-        "zh-CN": "tasks/n14.md",
-        "en": "tasks/n14.en.md"
+        "zh-CN": "prompts/n14.md",
+        "en": "prompts/n14.en.md"
       },
       "localized_pages": {
         "zh-CN": "https://pikaaa345.github.io/disk-covering-benchmark/n14.zh.html?lang=zh",
@@ -118,14 +118,14 @@
     },
     {
       "n": 15,
-      "prompt": "tasks/n15.en.md",
+      "prompt": "prompts/n15.en.md",
       "reference_sha256": null,
       "reference_status": "not_published",
       "historical_records": null,
       "page_url": "https://pikaaa345.github.io/disk-covering-benchmark/n15.html?lang=en",
       "localized_prompts": {
-        "zh-CN": "tasks/n15.md",
-        "en": "tasks/n15.en.md"
+        "zh-CN": "prompts/n15.md",
+        "en": "prompts/n15.en.md"
       },
       "localized_pages": {
         "zh-CN": "https://pikaaa345.github.io/disk-covering-benchmark/n15.zh.html?lang=zh",
@@ -143,12 +143,12 @@
     },
     {
       "n": 16,
-      "prompt": "tasks/n16.en.md",
+      "prompt": "prompts/n16.en.md",
       "historical_records": null,
       "page_url": "https://pikaaa345.github.io/disk-covering-benchmark/n16.html?lang=en",
       "localized_prompts": {
-        "zh-CN": "tasks/n16.md",
-        "en": "tasks/n16.en.md"
+        "zh-CN": "prompts/n16.md",
+        "en": "prompts/n16.en.md"
       },
       "localized_pages": {
         "zh-CN": "https://pikaaa345.github.io/disk-covering-benchmark/n16.zh.html?lang=zh",
@@ -168,14 +168,14 @@
     },
     {
       "n": 17,
-      "prompt": "tasks/n17.en.md",
+      "prompt": "prompts/n17.en.md",
       "reference_sha256": null,
       "reference_status": "not_published",
       "historical_records": null,
       "page_url": "https://pikaaa345.github.io/disk-covering-benchmark/n17.html?lang=en",
       "localized_prompts": {
-        "zh-CN": "tasks/n17.md",
-        "en": "tasks/n17.en.md"
+        "zh-CN": "prompts/n17.md",
+        "en": "prompts/n17.en.md"
       },
       "localized_pages": {
         "zh-CN": "https://pikaaa345.github.io/disk-covering-benchmark/n17.zh.html?lang=zh",
@@ -193,14 +193,14 @@
     },
     {
       "n": 18,
-      "prompt": "tasks/n18.en.md",
+      "prompt": "prompts/n18.en.md",
       "reference_sha256": null,
       "reference_status": "not_published",
       "historical_records": null,
       "page_url": "https://pikaaa345.github.io/disk-covering-benchmark/n18.html?lang=en",
       "localized_prompts": {
-        "zh-CN": "tasks/n18.md",
-        "en": "tasks/n18.en.md"
+        "zh-CN": "prompts/n18.md",
+        "en": "prompts/n18.en.md"
       },
       "localized_pages": {
         "zh-CN": "https://pikaaa345.github.io/disk-covering-benchmark/n18.zh.html?lang=zh",
@@ -218,12 +218,12 @@
     },
     {
       "n": 19,
-      "prompt": "tasks/n19.en.md",
+      "prompt": "prompts/n19.en.md",
       "historical_records": null,
       "page_url": "https://pikaaa345.github.io/disk-covering-benchmark/n19.html?lang=en",
       "localized_prompts": {
-        "zh-CN": "tasks/n19.md",
-        "en": "tasks/n19.en.md"
+        "zh-CN": "prompts/n19.md",
+        "en": "prompts/n19.en.md"
       },
       "localized_pages": {
         "zh-CN": "https://pikaaa345.github.io/disk-covering-benchmark/n19.zh.html?lang=zh",
@@ -243,14 +243,14 @@
     },
     {
       "n": 20,
-      "prompt": "tasks/n20.en.md",
+      "prompt": "prompts/n20.en.md",
       "reference_sha256": null,
       "reference_status": "not_published",
       "historical_records": null,
       "page_url": "https://pikaaa345.github.io/disk-covering-benchmark/n20.html?lang=en",
       "localized_prompts": {
-        "zh-CN": "tasks/n20.md",
-        "en": "tasks/n20.en.md"
+        "zh-CN": "prompts/n20.md",
+        "en": "prompts/n20.en.md"
       },
       "localized_pages": {
         "zh-CN": "https://pikaaa345.github.io/disk-covering-benchmark/n20.zh.html?lang=zh",
@@ -268,14 +268,14 @@
     },
     {
       "n": 21,
-      "prompt": "tasks/n21.en.md",
+      "prompt": "prompts/n21.en.md",
       "reference_sha256": null,
       "reference_status": "not_published",
       "historical_records": null,
       "page_url": "https://pikaaa345.github.io/disk-covering-benchmark/n21.html?lang=en",
       "localized_prompts": {
-        "zh-CN": "tasks/n21.md",
-        "en": "tasks/n21.en.md"
+        "zh-CN": "prompts/n21.md",
+        "en": "prompts/n21.en.md"
       },
       "localized_pages": {
         "zh-CN": "https://pikaaa345.github.io/disk-covering-benchmark/n21.zh.html?lang=zh",
@@ -293,12 +293,12 @@
     },
     {
       "n": 22,
-      "prompt": "tasks/n22.en.md",
+      "prompt": "prompts/n22.en.md",
       "historical_records": null,
       "page_url": "https://pikaaa345.github.io/disk-covering-benchmark/n22.html?lang=en",
       "localized_prompts": {
-        "zh-CN": "tasks/n22.md",
-        "en": "tasks/n22.en.md"
+        "zh-CN": "prompts/n22.md",
+        "en": "prompts/n22.en.md"
       },
       "localized_pages": {
         "zh-CN": "https://pikaaa345.github.io/disk-covering-benchmark/n22.zh.html?lang=zh",
@@ -318,14 +318,14 @@
     },
     {
       "n": 23,
-      "prompt": "tasks/n23.en.md",
+      "prompt": "prompts/n23.en.md",
       "reference_sha256": null,
       "reference_status": "not_published",
       "historical_records": null,
       "page_url": "https://pikaaa345.github.io/disk-covering-benchmark/n23.html?lang=en",
       "localized_prompts": {
-        "zh-CN": "tasks/n23.md",
-        "en": "tasks/n23.en.md"
+        "zh-CN": "prompts/n23.md",
+        "en": "prompts/n23.en.md"
       },
       "localized_pages": {
         "zh-CN": "https://pikaaa345.github.io/disk-covering-benchmark/n23.zh.html?lang=zh",
@@ -343,14 +343,14 @@
     },
     {
       "n": 24,
-      "prompt": "tasks/n24.en.md",
+      "prompt": "prompts/n24.en.md",
       "reference_sha256": null,
       "reference_status": "not_published",
       "historical_records": null,
       "page_url": "https://pikaaa345.github.io/disk-covering-benchmark/n24.html?lang=en",
       "localized_prompts": {
-        "zh-CN": "tasks/n24.md",
-        "en": "tasks/n24.en.md"
+        "zh-CN": "prompts/n24.md",
+        "en": "prompts/n24.en.md"
       },
       "localized_pages": {
         "zh-CN": "https://pikaaa345.github.io/disk-covering-benchmark/n24.zh.html?lang=zh",
@@ -368,12 +368,12 @@
     },
     {
       "n": 25,
-      "prompt": "tasks/n25.en.md",
+      "prompt": "prompts/n25.en.md",
       "historical_records": null,
       "page_url": "https://pikaaa345.github.io/disk-covering-benchmark/n25.html?lang=en",
       "localized_prompts": {
-        "zh-CN": "tasks/n25.md",
-        "en": "tasks/n25.en.md"
+        "zh-CN": "prompts/n25.md",
+        "en": "prompts/n25.en.md"
       },
       "localized_pages": {
         "zh-CN": "https://pikaaa345.github.io/disk-covering-benchmark/n25.zh.html?lang=zh",
@@ -393,12 +393,12 @@
     },
     {
       "n": 26,
-      "prompt": "tasks/n26.en.md",
+      "prompt": "prompts/n26.en.md",
       "historical_records": null,
       "page_url": "https://pikaaa345.github.io/disk-covering-benchmark/n26.html?lang=en",
       "localized_prompts": {
-        "zh-CN": "tasks/n26.md",
-        "en": "tasks/n26.en.md"
+        "zh-CN": "prompts/n26.md",
+        "en": "prompts/n26.en.md"
       },
       "localized_pages": {
         "zh-CN": "https://pikaaa345.github.io/disk-covering-benchmark/n26.zh.html?lang=zh",
@@ -418,12 +418,12 @@
     },
     {
       "n": 27,
-      "prompt": "tasks/n27.en.md",
+      "prompt": "prompts/n27.en.md",
       "historical_records": null,
       "page_url": "https://pikaaa345.github.io/disk-covering-benchmark/n27.html?lang=en",
       "localized_prompts": {
-        "zh-CN": "tasks/n27.md",
-        "en": "tasks/n27.en.md"
+        "zh-CN": "prompts/n27.md",
+        "en": "prompts/n27.en.md"
       },
       "localized_pages": {
         "zh-CN": "https://pikaaa345.github.io/disk-covering-benchmark/n27.zh.html?lang=zh",
@@ -443,14 +443,14 @@
     },
     {
       "n": 28,
-      "prompt": "tasks/n28.en.md",
+      "prompt": "prompts/n28.en.md",
       "reference_sha256": null,
       "reference_status": "not_published",
       "historical_records": null,
       "page_url": "https://pikaaa345.github.io/disk-covering-benchmark/n28.html?lang=en",
       "localized_prompts": {
-        "zh-CN": "tasks/n28.md",
-        "en": "tasks/n28.en.md"
+        "zh-CN": "prompts/n28.md",
+        "en": "prompts/n28.en.md"
       },
       "localized_pages": {
         "zh-CN": "https://pikaaa345.github.io/disk-covering-benchmark/n28.zh.html?lang=zh",
@@ -468,14 +468,14 @@
     },
     {
       "n": 29,
-      "prompt": "tasks/n29.en.md",
+      "prompt": "prompts/n29.en.md",
       "reference_sha256": null,
       "reference_status": "not_published",
       "historical_records": null,
       "page_url": "https://pikaaa345.github.io/disk-covering-benchmark/n29.html?lang=en",
       "localized_prompts": {
-        "zh-CN": "tasks/n29.md",
-        "en": "tasks/n29.en.md"
+        "zh-CN": "prompts/n29.md",
+        "en": "prompts/n29.en.md"
       },
       "localized_pages": {
         "zh-CN": "https://pikaaa345.github.io/disk-covering-benchmark/n29.zh.html?lang=zh",
@@ -529,5 +529,6 @@
   },
   "scoring_version": "diskcover-log-score-v1",
   "score_formula": "round_half_up(200 + 100 * log2(reference_time_seconds / elapsed_seconds))",
-  "score_rounding": "decimal_ROUND_HALF_UP_integer"
+  "score_rounding": "decimal_ROUND_HALF_UP_integer",
+  "path_scope": "relative_to_this_index_url"
 }

@@ -42,7 +42,9 @@ The separately requested process audit took 16 minutes 37.186 seconds. Subsequen
 | Sage / Wolfram | Not used; versions not queried |
 | Time budget | 43200 seconds |
 | Monetary budget / cost | Not recorded; null, not zero |
-| Goal token counter | 319768; not billed-token evidence |
+| Codex Goal cumulative counter | 319768; see the accounting definition below; not billed tokens or monetary cost |
+
+The Codex Goal cumulative counter is a budget-accounting field of Codex's Goal feature, not an industry-standard total-token metric. The verified [Codex 0.159.2 implementation](https://github.com/openai/codex/blob/rust-v0.159.2/codex-rs/ext/goal/src/accounting.rs#L527-L532) accumulates usage increments as input tokens minus cached input tokens plus output tokens: uncached input plus output. Output already includes reasoning tokens, which must not be added again. Historical versions follow their own implementation. This field is not the whole-chat token total, billed-token usage or monetary cost, and must not be compared directly with another platform's total-token figure.
 
 Memory type 34 (0x22) maps to DDR5 in the Memory Device Type table of [DMTF SMBIOS 3.4.0](https://www.dmtf.org/sites/default/files/standards/documents/DSP0134_3.4.0.pdf).
 

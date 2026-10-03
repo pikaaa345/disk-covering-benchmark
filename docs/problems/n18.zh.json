@@ -1,0 +1,40 @@
+{
+  "schema": "diskcover-public-problem-v2",
+  "problem_id": "diskcover-n18",
+  "n": 18,
+  "title": "单位圆盘的 18 圆最优覆盖问题",
+  "language": "zh-CN",
+  "page_url": "n18.zh.html",
+  "prompt_url": "prompts/n18.md",
+  "alternate_pages": {
+    "zh-CN": "n18.zh.html",
+    "en": "n18.html"
+  },
+  "protocol": "diskcover-minpoly-v1",
+  "protocol_url": "protocol.txt",
+  "fingerprint_script_url": "diskcover_answer.py",
+  "report_prompt_url": "report-prompt.txt",
+  "reference_sha256": null,
+  "reference_status": "not_published",
+  "reference_note": "标准答案未知；尚未发布参考指纹。",
+  "reference_time_seconds": "21600",
+  "scoring_version": "diskcover-log-score-v1",
+  "score_formula": "round_half_up(200 + 100 * log2(reference_time_seconds / elapsed_seconds))",
+  "score_rounding": "decimal_ROUND_HALF_UP_integer",
+  "score_direction": "higher_is_better",
+  "time_limit_seconds": "43200",
+  "deadline_inclusive": true,
+  "timeout_score": "0",
+  "late_completion_score": "0",
+  "not_tested_score": null,
+  "scoring_rule": "本题时限为12小时（43200秒）。超过12小时仍未取得符合本题验收要求的有效结果，计0分；超时后完成仍计0分。12小时内完成（含截止时刻），按 S = round(200 + 100 × log₂(参考用时 / 实际用时))计分，越高越好。未测试不计作0分。",
+  "scoring_status": "demo_reference_not_frozen",
+  "public_record_submissions": "closed",
+  "answer_disclosure": "fingerprint_only",
+  "configuration": {
+    "image": "assets/n18.svg",
+    "caption": "构型示意"
+  },
+  "records_note": null,
+  "records": []
+}

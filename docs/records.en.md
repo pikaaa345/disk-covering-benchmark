@@ -1,14 +1,17 @@
-# Historical n=11 records
+# n=11 test records
 
 
-These are historical demonstrations with checked record fields, not a formal leaderboard under the current strict prompt. Mathematical proofs were not rerun for this publication. Model labels use “name/reasoning setting”.
+The table includes two historical demonstrations and an independently reviewed incorrect DeepSeek submission; it is not a formal comparable leaderboard. Historical global proofs were not rerun; the exact DeepSeek coverage counterexample was replayed. Model labels use “name/reasoning setting”.
 
 | Model | Test date (UTC) | Recorded natural elapsed time | Score (higher is better) |
 |---|---|---|---:|
 | [gpt-6 astra/max](record-n11-astra-20260930.html) | 2026-09-30 | Main task 5h 34m 29.011s + independent minimal-polynomial stage 13m 46.178s; total 5h 48m 15.189s | 205 |
 | [gpt-6.1 sol/max](record-n11-sol-20260930.html) | 2026-09-30 | Goal creation to completion: 6h 17m 28s | 193 |
+| [deepseek-v4-pro/max](record-n11-deepseek-v4-pro-max-20261002.html) | 2026-10-02 | Goal creation to final submission: 10 h 57 min 27.149 s; incorrect proof submitted within its deadline | 0 |
 
 The timing endpoints differ. The original main tasks preceded the current minimal-polynomial requirement: SOL's historical report did not certify irreducibility, while Astra's report included a separate additional minimal-polynomial stage. Both runs missed their original 60-minute limit; completion during continuation does not change that timeout outcome. This table therefore does not establish that both models passed the same formal contract, or that the difference is stable across runs.
+
+DeepSeek had a 12-hour deadline and submitted within it. Its exact centers and radius leave a rigorously uncovered point, and its global lower bound is unproved, so it scored 0. The report identifies the affected sections, programs and reversed bound. The complete session and answer-containing evidence remain local. Its hardware was queried during preparation of this report.
 
 **n=11 reference hash:** published on the problem page; historical runs have not been rerun against this reference. [Public test reports](https://github.com/pikaaa345/disk-covering-benchmark/blob/main/docs/records.html) now describe the original inputs, hardware, main stages and acceptance status. The full originals and proof packages contain mathematical answers and remain unpublished.
 
@@ -29,6 +32,17 @@ Both models reused online configurations, proof code and certificates, adding al
 
 [Machine-readable records for both runs](https://github.com/pikaaa345/disk-covering-benchmark/blob/main/results/n12.json). Mathematical answers are withheld; full original reports, audits and proofs remain local.
 
+## n=13 test records
+
+| Model | Test date (UTC) | Scoring observation window | Score (higher is better) |
+|---|---|---|---:|
+| [gpt-6 astra/max](record-n13-codex-20261001.html) | 2026-10-01 | 12 hours (43200 seconds); incomplete, not a valid completion time | 0 |
+| [gpt-6.1 sol/max](record-n13-sol-20261001.html) | 2026-10-01 | 12 hours (43200 seconds); incomplete, not a valid completion time | 0 |
+
+Neither run submitted the radius's minimal polynomial and a complete valid proof by the deadline, so both scores are 0. Both models are verified from their own original Goal runtime metadata. All 14 Astra configuration records identify gpt-6-astra/max, and its report follows the n=11 Astra structure. Tools, stage timestamps and system counters are kept separately. Publication performs no new mathematical replay and makes no formal ranking claim.
+
+[Machine-readable records](https://github.com/pikaaa345/disk-covering-benchmark/blob/main/results/n13.json) · [SOL scoring output](https://github.com/pikaaa345/disk-covering-benchmark/blob/main/results/n13-sol-score-output.json) · [The other record's scoring output](https://github.com/pikaaa345/disk-covering-benchmark/blob/main/results/n13-score-output.json).
+
 ## Algorithm system runs
 
 These records describe local runs of algorithms developed and optimized through human–AI collaboration. They use the same scoring formula as the model tests above: higher is better, and scores compare completion efficiency on the same scale. See the reports for the recorded run conditions. The displayed minimum is selected from 40 complete observations in the three checked archives. Each entry is a single observation.
@@ -45,3 +59,11 @@ These records describe local runs of algorithms developed and optimized through 
 | 26 | DGC v62-G · MinPoly v15 | 760 | [Run report](record-n26-algorithm-run-20261001.html) |
 
 n=25 remains a candidate upper bound; n=26 source global-proof review is incomplete. Scores do not imply acceptance of these two full problems. Reports give CPU, memory, proof/algebra versions, stage timings and the latest 32-core reruns.
+
+## n=25 model test
+
+| Model | Test date (UTC) | Observation window | Score |
+|---|---|---|---:|
+| [gpt-6 astra/max](record-n25-astra-20261002.html) | 2026-10-02 | 12 hours, incomplete | 0 |
+
+The candidate fingerprint matches the reference upper bound. Global optimality remains unproved; the match does not change the zero score. [Machine record](https://github.com/pikaaa345/disk-covering-benchmark/blob/main/results/n25.json).

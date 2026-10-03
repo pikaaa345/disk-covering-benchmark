@@ -60,3 +60,11 @@ These records describe local runs of algorithms developed and optimized through 
 | 26 | DGC v62-G · MinPoly v15 | 760 | [Run report](https://pikaaa345.github.io/disk-covering-benchmark/record-n26-algorithm-run-20261001.html) |
 
 n=25 remains a candidate upper bound; n=26 source global-proof review is incomplete. Scores do not imply acceptance of these two full problems. Reports give CPU, memory, proof/algebra versions, stage timings and the latest 32-core reruns.
+
+## n=25 model test
+
+| Model | Test date (UTC) | Observation window | Score |
+|---|---|---|---:|
+| [gpt-6 astra/max](https://pikaaa345.github.io/disk-covering-benchmark/record-n25-astra-20261002.html) | 2026-10-02 | 12 hours, incomplete | 0 |
+
+The candidate fingerprint matches the reference upper bound. Global optimality remains unproved; the match does not change the zero score. [Machine record](n25.json).

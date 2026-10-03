@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en" data-page="n26">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>n = 26 · Unit Disk Covering Benchmark</title>
+  <script src="language.js"></script>
+  <script src="navigation.js" defer></script>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='12' fill='white' stroke='black' stroke-width='2'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+  <script src="vendor/marked.js" defer></script>
+  <script src="vendor/dompurify.js" defer></script>
+  <script src="math-config.js" defer></script>
+  <script src="vendor/mathjax-tex-svg-full.js" defer></script>
+  <script src="prompt-render.js" defer></script>
+  <script src="app.js" defer></script>
+  <link rel="alternate" type="application/json" href="problems/n26.json">
+  <link rel="alternate" hreflang="zh-CN" href="n26.zh.html"><link rel="alternate" hreflang="en" href="n26.html">
+</head>
+<body>
+  <header class="site-header" data-menu-open="false"><div class="site-header-inner"><a class="site-brand" href="index.html" title="Go to home page" aria-label="Go to home page"><svg class="site-brand-mark" viewBox="0 0 32 32" aria-hidden="true" fill="none"><circle cx="16" cy="16" r="14.3" stroke="currentColor" stroke-width="1.5"/><g stroke="currentColor" stroke-width="1.1" opacity=".65"><circle cx="11" cy="12" r="8"/><circle cx="21" cy="12" r="8"/><circle cx="16" cy="21" r="8"/></g></svg><span class="site-brand-copy"><span class="site-brand-title">AI Disk Benchmark</span><span class="site-brand-subtitle">Research-Level Mathematical Ability Test for Models</span></span></a><button class="site-menu-toggle" type="button" aria-controls="site-menu" aria-expanded="false" aria-label="Open navigation menu" data-open-label="Open navigation menu" data-close-label="Close navigation menu" hidden><svg class="menu-icon-open" viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14"/></svg><svg class="menu-icon-close" viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15"/></svg><span>Menu</span></button><div class="site-menu-panel" id="site-menu"><nav class="site-navigation" aria-label="Main navigation"><a class="site-nav-link" href="index.html" aria-current="true">Problems</a><a class="site-nav-link" href="guide.html">Guide</a><a class="site-nav-link" href="scoring.html">Scoring</a><a class="site-nav-link" href="records.html">Records</a><a class="site-nav-link" href="about.html">About</a></nav><div class="site-header-actions"><a class="repository-link" href="https://github.com/pikaaa345/disk-covering-benchmark" aria-label="Open GitHub repository">GitHub<svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13"/></svg></a><nav class="language-switch" aria-label="Language"><a href="n26.html?lang=en" data-language="en" lang="en" aria-current="page">English</a><a href="n26.zh.html?lang=zh" data-language="zh" lang="zh-CN">中文</a></nav></div></div></div></header>
+<main>
+  <script id="page-config" type="application/json">{"n":26,"referenceSha256":"668e35b36865e692e27ee2377a1dd970d0836c06821140867e4e0962e7b9108e","language":"en"}</script>
+  <p class="back"><a href="index-page-2.html">Unit Disk Covering Benchmark</a></p>
+  <h1>n = 26: Optimal Unit Disk Covering</h1>
+  <figure class="figure"><img src="assets/n26.svg" width="330" height="270" alt="26-disk covering: Illustration of a candidate optimal configuration (optimality under review)"><figcaption>Illustration of a candidate optimal configuration (optimality under review)</figcaption></figure>
+  <h2>Test records</h2>
+  <table><thead><tr><th scope="col">Model</th><th scope="col">Score (higher is better)</th></tr></thead><tbody><tr><td colspan="2" class="note">No test records have been published yet.</td></tr></tbody></table>
+  <section id="best-recorded-run" aria-labelledby="best-run-heading" data-status="recorded">
+    <h2 id="best-run-heading">Best recorded run</h2>
+    <p class="note">A run of an algorithm developed and optimized through human–AI collaboration, on specified hardware. Timing covers execution and required verification; prior development effort is recorded separately. Uses the same scoring formula as the model tests; higher is better.</p>
+    <table><thead><tr><th>Algorithm</th><th>Score (higher is better)</th></tr></thead><tbody><tr><td><a href="record-n26-algorithm-run-20261001.html">DGC v62-G · MinPoly v15</a></td><td class="score">760</td></tr></tbody></table><p class="note">Source global-proof review remains pending; the score does not certify independent proof review.</p>
+  </section>
+  <section id="scoring" aria-labelledby="scoring-heading">
+    <h2 id="scoring-heading"><a href="scoring.html">Scoring details</a></h2>
+  </section>
+  <hr class="rule">
+  <div class="prompt-heading"><h2>Test prompt</h2><div><button id="copy-prompt" class="copy">Copy full prompt</button><span id="copy-status" class="status" role="status"></span></div></div>
+  <div id="prompt-markdown" class="markdown-body"><pre class="prompt-fallback">Optimal Covering of the Unit Disk with 26 Disks
+Let
+$$
+D=\{x\in\mathbb R^2:\|x\|_2\le1\},\qquad
+R_D(C)=\max_{x\in D}\min_{1\le i\le26}\|x-c_i\|_2,
+$$
+where $C=(c_1,\ldots,c_{26})\in(\mathbb R^2)^{26}$, and define
+$$
+r_D(26)=\inf_{C\in(\mathbb R^2)^{26}}R_D(C).
+$$
+
+The covering disks are closed. They may overlap and extend beyond $D$; their centers are not initially restricted to lie in $D$.
+
+Determine $r_D(26)$ and satisfy all of the following requirements:
+
+1. **Minimal polynomial and root isolation:** Explicitly list every coefficient of the normalized integer representation $P(t)\in\mathbb Z[t]$ of the minimal polynomial of the optimal radius $r_D(26)$ over $\mathbb Q$. Require $P$ to be nonconstant and primitive, with positive leading coefficient, and prove that it is irreducible in $\mathbb Q[t]$. Give specific rational numbers $0\le a&lt;b$, prove $P(a)P(b)\ne0$, and prove that $P$ has exactly one real root $\alpha$ in $(a,b)$. Use the configuration and proofs below to establish $r_D(26)=\alpha$.
+2. **Explicit configuration:** Give a definite ordered tuple of centers $C_*=(c_1^*,\ldots,c_{26}^*)$, specified exactly by radicals, polynomials and rational isolating intervals, or other explicitly supplied finite algebraic data whose uniqueness is proved. Uniqueness here means that the submitted data uniquely specify these center coordinates; it does not require a proof that the optimal configuration is unique.
+3. **Coverage:** Rigorously prove
+   $$
+   \forall x\in D,\quad\exists i\in\{1,\ldots,26\},\quad
+   \|x-c_i^*\|_2\le\alpha.
+   $$
+   If continuous coverage is reduced to a finite set of checks, prove that the reduction is sufficient and rigorously complete every required check.
+4. **Global optimality:** Rigorously prove
+   $$
+   \forall C\in(\mathbb R^2)^{26},\quad R_D(C)\ge\alpha,
+   $$
+   and hence $R_D(C_*)=r_D(26)=\alpha$. Do not restrict symmetry, contact relations or combinatorial structure without proof. Every normalization, classification, enumeration or pruning step must be proved not to omit a potentially better configuration. Handle coincident centers, redundant disks and other relevant degeneracies.
+5. **Computer-assisted proof:** If the proof relies on computation, deliver the complete code actually used, inputs, certificates, necessary environment information and actual verification results. Explain why those results imply the mathematical statements above.
+
+**Final submission:** Explicitly list every coefficient of $P(t)$ and the rational root-isolating interval $(a,b)$, together with the configuration, complete proof and necessary verification materials. Submit the minimal polynomial of the optimal radius itself. A polynomial for its square or another auxiliary quantity, or an elimination polynomial without a proof of irreducibility, does not satisfy the requirement.
+
+Any rigorous method is allowed. Merely proving existence or algebraicity, or supplying unfinished enumeration, a solution algorithm or a numerical candidate, does not count as completion. Successful numerical optimization, a program printing “passed”, or floating-point results without rigorous error control cannot replace a proof. Checking only finitely many sample points, the boundary, or a numerical image cannot replace a proof that the entire closed unit disk is covered.</pre></div>
+  <pre id="test-prompt" hidden>Optimal Covering of the Unit Disk with 26 Disks
+Let
+$$
+D=\{x\in\mathbb R^2:\|x\|_2\le1\},\qquad
+R_D(C)=\max_{x\in D}\min_{1\le i\le26}\|x-c_i\|_2,
+$$
+where $C=(c_1,\ldots,c_{26})\in(\mathbb R^2)^{26}$, and define
+$$
+r_D(26)=\inf_{C\in(\mathbb R^2)^{26}}R_D(C).
+$$
+
+The covering disks are closed. They may overlap and extend beyond $D$; their centers are not initially restricted to lie in $D$.
+
+Determine $r_D(26)$ and satisfy all of the following requirements:
+
+1. **Minimal polynomial and root isolation:** Explicitly list every coefficient of the normalized integer representation $P(t)\in\mathbb Z[t]$ of the minimal polynomial of the optimal radius $r_D(26)$ over $\mathbb Q$. Require $P$ to be nonconstant and primitive, with positive leading coefficient, and prove that it is irreducible in $\mathbb Q[t]$. Give specific rational numbers $0\le a&lt;b$, prove $P(a)P(b)\ne0$, and prove that $P$ has exactly one real root $\alpha$ in $(a,b)$. Use the configuration and proofs below to establish $r_D(26)=\alpha$.
+2. **Explicit configuration:** Give a definite ordered tuple of centers $C_*=(c_1^*,\ldots,c_{26}^*)$, specified exactly by radicals, polynomials and rational isolating intervals, or other explicitly supplied finite algebraic data whose uniqueness is proved. Uniqueness here means that the submitted data uniquely specify these center coordinates; it does not require a proof that the optimal configuration is unique.
+3. **Coverage:** Rigorously prove
+   $$
+   \forall x\in D,\quad\exists i\in\{1,\ldots,26\},\quad
+   \|x-c_i^*\|_2\le\alpha.
+   $$
+   If continuous coverage is reduced to a finite set of checks, prove that the reduction is sufficient and rigorously complete every required check.
+4. **Global optimality:** Rigorously prove
+   $$
+   \forall C\in(\mathbb R^2)^{26},\quad R_D(C)\ge\alpha,
+   $$
+   and hence $R_D(C_*)=r_D(26)=\alpha$. Do not restrict symmetry, contact relations or combinatorial structure without proof. Every normalization, classification, enumeration or pruning step must be proved not to omit a potentially better configuration. Handle coincident centers, redundant disks and other relevant degeneracies.
+5. **Computer-assisted proof:** If the proof relies on computation, deliver the complete code actually used, inputs, certificates, necessary environment information and actual verification results. Explain why those results imply the mathematical statements above.
+
+**Final submission:** Explicitly list every coefficient of $P(t)$ and the rational root-isolating interval $(a,b)$, together with the configuration, complete proof and necessary verification materials. Submit the minimal polynomial of the optimal radius itself. A polynomial for its square or another auxiliary quantity, or an elimination polynomial without a proof of irreducibility, does not satisfy the requirement.
+
+Any rigorous method is allowed. Merely proving existence or algebraicity, or supplying unfinished enumeration, a solution algorithm or a numerical candidate, does not count as completion. Successful numerical optimization, a program printing “passed”, or floating-point results without rigorous error control cannot replace a proof. Checking only finitely many sample points, the boundary, or a numerical image cannot replace a proof that the entire closed unit disk is covered.</pre>
+  <hr class="rule">
+  <h2>Reference answer SHA256</h2>
+  <p class="hash" id="reference-hash">668e35b36865e692e27ee2377a1dd970d0836c06821140867e4e0962e7b9108e</p>
+  <p class="note">This fingerprint identifies the isolated radius root in the project. Review of the source global optimality proof remains incomplete; this is not a fully reviewed optimal-answer reference.</p>
+  <form id="hash-form"><label for="hash-input">Your SHA256:</label><div class="hash-controls"><input id="hash-input" type="text" spellcheck="false" autocapitalize="off" placeholder="Paste a 64-character hash" aria-describedby="hash-result"><button class="copy" type="submit">Check</button></div><p id="hash-result" class="note" role="status">Enter your hash to compare it with the reference fingerprint.</p></form>
+  
+  <p class="machine"><a href="prompts/n26.en.md">Markdown prompt</a> · <a href="problems/n26.json">Machine-readable data</a></p>
+</main></body>
+</html>

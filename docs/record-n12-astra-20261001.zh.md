@@ -42,7 +42,9 @@ Goal 累计时间 2705 秒（45 分 5 秒）起点较晚、终点较早，不能
 | Sage / Wolfram | 未使用，版本未查询 |
 | 时间预算 | 43200 秒 |
 | 费用预算 / 实际费用 | 均未记录，保留 null，不写成零费用 |
-| Goal token 计数 | 319768；不是账单中的计费 token |
+| Codex Goal 累计计数 | 319768；统计口径见下方说明，不据此推算计费 token 或费用 |
+
+Codex Goal 累计计数是 Codex Goal 功能的预算统计字段，不是行业统一的“总 token”指标。已核对的 [Codex 0.159.2 实现](https://github.com/openai/codex/blob/rust-v0.159.2/codex-rs/ext/goal/src/accounting.rs#L527-L532)按用量增量累计“输入 token − 缓存输入 token ＋ 输出 token”，即未缓存输入加输出；输出已包含推理 token，不重复相加。历史版本以当时实现为准。该字段不直接代表整个聊天的全部 token、计费 token 或费用，也不能直接与其他平台的“总 token”比较。
 
 内存类型码 34（0x22）按 [DMTF SMBIOS 3.4.0](https://www.dmtf.org/sites/default/files/standards/documents/DSP0134_3.4.0.pdf) 的 Memory Device Type 表解释为 DDR5。
 
