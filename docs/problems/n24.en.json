@@ -1,0 +1,40 @@
+{
+  "schema": "diskcover-public-problem-v2",
+  "problem_id": "diskcover-n24",
+  "n": 24,
+  "title": "Optimal Covering of the Unit Disk with 24 Disks",
+  "language": "en",
+  "page_url": "n24.html",
+  "prompt_url": "prompts/n24.en.md",
+  "alternate_pages": {
+    "zh-CN": "n24.zh.html",
+    "en": "n24.html"
+  },
+  "protocol": "diskcover-minpoly-v1",
+  "protocol_url": "protocol.en.txt",
+  "fingerprint_script_url": "diskcover_answer.py",
+  "report_prompt_url": "report-prompt.en.txt",
+  "reference_sha256": null,
+  "reference_status": "not_published",
+  "reference_note": "Reference answer unknown; no reference fingerprint has been published.",
+  "reference_time_seconds": "21600",
+  "scoring_version": "diskcover-log-score-v1",
+  "score_formula": "round_half_up(200 + 100 * log2(reference_time_seconds / elapsed_seconds))",
+  "score_rounding": "decimal_ROUND_HALF_UP_integer",
+  "score_direction": "higher_is_better",
+  "time_limit_seconds": "43200",
+  "deadline_inclusive": true,
+  "timeout_score": "0",
+  "late_completion_score": "0",
+  "not_tested_score": null,
+  "scoring_rule": "Time limit: 12 hours (43200 seconds). If no valid result meeting this problem's acceptance criteria is obtained within 12 hours, the score is 0; completion after the deadline also scores 0. Completion within 12 hours, including the deadline, is scored as S = round(200 + 100 × log₂(reference time / elapsed time)); higher is better. An untested run is not scored as 0.",
+  "scoring_status": "demo_reference_not_frozen",
+  "public_record_submissions": "closed",
+  "answer_disclosure": "fingerprint_only",
+  "configuration": {
+    "image": "assets/n24.svg",
+    "caption": "Configuration illustration"
+  },
+  "records_note": null,
+  "records": []
+}

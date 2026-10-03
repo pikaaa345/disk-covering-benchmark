@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-CN" data-page="background">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>问题背景 · 单位圆盘覆盖测试</title>
+  <script src="language.js"></script>
+  <script src="navigation.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="alternate" hreflang="zh-CN" href="background.zh.html"><link rel="alternate" hreflang="en" href="background.html">
+  <script src="vendor/marked.js" defer></script>
+  <script src="vendor/dompurify.js" defer></script>
+  <script src="math-config.js" defer></script>
+  <script src="vendor/mathjax-tex-svg-full.js" defer></script>
+  <script src="prompt-render.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header" data-menu-open="false"><div class="site-header-inner"><a class="site-brand" href="index.zh.html" title="返回网站首页" aria-label="返回网站首页"><svg class="site-brand-mark" viewBox="0 0 32 32" aria-hidden="true" fill="none"><circle cx="16" cy="16" r="14.3" stroke="currentColor" stroke-width="1.5"/><g stroke="currentColor" stroke-width="1.1" opacity=".65"><circle cx="11" cy="12" r="8"/><circle cx="21" cy="12" r="8"/><circle cx="16" cy="21" r="8"/></g></svg><span class="site-brand-copy"><span class="site-brand-title">AI圆盘测试</span><span class="site-brand-subtitle">模型研究级数学能力测试</span></span></a><button class="site-menu-toggle" type="button" aria-controls="site-menu" aria-expanded="false" aria-label="打开导航菜单" data-open-label="打开导航菜单" data-close-label="关闭导航菜单" hidden><svg class="menu-icon-open" viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14"/></svg><svg class="menu-icon-close" viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15"/></svg><span>菜单</span></button><div class="site-menu-panel" id="site-menu"><nav class="site-navigation" aria-label="主要导航"><a class="site-nav-link" href="index.zh.html">题目</a><a class="site-nav-link" href="guide.zh.html">测试指南</a><a class="site-nav-link" href="scoring.zh.html">评分</a><a class="site-nav-link" href="records.zh.html">测试记录</a><a class="site-nav-link" href="about.zh.html" aria-current="true">关于项目</a></nav><div class="site-header-actions"><a class="repository-link" href="https://github.com/pikaaa345/disk-covering-benchmark" aria-label="打开 GitHub 仓库">GitHub 仓库<svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13"/></svg></a><nav class="language-switch" aria-label="语言"><a href="background.html?lang=en" data-language="en" lang="en">English</a><a href="background.zh.html?lang=zh" data-language="zh" lang="zh-CN" aria-current="page">中文</a></nav></div></div></div></header>
+<main>
+  <script id="page-config" type="application/json">{"language":"zh","referenceSha256":null}</script>
+  <p class="back"><a href="index.zh.html">单位圆盘覆盖测试</a> · <a href="about.zh.html">项目说明</a></p>
+  <div class="prompt-heading"><h1>问题背景</h1><div><button id="copy-prompt" class="copy">复制全文</button><span id="copy-status" class="status" role="status"></span></div></div>
+  <div id="prompt-markdown" class="markdown-body" data-article="true" data-format="markdown"><pre class="prompt-fallback"># 问题背景
+
+单位圆盘是平面上到原点距离不超过1的所有点。我们使用 n 个半径相同的闭圆盘覆盖它，允许重叠和超出边界，寻找最小的公共半径。覆盖的是包括边界在内的整个区域。
+
+Erich Friedman 的 [Circles Covering Circles](https://erich-friedman.github.io/packing/circovcir/) 按 n 展示已知构型，并分别标注构型发现者和部分最优性证明。该页采用“固定小圆半径为1、尽量覆盖更大的圆”的尺度；这里采用“被覆盖圆半径为1、尽量减小覆盖圆半径”的尺度，两者通过整体缩放互换。发现好的构型与证明全局最优是不同工作。
+
+这个问题连接了几个研究环节：几何和连续优化寻找候选，组合分类与严格剪枝排除更优构型，算法设计压缩计算，精确代数把半径指定为唯一实根，最终核验将计算结果连接到数学命题。因此它可以同时展示模型的研究选择、计算效率和证据质量。
+
+有的 n 可能更适合特定结构或低次代数表达，难度并不严格随 n 增加。项目不把整个题库统一宣称为尚未解决的公开问题，也不将已有候选表格视作完整证明。每题的状态需要单独记录。
+
+要求最小多项式是为了提供精确、紧凑、可规范编码的答案数据。它不能替代证明；构造出正确候选的最小多项式，仍可能没有完成覆盖性和全局下界。本项目将数学交付和轻量指纹核对分别说明。
+
+背景链接核对于2026-09-30。该链接含已有构型和数值资料；是否允许模型访问，须在一次测试开始前约定。这里不转载其中的半径数值或图像。</pre></div>
+  <pre id="test-prompt" hidden># 问题背景
+
+单位圆盘是平面上到原点距离不超过1的所有点。我们使用 n 个半径相同的闭圆盘覆盖它，允许重叠和超出边界，寻找最小的公共半径。覆盖的是包括边界在内的整个区域。
+
+Erich Friedman 的 [Circles Covering Circles](https://erich-friedman.github.io/packing/circovcir/) 按 n 展示已知构型，并分别标注构型发现者和部分最优性证明。该页采用“固定小圆半径为1、尽量覆盖更大的圆”的尺度；这里采用“被覆盖圆半径为1、尽量减小覆盖圆半径”的尺度，两者通过整体缩放互换。发现好的构型与证明全局最优是不同工作。
+
+这个问题连接了几个研究环节：几何和连续优化寻找候选，组合分类与严格剪枝排除更优构型，算法设计压缩计算，精确代数把半径指定为唯一实根，最终核验将计算结果连接到数学命题。因此它可以同时展示模型的研究选择、计算效率和证据质量。
+
+有的 n 可能更适合特定结构或低次代数表达，难度并不严格随 n 增加。项目不把整个题库统一宣称为尚未解决的公开问题，也不将已有候选表格视作完整证明。每题的状态需要单独记录。
+
+要求最小多项式是为了提供精确、紧凑、可规范编码的答案数据。它不能替代证明；构造出正确候选的最小多项式，仍可能没有完成覆盖性和全局下界。本项目将数学交付和轻量指纹核对分别说明。
+
+背景链接核对于2026-09-30。该链接含已有构型和数值资料；是否允许模型访问，须在一次测试开始前约定。这里不转载其中的半径数值或图像。</pre>
+  
+</main></body>
+</html>

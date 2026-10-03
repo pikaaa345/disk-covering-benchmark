@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en" data-page="about">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About &amp; shared tools · Unit Disk Covering Benchmark</title>
+  <script src="language.js"></script>
+  <script src="navigation.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="alternate" hreflang="zh-CN" href="about.zh.html"><link rel="alternate" hreflang="en" href="about.html">
+  <script src="vendor/marked.js" defer></script>
+  <script src="vendor/dompurify.js" defer></script>
+  <script src="math-config.js" defer></script>
+  <script src="vendor/mathjax-tex-svg-full.js" defer></script>
+  <script src="prompt-render.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header" data-menu-open="false"><div class="site-header-inner"><a class="site-brand" href="index.html" title="Go to home page" aria-label="Go to home page"><svg class="site-brand-mark" viewBox="0 0 32 32" aria-hidden="true" fill="none"><circle cx="16" cy="16" r="14.3" stroke="currentColor" stroke-width="1.5"/><g stroke="currentColor" stroke-width="1.1" opacity=".65"><circle cx="11" cy="12" r="8"/><circle cx="21" cy="12" r="8"/><circle cx="16" cy="21" r="8"/></g></svg><span class="site-brand-copy"><span class="site-brand-title">AI Disk Benchmark</span><span class="site-brand-subtitle">Research-Level Mathematical Ability Test for Models</span></span></a><button class="site-menu-toggle" type="button" aria-controls="site-menu" aria-expanded="false" aria-label="Open navigation menu" data-open-label="Open navigation menu" data-close-label="Close navigation menu" hidden><svg class="menu-icon-open" viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14"/></svg><svg class="menu-icon-close" viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15"/></svg><span>Menu</span></button><div class="site-menu-panel" id="site-menu"><nav class="site-navigation" aria-label="Main navigation"><a class="site-nav-link" href="index.html">Problems</a><a class="site-nav-link" href="guide.html">Guide</a><a class="site-nav-link" href="scoring.html">Scoring</a><a class="site-nav-link" href="records.html">Records</a><a class="site-nav-link" href="about.html" aria-current="page">About</a></nav><div class="site-header-actions"><a class="repository-link" href="https://github.com/pikaaa345/disk-covering-benchmark" aria-label="Open GitHub repository">GitHub<svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13"/></svg></a><nav class="language-switch" aria-label="Language"><a href="about.html?lang=en" data-language="en" lang="en" aria-current="page">English</a><a href="about.zh.html?lang=zh" data-language="zh" lang="zh-CN">中文</a></nav></div></div></div></header>
+<main>
+  <script id="page-config" type="application/json">{"language":"en","referenceSha256":null}</script>
+  <p class="back"><a href="index.html">Unit Disk Covering Benchmark</a> · <a href="about.html">About</a></p>
+  <div class="prompt-heading"><h1>About &amp; shared tools</h1><div><button id="copy-prompt" class="copy">Copy text</button><span id="copy-status" class="status" role="status"></span></div></div>
+  <div id="prompt-markdown" class="markdown-body" data-article="true" data-format="markdown"><pre class="prompt-fallback"># Disk Covering Benchmark
+
+
+How small can n equal disks be while still covering the entire unit disk? This project uses that question to study AI mathematical research, from finding a configuration to proving the result, and records the time and cost required.
+
+A complete solution must provide the optimal radius&#x27;s minimal polynomial and rational root-isolating interval, exact centers, continuous coverage and a global optimality proof over all configurations.
+
+## Problems and test records
+
+**[Open the configuration gallery →](index.html)**
+
+Browse configurations by n and click a picture to open its problem page. Each page contains test scores, a copyable full prompt, the reference SHA256 and a local comparison form. Chinese and English are available. The gallery lists every n from 11 to 29, with 12 problems per page; unpublished reference answers are shown as Unknown.
+
+Reference fingerprints are available for n = 11, 12, 14, 16, 19, 22, 25, 26 and 27. The n=25 fingerprint is for a fixed candidate configuration without a proved matching global lower bound; the n=26 source proof review remains incomplete. Both limits are noted on their pages. Fingerprints were checked against exact root isolation and independently recomputed. Public submissions are closed; existing scores remain historical demonstrations, and the formal comparison contract is not frozen.
+
+Scoring deadline: every n≤30 problem has a 12-hour (43200-second) limit. No valid result meeting the task&#x27;s acceptance criteria by the deadline scores 0; late completion also scores 0. Untested runs are not scored as 0.
+
+## Shared tools
+
+All problems use the same tools. Read the [testing guide](guide.html) for timing, scoring, acceptance criteria and the complete answer-to-hash procedure.
+
+**[Download tools and materials (ZIP)](https://github.com/pikaaa345/disk-covering-benchmark/archive/refs/heads/main.zip)**
+
+One download contains the answer checker, encoding protocol in both languages, score calculator, self-checks, report prompts, problem statements and usage instructions. It also includes qualified published record summaries. Website source and development history are maintained privately. No separate downloads are needed.
+
+Extract the ZIP, open the project folder and follow the testing guide. The scripts require only Python 3.9+ and its standard library. Coefficients are ordered by increasing degree, and the radius is rounded to 20 decimal places. The checker normalizes and hashes the data; a match does not verify proofs or reported timing.
+
+**For AI agents:** [Instructions](agents.html) · [Machine-readable index](benchmark.json). The index locates prompts, records and protocols without navigating website menus.
+
+## Publication and license
+
+The public repository contains downloadable tools and testing materials. Website source and development history are maintained in a private repository; the website publishes approved pages only. Public downloads continue to have their own Git history.
+
+The tools use the [MIT license](LICENSE.txt). No private solver or exact reference answers are included.</pre></div>
+  <pre id="test-prompt" hidden># Disk Covering Benchmark
+
+
+How small can n equal disks be while still covering the entire unit disk? This project uses that question to study AI mathematical research, from finding a configuration to proving the result, and records the time and cost required.
+
+A complete solution must provide the optimal radius&#x27;s minimal polynomial and rational root-isolating interval, exact centers, continuous coverage and a global optimality proof over all configurations.
+
+## Problems and test records
+
+**[Open the configuration gallery →](index.html)**
+
+Browse configurations by n and click a picture to open its problem page. Each page contains test scores, a copyable full prompt, the reference SHA256 and a local comparison form. Chinese and English are available. The gallery lists every n from 11 to 29, with 12 problems per page; unpublished reference answers are shown as Unknown.
+
+Reference fingerprints are available for n = 11, 12, 14, 16, 19, 22, 25, 26 and 27. The n=25 fingerprint is for a fixed candidate configuration without a proved matching global lower bound; the n=26 source proof review remains incomplete. Both limits are noted on their pages. Fingerprints were checked against exact root isolation and independently recomputed. Public submissions are closed; existing scores remain historical demonstrations, and the formal comparison contract is not frozen.
+
+Scoring deadline: every n≤30 problem has a 12-hour (43200-second) limit. No valid result meeting the task&#x27;s acceptance criteria by the deadline scores 0; late completion also scores 0. Untested runs are not scored as 0.
+
+## Shared tools
+
+All problems use the same tools. Read the [testing guide](guide.html) for timing, scoring, acceptance criteria and the complete answer-to-hash procedure.
+
+**[Download tools and materials (ZIP)](https://github.com/pikaaa345/disk-covering-benchmark/archive/refs/heads/main.zip)**
+
+One download contains the answer checker, encoding protocol in both languages, score calculator, self-checks, report prompts, problem statements and usage instructions. It also includes qualified published record summaries. Website source and development history are maintained privately. No separate downloads are needed.
+
+Extract the ZIP, open the project folder and follow the testing guide. The scripts require only Python 3.9+ and its standard library. Coefficients are ordered by increasing degree, and the radius is rounded to 20 decimal places. The checker normalizes and hashes the data; a match does not verify proofs or reported timing.
+
+**For AI agents:** [Instructions](agents.html) · [Machine-readable index](benchmark.json). The index locates prompts, records and protocols without navigating website menus.
+
+## Publication and license
+
+The public repository contains downloadable tools and testing materials. Website source and development history are maintained in a private repository; the website publishes approved pages only. Public downloads continue to have their own Git history.
+
+The tools use the [MIT license](LICENSE.txt). No private solver or exact reference answers are included.</pre>
+  
+</main></body>
+</html>

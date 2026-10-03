@@ -1,0 +1,319 @@
+{
+  "schema": "diskcover-public-test-reports-v1",
+  "n": 25,
+  "report_scope": "Source-attributed n25 test reports with individual acceptance findings; mathematical answer data withheld.",
+  "records_comparable": false,
+  "records": [
+    {
+      "record_id": "n25-astra-20261002",
+      "test_id": "T_20261002T095207Z_01a0fc07",
+      "model": "gpt-6 astra/max",
+      "model_id": "gpt-6-astra",
+      "reasoning_effort": "max",
+      "model_identity_evidence": "All 12 saved predeadline turn_context records; user confirmation agrees.",
+      "test_date_utc": "2026-10-02",
+      "report_date": "2026-10-03",
+      "status": "not_completed",
+      "failure_reason": "No complete global optimality proof for arbitrary 25-center configurations by the inclusive 12-hour deadline.",
+      "runs": 1,
+      "score": 0,
+      "score_scope": "benchmark_failure_score",
+      "acceptance_status": "failed_no_complete_valid_result_by_deadline",
+      "formal_ranking": false,
+      "elapsed_seconds": "43200",
+      "valid_completion_elapsed_seconds": null,
+      "original_budget_seconds": "43200",
+      "deadline_inclusive": true,
+      "timing_scope": "Fixed failed-run observation window, not completion time.",
+      "main_system_accumulated_seconds": "41930",
+      "timing": {
+        "goal_created_at_epoch": 1790934727,
+        "deadline_epoch": 1790977927,
+        "budget_seconds": 43200,
+        "deadline_inclusive": true,
+        "valid_completion_seconds": null,
+        "main_test_window_seconds": 43200,
+        "goal_system_cumulative_seconds": 41930,
+        "goal_last_updated_epoch": 1790985188,
+        "goal_last_update_natural_elapsed_seconds": 50461,
+        "report_evidence_cutoff_utc": "2026-10-03T01:04:39.748Z",
+        "natural_elapsed_to_report_evidence_cutoff_seconds": 54752.748,
+        "report_task_elapsed_seconds": 1370.807,
+        "report_task_timing_note": "Natural elapsed from report-request message create_time to saved metadata cutoff; final packaging/render later excluded",
+        "report_request_epoch": 1790988108.940816,
+        "failure_response_recorded_relative_seconds": 43267.592,
+        "failure_response_message_creation_epoch": 1790977965.753212
+      },
+      "usage": {
+        "goal_tokens_used": 3906233,
+        "scope": "System Goal counter including post-deadline administrative continuations; not full thread, not solely before deadline",
+        "input_tokens": 58597430,
+        "output_tokens": 905374,
+        "cached_tokens": 55492736,
+        "cost": null,
+        "predeadline_saved_response_count": 428,
+        "predeadline_saved_response_usage": {
+          "input_tokens": 58597430,
+          "cached_input_tokens": 55492736,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 905374,
+          "reasoning_output_tokens": 561373,
+          "total_tokens": 59502804
+        },
+        "usage_checkpoint_relative_seconds": 43177.792,
+        "usage_checkpoint_note": "Sum of deduplicated saved per-response usage; equals last corresponding thread_token_usage; excludes later administrative/report usage and may exclude an in-flight request at deadline",
+        "reasoning_output_tokens": 561373,
+        "thread_db_snapshot_tokens_used": 63271701,
+        "thread_db_scope": "Separate mutable thread DB snapshot; includes administrative and report work; not a deadline or final total"
+      },
+      "hardware": {
+        "cpu": "AMD Ryzen 9 8945HX with Radeon Graphics",
+        "memory_ddr": "DDR5",
+        "memory_gb": 32.0,
+        "SMBIOSMemoryType": [
+          34
+        ],
+        "note": "Report-preparation current CIM query, not a task-start snapshot",
+        "queried_at": "2026-10-02T21:00:51.7375979-04:00",
+        "memory_type_basis": "DMTF DSP0134 memory-device type 22h = DDR5; 34 decimal = 22h hexadecimal"
+      },
+      "environment": {
+        "execution": "local Ubuntu WSL",
+        "python": "3.12.3",
+        "sympy": "1.14.0",
+        "version_evidence": "original proof ZIP README; not a fresh environment query",
+        "preexisting_specialist_tools_used": [],
+        "task_obtained_tools": [
+          {
+            "name": "SymPy",
+            "version": "1.14.0",
+            "source": "public PyPI",
+            "use": "exact algebra and symbolic checks"
+          },
+          {
+            "name": "CaDiCaL",
+            "version": "1.9.5",
+            "source": "public upstream source; context summary",
+            "use": "unfinished SAT search, no global UNSAT"
+          },
+          {
+            "name": "drat-trim",
+            "version": null,
+            "source": "public upstream source; context summary",
+            "use": "planned proof conversion, no completed global trace"
+          }
+        ],
+        "remote_key_computation": false,
+        "wsl_failure": "CreateInstance/E_FAIL; cause not diagnosed"
+      },
+      "requirements": [
+        {
+          "id": 1,
+          "status": "incomplete",
+          "note": "Polynomial and isolated root supplied for explicit candidate only; no identification with global optimum"
+        },
+        {
+          "id": 2,
+          "status": "partial_result_documented",
+          "note": "Exact ordered 25-center candidate; globally optimal tuple unestablished"
+        },
+        {
+          "id": 3,
+          "status": "partial_result_documented",
+          "note": "Full closed-disk analytic coverage for candidate; historical exact checks retained"
+        },
+        {
+          "id": 4,
+          "status": "incomplete",
+          "note": "Weaker universal bound and bounded local theorem do not imply global optimality"
+        },
+        {
+          "id": 5,
+          "status": "incomplete_for_full_problem",
+          "note": "Code, inputs and logs for partial results retained; no exhaustive global exclusion certificate"
+        }
+      ],
+      "answer_check": {
+        "protocol": "diskcover-minpoly-v1",
+        "expected_sha256": "2cf89430e0f746fabd1f84298f3449cb9f755a8c3d41a198b2881dd042d06e12",
+        "sha256": "2cf89430e0f746fabd1f84298f3449cb9f755a8c3d41a198b2881dd042d06e12",
+        "matches_reference": true,
+        "reference_status": "candidate_upper_bound",
+        "executed": true,
+        "execution_scope": "post-test publication task; not a predeadline completion",
+        "rounding": "20 decimal places ROUND_HALF_UP, certified by exact rational interval and integer rounding",
+        "certified_global_optimum": false,
+        "source_commit": "7f1c64dc7103639fb9d53da7695cdd60408b9c97",
+        "coefficient_or_radius_disclosed": false
+      },
+      "score_execution": {
+        "status": "not_completed",
+        "score": "0",
+        "reference_seconds": "21600",
+        "elapsed_seconds": "43200",
+        "budget_seconds": "43200",
+        "budget_specified": true,
+        "n": 25,
+        "fixed_12_hour_limit_applies": true,
+        "scoring_version": "diskcover-log-score-v1",
+        "score_formula": "round_half_up(200 + 100 * log2(reference_time_seconds / elapsed_seconds))",
+        "score_rounding": "decimal_ROUND_HALF_UP_integer",
+        "deadline_inclusive": true,
+        "completion_independently_verified": false
+      },
+      "original_math_replayed_in_publication": false,
+      "archive_scope": "Selected runtime evidence and original partial deliverable, not a full chat archive.",
+      "private_proof_package_public": false,
+      "prompt_artifacts": [
+        {
+          "original_text_url": "reports/n25-astra-main-prompt.original.txt",
+          "preserve_original_bytes": true,
+          "scope": "Original user instruction from saved Goal objective; no task-start web-byte snapshot."
+        }
+      ]
+    },
+    {
+      "record_id": "n25-sol-20261002",
+      "test_id": "T_20261002T095156Z_01a0fc06",
+      "model": "gpt-6.1 sol/max",
+      "model_id": "gpt-6.1-sol",
+      "reasoning_effort": "max",
+      "model_identity_status": "original_turn_context_and_user_confirmation",
+      "test_date_utc": "2026-10-02",
+      "status": "accepted_complete_proof",
+      "acceptance_status": "accepted_exact_computer_assisted_proof",
+      "verification_status": "written_geometric_review_and_full_exact_replay",
+      "elapsed_seconds": "17539",
+      "main_natural_seconds": "17539",
+      "main_system_accumulated_seconds": "17538",
+      "timing_scope": "goal_creation_to_completion_natural_interval",
+      "original_budget_seconds": "43200",
+      "within_original_budget": true,
+      "score": "230",
+      "score_scope": "benchmark_score",
+      "answer_sha256": "2cf89430e0f746fabd1f84298f3449cb9f755a8c3d41a198b2881dd042d06e12",
+      "reference_sha256": "2cf89430e0f746fabd1f84298f3449cb9f755a8c3d41a198b2881dd042d06e12",
+      "hash_matches": true,
+      "hardware": {
+        "cpu": "AMD Ryzen 9 8945HX with Radeon Graphics",
+        "physical_cores": 16,
+        "logical_processors": 32,
+        "memory_generation": "DDR5",
+        "memory_gib": 32,
+        "memory_bytes": 34359738368,
+        "memory_speed_mts": 5600,
+        "snapshot_scope": "post_test_report_query_2026-10-03_not_a_task_start_snapshot"
+      },
+      "prompt_artifacts": [
+        {
+          "kind": "main",
+          "original_text_url": "reports/n25-sol-main-prompt.original.txt",
+          "sha256": "f1d937c68b5ce90073563dbb6cc5153b9cbdc05f83641f3d5947bf1a1cedb982",
+          "preserve_original_bytes": true
+        }
+      ],
+      "phases": [
+        {
+          "start_relative_seconds": "0",
+          "end_relative_seconds": "1896",
+          "duration_seconds": "1896",
+          "activity_zh": "公开候选、方法检索及全闭盘上界",
+          "activity_en": "Public candidate and method research; full closed-disk upper bound",
+          "outcome_zh": "候选来自公开资料；完成32个三角形和8个完整二维圆弧帽的解析覆盖。",
+          "outcome_en": "The candidate came from public sources; analytic coverage was established for 32 triangles and eight complete two-dimensional circular caps.",
+          "evidence_scope": "reconstructed_from_original_public_progress_and_execution_receipts; parallel work may overlap"
+        },
+        {
+          "start_relative_seconds": "1896",
+          "end_relative_seconds": "8054",
+          "duration_seconds": "6158",
+          "activity_zh": "一般覆盖归约、枚举和精确证书方法",
+          "activity_en": "Reduction of arbitrary covers, enumeration and exact certificate methods",
+          "outcome_zh": "推广公开 n20 的一般方法及实验代码；完成必要几何归约、力流证书和局部应力证明，早期部分枚举尚不是最终证明。",
+          "outcome_en": "Extend public n20 methods and experimental code; establish necessary geometric reductions, force certificates and a local stress proof. Early partial enumeration was not the final proof.",
+          "evidence_scope": "reconstructed_from_original_public_progress_and_execution_receipts; parallel work may overlap"
+        },
+        {
+          "start_relative_seconds": "8054",
+          "end_relative_seconds": "12177",
+          "duration_seconds": "4123",
+          "activity_zh": "八内盘引理及完整 n25 目录和证书生成",
+          "activity_en": "Eight-interior-disk lemma, complete n25 catalogue and certificate generation",
+          "outcome_zh": "补充八内盘七辐轮必要条件；重写最终枚举，完成十类4,568,172图和7,136前沿任务，未完成项为零。",
+          "outcome_en": "Add the necessary seven-spoke-wheel condition for eight interior disks; reimplement final enumeration and complete ten classes, 4,568,172 graphs and 7,136 frontier tasks, with zero unfinished items.",
+          "evidence_scope": "reconstructed_from_original_public_progress_and_execution_receipts; parallel work may overlap"
+        },
+        {
+          "start_relative_seconds": "12177",
+          "end_relative_seconds": "15621",
+          "duration_seconds": "3444",
+          "activity_zh": "重新枚举及全量严格证书校验",
+          "activity_en": "Fresh enumeration and full exact certificate verification",
+          "outcome_zh": "重新枚举逐类一致；检查全部连续角度域的完整树、每叶严格不等式和局部定理。",
+          "outcome_en": "Fresh enumeration matched every class; complete trees covering the continuous angle domains, every strict leaf inequality and the local theorem were checked.",
+          "evidence_scope": "reconstructed_from_original_public_progress_and_execution_receipts; parallel work may overlap"
+        },
+        {
+          "start_relative_seconds": "15621",
+          "end_relative_seconds": "17539",
+          "duration_seconds": "1918",
+          "activity_zh": "证明说明、冻结交付和逐文件回读",
+          "activity_en": "Proof documentation, frozen delivery and file-by-file readback",
+          "outcome_zh": "完整证明、源码及证书包完成，逐文件SHA-256/长度核对后Goal完成。",
+          "outcome_en": "The full proof, source and certificate package were delivered; Goal completed after SHA-256 and size readback checks.",
+          "evidence_scope": "reconstructed_from_original_public_progress_and_execution_receipts; parallel work may overlap"
+        }
+      ],
+      "source_report": {
+        "filename": "n25-complete-proof.md",
+        "sha256": "34b71efff603e049398c6401aa5e031c9412d2d7ddba78823c1a8d32f1342052",
+        "public_version": "answer_withheld_reviewed_summary"
+      },
+      "report_urls": {
+        "zh": "record-n25-sol-20261002.zh.html",
+        "en": "record-n25-sol-20261002.html"
+      },
+      "token_usage": {
+        "goal_meter_tokens": 1483946,
+        "thread_snapshot_scope": "through_original_final_message_2026-10-02T14:57:01.325Z_includes_delivery_followup_excludes_later_review_and_scoring",
+        "input_tokens": 17911106,
+        "cached_input_tokens": 16589952,
+        "output_tokens": 337866,
+        "reasoning_output_tokens": 227793,
+        "total_tokens": 18248972,
+        "cost": null,
+        "cost_scope": "no_billing_receipt_available"
+      },
+      "external_work": {
+        "source_repository": "VonEquinox/DiskCoveringSolve",
+        "source_url": "https://github.com/VonEquinox/DiskCoveringSolve",
+        "candidate_url": "https://erich-friedman.github.io/packing/circovcir/",
+        "proof_origin": "public_candidate_and_general_methods_extended_with_n25_specific_proof_and_complete_exact_certificates",
+        "reused_materials": [
+          "public candidate configuration",
+          "general Voronoi and rooted-triangulation methods",
+          "n20 experimental peeling code adapted during exploration",
+          "force/domain certificate methods"
+        ],
+        "contribution_zh": "本次补足n25全闭盘覆盖、八内盘必要条件、最终完整目录、局部应力论证及全角度域严格证书；最终枚举和验证交付与早期改编的公开实验代码有别。",
+        "contribution_en": "Supply n25 full-disk coverage, the necessary eight-interior-disk condition, the final exhaustive catalogue, local stress argument and exact full-angle-domain certificates; final enumeration and verification differ from the early adapted public experimental code.",
+        "verification_scope": "original complete runs plus publisher post-test review using pre-existing research assets, a fresh catalogue and full exact replay"
+      },
+      "verification": {
+        "graphs": 4568172,
+        "frontier_tasks": 7136,
+        "force_leaves": 5206340,
+        "local_leaves": 160,
+        "split_nodes": 638328,
+        "total_nodes": 5844828,
+        "missing_or_unresolved": 0,
+        "original_enumeration_seconds": "423.66974852",
+        "original_exact_verification_seconds": "752.871658933",
+        "post_test_enumeration_seconds": "466.102",
+        "post_test_exact_verification_seconds": "799.813",
+        "post_test_split_literal_integer_audit": 638328,
+        "scope": "geometric completeness arguments and exact mathematical inequalities; program success and fingerprint equality alone are not proof"
+      }
+    }
+  ]
+}
