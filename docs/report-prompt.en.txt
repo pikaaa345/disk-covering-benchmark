@@ -1,0 +1,126 @@
+Generate a research work report for this task. Base it on the task's actual
+records, execution logs and delivered artifacts. Include the following.
+
+1. Task and completion
+
+- Objective: describe the problem and acceptance requirements.
+- Final outcome: state which requirements were met and which remain unmet.
+- Time limit: if there was a deadline or duration limit, state whether it
+  was met. Completion after the limit must not be described as on time.
+
+2. Duration and relative timestamps
+
+Use relative time throughout: the task begins at T+00:00:00. State how much
+time had elapsed when something happened; do not use wall-clock times or
+timestamps with time zones. A date may be used for filing the report, but
+need not appear in the process narrative.
+
+Examples:
+- “About three minutes after the start, the first candidate was obtained.”
+- “During minutes 15–40, two elimination methods were tried; neither worked.”
+- “T+01:29:00: the key verification passed for the first time.”
+
+You must report:
+- Total task duration and the timing convention used.
+- Any system-provided cumulative duration, separately.
+- Natural elapsed time from task start to completion, or to this report's
+  cutoff if the task remains incomplete.
+- Both durations when they differ. Describe pauses or waiting only when
+  recorded; do not guess why the durations differ.
+
+Use natural elapsed time from task start for the process timeline. Do not
+mix it with system cumulative time. Pauses and waiting remain part of that
+timeline and may be noted when supported by records.
+
+Time independent additional tasks separately and state each start point.
+Exclude the gap between tasks from the additional task's duration.
+
+Major program runtimes may be added when useful, but do not sum parallel
+program runtimes and call the result total task duration.
+
+Match timestamp precision to the records and narrative. Approximate minutes
+or hours and minutes usually suffice; use seconds for important milestones
+when justified. Milliseconds are unnecessary. Mark missing or unverifiable
+times as “not recorded” or “cannot confirm”; do not present estimates as
+measurements.
+
+3. Computing conditions
+
+Report only the following information relevant to this task.
+
+Hardware:
+- CPU: full model name.
+- Memory: DDR generation and total capacity, for example DDR5, 64 GB.
+If the DDR generation cannot be confirmed, state that it is unknown.
+GPU, disks, motherboard and other hardware need not normally be reported.
+
+Pre-existing software environment:
+- List relevant specialist tools installed before the task began, such as
+  SageMath, Wolfram Mathematica, GAP, Magma or MATLAB, with versions when
+  verifiable.
+- State which tools were actually used and what they did.
+- If Python was used, report its version and major libraries involved in
+  the core computation, such as SymPy, NumPy or SciPy. Do not list every
+  dependency.
+- Separately list tools obtained, installed or configured during the task:
+  name, purpose, source and verifiable version. Do not mix them into the
+  preinstalled environment. Explain an unfamiliar specialist tool briefly.
+- If key computations ran remotely, state where they ran and report that
+  machine's CPU and memory on the same basis. Do not attribute remote
+  results to the local machine.
+
+Base configuration information on actual queries or reliable environment
+records. If only a query made while writing this report is available, label
+it as a current query, not the task-start environment. Mark unverifiable
+information as unknown; do not infer hardware from computation speed.
+Do not inventory unrelated software.
+
+4. Actual research process
+
+Describe the main attempts, results and route changes in their actual order.
+Do not prescribe a number of stages or require failures, pivots or searches.
+If one attempt succeeded, describe it briefly. If exploration was needed,
+organize around the actual important changes.
+
+Use the relative timeline above for attempts, key sources and route changes.
+Choose intervals based on the real process, not arbitrary one-hour blocks.
+
+Where relevant, explain:
+- What was known at the time and what was missing.
+- The method tried and its result.
+- Key sources consulted, when obtained, how they helped, with verifiable
+  citations.
+- Obstacles and the evidence for continuing, changing or abandoning a route.
+- When a candidate was obtained and when rigorous proof or verification
+  was completed.
+
+Explain method choices and changes using checkable evidence. Do not copy
+every log operation or invent complications to fill a template. Distinguish
+external existing results, new work in this task and retrospective judgment.
+
+5. Verification and delivery
+
+- State the verification method and the scope it covers.
+- Distinguish numerical experiments, candidates, rigorous proofs and
+  computer-assisted checks that were actually executed.
+- List key deliverables and their locations, including necessary code,
+  inputs, results and proof materials.
+- State unverified steps, failed checks and applicability limits explicitly.
+  Written code is not evidence that it ran successfully.
+- Distinguish checks performed during the task from new checks performed
+  while preparing this report. A check that was not rerun must not be
+  described as newly verified.
+
+Writing requirements
+
+- Retain basic information fields. Mark unknowns honestly and explain
+  non-applicable items.
+- Match the process section's length to the work; do not invent stages or
+  pad the report.
+- Use relative time throughout the process narrative, not clock times.
+  Do not require the reader to compute time differences.
+- Base all historical statements on this task's records. Sources found
+  afterward must not be described as used during the research.
+- Evaluate inefficient attempts and mistakes concretely, with evidence.
+  Do not invent failure causes, discovery times or supposedly avoidable
+  durations.

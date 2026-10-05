@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en" data-page="guide">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Testing guide · Unit Disk Covering Benchmark</title>
+  <script src="language.js"></script>
+  <script src="navigation.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="alternate" hreflang="zh-CN" href="guide.zh.html"><link rel="alternate" hreflang="en" href="guide.html">
+  <script src="vendor/marked.js" defer></script>
+  <script src="vendor/dompurify.js" defer></script>
+  <script src="math-config.js" defer></script>
+  <script src="vendor/mathjax-tex-svg-full.js" defer></script>
+  <script src="prompt-render.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header" data-menu-open="false"><div class="site-header-inner"><a class="site-brand" href="index.html" title="Go to home page" aria-label="Go to home page"><svg class="site-brand-mark" viewBox="0 0 32 32" aria-hidden="true" fill="none"><circle cx="16" cy="16" r="14.3" stroke="currentColor" stroke-width="1.5"/><g stroke="currentColor" stroke-width="1.1" opacity=".65"><circle cx="11" cy="12" r="8"/><circle cx="21" cy="12" r="8"/><circle cx="16" cy="21" r="8"/></g></svg><span class="site-brand-copy"><span class="site-brand-title">AI Disk Benchmark</span><span class="site-brand-subtitle">Research-Level Mathematical Ability Test for Models</span></span></a><button class="site-menu-toggle" type="button" aria-controls="site-menu" aria-expanded="false" aria-label="Open navigation menu" data-open-label="Open navigation menu" data-close-label="Close navigation menu" hidden><svg class="menu-icon-open" viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14"/></svg><svg class="menu-icon-close" viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15"/></svg><span>Menu</span></button><div class="site-menu-panel" id="site-menu"><nav class="site-navigation" aria-label="Main navigation"><a class="site-nav-link" href="index.html">Problems</a><a class="site-nav-link" href="guide.html" aria-current="page">Guide</a><a class="site-nav-link" href="scoring.html">Scoring</a><a class="site-nav-link" href="records.html">Records</a><a class="site-nav-link" href="about.html">About</a></nav><div class="site-header-actions"><a class="repository-link" href="https://github.com/pikaaa345/disk-covering-benchmark" aria-label="Open GitHub repository">GitHub<svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13"/></svg></a><nav class="language-switch" aria-label="Language"><a href="guide.html?lang=en" data-language="en" lang="en" aria-current="page">English</a><a href="guide.zh.html?lang=zh" data-language="zh" lang="zh-CN">中文</a></nav></div></div></div></header>
+<main>
+  <script id="page-config" type="application/json">{"language":"en","referenceSha256":null}</script>
+  <p class="back"><a href="index.html">Unit Disk Covering Benchmark</a> · <a href="about.html">About</a></p>
+  <div class="prompt-heading"><h1>Testing guide</h1><div><button id="copy-prompt" class="copy">Copy text</button><span id="copy-status" class="status" role="status"></span></div></div>
+  <div id="prompt-markdown" class="markdown-body" data-article="true" data-format="markdown"><pre class="prompt-fallback"># Testing guide
+
+
+Choose a problem, copy its prompt and view its records in the [problem catalog](index.html). This guide describes the shared testing procedure.
+
+Replace `N` in commands with the selected problem number. [Background](background.html) · [Scoring](scoring.html) · [Answer protocol](protocol.html).
+
+## The mathematical task
+
+Let
+
+$$D=\{x\in\mathbb R^2:\|x\|_2\le1\},\qquad R_D(C)=\max_{x\in D}\min_{1\le i\le n}\|x-c_i\|_2,$$
+
+$$r_D(n)=\inf_{C\in(\mathbb R^2)^n}R_D(C).$$
+
+The covering disks may overlap and extend beyond D. A complete solution must provide the minimal polynomial of the optimal radius itself, in primitive integer form with positive leading coefficient, prove irreducibility, and give a rational interval containing exactly one real root. It must also specify the centers exactly and prove both coverage of the entire disk and a matching lower bound over all configurations. See the full prompt for the precise requirements.
+
+Numerical optimization and finite sampling may help find candidates. They do not replace continuous coverage or a global optimality proof.
+
+
+## Run one test
+
+1. Choose a task and preserve its prompt and repository commit. Record the model and reasoning setting, starting materials, tools, network policy, hardware, time budget and cost budget. A single run can be reported; state the number of runs and do not infer repeatability from one result.
+2. Give the full prompt to the model. Record natural elapsed time, including model work, computations, waiting and verification.
+3. Keep the polynomial, isolating interval, configuration, proofs and certificates. Generate an answer fingerprint locally. Compare it only after a reference hash has been published.
+4. Use the report prompt to summarize the actual record. Distinguish an answer match, a complete mathematical solution and independently checked proof materials.
+
+## From answer to SHA256
+
+Save the coefficients as a UTF-8 JSON integer array in `coefficients.json`, **in increasing order of degree**: constant coefficient first, leading coefficient last. Keep internal zeros. Do not sort by numerical value. Preserve large integers exactly; never pass them through JavaScript `Number` or floating point.
+
+From the downloaded directory, replace the radius placeholder and run:
+
+~~~text
+python tools/diskcover_answer.py --n N --coefficients coefficients.json --radius YOUR_HIGH_PRECISION_RADIUS
+~~~
+
+After publication of a reference hash, add:
+
+~~~text
+python tools/diskcover_answer.py --n N --coefficients coefficients.json --radius YOUR_HIGH_PRECISION_RADIUS --expected-sha256 PUBLISHED_64_HEX_HASH
+~~~
+
+The script normalizes the polynomial to primitive integer form with positive leading coefficient, rounds the radius to **20 digits after the decimal point** using `ROUND_HALF_UP`, and hashes a fixed JSON encoding as UTF-8. Supply at least 30–40 decimal places as a practical starting point; near a rounding boundary, greater precision is necessary. The script outputs the normalized data, exact canonical JSON and SHA256.
+
+A match produces `matches_reference: true` and exit code 0. A mismatch returns 1; invalid input returns 2. Without a reference hash, the script can generate your fingerprint but cannot establish a match.
+
+**Matching fingerprints compare answer data only.** The checker does not verify irreducibility, root isolation, coverage, global optimality, model identity or timing. Keep proof materials separately and state whether they have been checked. The root-isolating interval is a mathematical deliverable but is not included in the v1 hash; 20 decimal places do not prove root uniqueness. Both languages use the same protocol and produce the same hash from the same answer.
+
+## Scores
+
+$$S=\operatorname{RoundHalfUp}\!\left(200+100\log_2\frac{21600}{T}\right),\qquad T&gt;0\text{ seconds}.$$
+
+Higher scores mean shorter completion times, with no upper cap. With a six-hour baseline, six hours scores 200, each halving adds 100 points, and three minutes scores 891. Round the result to an integer using `ROUND_HALF_UP`. The three-minute example is arithmetic, not an observed research run.
+
+For n≤30, each problem has a fixed 12-hour (43200-second) time limit. No valid result meeting the task&#x27;s acceptance criteria within 12 hours scores 0; later completion also scores 0. Only completion by the deadline, including the deadline itself, receives an efficiency score. Formal tests must also freeze acceptance criteria and timing endpoints; time limits for n&gt;30 remain to be set. An untested task is not a zero score. Current historical demonstrations use different timing endpoints and acceptance scopes, so they are not a formal comparable leaderboard. See [historical records](records.html).
+
+Difficulty is not assumed to increase strictly with n. There is currently no combined ranking across different n values or costs.
+
+## Publication status
+
+The catalog contains prompts and reference fingerprints for n = 11, 12, 14, 16, 19, 22, 25, 26 and 27. The global optimality proofs for n=25 and n=26 were accepted by the project’s local mathematical review on 2026-09-26. Independent review of the n=26 minimal-polynomial source remains pending; this is separate from global optimality. Fingerprint matching compares answer data and does not verify a submitted proof. Polynomial coefficients, radius decimals and isolating intervals remain private. Other tasks will be added after their materials are checked; a missing fingerprint does not imply that a problem is unsolved worldwide.
+
+The publisher currently posts their own records. There is no public submission endpoint, independently audited leaderboard or reward commitment. Disclose use of known configurations, existing code or answers. Public prompts and hashes do not provide an anti-cheating guarantee.
+
+## Tools and page publication
+
+Run `python tools/check_tools.py` to check fingerprinting and scoring tools. These checks do not execute a mathematical solver or prove coverage or global optimality. Website source is maintained privately and only approved pages are deployed. The public repository supplies downloadable materials.</pre></div>
+  <pre id="test-prompt" hidden># Testing guide
+
+
+Choose a problem, copy its prompt and view its records in the [problem catalog](index.html). This guide describes the shared testing procedure.
+
+Replace `N` in commands with the selected problem number. [Background](background.html) · [Scoring](scoring.html) · [Answer protocol](protocol.html).
+
+## The mathematical task
+
+Let
+
+$$D=\{x\in\mathbb R^2:\|x\|_2\le1\},\qquad R_D(C)=\max_{x\in D}\min_{1\le i\le n}\|x-c_i\|_2,$$
+
+$$r_D(n)=\inf_{C\in(\mathbb R^2)^n}R_D(C).$$
+
+The covering disks may overlap and extend beyond D. A complete solution must provide the minimal polynomial of the optimal radius itself, in primitive integer form with positive leading coefficient, prove irreducibility, and give a rational interval containing exactly one real root. It must also specify the centers exactly and prove both coverage of the entire disk and a matching lower bound over all configurations. See the full prompt for the precise requirements.
+
+Numerical optimization and finite sampling may help find candidates. They do not replace continuous coverage or a global optimality proof.
+
+
+## Run one test
+
+1. Choose a task and preserve its prompt and repository commit. Record the model and reasoning setting, starting materials, tools, network policy, hardware, time budget and cost budget. A single run can be reported; state the number of runs and do not infer repeatability from one result.
+2. Give the full prompt to the model. Record natural elapsed time, including model work, computations, waiting and verification.
+3. Keep the polynomial, isolating interval, configuration, proofs and certificates. Generate an answer fingerprint locally. Compare it only after a reference hash has been published.
+4. Use the report prompt to summarize the actual record. Distinguish an answer match, a complete mathematical solution and independently checked proof materials.
+
+## From answer to SHA256
+
+Save the coefficients as a UTF-8 JSON integer array in `coefficients.json`, **in increasing order of degree**: constant coefficient first, leading coefficient last. Keep internal zeros. Do not sort by numerical value. Preserve large integers exactly; never pass them through JavaScript `Number` or floating point.
+
+From the downloaded directory, replace the radius placeholder and run:
+
+~~~text
+python tools/diskcover_answer.py --n N --coefficients coefficients.json --radius YOUR_HIGH_PRECISION_RADIUS
+~~~
+
+After publication of a reference hash, add:
+
+~~~text
+python tools/diskcover_answer.py --n N --coefficients coefficients.json --radius YOUR_HIGH_PRECISION_RADIUS --expected-sha256 PUBLISHED_64_HEX_HASH
+~~~
+
+The script normalizes the polynomial to primitive integer form with positive leading coefficient, rounds the radius to **20 digits after the decimal point** using `ROUND_HALF_UP`, and hashes a fixed JSON encoding as UTF-8. Supply at least 30–40 decimal places as a practical starting point; near a rounding boundary, greater precision is necessary. The script outputs the normalized data, exact canonical JSON and SHA256.
+
+A match produces `matches_reference: true` and exit code 0. A mismatch returns 1; invalid input returns 2. Without a reference hash, the script can generate your fingerprint but cannot establish a match.
+
+**Matching fingerprints compare answer data only.** The checker does not verify irreducibility, root isolation, coverage, global optimality, model identity or timing. Keep proof materials separately and state whether they have been checked. The root-isolating interval is a mathematical deliverable but is not included in the v1 hash; 20 decimal places do not prove root uniqueness. Both languages use the same protocol and produce the same hash from the same answer.
+
+## Scores
+
+$$S=\operatorname{RoundHalfUp}\!\left(200+100\log_2\frac{21600}{T}\right),\qquad T&gt;0\text{ seconds}.$$
+
+Higher scores mean shorter completion times, with no upper cap. With a six-hour baseline, six hours scores 200, each halving adds 100 points, and three minutes scores 891. Round the result to an integer using `ROUND_HALF_UP`. The three-minute example is arithmetic, not an observed research run.
+
+For n≤30, each problem has a fixed 12-hour (43200-second) time limit. No valid result meeting the task&#x27;s acceptance criteria within 12 hours scores 0; later completion also scores 0. Only completion by the deadline, including the deadline itself, receives an efficiency score. Formal tests must also freeze acceptance criteria and timing endpoints; time limits for n&gt;30 remain to be set. An untested task is not a zero score. Current historical demonstrations use different timing endpoints and acceptance scopes, so they are not a formal comparable leaderboard. See [historical records](records.html).
+
+Difficulty is not assumed to increase strictly with n. There is currently no combined ranking across different n values or costs.
+
+## Publication status
+
+The catalog contains prompts and reference fingerprints for n = 11, 12, 14, 16, 19, 22, 25, 26 and 27. The global optimality proofs for n=25 and n=26 were accepted by the project’s local mathematical review on 2026-09-26. Independent review of the n=26 minimal-polynomial source remains pending; this is separate from global optimality. Fingerprint matching compares answer data and does not verify a submitted proof. Polynomial coefficients, radius decimals and isolating intervals remain private. Other tasks will be added after their materials are checked; a missing fingerprint does not imply that a problem is unsolved worldwide.
+
+The publisher currently posts their own records. There is no public submission endpoint, independently audited leaderboard or reward commitment. Disclose use of known configurations, existing code or answers. Public prompts and hashes do not provide an anti-cheating guarantee.
+
+## Tools and page publication
+
+Run `python tools/check_tools.py` to check fingerprinting and scoring tools. These checks do not execute a mathematical solver or prove coverage or global optimality. Website source is maintained privately and only approved pages are deployed. The public repository supplies downloadable materials.</pre>
+  
+</main></body>
+</html>

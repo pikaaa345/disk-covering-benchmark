@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="zh-CN" data-page="n13">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>n = 13 · 单位圆盘覆盖测试</title>
+  <script src="language.js"></script>
+  <script src="navigation.js" defer></script>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='12' fill='white' stroke='black' stroke-width='2'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+  <script src="vendor/marked.js" defer></script>
+  <script src="vendor/dompurify.js" defer></script>
+  <script src="math-config.js" defer></script>
+  <script src="vendor/mathjax-tex-svg-full.js" defer></script>
+  <script src="prompt-render.js" defer></script>
+  <script src="app.js" defer></script>
+  <link rel="alternate" type="application/json" href="problems/n13.zh.json">
+  <link rel="alternate" hreflang="zh-CN" href="n13.zh.html"><link rel="alternate" hreflang="en" href="n13.html">
+</head>
+<body>
+  <header class="site-header" data-menu-open="false"><div class="site-header-inner"><a class="site-brand" href="index.zh.html" title="返回网站首页" aria-label="返回网站首页"><svg class="site-brand-mark" viewBox="0 0 32 32" aria-hidden="true" fill="none"><circle cx="16" cy="16" r="14.3" stroke="currentColor" stroke-width="1.5"/><g stroke="currentColor" stroke-width="1.1" opacity=".65"><circle cx="11" cy="12" r="8"/><circle cx="21" cy="12" r="8"/><circle cx="16" cy="21" r="8"/></g></svg><span class="site-brand-copy"><span class="site-brand-title">AI圆盘测试</span><span class="site-brand-subtitle">模型研究级数学能力测试</span></span></a><button class="site-menu-toggle" type="button" aria-controls="site-menu" aria-expanded="false" aria-label="打开导航菜单" data-open-label="打开导航菜单" data-close-label="关闭导航菜单" hidden><svg class="menu-icon-open" viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14"/></svg><svg class="menu-icon-close" viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15"/></svg><span>菜单</span></button><div class="site-menu-panel" id="site-menu"><nav class="site-navigation" aria-label="主要导航"><a class="site-nav-link" href="index.zh.html" aria-current="true">题目</a><a class="site-nav-link" href="guide.zh.html">测试指南</a><a class="site-nav-link" href="scoring.zh.html">评分</a><a class="site-nav-link" href="records.zh.html">测试记录</a><a class="site-nav-link" href="about.zh.html">关于项目</a></nav><div class="site-header-actions"><a class="repository-link" href="https://github.com/pikaaa345/disk-covering-benchmark" aria-label="打开 GitHub 仓库">GitHub 仓库<svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13"/></svg></a><nav class="language-switch" aria-label="语言"><a href="n13.html?lang=en" data-language="en" lang="en">English</a><a href="n13.zh.html?lang=zh" data-language="zh" lang="zh-CN" aria-current="page">中文</a></nav></div></div></div></header>
+<main>
+  <script id="page-config" type="application/json">{"n":13,"referenceSha256":null,"language":"zh"}</script>
+  <p class="back"><a href="index.zh.html">单位圆盘覆盖测试</a></p>
+  <h1>n = 13：单位圆盘最优覆盖</h1>
+  <figure class="figure"><img src="assets/n13.svg" width="330" height="270" alt="13 圆覆盖：覆盖示意图：非最优构型，仅作展示"><figcaption>覆盖示意图：非最优构型，仅作展示</figcaption></figure>
+  <h2>测试记录</h2>
+  <table><thead><tr><th scope="col">模型</th><th scope="col">分数（越高越好）</th></tr></thead><tbody><tr><td><a href="record-n13-codex-20261001.zh.html">gpt-6 astra/max</a><div class="note record-date">测试日期: <time datetime="2026-10-01">2026-10-01</time> (UTC)</div></td><td class="score">0（未完成）</td></tr><tr><td><a href="record-n13-sol-20261001.zh.html">gpt-6.1 sol/max</a><div class="note record-date">测试日期: <time datetime="2026-10-01">2026-10-01</time> (UTC)</div></td><td class="score">0（未完成）</td></tr></tbody></table>
+  <section id="best-recorded-run" aria-labelledby="best-run-heading" data-status="not-published">
+    <h2 id="best-run-heading">最佳已记录运行</h2>
+    <p class="note">人类与 AI 协作开发并优化的算法，在指定计算环境中的运行纪录。用时涵盖程序执行及规定核验；此前研发投入另行记录。 采用与模型测试相同的计分公式，分数越高越好。</p>
+    <p class="note" id="best-run-result">尚未发布完整流程运行纪录。</p>
+  </section>
+  <section id="scoring" aria-labelledby="scoring-heading">
+    <h2 id="scoring-heading"><a href="scoring.zh.html">计分说明</a></h2>
+  </section>
+  <hr class="rule">
+  <div class="prompt-heading"><h2>测试 Prompt</h2><div><button id="copy-prompt" class="copy">复制全文</button><span id="copy-status" class="status" role="status"></span></div></div>
+  <div id="prompt-markdown" class="markdown-body"><pre class="prompt-fallback">单位圆盘的 13 圆最优覆盖问题
+设
+$$
+D=\{x\in\mathbb R^2:\|x\|_2\le1\},\qquad
+R_D(C)=\max_{x\in D}\min_{1\le i\le13}\|x-c_i\|_2,
+$$
+其中 $C=(c_1,\ldots,c_{13})\in(\mathbb R^2)^{13}$，并定义
+$$
+r_D(13)=\inf_{C\in(\mathbb R^2)^{13}}R_D(C).
+$$
+
+覆盖圆盘均为闭圆盘，允许相互重叠和超出 $D$；圆心不预先限制在 $D$ 内。
+
+确定 $r_D(13)$，并完成以下要求：
+
+1. **最小多项式与根隔离区间：**实际列出最优半径 $r_D(13)$ 在 $\mathbb Q$ 上的最小多项式的规范化整系数表示 $P(t)\in\mathbb Z[t]$ 的全部系数：要求 $P$ 非常数、本原、首项系数为正，并证明其在 $\mathbb Q[t]$ 中不可约。给出具体有理数 $0\le a&lt;b$，证明 $P(a)P(b)\ne0$，且 $P$ 在 $(a,b)$ 内恰有一个实根 $\alpha$；结合以下构型与证明，确定 $r_D(13)=\alpha$。
+2. **具体构型：**给出一组确定的有序圆心坐标 $C_*=(c_1^*,\ldots,c_{13}^*)$，采用根式、多项式与有理隔离区间，或其他实际列出的、具有唯一性证明的有限代数数据精确指定。这里的唯一性指所提交的数据唯一指定该组圆心坐标，不要求证明最优构型唯一。
+3. **覆盖性：**严格证明
+   $$
+   \forall x\in D,\quad\exists i\in\{1,\ldots,13\},\quad
+   \|x-c_i^*\|_2\le\alpha.
+   $$
+   若将连续覆盖归约为有限检查，须证明该归约充分，并严格完成全部检查。
+4. **全局最优性：**严格证明
+   $$
+   \forall C\in(\mathbb R^2)^{13},\quad R_D(C)\ge\alpha,
+   $$
+   从而 $R_D(C_*)=r_D(13)=\alpha$。不得未经证明限制构型的对称性、接触关系或组合结构。任何规范化、分类、枚举或剪枝都须证明不会遗漏可能的更优构型，并处理圆心重合、冗余圆盘及其他相关退化情形。
+5. **计算机辅助证明：**若证明依赖计算，须交付实际使用的完整代码、输入、证书、必要环境说明及实际核验结果，并说明核验结果为何推出上述数学命题。
+
+**最终提交：**明确列出 $P(t)$ 的全部系数与有理根隔离区间 $(a,b)$，并附上上述构型、完整证明及必要核验材料。必须提交最优半径本身的最小多项式；仅给出半径平方或其他辅助量的多项式，或未证明不可约的消元多项式，不满足要求。
+
+允许任何严格方法，但仅证明存在性、代数性，或仅给出尚未完成的枚举、求解算法、数值候选，均不视为完成。数值优化成功、程序输出“通过”及未经严格误差控制的浮点结果不能代替证明；只检查有限采样点、边界或数值图像，也不能代替整个闭圆盘被覆盖的证明。</pre></div>
+  <pre id="test-prompt" hidden>单位圆盘的 13 圆最优覆盖问题
+设
+$$
+D=\{x\in\mathbb R^2:\|x\|_2\le1\},\qquad
+R_D(C)=\max_{x\in D}\min_{1\le i\le13}\|x-c_i\|_2,
+$$
+其中 $C=(c_1,\ldots,c_{13})\in(\mathbb R^2)^{13}$，并定义
+$$
+r_D(13)=\inf_{C\in(\mathbb R^2)^{13}}R_D(C).
+$$
+
+覆盖圆盘均为闭圆盘，允许相互重叠和超出 $D$；圆心不预先限制在 $D$ 内。
+
+确定 $r_D(13)$，并完成以下要求：
+
+1. **最小多项式与根隔离区间：**实际列出最优半径 $r_D(13)$ 在 $\mathbb Q$ 上的最小多项式的规范化整系数表示 $P(t)\in\mathbb Z[t]$ 的全部系数：要求 $P$ 非常数、本原、首项系数为正，并证明其在 $\mathbb Q[t]$ 中不可约。给出具体有理数 $0\le a&lt;b$，证明 $P(a)P(b)\ne0$，且 $P$ 在 $(a,b)$ 内恰有一个实根 $\alpha$；结合以下构型与证明，确定 $r_D(13)=\alpha$。
+2. **具体构型：**给出一组确定的有序圆心坐标 $C_*=(c_1^*,\ldots,c_{13}^*)$，采用根式、多项式与有理隔离区间，或其他实际列出的、具有唯一性证明的有限代数数据精确指定。这里的唯一性指所提交的数据唯一指定该组圆心坐标，不要求证明最优构型唯一。
+3. **覆盖性：**严格证明
+   $$
+   \forall x\in D,\quad\exists i\in\{1,\ldots,13\},\quad
+   \|x-c_i^*\|_2\le\alpha.
+   $$
+   若将连续覆盖归约为有限检查，须证明该归约充分，并严格完成全部检查。
+4. **全局最优性：**严格证明
+   $$
+   \forall C\in(\mathbb R^2)^{13},\quad R_D(C)\ge\alpha,
+   $$
+   从而 $R_D(C_*)=r_D(13)=\alpha$。不得未经证明限制构型的对称性、接触关系或组合结构。任何规范化、分类、枚举或剪枝都须证明不会遗漏可能的更优构型，并处理圆心重合、冗余圆盘及其他相关退化情形。
+5. **计算机辅助证明：**若证明依赖计算，须交付实际使用的完整代码、输入、证书、必要环境说明及实际核验结果，并说明核验结果为何推出上述数学命题。
+
+**最终提交：**明确列出 $P(t)$ 的全部系数与有理根隔离区间 $(a,b)$，并附上上述构型、完整证明及必要核验材料。必须提交最优半径本身的最小多项式；仅给出半径平方或其他辅助量的多项式，或未证明不可约的消元多项式，不满足要求。
+
+允许任何严格方法，但仅证明存在性、代数性，或仅给出尚未完成的枚举、求解算法、数值候选，均不视为完成。数值优化成功、程序输出“通过”及未经严格误差控制的浮点结果不能代替证明；只检查有限采样点、边界或数值图像，也不能代替整个闭圆盘被覆盖的证明。</pre>
+  <hr class="rule">
+  <h2>标准答案 SHA256</h2>
+  <p class="hash" id="reference-hash">未知</p>
+  <p class="note">标准答案未知；尚未发布参考指纹。</p>
+  <form id="hash-form"><label for="hash-input">你的 SHA256：</label><div class="hash-controls"><input id="hash-input" type="text" spellcheck="false" autocapitalize="off" placeholder="粘贴 64 位哈希" aria-describedby="hash-result"><button class="copy" type="submit">核对</button></div><p id="hash-result" class="note" role="status">参考指纹尚未发布，目前仅检查输入格式。</p></form>
+  
+  <p class="machine"><a href="prompts/n13.md">Markdown 题面</a> · <a href="problems/n13.zh.json">机器可读索引</a></p>
+</main></body>
+</html>

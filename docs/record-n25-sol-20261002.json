@@ -1,0 +1,156 @@
+{
+  "schema": "diskcover-public-test-reports-v1",
+  "n": 25,
+  "report_scope": "Source-attributed n25 test reports with individual acceptance findings; mathematical answer data withheld.",
+  "records_comparable": false,
+  "records": [
+    {
+      "record_id": "n25-sol-20261002",
+      "test_id": "T_20261002T095156Z_01a0fc06",
+      "model": "gpt-6.1 sol/max",
+      "model_id": "gpt-6.1-sol",
+      "reasoning_effort": "max",
+      "model_identity_status": "original_turn_context_and_user_confirmation",
+      "test_date_utc": "2026-10-02",
+      "status": "accepted_complete_proof",
+      "acceptance_status": "accepted_exact_computer_assisted_proof",
+      "verification_status": "written_geometric_review_and_full_exact_replay",
+      "elapsed_seconds": "17539",
+      "main_natural_seconds": "17539",
+      "main_system_accumulated_seconds": "17538",
+      "timing_scope": "goal_creation_to_completion_natural_interval",
+      "original_budget_seconds": "43200",
+      "within_original_budget": true,
+      "score": "230",
+      "score_scope": "benchmark_score",
+      "answer_sha256": "2cf89430e0f746fabd1f84298f3449cb9f755a8c3d41a198b2881dd042d06e12",
+      "reference_sha256": "2cf89430e0f746fabd1f84298f3449cb9f755a8c3d41a198b2881dd042d06e12",
+      "hash_matches": true,
+      "hardware": {
+        "cpu": "AMD Ryzen 9 8945HX with Radeon Graphics",
+        "physical_cores": 16,
+        "logical_processors": 32,
+        "memory_generation": "DDR5",
+        "memory_gib": 32,
+        "memory_bytes": 34359738368,
+        "memory_speed_mts": 5600,
+        "snapshot_scope": "post_test_report_query_2026-10-03_not_a_task_start_snapshot"
+      },
+      "prompt_artifacts": [
+        {
+          "kind": "main",
+          "original_text_url": "reports/n25-sol-main-prompt.original.txt",
+          "sha256": "f1d937c68b5ce90073563dbb6cc5153b9cbdc05f83641f3d5947bf1a1cedb982",
+          "preserve_original_bytes": true
+        }
+      ],
+      "phases": [
+        {
+          "start_relative_seconds": "0",
+          "end_relative_seconds": "1896",
+          "duration_seconds": "1896",
+          "activity_zh": "公开候选、方法检索及全闭盘上界",
+          "activity_en": "Public candidate and method research; full closed-disk upper bound",
+          "outcome_zh": "候选来自公开资料；完成32个三角形和8个完整二维圆弧帽的解析覆盖。",
+          "outcome_en": "The candidate came from public sources; analytic coverage was established for 32 triangles and eight complete two-dimensional circular caps.",
+          "evidence_scope": "reconstructed_from_original_public_progress_and_execution_receipts; parallel work may overlap"
+        },
+        {
+          "start_relative_seconds": "1896",
+          "end_relative_seconds": "8054",
+          "duration_seconds": "6158",
+          "activity_zh": "一般覆盖归约、枚举和精确证书方法",
+          "activity_en": "Reduction of arbitrary covers, enumeration and exact certificate methods",
+          "outcome_zh": "推广公开 n20 的一般方法及实验代码；完成必要几何归约、力流证书和局部应力证明，早期部分枚举尚不是最终证明。",
+          "outcome_en": "Extend public n20 methods and experimental code; establish necessary geometric reductions, force certificates and a local stress proof. Early partial enumeration was not the final proof.",
+          "evidence_scope": "reconstructed_from_original_public_progress_and_execution_receipts; parallel work may overlap"
+        },
+        {
+          "start_relative_seconds": "8054",
+          "end_relative_seconds": "12177",
+          "duration_seconds": "4123",
+          "activity_zh": "八内盘引理及完整 n25 目录和证书生成",
+          "activity_en": "Eight-interior-disk lemma, complete n25 catalogue and certificate generation",
+          "outcome_zh": "补充八内盘七辐轮必要条件；重写最终枚举，完成十类4,568,172图和7,136前沿任务，未完成项为零。",
+          "outcome_en": "Add the necessary seven-spoke-wheel condition for eight interior disks; reimplement final enumeration and complete ten classes, 4,568,172 graphs and 7,136 frontier tasks, with zero unfinished items.",
+          "evidence_scope": "reconstructed_from_original_public_progress_and_execution_receipts; parallel work may overlap"
+        },
+        {
+          "start_relative_seconds": "12177",
+          "end_relative_seconds": "15621",
+          "duration_seconds": "3444",
+          "activity_zh": "重新枚举及全量严格证书校验",
+          "activity_en": "Fresh enumeration and full exact certificate verification",
+          "outcome_zh": "重新枚举逐类一致；检查全部连续角度域的完整树、每叶严格不等式和局部定理。",
+          "outcome_en": "Fresh enumeration matched every class; complete trees covering the continuous angle domains, every strict leaf inequality and the local theorem were checked.",
+          "evidence_scope": "reconstructed_from_original_public_progress_and_execution_receipts; parallel work may overlap"
+        },
+        {
+          "start_relative_seconds": "15621",
+          "end_relative_seconds": "17539",
+          "duration_seconds": "1918",
+          "activity_zh": "证明说明、冻结交付和逐文件回读",
+          "activity_en": "Proof documentation, frozen delivery and file-by-file readback",
+          "outcome_zh": "完整证明、源码及证书包完成，逐文件SHA-256/长度核对后Goal完成。",
+          "outcome_en": "The full proof, source and certificate package were delivered; Goal completed after SHA-256 and size readback checks.",
+          "evidence_scope": "reconstructed_from_original_public_progress_and_execution_receipts; parallel work may overlap"
+        }
+      ],
+      "source_report": {
+        "filename": "n25-complete-proof.md",
+        "sha256": "34b71efff603e049398c6401aa5e031c9412d2d7ddba78823c1a8d32f1342052",
+        "public_version": "answer_withheld_reviewed_summary"
+      },
+      "report_urls": {
+        "zh": "record-n25-sol-20261002.zh.html",
+        "en": "record-n25-sol-20261002.html"
+      },
+      "token_usage": {
+        "goal_meter_tokens": 1483946,
+        "thread_snapshot_scope": "through_original_final_message_2026-10-02T14:57:01.325Z_includes_delivery_followup_excludes_later_review_and_scoring",
+        "input_tokens": 17911106,
+        "cached_input_tokens": 16589952,
+        "output_tokens": 337866,
+        "reasoning_output_tokens": 227793,
+        "total_tokens": 18248972,
+        "cost": null,
+        "cost_scope": "no_billing_receipt_available"
+      },
+      "external_work": {
+        "source_repository": "VonEquinox/DiskCoveringSolve",
+        "source_url": "https://github.com/VonEquinox/DiskCoveringSolve",
+        "candidate_url": "https://erich-friedman.github.io/packing/circovcir/",
+        "proof_origin": "public_candidate_and_general_methods_extended_with_n25_specific_proof_and_complete_exact_certificates",
+        "reused_materials": [
+          "public candidate configuration",
+          "general Voronoi and rooted-triangulation methods",
+          "n20 experimental peeling code adapted during exploration",
+          "force/domain certificate methods"
+        ],
+        "contribution_zh": "本次补足n25全闭盘覆盖、八内盘必要条件、最终完整目录、局部应力论证及全角度域严格证书；最终枚举和验证交付与早期改编的公开实验代码有别。",
+        "contribution_en": "Supply n25 full-disk coverage, the necessary eight-interior-disk condition, the final exhaustive catalogue, local stress argument and exact full-angle-domain certificates; final enumeration and verification differ from the early adapted public experimental code.",
+        "verification_scope": "original complete runs plus publisher post-test review using pre-existing research assets, a fresh catalogue and full exact replay"
+      },
+      "verification": {
+        "graphs": 4568172,
+        "frontier_tasks": 7136,
+        "force_leaves": 5206340,
+        "local_leaves": 160,
+        "split_nodes": 638328,
+        "total_nodes": 5844828,
+        "missing_or_unresolved": 0,
+        "original_enumeration_seconds": "423.66974852",
+        "original_exact_verification_seconds": "752.871658933",
+        "post_test_enumeration_seconds": "466.102",
+        "post_test_exact_verification_seconds": "799.813",
+        "post_test_split_literal_integer_audit": 638328,
+        "scope": "geometric completeness arguments and exact mathematical inequalities; program success and fingerprint equality alone are not proof"
+      }
+    }
+  ],
+  "reference_status_correction": {
+    "date": "2026-10-03",
+    "note": "The global optimality proofs for n=25 and n=26 were accepted by the project’s local mathematical review on 2026-09-26. Independent review of the n=26 minimal-polynomial source remains pending; this is separate from global optimality. Fingerprint matching compares answer data and does not verify a submitted proof.",
+    "retained_scope": "Original test observations, failed score and historical reference_status fields are preserved."
+  }
+}
