@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="zh-CN" data-page="record-n25-sol-20261002">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>n=25 · gpt-6.1 sol/max 测试报告 · 单位圆盘覆盖测试</title>
+  <script src="language.js"></script>
+  <script src="navigation.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="alternate" hreflang="zh-CN" href="record-n25-sol-20261002.zh.html"><link rel="alternate" hreflang="en" href="record-n25-sol-20261002.html">
+  <link rel="alternate" type="application/json" href="record-n25-sol-20261002.json">
+  <script src="vendor/marked.js" defer></script>
+  <script src="vendor/dompurify.js" defer></script>
+  <script src="math-config.js" defer></script>
+  <script src="vendor/mathjax-tex-svg-full.js" defer></script>
+  <script src="prompt-render.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header" data-menu-open="false"><div class="site-header-inner"><a class="site-brand" href="index.zh.html" title="返回网站首页" aria-label="返回网站首页"><svg class="site-brand-mark" viewBox="0 0 32 32" aria-hidden="true" fill="none"><circle cx="16" cy="16" r="14.3" stroke="currentColor" stroke-width="1.5"/><g stroke="currentColor" stroke-width="1.1" opacity=".65"><circle cx="11" cy="12" r="8"/><circle cx="21" cy="12" r="8"/><circle cx="16" cy="21" r="8"/></g></svg><span class="site-brand-copy"><span class="site-brand-title">AI圆盘测试</span><span class="site-brand-subtitle">模型研究级数学能力测试</span></span></a><button class="site-menu-toggle" type="button" aria-controls="site-menu" aria-expanded="false" aria-label="打开导航菜单" data-open-label="打开导航菜单" data-close-label="关闭导航菜单" hidden><svg class="menu-icon-open" viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14"/></svg><svg class="menu-icon-close" viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15"/></svg><span>菜单</span></button><div class="site-menu-panel" id="site-menu"><nav class="site-navigation" aria-label="主要导航"><a class="site-nav-link" href="index.zh.html">题目</a><a class="site-nav-link" href="guide.zh.html">测试指南</a><a class="site-nav-link" href="scoring.zh.html">评分</a><a class="site-nav-link" href="records.zh.html" aria-current="true">测试记录</a><a class="site-nav-link" href="about.zh.html">关于项目</a></nav><div class="site-header-actions"><a class="repository-link" href="https://github.com/pikaaa345/disk-covering-benchmark" aria-label="打开 GitHub 仓库">GitHub 仓库<svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13"/></svg></a><nav class="language-switch" aria-label="语言"><a href="record-n25-sol-20261002.html?lang=en" data-language="en" lang="en">English</a><a href="record-n25-sol-20261002.zh.html?lang=zh" data-language="zh" lang="zh-CN" aria-current="page">中文</a></nav></div></div></div></header>
+<main>
+  <script id="page-config" type="application/json">{"language":"zh","referenceSha256":null}</script>
+  <p class="back"><a href="index.zh.html">单位圆盘覆盖测试</a> · <a href="n25.zh.html">n = 25</a></p>
+  <div class="prompt-heading"><h1>n=25 · gpt-6.1 sol/max 测试报告</h1><div><button id="copy-prompt" class="copy">复制全文</button><span id="copy-status" class="status" role="status"></span></div></div>
+  <div id="prompt-markdown" class="markdown-body" data-article="true" data-format="markdown"><pre class="prompt-fallback"># n=25 测试研究报告：gpt-6.1 sol/max
+
+本次测试完成，按现行对数评分规则得 **230 分**。自然用时 **4小时52分19秒（17539秒）**，在12小时限时内。标准答案指纹与网页参考指纹一致。完成判定依据书面几何论证、完整精确证书及测试后复核；哈希匹配本身不证明最优性。
+
+## 测试要求与模型身份
+
+任务要求给出 n=25 单位闭圆盘等半径覆盖的完整最优性结果，包括整个闭圆盘的覆盖、任意竞争构型的全局下界、半径与圆心代数资料。仅存在性、数值候选、未完成枚举、浮点“通过”、边界或有限采样均不算完成。原任务禁止预存本地资料、技能及历史聊天，允许网络和WSL计算工具。[原测试用户输入](reports/n25-sol-main-prompt.original.txt)按取得的原字节保存，指纹为 `f1d937c68b5ce90073563dbb6cc5153b9cbdc05f83641f3d5947bf1a1cedb982`。
+
+模型 `gpt-6.1-sol`，推理强度 `max`，由原始 turn_context 与用户确认共同核实。未用当前thread后来变更的模型设置反推原测试身份。本测试编号 `T_20261002T095156Z_01a0fc06`，与项目内另一次 n25 Astra 测试分开。
+
+## 用时、分数和指纹
+
+计分口径与 n11 Sol 记录一致：Goal创建至完成的自然时间。原始Goal时间为2026-10-02 09:51:56至14:44:15 UTC，相减17539秒；Goal累计计时17538秒，包含一次约1秒的暂停差异，计分不扣除暂停。数学全量核验在T+04:20:21完成，交付、压缩包回读等必要工作计至T+04:52:19。随后恢复对话中的最终确认消息不另算必需补做证明。
+
+参考用时21600秒；`ROUND_HALF_UP(200 + 100 × log2(21600 / 17539)) = 230`。使用网站现有评分工具，并以精确有理数幂比较确认整数舍入。
+
+协议 `diskcover-minpoly-v1`。半径的20位小数舍入由精确有理根区间两端同舍入值认证；原始本原正首项系数按常数项在前编码，排序紧凑JSON经UTF-8计算SHA-256。计算值与网页参考值均为：
+
+`2cf89430e0f746fabd1f84298f3449cb9f755a8c3d41a198b2881dd042d06e12`
+
+匹配结果：**true**。具体半径、系数、圆心与证明数据按网站报告惯例不在公开报告披露。网页原有算法记录与候选参考标记描述此前资料的验收范围；本条记录有单独的完整证明审核结论。
+
+## 研究过程（相对时间）
+
+| 区间 | 工作 | 阶段结果 |
+|---|---|---|
+| T+00:00:00—00:31:36 | 公开候选、方法检索及全闭盘上界 | 候选来自公开资料；完成32个三角形和8个完整二维圆弧帽的解析覆盖。 |
+| T+00:31:36—02:14:14 | 一般覆盖归约、枚举和精确证书方法 | 推广公开 n20 的一般方法及实验代码；完成必要几何归约、力流证书和局部应力证明，早期部分枚举尚不是最终证明。 |
+| T+02:14:14—03:22:57 | 八内盘引理及完整 n25 目录和证书生成 | 补充八内盘七辐轮必要条件；重写最终枚举，完成十类4,568,172图和7,136前沿任务，未完成项为零。 |
+| T+03:22:57—04:20:21 | 重新枚举及全量严格证书校验 | 重新枚举逐类一致；检查全部连续角度域的完整树、每叶严格不等式和局部定理。 |
+| T+04:20:21—04:52:19 | 证明说明、冻结交付和逐文件回读 | 完整证明、源码及证书包完成，逐文件SHA-256/长度核对后Goal完成。 |
+
+阶段由原始公开进度消息及执行回执重建，探索与多核计算有重叠；表格不把并行任务用时相加为总用时。面积粗界不足以达到目标，早期小规模目录、数值优化及候选附近实验均未被当作最终证书。
+
+## 外部材料与本次贡献
+
+候选构型来自 [Friedman 的公开圆盘覆盖表](https://erich-friedman.github.io/packing/circovcir/)，约T+00:03:17取得。约T+00:12:42开始阅读 [VonEquinox/DiskCoveringSolve](https://github.com/VonEquinox/DiskCoveringSolve)，参考其一般位置、Voronoi、递归剥面方法和 n20 实验代码；早期确有将公开 n20 代码改为 n25 的实验。力流和角度域生成方法也参考了公开代码。因此不能把全部方法说成从零独立发明。
+
+原始运行未取得一个可直接提交的 n25 完整现成证明。本次补足了全闭盘上界、八内盘必要条件、最终完整 n25 枚举、新的局部应力证明及完整连续角度域的精确证书。最终交付使用重写的枚举和独立于数值搜寻的严格验证器。公开优化器只寻找整数证书候选，浮点状态不参与最终接受逻辑。
+
+## 严格验证与测试后审核
+
+上界覆盖32个三角形的全部点和8个完整二维圆弧帽。下界从任意严格更优覆盖出发，论证扰动、删冗余、Voronoi归约及必要剪枝，覆盖十种组合类别。递归剥面穷尽性和剪枝正确性由书面几何/归纳论证解释，有限回归测试仅用于检查实现。
+
+完整目录为4,568,172个不同图、7,136个前沿任务；全域树含5,206,340个严格力流叶、160个局部证明叶、638,328个二分节点，共5,844,828个节点，缺图与未完成项为零。二分两闭子盒覆盖父盒，区间三角函数和整数/有理不等式带严格余项及向外舍入；没有以离散采样代替连续域证明。
+
+测试后，发布者使用既有研究资产及工具对新证明交叉核验，并重新完成完整目录和全部精确证书。新枚举466.102秒，精确核验799.813秒；另外使用不同实现的纯有理三角界，检查全部638,328个二分字面量确为整数。审核接受书面几何加冻结精确计算的证明。此复核不计入原测试用时，也不把既有本地资产算入原测试求解过程。
+
+原校验器对新输入可补显式整数类型断言；本次冻结证书的全部相关字面量已另行审计，故未改变此次接受结论。没有声明第三方审稿身份认证或证明助手内核形式化。
+
+## 计算环境与计量范围
+
+原运行记录的软件：SageMath 10.7、其Python 3.12.13、NumPy 2.4.3、SciPy 1.17.1、Clarabel 0.11.1用于发现；精确校验使用Python 3.12.3标准库和g++ 13.3.0/C++17，环境为WSL2 Ubuntu x86_64。证书生成使用任务工作区中的优化器环境，软件版本取原交付记录。枚举4进程、证书生成28进程、最终验证16进程。
+
+报告阶段补查机器为AMD Ryzen 9 8945HX（16核、32逻辑处理器），32 GiB DDR5、5600 MT/s。这不是任务开始时的硬件快照，不据此补造原运行监测曲线。
+
+Goal计量1,483,946 tokens。至原最终确认消息的thread累计输入17,911,106（缓存输入16,589,952为其中子集）、输出337,866（推理输出227,793为其中子集）、总计18,248,972。该thread快照含交付恢复消息，排除后来数学审核与此次评分；不能与Goal计量相加。无账单回执，费用未知。
+
+## 交付及公开范围
+
+本地原交付包含完整证明、54文件的冻结源码ZIP、约10.25 GiB证书包、复现指南及清单。完整证明SHA-256为 `34b71efff603e049398c6401aa5e031c9412d2d7ddba78823c1a8d32f1342052`；源码ZIP为 `4e655e095afc017f22a3e681e058b2467906ec3574b755a5b7aa06303c5fc6e2`；证书包为 `7a0eba18dff589b701e913f2fde7ca19d670d3a437ae4a739f4140c6adba676a`。哈希只绑定交付字节。
+
+本站公开分数、标准指纹、原测试输入及这份不披露答案的报告；原证明、完整证书、私有路径、完整聊天及推理内容不随报告发布。报告生成阶段核对原运行证据、舍入、评分和既有审核结果，没有再重复耗时的全量数学验算。
+</pre></div>
+  <pre id="test-prompt" hidden># n=25 测试研究报告：gpt-6.1 sol/max
+
+本次测试完成，按现行对数评分规则得 **230 分**。自然用时 **4小时52分19秒（17539秒）**，在12小时限时内。标准答案指纹与网页参考指纹一致。完成判定依据书面几何论证、完整精确证书及测试后复核；哈希匹配本身不证明最优性。
+
+## 测试要求与模型身份
+
+任务要求给出 n=25 单位闭圆盘等半径覆盖的完整最优性结果，包括整个闭圆盘的覆盖、任意竞争构型的全局下界、半径与圆心代数资料。仅存在性、数值候选、未完成枚举、浮点“通过”、边界或有限采样均不算完成。原任务禁止预存本地资料、技能及历史聊天，允许网络和WSL计算工具。[原测试用户输入](reports/n25-sol-main-prompt.original.txt)按取得的原字节保存，指纹为 `f1d937c68b5ce90073563dbb6cc5153b9cbdc05f83641f3d5947bf1a1cedb982`。
+
+模型 `gpt-6.1-sol`，推理强度 `max`，由原始 turn_context 与用户确认共同核实。未用当前thread后来变更的模型设置反推原测试身份。本测试编号 `T_20261002T095156Z_01a0fc06`，与项目内另一次 n25 Astra 测试分开。
+
+## 用时、分数和指纹
+
+计分口径与 n11 Sol 记录一致：Goal创建至完成的自然时间。原始Goal时间为2026-10-02 09:51:56至14:44:15 UTC，相减17539秒；Goal累计计时17538秒，包含一次约1秒的暂停差异，计分不扣除暂停。数学全量核验在T+04:20:21完成，交付、压缩包回读等必要工作计至T+04:52:19。随后恢复对话中的最终确认消息不另算必需补做证明。
+
+参考用时21600秒；`ROUND_HALF_UP(200 + 100 × log2(21600 / 17539)) = 230`。使用网站现有评分工具，并以精确有理数幂比较确认整数舍入。
+
+协议 `diskcover-minpoly-v1`。半径的20位小数舍入由精确有理根区间两端同舍入值认证；原始本原正首项系数按常数项在前编码，排序紧凑JSON经UTF-8计算SHA-256。计算值与网页参考值均为：
+
+`2cf89430e0f746fabd1f84298f3449cb9f755a8c3d41a198b2881dd042d06e12`
+
+匹配结果：**true**。具体半径、系数、圆心与证明数据按网站报告惯例不在公开报告披露。网页原有算法记录与候选参考标记描述此前资料的验收范围；本条记录有单独的完整证明审核结论。
+
+## 研究过程（相对时间）
+
+| 区间 | 工作 | 阶段结果 |
+|---|---|---|
+| T+00:00:00—00:31:36 | 公开候选、方法检索及全闭盘上界 | 候选来自公开资料；完成32个三角形和8个完整二维圆弧帽的解析覆盖。 |
+| T+00:31:36—02:14:14 | 一般覆盖归约、枚举和精确证书方法 | 推广公开 n20 的一般方法及实验代码；完成必要几何归约、力流证书和局部应力证明，早期部分枚举尚不是最终证明。 |
+| T+02:14:14—03:22:57 | 八内盘引理及完整 n25 目录和证书生成 | 补充八内盘七辐轮必要条件；重写最终枚举，完成十类4,568,172图和7,136前沿任务，未完成项为零。 |
+| T+03:22:57—04:20:21 | 重新枚举及全量严格证书校验 | 重新枚举逐类一致；检查全部连续角度域的完整树、每叶严格不等式和局部定理。 |
+| T+04:20:21—04:52:19 | 证明说明、冻结交付和逐文件回读 | 完整证明、源码及证书包完成，逐文件SHA-256/长度核对后Goal完成。 |
+
+阶段由原始公开进度消息及执行回执重建，探索与多核计算有重叠；表格不把并行任务用时相加为总用时。面积粗界不足以达到目标，早期小规模目录、数值优化及候选附近实验均未被当作最终证书。
+
+## 外部材料与本次贡献
+
+候选构型来自 [Friedman 的公开圆盘覆盖表](https://erich-friedman.github.io/packing/circovcir/)，约T+00:03:17取得。约T+00:12:42开始阅读 [VonEquinox/DiskCoveringSolve](https://github.com/VonEquinox/DiskCoveringSolve)，参考其一般位置、Voronoi、递归剥面方法和 n20 实验代码；早期确有将公开 n20 代码改为 n25 的实验。力流和角度域生成方法也参考了公开代码。因此不能把全部方法说成从零独立发明。
+
+原始运行未取得一个可直接提交的 n25 完整现成证明。本次补足了全闭盘上界、八内盘必要条件、最终完整 n25 枚举、新的局部应力证明及完整连续角度域的精确证书。最终交付使用重写的枚举和独立于数值搜寻的严格验证器。公开优化器只寻找整数证书候选，浮点状态不参与最终接受逻辑。
+
+## 严格验证与测试后审核
+
+上界覆盖32个三角形的全部点和8个完整二维圆弧帽。下界从任意严格更优覆盖出发，论证扰动、删冗余、Voronoi归约及必要剪枝，覆盖十种组合类别。递归剥面穷尽性和剪枝正确性由书面几何/归纳论证解释，有限回归测试仅用于检查实现。
+
+完整目录为4,568,172个不同图、7,136个前沿任务；全域树含5,206,340个严格力流叶、160个局部证明叶、638,328个二分节点，共5,844,828个节点，缺图与未完成项为零。二分两闭子盒覆盖父盒，区间三角函数和整数/有理不等式带严格余项及向外舍入；没有以离散采样代替连续域证明。
+
+测试后，发布者使用既有研究资产及工具对新证明交叉核验，并重新完成完整目录和全部精确证书。新枚举466.102秒，精确核验799.813秒；另外使用不同实现的纯有理三角界，检查全部638,328个二分字面量确为整数。审核接受书面几何加冻结精确计算的证明。此复核不计入原测试用时，也不把既有本地资产算入原测试求解过程。
+
+原校验器对新输入可补显式整数类型断言；本次冻结证书的全部相关字面量已另行审计，故未改变此次接受结论。没有声明第三方审稿身份认证或证明助手内核形式化。
+
+## 计算环境与计量范围
+
+原运行记录的软件：SageMath 10.7、其Python 3.12.13、NumPy 2.4.3、SciPy 1.17.1、Clarabel 0.11.1用于发现；精确校验使用Python 3.12.3标准库和g++ 13.3.0/C++17，环境为WSL2 Ubuntu x86_64。证书生成使用任务工作区中的优化器环境，软件版本取原交付记录。枚举4进程、证书生成28进程、最终验证16进程。
+
+报告阶段补查机器为AMD Ryzen 9 8945HX（16核、32逻辑处理器），32 GiB DDR5、5600 MT/s。这不是任务开始时的硬件快照，不据此补造原运行监测曲线。
+
+Goal计量1,483,946 tokens。至原最终确认消息的thread累计输入17,911,106（缓存输入16,589,952为其中子集）、输出337,866（推理输出227,793为其中子集）、总计18,248,972。该thread快照含交付恢复消息，排除后来数学审核与此次评分；不能与Goal计量相加。无账单回执，费用未知。
+
+## 交付及公开范围
+
+本地原交付包含完整证明、54文件的冻结源码ZIP、约10.25 GiB证书包、复现指南及清单。完整证明SHA-256为 `34b71efff603e049398c6401aa5e031c9412d2d7ddba78823c1a8d32f1342052`；源码ZIP为 `4e655e095afc017f22a3e681e058b2467906ec3574b755a5b7aa06303c5fc6e2`；证书包为 `7a0eba18dff589b701e913f2fde7ca19d670d3a437ae4a739f4140c6adba676a`。哈希只绑定交付字节。
+
+本站公开分数、标准指纹、原测试输入及这份不披露答案的报告；原证明、完整证书、私有路径、完整聊天及推理内容不随报告发布。报告生成阶段核对原运行证据、舍入、评分和既有审核结果，没有再重复耗时的全量数学验算。
+</pre>
+</main></body>
+</html>

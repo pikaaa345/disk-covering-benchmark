@@ -1,0 +1,91 @@
+Disk Covering Benchmark: self-check answer protocol v1
+
+Purpose
+The publisher posts prompts, run conditions, reference hashes and their own
+test records. Other participants can test and compare answers locally.
+Reported timing is self-reported. This protocol checks answer fingerprints,
+not proofs, model identity or execution time. Large proof packages need not
+be uploaded under this protocol; keep them separately.
+
+Environment
+Python 3.9 or newer; standard library only, no third-party dependencies.
+
+Inputs
+1. n: a positive integer.
+2. coefficients.json: a UTF-8 JSON array of exact integers.
+   Order: constant coefficient, coefficient of t, coefficient of t^2, ...,
+   leading coefficient. This is increasing degree, not numerical sorting.
+   Preserve internal zeros. Do not use floats or scientific notation.
+3. Radius: high-precision decimal text; at least 30–40 decimal places are
+   recommended as a starting point. Near a rounding boundary, use more.
+   The script cannot verify the supplied precision.
+
+Normalization
+Remove surplus zeros at the highest-degree end, divide all coefficients by
+their greatest common divisor, and make the leading coefficient positive.
+Constant polynomials are rejected. The participant must supply the minimal
+polynomial; the script does not prove irreducibility or global optimality.
+The radius must lie in [0,1]. Round using ROUND_HALF_UP to exactly 20 digits
+after the decimal point, not 20 significant digits. Preserve trailing zeros.
+Do not convert through float.
+
+Hash payload
+A JSON object containing protocol, n, coefficients and radius.
+protocol is exactly diskcover-minpoly-v1.
+Sort keys alphabetically. Use no extra spaces, BOM or trailing newline.
+Coefficients are JSON integers; radius is a JSON string with exactly 20
+digits after the decimal point. Hash these UTF-8 bytes using SHA-256 and
+output lowercase hexadecimal.
+This protocol specifies exact-integer JSON encoding. Do not decode huge
+coefficients through JavaScript Number and re-encode them. The canonical
+script's output defines the encoding. Chinese and English versions use
+the same fields, protocol identifier and hashing bytes.
+
+Run
+python tools/diskcover_answer.py --n 11 --coefficients coefficients.json --radius YOUR_HIGH_PRECISION_RADIUS
+
+Compare
+python tools/diskcover_answer.py --n 11 --coefficients coefficients.json --radius YOUR_HIGH_PRECISION_RADIUS --expected-sha256 PUBLISHED_64_HEX_HASH
+
+A match outputs matches_reference: true and exits with code 0.
+A mismatch outputs false and exits with code 1. Invalid input exits with 2.
+The script also outputs the normalized answer and exact canonical_json.
+If you downloaded the script alone, adjust its path in these commands.
+
+Publisher and participants
+Both sides must use the same protocol version and script for fingerprints.
+The publisher generates a reference from their checked minimal polynomial
+and sufficiently precise radius. Report the task, protocol, answer hash,
+model and reasoning settings, starting materials, permitted tools, hardware,
+actual time, cost and number of runs. Disclose networking and any existing
+configurations, solving code or answers used.
+
+Scores
+For a valid answer under a frozen contract within its budget:
+score = ROUND_HALF_UP(200 + 100 × log2(21600 / T)), with T in seconds.
+Higher is better: 6 hours scores 200, each halving adds 100, and 3 minutes
+scores 891. Round to an integer using ROUND_HALF_UP.
+Failure or timeout scores 0; untested runs do not score 0. For n≤30 the limit
+is 12 hours (43200 seconds): valid completion exactly at the deadline scores
+100, while later completion scores 0. A shorter agreed budget must also be
+met; limits for n>30 remain to be set. These are arithmetic examples.
+Here, a valid answer means a fingerprint match, not independently completed
+global proof. Only after additional proof verification may a record be
+marked as having its complete proof checked. Current historical scores are
+demonstrations; the formal comparison contract is not yet frozen.
+
+Limitations
+The 20-place radius is a fixed fingerprint/display field, not a proof of
+unique root identity. Different real roots may round to the same value.
+Strict distinction requires checking the root-isolating interval separately
+or adding a real-root index in a new protocol version.
+The full polynomial and rounded radius jointly compare answer data. Decimal
+precision alone neither proves a result nor prevents copying a known answer.
+Public reference hashes support self-checking, not an audited anti-cheating
+leaderboard. The rational isolating interval is required by the mathematical
+prompt but is not included in the v1 payload.
+
+Versioning
+Changes to fields, sorting, radius rounding, decimal places or encoding
+require a new protocol version. Do not compare hashes across versions.
+Translation alone does not change the protocol.

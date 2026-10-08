@@ -1,0 +1,16 @@
+{
+  "status": "not_completed",
+  "score": "0",
+  "reference_seconds": "21600",
+  "elapsed_seconds": "43200",
+  "budget_seconds": "43200",
+  "budget_specified": true,
+  "n": 27,
+  "fixed_12_hour_limit_applies": true,
+  "scoring_version": "diskcover-log-score-v1",
+  "score_formula": "round_half_up(200 + 100 * log2(reference_time_seconds / elapsed_seconds))",
+  "score_rounding": "decimal_ROUND_HALF_UP_integer",
+  "deadline_inclusive": true,
+  "completion_independently_verified": false,
+  "elapsed_seconds_scope": "deadline assessment cutoff, not successful completion time"
+}

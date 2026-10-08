@@ -1,0 +1,72 @@
+# n=27 · gpt-6 astra/max test report
+
+[Back to n=27](n27.html) · [Test records](records.html)
+
+This test took place on 2026-10-07 (UTC), with a 12-hour limit. **The full requirements were not met by the deadline: incomplete, score 0.** Work produced a candidate configuration and verified algebraic data, but did not finish an unconditional global optimality proof covering arbitrary configurations. The requested optimal radius was therefore not established. This report reviews the original records and saved materials; it does not supply the missing proof.
+
+### Task and timing
+
+| Field | Record |
+|---|---|
+| Test ID / independent runs | T_20261007T025113Z_01a11444 / 1 |
+| Original solver / reasoning setting | gpt-6-astra / max; all 12 original-test model-context records agree |
+| Target | Radius minimal polynomial and root isolation, exact ordered centers, coverage of the entire closed disk, unconditional global optimality, and actual verification materials |
+| Original limit / scoring observation window | **12 h (43200 s)**; a failed-run observation window, not a successful completion time |
+| Natural elapsed time through failure confirmation | **12 h 54 min 41 s**, from original Goal creation to the failure response; not valid completion time |
+| Valid completion time / complete result within limit | None, null / no |
+| Acceptance / score | not_completed / **0 (Incomplete)** |
+| Monetary cost | Not recorded |
+| Goal cumulative accounting field | 2435247; not monetary cost or a whole-thread total-token figure |
+| Formal ranking | No formal ranking or stable capability claim from this single run |
+
+T+00:00:00 is original Goal creation. Natural elapsed time and the system counter retain their own recorded definitions; neither replaces the other. Parallel program runtimes are not summed as task duration. Reporting and publication are separate work and do not count as successful completion of the original test.
+
+### Computing environment
+
+| Item | Record |
+|---|---|
+| CPU | AMD Ryzen 9 8945HX with Radeon Graphics; 16 cores, 32 logical processors |
+| Memory | DDR5, 32 GiB |
+| Execution location | Local Ubuntu WSL; no remote machine performed the key computation |
+| Hardware evidence | Actual Windows query during reporting, not a separate task-start snapshot |
+| Preinstalled and used | Python 3.12.3; SageMath, NumPy, SciPy and SymPy for candidate computation and exact verification; unfrozen versions remain unknown |
+| Obtained during the test | msolve 0.10.1, a polynomial-system solver; python-flint 0.9.0 for exact algebra; Numba 0.68.0 and llvmlite 0.50.0 for computation acceleration |
+
+The Python version comes from an original saved verification record. The environment list does not certify task completion, and missing dependency details are not inferred.
+
+### Original input and sources
+
+The original instruction required the [n=27 webpage test prompt](n27.html). It allowed public internet and local WSL tools, while prohibiting pre-existing local materials, skills, chats, archived chats and stored WSL research materials. A resource-rule violation or absence of a complete correct result within 12 hours meant failure. Subsequent permission for assessment, reporting and publication belongs to this separate follow-up.
+
+[Download the original Goal input](reports/n27-astra-main-prompt.original.txt), SHA256 9e8a7bf974f55ae5f11ebf168c6ec44552467b9741397c4e96a1d9a2eb9f3e9f.
+
+The test consulted the public benchmark pages and the [fixed-version DiskCoveringSolve repository](https://github.com/VonEquinox/DiskCoveringSolve/tree/089584973f41e6374ce110f6e5b5ee456df19352) for background and program references. This run generated its own candidate and verification materials. It did not obtain and deliver a complete optimality proof covering all n=27 configurations. An online success claim does not replace acceptance of this run.
+
+### Main stages
+
+These nodes are supported by original progress messages and saved verification records. They identify recorded status, not an unobserved exact discovery time. The process is summarized without internal solving details.
+
+| Relative natural time | Work and recorded outcome |
+|---|---|
+| T+00:00:00–T+02:02:20 | Read the task and public sources, prepare the environment, construct and verify a candidate covering. At the endpoint, exact candidate coverage was recorded as complete; algebraic and global-proof requirements remained open. |
+| T+02:02:20–T+08:43:59 | Advance algebraic data and its association with the candidate while working on the global proof. At the endpoint, the candidate-radius algebraic verification was recorded as closed; global optimality remained incomplete. |
+| T+12:00:00 | Original deadline; the full requirements were not met and no complete valid result was available. |
+| T+12:54:41 | Failure explicitly confirmed; this is not a successful completion time. |
+
+Partial verification and lower bounds of limited scope have research value, but do not fill the missing global argument.
+
+### Verification, delivery and limits
+
+| Acceptance requirement | Result |
+|---|---|
+| Optimal-radius minimal polynomial and root isolation | Complete candidate-radius algebraic data and association materials were saved. Identification with the global optimum remained unproved, so the full requirement was not met. |
+| Exactly specified ordered centers | Exact candidate-center specification and verification materials were saved; no complete proven-optimal final answer. |
+| Entire closed-disk coverage | Original strict verification records cover the candidate over the whole disk; this establishes a feasible covering. |
+| Global optimality for arbitrary configurations | **Incomplete**; a complete exclusion of every better configuration was missing. |
+| Actual code, inputs, certificates and execution evidence | Partial reproducible materials and packages exist, but no final proof package establishing all requirements. |
+
+This assessment checked model metadata, recorded timing, saved-material scope and the scoring output. It did not rerun the mathematical proof. Historical program verification and current website checks have separate scopes. Numerical candidates, local certificates, a program reporting success and fingerprint agreement do not automatically prove global optimality.
+
+Research materials and two partial-result packages remain local. Public deliverables are this report, the original input and a structured test record. Radius values, centers, coefficients, internal certificates and concrete solving steps are withheld. No acceptable complete optimal answer was submitted; valid completion time and the acceptance answer fingerprint remain null, rather than being labeled a fingerprint mismatch.
+
+[Machine-readable record](record-n27-astra-20261007.json) · [Report Markdown](record-n27-astra-20261007.en.md) · [中文报告](record-n27-astra-20261007.zh.html)

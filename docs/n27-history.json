@@ -1,0 +1,23 @@
+{
+  "schema": "diskcover-public-test-reports-v1",
+  "n": 27,
+  "report_scope": "Single best recorded DGC v62 + MinPoly v8 run only; exact answer data withheld.",
+  "records_comparable": false,
+  "records": [
+    {
+      "record_id": "n27-algorithm-run-20261005",
+      "test_id": "T_20261005T042916Z_01a10823",
+      "model": "DGC v62 + MinPoly v8",
+      "record_kind": "best_recorded_run",
+      "elapsed_seconds": "882.4296346960001",
+      "score": "661",
+      "score_scope": "benchmark_score",
+      "timing_scope": "fresh build plus joint controller; not AI natural elapsed time; reference comparison excluded",
+      "logical_cores": 32,
+      "sha256": "c31dce1e3cac5f00d12105435f9f7c61a0456844a01867efbc69011f90473b55",
+      "hash_matches": true,
+      "verification_status": "complete exact replay within inherited DGC assumptions; no new unconditional global-optimality certification",
+      "prompt_artifacts": []
+    }
+  ]
+}

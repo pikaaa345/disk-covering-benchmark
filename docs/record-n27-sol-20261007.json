@@ -1,0 +1,108 @@
+{
+  "schema": "diskcover-public-test-reports-v1",
+  "n": 27,
+  "report_scope": "One unsuccessful model test under the strict 12-hour task; research overview only; mathematical answer data withheld.",
+  "records_comparable": false,
+  "records": [
+    {
+      "record_id": "n27-sol-20261007",
+      "test_id": "T_20261007T025130Z_01a11445",
+      "model": "gpt-6.1 sol/max",
+      "model_id": "gpt-6.1-sol",
+      "reasoning_effort": "max",
+      "test_date_utc": "2026-10-07",
+      "report_date_utc": "2026-10-08",
+      "status": "not_completed",
+      "acceptance_status": "incomplete_at_deadline",
+      "score": "0",
+      "score_scope": "failure_under_diskcover-log-score-v1",
+      "time_budget_seconds": "43200",
+      "elapsed_seconds": "43200",
+      "elapsed_seconds_scope": "assessment_window_to_deadline_not_successful_completion",
+      "valid_completion_seconds": null,
+      "completed_within_time_limit": false,
+      "report_included_in_main_test_time": false,
+      "model_identity_status": "verified_original_test_turn_context",
+      "model_identity_evidence": {
+        "kind": "current_thread_metadata_and_test_window_turn_context",
+        "configuration_count": 7,
+        "distinct_configurations": 1,
+        "model": "gpt-6.1-sol",
+        "effort": "max",
+        "independent_provider_authentication": false
+      },
+      "hardware": {
+        "cpu": "AMD Ryzen 9 8945HX with Radeon Graphics",
+        "memory_generation": "DDR5",
+        "memory_gib": 32,
+        "memory_module_bytes": 34359738368,
+        "smbios_memory_type": 34,
+        "snapshot_scope": "actual_query_during_report_preparation_not_task_start"
+      },
+      "software_current_query": {
+        "sage": "10.7",
+        "sage_python": "3.12.13",
+        "numpy": "2.4.3",
+        "scipy": "1.17.1",
+        "sympy": "1.14.0",
+        "scope": "report_preparation_current_versions_not_start_snapshot"
+      },
+      "money_spent": null,
+      "billed_tokens": null,
+      "mathematics": {
+        "full_task_completed": false,
+        "radius_minimal_polynomial_complete": false,
+        "global_optimality_complete": false,
+        "candidate_exact_definition_records_saved": true,
+        "candidate_whole_closed_disk_coverage_records_saved": true,
+        "complete_final_proof_package_delivered": false,
+        "mathematical_proof_rerun_for_report": false
+      },
+      "answer_check": {
+        "executed": false,
+        "submitted_answer_sha256": null,
+        "matches_reference": null,
+        "reason": "No complete answer produced."
+      },
+      "subagents_used_in_original_test": false,
+      "complete_os_file_access_audit_available": false,
+      "prompt_artifacts": [
+        {
+          "kind": "main_user_instruction",
+          "original_text_url": "reports/n27-sol-main-prompt.original.txt",
+          "sha256": "2390625cbe5fb4b261e7fe48482207e8d92d3476ea89c67facbc1451b06f7654",
+          "source": "Original user text transcribed from the current conversation; UTF-8 LF.",
+          "preserve_original_bytes": true
+        },
+        {
+          "kind": "downloaded_problem_snapshot",
+          "original_text_url": "reports/n27-sol-task.en.txt",
+          "sha256": "2b777b90d79dfe1ea43bfeba7203f9e096e84ec5706a1854920d296dd6133720",
+          "original_download_sha256": "9923675981503329f571825022068bc4fc6a6e515119cabb182828b64e29de3a",
+          "source": "Problem text downloaded during the original test; CRLF converted to LF for publication.",
+          "preserve_original_bytes": true
+        },
+        {
+          "kind": "score_receipt",
+          "original_text_url": "reports/n27-sol-score-output.json",
+          "sha256": "1d7655fdd14b3a66c1c525abe96d430faacbd50797b15fdd7e70f11f0f46a70b",
+          "source": "Actually executed shared scoring tool during report preparation.",
+          "preserve_original_bytes": true
+        }
+      ],
+      "report_urls": {
+        "zh": "record-n27-sol-20261007.zh.html",
+        "en": "record-n27-sol-20261007.html"
+      },
+      "answer_disclosure": "No radius, centers, coefficients or internal solution steps.",
+      "formal_ranking": false,
+      "completion_independently_verified": false,
+      "source_report": {
+        "filename": "record-n27-sol-20261007.zh.md",
+        "sha256": "84a709aba87381d321ff78a684940f2799df4e716c780631826c8be97197b46a",
+        "public_version": "abstract_research_overview",
+        "sha256_scope": "UTF-8 LF authoring text; deployed Markdown raw bytes are bound by the publication manifest."
+      }
+    }
+  ]
+}
