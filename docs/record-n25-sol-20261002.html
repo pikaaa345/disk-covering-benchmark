@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en" data-page="record-n25-sol-20261002">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>n=25 · gpt-6.1 sol/max test report · Unit Disk Covering Benchmark</title>
+  <script src="language.js"></script>
+  <script src="navigation.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="alternate" hreflang="zh-CN" href="record-n25-sol-20261002.zh.html"><link rel="alternate" hreflang="en" href="record-n25-sol-20261002.html">
+  <link rel="alternate" type="application/json" href="record-n25-sol-20261002.json">
+  <script src="vendor/marked.js" defer></script>
+  <script src="vendor/dompurify.js" defer></script>
+  <script src="math-config.js" defer></script>
+  <script src="vendor/mathjax-tex-svg-full.js" defer></script>
+  <script src="prompt-render.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header" data-menu-open="false"><div class="site-header-inner"><a class="site-brand" href="index.html" title="Go to home page" aria-label="Go to home page"><svg class="site-brand-mark" viewBox="0 0 32 32" aria-hidden="true" fill="none"><circle cx="16" cy="16" r="14.3" stroke="currentColor" stroke-width="1.5"/><g stroke="currentColor" stroke-width="1.1" opacity=".65"><circle cx="11" cy="12" r="8"/><circle cx="21" cy="12" r="8"/><circle cx="16" cy="21" r="8"/></g></svg><span class="site-brand-copy"><span class="site-brand-title">AI Disk Benchmark</span><span class="site-brand-subtitle">Research-Level Mathematical Ability Test for Models</span></span></a><button class="site-menu-toggle" type="button" aria-controls="site-menu" aria-expanded="false" aria-label="Open navigation menu" data-open-label="Open navigation menu" data-close-label="Close navigation menu" hidden><svg class="menu-icon-open" viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14"/></svg><svg class="menu-icon-close" viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15"/></svg><span>Menu</span></button><div class="site-menu-panel" id="site-menu"><nav class="site-navigation" aria-label="Main navigation"><a class="site-nav-link" href="index.html">Problems</a><a class="site-nav-link" href="guide.html">Guide</a><a class="site-nav-link" href="scoring.html">Scoring</a><a class="site-nav-link" href="records.html" aria-current="true">Records</a><a class="site-nav-link" href="about.html">About</a></nav><div class="site-header-actions"><a class="repository-link" href="https://github.com/pikaaa345/disk-covering-benchmark" aria-label="Open GitHub repository">GitHub<svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13"/></svg></a><nav class="language-switch" aria-label="Language"><a href="record-n25-sol-20261002.html?lang=en" data-language="en" lang="en" aria-current="page">English</a><a href="record-n25-sol-20261002.zh.html?lang=zh" data-language="zh" lang="zh-CN">中文</a></nav></div></div></div></header>
+<main>
+  <script id="page-config" type="application/json">{"language":"en","referenceSha256":null}</script>
+  <p class="back"><a href="index.html">Unit Disk Covering Benchmark</a> · <a href="n25.html">n = 25</a></p>
+  <div class="prompt-heading"><h1>n=25 · gpt-6.1 sol/max test report</h1><div><button id="copy-prompt" class="copy">Copy full prompt</button><span id="copy-status" class="status" role="status"></span></div></div>
+  <div id="prompt-markdown" class="markdown-body" data-article="true" data-format="markdown"><pre class="prompt-fallback"># n=25 research report: gpt-6.1 sol/max
+
+The test completed with **230 points** under the current logarithmic rubric. Natural elapsed time was **4 h 52 min 19 s (17539 seconds)**, within the twelve-hour deadline. The canonical answer fingerprint matches the published reference. Acceptance rests on geometric arguments, exhaustive exact certificates and post-test review; matching hashes alone do not establish optimality.
+
+## Task and model identity
+
+The task requires a complete optimality result for 25 equal-radius disks covering the closed unit disk: whole-disk coverage, a lower bound for every competing configuration, and algebraic radius and center data. Existence alone, numerical candidates, unfinished enumeration, floating-point success, boundary checks or finite sampling do not suffice. Pre-existing local research, skills and historical chats were prohibited during solving; online sources and WSL computing tools were allowed. The [original user prompt](reports/n25-sol-main-prompt.original.txt) preserves the obtained bytes, SHA-256 `f1d937c68b5ce90073563dbb6cc5153b9cbdc05f83641f3d5947bf1a1cedb982`.
+
+Original turn contexts and the user&#x27;s confirmation identify `gpt-6.1-sol` with `max` reasoning. Later thread settings were not substituted. Test identifier: `T_20261002T095156Z_01a0fc06`; this is distinct from the project&#x27;s separate n25 Astra test.
+
+## Timing, score and fingerprint
+
+As in the n11 Sol report, scoring uses the natural interval from Goal creation to completion: 2026-10-02 09:51:56–14:44:15 UTC, 17539 seconds. The Goal accumulated timer is 17538 seconds; an approximately one-second pause accounts for the timing distinction, and no pause is deducted from scoring. Full mathematical verification finished at T+04:20:21; required documentation, packaging and readback continued through T+04:52:19. The later resumed delivery confirmation was not an additional proof task.
+
+Reference time is 21600 seconds. `ROUND_HALF_UP(200 + 100 × log2(21600 / 17539)) = 230`, with integer rounding certified by the site&#x27;s existing exact rational-power comparison.
+
+Under `diskcover-minpoly-v1`, exact rational root isolation certifies twenty-decimal-place rounding. Primitive positive-leading coefficients, constant term first, and the radius are encoded as sorted compact UTF-8 JSON and hashed with SHA-256. Both computed and reference fingerprints are:
+
+`2cf89430e0f746fabd1f84298f3449cb9f755a8c3d41a198b2881dd042d06e12`
+
+Match: **true**. The numerical answer, polynomial coefficients, centers and proof data are withheld from this public report. Existing algorithm/candidate reference labels describe the earlier material; this test record has a separate complete-proof acceptance finding.
+
+## Research timeline (relative time)
+
+| Interval | Activity | Outcome |
+|---|---|---|
+| T+00:00:00–00:31:36 | Public candidate and method research; full closed-disk upper bound | The candidate came from public sources; analytic coverage was established for 32 triangles and eight complete two-dimensional circular caps. |
+| T+00:31:36–02:14:14 | Reduction of arbitrary covers, enumeration and exact certificate methods | Extend public n20 methods and experimental code; establish necessary geometric reductions, force certificates and a local stress proof. Early partial enumeration was not the final proof. |
+| T+02:14:14–03:22:57 | Eight-interior-disk lemma, complete n25 catalogue and certificate generation | Add the necessary seven-spoke-wheel condition for eight interior disks; reimplement final enumeration and complete ten classes, 4,568,172 graphs and 7,136 frontier tasks, with zero unfinished items. |
+| T+03:22:57–04:20:21 | Fresh enumeration and full exact certificate verification | Fresh enumeration matched every class; complete trees covering the continuous angle domains, every strict leaf inequality and the local theorem were checked. |
+| T+04:20:21–04:52:19 | Proof documentation, frozen delivery and file-by-file readback | The full proof, source and certificate package were delivered; Goal completed after SHA-256 and size readback checks. |
+
+Intervals are reconstructed from original public progress and execution receipts. Exploration and parallel computation overlap; runtimes of parallel jobs are not added to total elapsed time. Insufficient area bounds, preliminary small catalogues, numerical optimization and local experiments were not accepted as the final proof.
+
+## External sources and contributions
+
+The candidate came from [Friedman&#x27;s public covering table](https://erich-friedman.github.io/packing/circovcir/) at about T+00:03:17. At about T+00:12:42, the run consulted [VonEquinox/DiskCoveringSolve](https://github.com/VonEquinox/DiskCoveringSolve) for general-position/Voronoi reductions, recursive peeling and n20 experimental code; early experiments explicitly adapted public n20 code to n25. Force/domain generation also drew on public code. The entire method was therefore not invented independently from scratch.
+
+The original run did not obtain a ready-to-submit complete n25 proof. Its contributions include full closed-disk coverage, the necessary eight-interior-disk lemma, final exhaustive n25 enumeration, a new local stress proof and exact certificates over the complete continuous angle domains. Final delivery uses reimplemented enumeration and strict verification separated from numerical discovery. The optimizer only finds integer certificate candidates; floating-point solver status does not enter acceptance.
+
+## Exact verification and post-test review
+
+The upper bound covers every point of 32 triangles and eight full two-dimensional circular caps. The lower bound starts from any hypothetical strictly better cover and justifies perturbation, redundancy removal, Voronoi reduction and necessary pruning across ten combinatorial classes. Written geometric and inductive arguments establish recursive completeness and pruning soundness; finite regression checks only diagnose implementation errors.
+
+The catalogue contains 4,568,172 distinct graphs and 7,136 frontier tasks. Full-domain trees contain 5,206,340 strict force leaves, 160 local-proof leaves and 638,328 split nodes, totaling 5,844,828 nodes, with zero missing graphs or unresolved items. Two closed child boxes cover every parent. Trigonometric intervals and integer/rational inequalities include strict remainder bounds and outward rounding; continuous domains are not replaced by samples.
+
+After testing, the publisher cross-checked the new proof against established local research assets and tools and regenerated the complete catalogue and replayed every exact certificate. Fresh enumeration took 466.102 seconds and exact verification 799.813 seconds. A separate rational trigonometric implementation checked constants, and all 638,328 split literals were audited as exact integers. The review accepts a written geometric and exact computer-assisted proof. Post-test review is excluded from test elapsed time; local review assets are not attributed to original solving.
+
+Explicit integer-type assertions are recommended for future verifier inputs. Every relevant literal in this frozen certificate was separately audited, so the omission does not change this result. No authenticated third-party referee identity or proof-assistant kernel formalization is claimed.
+
+## Computing environment and measurement scope
+
+Original delivery records list SageMath 10.7 with Python 3.12.13, NumPy 2.4.3, SciPy 1.17.1 and Clarabel 0.11.1 for discovery. Exact verification used Python 3.12.3 standard libraries and g++ 13.3.0/C++17 under WSL2 Ubuntu x86_64. Optimization used a task workspace environment; versions come from original artifacts. Enumeration used four processes, certificate generation 28 and final verification 16.
+
+A post-test report-stage hardware query found AMD Ryzen 9 8945HX, 16 physical cores/32 logical processors, and 32 GiB DDR5 at 5600 MT/s. This is not a task-start hardware snapshot or original telemetry.
+
+The Goal meter reports 1,483,946 tokens. The thread snapshot through the original final confirmation reports 17,911,106 input tokens (16,589,952 cached, a subset), 337,866 output tokens (227,793 reasoning, a subset), and 18,248,972 total. That snapshot includes resumed delivery and excludes later mathematical review and scoring. It must not be added to the Goal meter. Cost is unknown without a billing receipt.
+
+## Delivery and publication scope
+
+Original local delivery includes a complete proof, frozen 54-file source ZIP, approximately 10.25 GiB certificate archive, reproduction guide and manifests. Proof SHA-256: `34b71efff603e049398c6401aa5e031c9412d2d7ddba78823c1a8d32f1342052`; source ZIP: `4e655e095afc017f22a3e681e058b2467906ec3574b755a5b7aa06303c5fc6e2`; certificate archive: `7a0eba18dff589b701e913f2fde7ca19d670d3a437ae4a739f4140c6adba676a`. Hashes bind bytes only.
+
+The public site receives the score, canonical fingerprint, original prompt and this answer-withheld report. Full proofs, certificates, private paths, complete chats and reasoning content are not published. Report preparation checks original evidence, rounding, scoring and the existing completed review; it does not perform another full mathematical replay.
+</pre></div>
+  <pre id="test-prompt" hidden># n=25 research report: gpt-6.1 sol/max
+
+The test completed with **230 points** under the current logarithmic rubric. Natural elapsed time was **4 h 52 min 19 s (17539 seconds)**, within the twelve-hour deadline. The canonical answer fingerprint matches the published reference. Acceptance rests on geometric arguments, exhaustive exact certificates and post-test review; matching hashes alone do not establish optimality.
+
+## Task and model identity
+
+The task requires a complete optimality result for 25 equal-radius disks covering the closed unit disk: whole-disk coverage, a lower bound for every competing configuration, and algebraic radius and center data. Existence alone, numerical candidates, unfinished enumeration, floating-point success, boundary checks or finite sampling do not suffice. Pre-existing local research, skills and historical chats were prohibited during solving; online sources and WSL computing tools were allowed. The [original user prompt](reports/n25-sol-main-prompt.original.txt) preserves the obtained bytes, SHA-256 `f1d937c68b5ce90073563dbb6cc5153b9cbdc05f83641f3d5947bf1a1cedb982`.
+
+Original turn contexts and the user&#x27;s confirmation identify `gpt-6.1-sol` with `max` reasoning. Later thread settings were not substituted. Test identifier: `T_20261002T095156Z_01a0fc06`; this is distinct from the project&#x27;s separate n25 Astra test.
+
+## Timing, score and fingerprint
+
+As in the n11 Sol report, scoring uses the natural interval from Goal creation to completion: 2026-10-02 09:51:56–14:44:15 UTC, 17539 seconds. The Goal accumulated timer is 17538 seconds; an approximately one-second pause accounts for the timing distinction, and no pause is deducted from scoring. Full mathematical verification finished at T+04:20:21; required documentation, packaging and readback continued through T+04:52:19. The later resumed delivery confirmation was not an additional proof task.
+
+Reference time is 21600 seconds. `ROUND_HALF_UP(200 + 100 × log2(21600 / 17539)) = 230`, with integer rounding certified by the site&#x27;s existing exact rational-power comparison.
+
+Under `diskcover-minpoly-v1`, exact rational root isolation certifies twenty-decimal-place rounding. Primitive positive-leading coefficients, constant term first, and the radius are encoded as sorted compact UTF-8 JSON and hashed with SHA-256. Both computed and reference fingerprints are:
+
+`2cf89430e0f746fabd1f84298f3449cb9f755a8c3d41a198b2881dd042d06e12`
+
+Match: **true**. The numerical answer, polynomial coefficients, centers and proof data are withheld from this public report. Existing algorithm/candidate reference labels describe the earlier material; this test record has a separate complete-proof acceptance finding.
+
+## Research timeline (relative time)
+
+| Interval | Activity | Outcome |
+|---|---|---|
+| T+00:00:00–00:31:36 | Public candidate and method research; full closed-disk upper bound | The candidate came from public sources; analytic coverage was established for 32 triangles and eight complete two-dimensional circular caps. |
+| T+00:31:36–02:14:14 | Reduction of arbitrary covers, enumeration and exact certificate methods | Extend public n20 methods and experimental code; establish necessary geometric reductions, force certificates and a local stress proof. Early partial enumeration was not the final proof. |
+| T+02:14:14–03:22:57 | Eight-interior-disk lemma, complete n25 catalogue and certificate generation | Add the necessary seven-spoke-wheel condition for eight interior disks; reimplement final enumeration and complete ten classes, 4,568,172 graphs and 7,136 frontier tasks, with zero unfinished items. |
+| T+03:22:57–04:20:21 | Fresh enumeration and full exact certificate verification | Fresh enumeration matched every class; complete trees covering the continuous angle domains, every strict leaf inequality and the local theorem were checked. |
+| T+04:20:21–04:52:19 | Proof documentation, frozen delivery and file-by-file readback | The full proof, source and certificate package were delivered; Goal completed after SHA-256 and size readback checks. |
+
+Intervals are reconstructed from original public progress and execution receipts. Exploration and parallel computation overlap; runtimes of parallel jobs are not added to total elapsed time. Insufficient area bounds, preliminary small catalogues, numerical optimization and local experiments were not accepted as the final proof.
+
+## External sources and contributions
+
+The candidate came from [Friedman&#x27;s public covering table](https://erich-friedman.github.io/packing/circovcir/) at about T+00:03:17. At about T+00:12:42, the run consulted [VonEquinox/DiskCoveringSolve](https://github.com/VonEquinox/DiskCoveringSolve) for general-position/Voronoi reductions, recursive peeling and n20 experimental code; early experiments explicitly adapted public n20 code to n25. Force/domain generation also drew on public code. The entire method was therefore not invented independently from scratch.
+
+The original run did not obtain a ready-to-submit complete n25 proof. Its contributions include full closed-disk coverage, the necessary eight-interior-disk lemma, final exhaustive n25 enumeration, a new local stress proof and exact certificates over the complete continuous angle domains. Final delivery uses reimplemented enumeration and strict verification separated from numerical discovery. The optimizer only finds integer certificate candidates; floating-point solver status does not enter acceptance.
+
+## Exact verification and post-test review
+
+The upper bound covers every point of 32 triangles and eight full two-dimensional circular caps. The lower bound starts from any hypothetical strictly better cover and justifies perturbation, redundancy removal, Voronoi reduction and necessary pruning across ten combinatorial classes. Written geometric and inductive arguments establish recursive completeness and pruning soundness; finite regression checks only diagnose implementation errors.
+
+The catalogue contains 4,568,172 distinct graphs and 7,136 frontier tasks. Full-domain trees contain 5,206,340 strict force leaves, 160 local-proof leaves and 638,328 split nodes, totaling 5,844,828 nodes, with zero missing graphs or unresolved items. Two closed child boxes cover every parent. Trigonometric intervals and integer/rational inequalities include strict remainder bounds and outward rounding; continuous domains are not replaced by samples.
+
+After testing, the publisher cross-checked the new proof against established local research assets and tools and regenerated the complete catalogue and replayed every exact certificate. Fresh enumeration took 466.102 seconds and exact verification 799.813 seconds. A separate rational trigonometric implementation checked constants, and all 638,328 split literals were audited as exact integers. The review accepts a written geometric and exact computer-assisted proof. Post-test review is excluded from test elapsed time; local review assets are not attributed to original solving.
+
+Explicit integer-type assertions are recommended for future verifier inputs. Every relevant literal in this frozen certificate was separately audited, so the omission does not change this result. No authenticated third-party referee identity or proof-assistant kernel formalization is claimed.
+
+## Computing environment and measurement scope
+
+Original delivery records list SageMath 10.7 with Python 3.12.13, NumPy 2.4.3, SciPy 1.17.1 and Clarabel 0.11.1 for discovery. Exact verification used Python 3.12.3 standard libraries and g++ 13.3.0/C++17 under WSL2 Ubuntu x86_64. Optimization used a task workspace environment; versions come from original artifacts. Enumeration used four processes, certificate generation 28 and final verification 16.
+
+A post-test report-stage hardware query found AMD Ryzen 9 8945HX, 16 physical cores/32 logical processors, and 32 GiB DDR5 at 5600 MT/s. This is not a task-start hardware snapshot or original telemetry.
+
+The Goal meter reports 1,483,946 tokens. The thread snapshot through the original final confirmation reports 17,911,106 input tokens (16,589,952 cached, a subset), 337,866 output tokens (227,793 reasoning, a subset), and 18,248,972 total. That snapshot includes resumed delivery and excludes later mathematical review and scoring. It must not be added to the Goal meter. Cost is unknown without a billing receipt.
+
+## Delivery and publication scope
+
+Original local delivery includes a complete proof, frozen 54-file source ZIP, approximately 10.25 GiB certificate archive, reproduction guide and manifests. Proof SHA-256: `34b71efff603e049398c6401aa5e031c9412d2d7ddba78823c1a8d32f1342052`; source ZIP: `4e655e095afc017f22a3e681e058b2467906ec3574b755a5b7aa06303c5fc6e2`; certificate archive: `7a0eba18dff589b701e913f2fde7ca19d670d3a437ae4a739f4140c6adba676a`. Hashes bind bytes only.
+
+The public site receives the score, canonical fingerprint, original prompt and this answer-withheld report. Full proofs, certificates, private paths, complete chats and reasoning content are not published. Report preparation checks original evidence, rounding, scoring and the existing completed review; it does not perform another full mathematical replay.
+</pre>
+</main></body>
+</html>

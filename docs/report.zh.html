@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="zh-CN" data-page="report">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>报告生成 Prompt · 单位圆盘覆盖测试</title>
+  <script src="language.js"></script>
+  <script src="navigation.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="alternate" hreflang="zh-CN" href="report.zh.html"><link rel="alternate" hreflang="en" href="report.html">
+  <script src="vendor/marked.js" defer></script>
+  <script src="vendor/dompurify.js" defer></script>
+  <script src="math-config.js" defer></script>
+  <script src="vendor/mathjax-tex-svg-full.js" defer></script>
+  <script src="prompt-render.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header" data-menu-open="false"><div class="site-header-inner"><a class="site-brand" href="index.zh.html" title="返回网站首页" aria-label="返回网站首页"><svg class="site-brand-mark" viewBox="0 0 32 32" aria-hidden="true" fill="none"><circle cx="16" cy="16" r="14.3" stroke="currentColor" stroke-width="1.5"/><g stroke="currentColor" stroke-width="1.1" opacity=".65"><circle cx="11" cy="12" r="8"/><circle cx="21" cy="12" r="8"/><circle cx="16" cy="21" r="8"/></g></svg><span class="site-brand-copy"><span class="site-brand-title">AI圆盘测试</span><span class="site-brand-subtitle">模型研究级数学能力测试</span></span></a><button class="site-menu-toggle" type="button" aria-controls="site-menu" aria-expanded="false" aria-label="打开导航菜单" data-open-label="打开导航菜单" data-close-label="关闭导航菜单" hidden><svg class="menu-icon-open" viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14"/></svg><svg class="menu-icon-close" viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15"/></svg><span>菜单</span></button><div class="site-menu-panel" id="site-menu"><nav class="site-navigation" aria-label="主要导航"><a class="site-nav-link" href="index.zh.html">题目</a><a class="site-nav-link" href="guide.zh.html" aria-current="true">测试指南</a><a class="site-nav-link" href="scoring.zh.html">评分</a><a class="site-nav-link" href="records.zh.html">测试记录</a><a class="site-nav-link" href="about.zh.html">关于项目</a></nav><div class="site-header-actions"><a class="repository-link" href="https://github.com/pikaaa345/disk-covering-benchmark" aria-label="打开 GitHub 仓库">GitHub 仓库<svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13"/></svg></a><nav class="language-switch" aria-label="语言"><a href="report.html?lang=en" data-language="en" lang="en">English</a><a href="report.zh.html?lang=zh" data-language="zh" lang="zh-CN" aria-current="page">中文</a></nav></div></div></div></header>
+<main>
+  <script id="page-config" type="application/json">{"language":"zh","referenceSha256":null}</script>
+  <p class="back"><a href="index.zh.html">单位圆盘覆盖测试</a> · <a href="about.zh.html">项目说明</a></p>
+  <div class="prompt-heading"><h1>报告生成 Prompt</h1><div><button id="copy-prompt" class="copy">复制全文</button><span id="copy-status" class="status" role="status"></span></div></div>
+  <div id="prompt-markdown" class="markdown-body" data-article="true" data-format="text"><pre class="prompt-fallback">请为本次任务生成一份研究工作报告。报告须依据本次任务的实际记录、运行日志和交付产物，包含以下内容。
+
+一、任务与完成情况
+
+- 任务目标：简述需要解决的问题和验收要求。
+- 最终结果：说明完成了哪些要求，还有哪些未完成。
+- 时间限制：如有截止时间或时长限制，说明是否按时完成。超时后完成不能写成按时完成。
+
+二、任务耗时与时间标注
+
+报告统一采用相对时间：以本次任务开始为 T+00:00:00，说明经过多久发生了什么，不使用实际钟点或带时区的时间戳。日期可用于报告归档，但不必出现在过程叙述中。
+
+例如：
+
+- “开始后约 3 分钟，得到第一个候选。”
+- “第 15—40 分钟，尝试两种消元方法，均未成功。”
+- “T+01:29:00，首次通过关键验证。”
+
+必须报告：
+
+- 总任务耗时，并注明计时口径。
+- 若任务系统提供累计耗时，单独报告该数值。
+- 从任务开始到完成的自然经过时间；尚未完成时，统计到本次报告截止。
+- 两种耗时若不同，分别列出；有记录时说明暂停、等待等情况，不猜测差异原因。
+
+过程时间线统一使用“从任务开始自然经过的时间”，不要与系统累计耗时混用。暂停或等待仍包含在这条时间线中，可在有记录时注明。
+
+独立追加任务单独计时，明确其起点，不将两次任务之间的空档算作追加任务耗时。
+
+必要时补充主要程序的运行时间，但不得把并行程序运行时间之和当作任务总耗时。
+
+时间精度应与记录和叙述需要相称：通常使用“约几分钟”或“几小时几分钟”，关键节点有必要时精确到秒，不必展示毫秒。缺失或无法核验的时间注明“未记录”或“无法确认”，不得估算后冒充实测值。
+
+三、本地计算条件
+
+只报告与本次任务相关的以下信息。
+
+1. 硬件
+
+- CPU：完整型号。
+- 内存：DDR 代际和总容量，例如“DDR5，64 GB”。
+
+如无法确认 DDR 代际，明确注明未知。默认无需报告显卡、硬盘、主板等其他配置。
+
+2. 预先提供的计算环境
+
+- 列出任务开始前已经安装、且与本次计算相关的专业工具，例如 SageMath、Wolfram Mathematica、GAP、Magma、MATLAB 等，并在能够核实时注明版本。
+- 标明哪些工具实际使用过，以及各自承担的工作。
+- 如果使用了 Python，列出 Python 版本及实际参与核心计算的主要库，例如 SymPy、NumPy、SciPy；不必列出全部依赖。
+- 任务过程中临时取得、安装或配置的工具单独列出，注明名称、用途、来源及能够确认的版本，不能混入“预装环境”。不常见的专业工具用一句话解释它是什么。
+- 若关键计算实际运行在远程机器上，注明执行位置，并按同样标准报告该机器的 CPU 和内存，避免将远程结果归于本机。
+
+配置应依据实际查询结果或可靠的环境记录。若只能取得报告整理时的配置，注明这是当前查询结果，不能冒充任务开始时的环境记录。无法确认的信息注明未知，不得根据计算速度推测配置。无需盘点与任务无关的软件。
+
+四、实际解题过程
+
+按真实发生的顺序，说明主要尝试、结果和路线变化。
+
+不预设阶段数量，不要求必须出现失败、转折或资料检索。一次尝试完成就简洁说明；经过多次探索，则按实际的重要变化组织。
+
+各次尝试、关键资料获取及路线转折均使用上述相对时间标注。时间区间根据实际过程划分，不按整小时机械分段。
+
+视实际情况交代：
+
+- 当时已知什么、还缺什么。
+- 尝试了什么方法，得到什么结果。
+- 查阅了哪些关键资料，何时获取，对解题起了什么作用，并给出可核验的来源。
+- 遇到哪些障碍，依据什么继续、调整或放弃路线。
+- 何时得到候选结果，何时完成严格证明或验证。
+
+重点解释方法选择和变化的可核验依据，不逐条抄录操作日志，不为满足格式编造曲折。区分外部已有成果、本次新增工作，以及事后的评价。
+
+五、验证与交付
+
+- 说明最终结论采用什么方式验证，以及验证覆盖的范围。
+- 区分数值实验、候选结果、严格证明和已执行的计算机验证。
+- 列出关键交付物及其位置，包括必要的代码、输入、结果和证明材料。
+- 如仍有未验证的环节、失败的检查或适用限制，明确列出。写出的代码不能当作已经运行通过的结果。
+- 区分任务过程中已经执行的验证与本次整理报告时新执行的检查；没有重新运行的验证不能表述为本次重新验证通过。
+
+写作要求：
+
+- 基本信息字段必须保留；未知项如实注明，不适用项说明不适用。
+- 过程部分的篇幅与实际工作量相称，不凑阶段、不凑字数。
+- 全文使用相对时间描述过程，不写实际几点几分，不要求读者自行计算时间差。
+- 所有历史叙述均以本次任务记录为依据；事后新查到的资料不能写成解题时已经使用。
+- 对低效尝试和错误作具体评价，说明证据；不编造故障原因、发现时刻或“本可节省”的时间。</pre></div>
+  <pre id="test-prompt" hidden>请为本次任务生成一份研究工作报告。报告须依据本次任务的实际记录、运行日志和交付产物，包含以下内容。
+
+一、任务与完成情况
+
+- 任务目标：简述需要解决的问题和验收要求。
+- 最终结果：说明完成了哪些要求，还有哪些未完成。
+- 时间限制：如有截止时间或时长限制，说明是否按时完成。超时后完成不能写成按时完成。
+
+二、任务耗时与时间标注
+
+报告统一采用相对时间：以本次任务开始为 T+00:00:00，说明经过多久发生了什么，不使用实际钟点或带时区的时间戳。日期可用于报告归档，但不必出现在过程叙述中。
+
+例如：
+
+- “开始后约 3 分钟，得到第一个候选。”
+- “第 15—40 分钟，尝试两种消元方法，均未成功。”
+- “T+01:29:00，首次通过关键验证。”
+
+必须报告：
+
+- 总任务耗时，并注明计时口径。
+- 若任务系统提供累计耗时，单独报告该数值。
+- 从任务开始到完成的自然经过时间；尚未完成时，统计到本次报告截止。
+- 两种耗时若不同，分别列出；有记录时说明暂停、等待等情况，不猜测差异原因。
+
+过程时间线统一使用“从任务开始自然经过的时间”，不要与系统累计耗时混用。暂停或等待仍包含在这条时间线中，可在有记录时注明。
+
+独立追加任务单独计时，明确其起点，不将两次任务之间的空档算作追加任务耗时。
+
+必要时补充主要程序的运行时间，但不得把并行程序运行时间之和当作任务总耗时。
+
+时间精度应与记录和叙述需要相称：通常使用“约几分钟”或“几小时几分钟”，关键节点有必要时精确到秒，不必展示毫秒。缺失或无法核验的时间注明“未记录”或“无法确认”，不得估算后冒充实测值。
+
+三、本地计算条件
+
+只报告与本次任务相关的以下信息。
+
+1. 硬件
+
+- CPU：完整型号。
+- 内存：DDR 代际和总容量，例如“DDR5，64 GB”。
+
+如无法确认 DDR 代际，明确注明未知。默认无需报告显卡、硬盘、主板等其他配置。
+
+2. 预先提供的计算环境
+
+- 列出任务开始前已经安装、且与本次计算相关的专业工具，例如 SageMath、Wolfram Mathematica、GAP、Magma、MATLAB 等，并在能够核实时注明版本。
+- 标明哪些工具实际使用过，以及各自承担的工作。
+- 如果使用了 Python，列出 Python 版本及实际参与核心计算的主要库，例如 SymPy、NumPy、SciPy；不必列出全部依赖。
+- 任务过程中临时取得、安装或配置的工具单独列出，注明名称、用途、来源及能够确认的版本，不能混入“预装环境”。不常见的专业工具用一句话解释它是什么。
+- 若关键计算实际运行在远程机器上，注明执行位置，并按同样标准报告该机器的 CPU 和内存，避免将远程结果归于本机。
+
+配置应依据实际查询结果或可靠的环境记录。若只能取得报告整理时的配置，注明这是当前查询结果，不能冒充任务开始时的环境记录。无法确认的信息注明未知，不得根据计算速度推测配置。无需盘点与任务无关的软件。
+
+四、实际解题过程
+
+按真实发生的顺序，说明主要尝试、结果和路线变化。
+
+不预设阶段数量，不要求必须出现失败、转折或资料检索。一次尝试完成就简洁说明；经过多次探索，则按实际的重要变化组织。
+
+各次尝试、关键资料获取及路线转折均使用上述相对时间标注。时间区间根据实际过程划分，不按整小时机械分段。
+
+视实际情况交代：
+
+- 当时已知什么、还缺什么。
+- 尝试了什么方法，得到什么结果。
+- 查阅了哪些关键资料，何时获取，对解题起了什么作用，并给出可核验的来源。
+- 遇到哪些障碍，依据什么继续、调整或放弃路线。
+- 何时得到候选结果，何时完成严格证明或验证。
+
+重点解释方法选择和变化的可核验依据，不逐条抄录操作日志，不为满足格式编造曲折。区分外部已有成果、本次新增工作，以及事后的评价。
+
+五、验证与交付
+
+- 说明最终结论采用什么方式验证，以及验证覆盖的范围。
+- 区分数值实验、候选结果、严格证明和已执行的计算机验证。
+- 列出关键交付物及其位置，包括必要的代码、输入、结果和证明材料。
+- 如仍有未验证的环节、失败的检查或适用限制，明确列出。写出的代码不能当作已经运行通过的结果。
+- 区分任务过程中已经执行的验证与本次整理报告时新执行的检查；没有重新运行的验证不能表述为本次重新验证通过。
+
+写作要求：
+
+- 基本信息字段必须保留；未知项如实注明，不适用项说明不适用。
+- 过程部分的篇幅与实际工作量相称，不凑阶段、不凑字数。
+- 全文使用相对时间描述过程，不写实际几点几分，不要求读者自行计算时间差。
+- 所有历史叙述均以本次任务记录为依据；事后新查到的资料不能写成解题时已经使用。
+- 对低效尝试和错误作具体评价，说明证据；不编造故障原因、发现时刻或“本可节省”的时间。</pre>
+  <p><a href="report-prompt.txt" download>下载原文</a></p>
+</main></body>
+</html>

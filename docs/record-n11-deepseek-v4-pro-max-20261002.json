@@ -1,0 +1,144 @@
+{
+  "schema": "diskcover-public-test-reports-v1",
+  "n": 11,
+  "report_scope": "Historical source-based reports and an independently reviewed failed DeepSeek submission; mathematical answer data withheld. Existing global proofs were not rerun; the DeepSeek exact counterexample was replayed.",
+  "records_comparable": false,
+  "records": [
+    {
+      "record_id": "n11-deepseek-v4-pro-max-20261002",
+      "n": 11,
+      "model": "deepseek-v4-pro/max",
+      "model_id": "deepseek-v4-pro",
+      "reasoning_effort": "max",
+      "provider_recorded": "deepseek-official",
+      "test_date_utc": "2026-10-02",
+      "status": "failed_incorrect_proof",
+      "score": "0",
+      "elapsed_seconds": "39447.149",
+      "main_system_accumulated_seconds": null,
+      "timing_scope": "first_goal_create_to_final_substantive_assistant_message_includes_interruption_intervals",
+      "original_budget_seconds": "43200",
+      "submission_within_budget": true,
+      "valid_completion_within_budget": false,
+      "session_id": "session-6badb200-1360-4d95-a357-d9f54be3a468",
+      "source_session_sha256": "4dfa921440e6b9d4a219b80b63fd514609c1661163e5d82cd424a9b445c4744d",
+      "source_event_seqs": {
+        "start": 12,
+        "goal_mark_complete": 2514,
+        "final_submission": 2522,
+        "final_turn_end": 2525
+      },
+      "turn_interval_sum_seconds": "37027.526",
+      "turn_interval_sum_is_system_accumulated_time": false,
+      "token_usage": {
+        "inputTokens": 983404,
+        "outputTokens": 567001,
+        "cacheReadTokens": 161620608,
+        "cacheWriteTokens": 0,
+        "totalTokens": 163171013,
+        "usage_record_count": 373,
+        "currency_cost": null,
+        "scope": "saved_assistant_message_usage; not complete invoiced usage"
+      },
+      "hardware": {
+        "cpu": "AMD Ryzen 9 8945HX with Radeon Graphics",
+        "memory_generation": "DDR5",
+        "memory_gib": 32,
+        "memory_bytes": 34359738368,
+        "snapshot_scope": "queried_during_report_preparation_not_at_task_start"
+      },
+      "environment": {
+        "python": "3.12.3",
+        "numpy": "2.5.3",
+        "scipy": "1.18.1",
+        "sympy": "1.14.0",
+        "mpmath": "1.3.0",
+        "pari_gp": "2.15.4",
+        "fplll_tools": null,
+        "versions_source": "actual_test_tool_output",
+        "package_preinstallation_status": "not_fully_known"
+      },
+      "phases": [
+        {
+          "start_relative_seconds": "0",
+          "end_relative_seconds": "1673",
+          "activity_zh": "资料检索、图片重建与环境准备",
+          "activity_en": "Sources, image reconstruction and environment setup",
+          "outcome_zh": "查阅构型目录、Handbook 和 Fejes Tóth 论文，未取得适用于 n=11 的完整全局证明。",
+          "outcome_en": "Read the configuration collection, Handbook and Fejes Tóth paper; obtain no applicable complete global proof for n=11."
+        },
+        {
+          "start_relative_seconds": "1673",
+          "end_relative_seconds": "3310",
+          "activity_zh": "优化与高精度接触方程",
+          "activity_en": "Optimization and high-precision contact equations",
+          "outcome_zh": "首个局部结果较差；改善图片初值，修正半径评估器，得到更好的数值候选。",
+          "outcome_en": "Improve image-derived starting data after a poor local result, correct the radius evaluator, and obtain a better numerical candidate."
+        },
+        {
+          "start_relative_seconds": "3310",
+          "end_relative_seconds": "9984",
+          "activity_zh": "覆盖程序与类型分析",
+          "activity_en": "Coverage programs and type analysis",
+          "outcome_zh": "覆盖程序输出通过，对内圆数与 边界圆盘连续分组作局部数值分析；尚无严格全局下界。",
+          "outcome_en": "Coverage programs report success; local numerical searches examine interior counts and consecutive groups of boundary disks, without certified global lower bounds."
+        },
+        {
+          "start_relative_seconds": "9984",
+          "end_relative_seconds": "35130",
+          "activity_zh": "整数关系搜索及反复重算",
+          "activity_en": "Relation searches and repeated recomputation",
+          "outcome_zh": "多次提高精度、尝试 PSLQ 与 PARI/GP，否定多个伪关系；放弃退化的 Krawczyk 路线；首份交付承认缺最小多项式。",
+          "outcome_en": "Raise precision, try PSLQ and PARI/GP, reject several spurious relations, abandon a degenerate Krawczyk route, and acknowledge the missing minimal polynomial in the first delivery."
+        },
+        {
+          "start_relative_seconds": "35130",
+          "end_relative_seconds": "37822",
+          "activity_zh": "fplll 与后续核验",
+          "activity_en": "fplll and subsequent checks",
+          "outcome_zh": "加入非对称类型局部搜索；找到八次大系数关系，修正系数顺序后因子分解与 Sturm 输出通过；未建立其根等于最优半径。",
+          "outcome_en": "Add asymmetric local searches, find a degree-eight large-coefficient relation, and obtain passing factorization/Sturm outputs after correcting coefficient order; no exact connection to the optimum is proved."
+        },
+        {
+          "start_relative_seconds": "37822",
+          "end_relative_seconds": "39447.149",
+          "activity_zh": "圆心代数数据与最终交付",
+          "activity_en": "Algebraic centers and final delivery",
+          "outcome_zh": "生成圆心多项式，修复缺失 sqrt 和精度设置错误，自称完成。事后严格审核发现提交构型漏覆盖。",
+          "outcome_en": "Generate coordinate polynomials, fix a missing sqrt import and a precision setting, and claim completion. Subsequent exact review refutes coverage."
+        }
+      ],
+      "mathematical_review": {
+        "accepted": false,
+        "submitted_coverage_refuted": true,
+        "true_optimal_radius_refuted": false,
+        "answer_data_public": false,
+        "review_sha256": "492d601cc2d9969a9aecde1e0c0dd60ee49a0ee3c9e9e19f6d5a5102430ee251",
+        "failure_reasons": [
+          "exact_uncovered_point",
+          "incomplete_finite_reduction",
+          "unproved_classification_and_local_minimum_used_as_lower_bound"
+        ]
+      },
+      "prompt_artifacts": [
+        {
+          "kind": "goal_objective",
+          "original_text_url": "reports/n11-deepseek-main-prompt.original.txt",
+          "sha256": "2baffa2d41229eab1d48003c64f53975c0696961a6236219373a7090bb7ff892"
+        }
+      ],
+      "report_urls": {
+        "zh": "record-n11-deepseek-v4-pro-max-20261002.zh.html",
+        "en": "record-n11-deepseek-v4-pro-max-20261002.html"
+      },
+      "resource_compliance_audit": "not_complete; mathematical_failure_decisive",
+      "score_scope": "benchmark_failure_score",
+      "acceptance_status": "failed_incorrect_proof_exact_coverage_counterexample",
+      "source_report": {
+        "filename": "solution.md",
+        "sha256": "5ab2821e885697598ff2b869ee68d53e59f8c4d51845cf4cf358a19fb125e86b",
+        "public_version": "independent_answer_withheld_review"
+      }
+    }
+  ]
+}
