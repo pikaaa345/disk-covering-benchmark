@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="zh-CN" data-page="guide">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>测试指南 · 单位圆盘覆盖测试</title>
+  <script src="language.js"></script>
+  <script src="navigation.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="alternate" hreflang="zh-CN" href="guide.zh.html"><link rel="alternate" hreflang="en" href="guide.html">
+  <script src="vendor/marked.js" defer></script>
+  <script src="vendor/dompurify.js" defer></script>
+  <script src="math-config.js" defer></script>
+  <script src="vendor/mathjax-tex-svg-full.js" defer></script>
+  <script src="prompt-render.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header" data-menu-open="false"><div class="site-header-inner"><a class="site-brand" href="index.zh.html" title="返回网站首页" aria-label="返回网站首页"><svg class="site-brand-mark" viewBox="0 0 32 32" aria-hidden="true" fill="none"><circle cx="16" cy="16" r="14.3" stroke="currentColor" stroke-width="1.5"/><g stroke="currentColor" stroke-width="1.1" opacity=".65"><circle cx="11" cy="12" r="8"/><circle cx="21" cy="12" r="8"/><circle cx="16" cy="21" r="8"/></g></svg><span class="site-brand-copy"><span class="site-brand-title">AI圆盘测试</span><span class="site-brand-subtitle">模型研究级数学能力测试</span></span></a><button class="site-menu-toggle" type="button" aria-controls="site-menu" aria-expanded="false" aria-label="打开导航菜单" data-open-label="打开导航菜单" data-close-label="关闭导航菜单" hidden><svg class="menu-icon-open" viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14"/></svg><svg class="menu-icon-close" viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15"/></svg><span>菜单</span></button><div class="site-menu-panel" id="site-menu"><nav class="site-navigation" aria-label="主要导航"><a class="site-nav-link" href="index.zh.html">题目</a><a class="site-nav-link" href="guide.zh.html" aria-current="page">测试指南</a><a class="site-nav-link" href="scoring.zh.html">评分</a><a class="site-nav-link" href="records.zh.html">测试记录</a><a class="site-nav-link" href="about.zh.html">关于项目</a></nav><div class="site-header-actions"><a class="repository-link" href="https://github.com/pikaaa345/disk-covering-benchmark" aria-label="打开 GitHub 仓库">GitHub 仓库<svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13"/></svg></a><nav class="language-switch" aria-label="语言"><a href="guide.html?lang=en" data-language="en" lang="en">English</a><a href="guide.zh.html?lang=zh" data-language="zh" lang="zh-CN" aria-current="page">中文</a></nav></div></div></div></header>
+<main>
+  <script id="page-config" type="application/json">{"language":"zh","referenceSha256":null}</script>
+  <p class="back"><a href="index.zh.html">单位圆盘覆盖测试</a> · <a href="about.zh.html">项目说明</a></p>
+  <div class="prompt-heading"><h1>测试指南</h1><div><button id="copy-prompt" class="copy">复制全文</button><span id="copy-status" class="status" role="status"></span></div></div>
+  <div id="prompt-markdown" class="markdown-body" data-article="true" data-format="markdown"><pre class="prompt-fallback"># 测试指南
+
+
+选题、复制题面与查看记录，请从[题目总览](index.zh.html)进入。这里说明所有题目共用的测试流程。
+
+命令中的 `N` 请替换为所选题号。[问题背景](background.zh.html) · [计分说明](scoring.zh.html) · [指纹协议](protocol.zh.html)。
+
+## 测什么
+
+设
+
+$$D=\{x\in\mathbb R^2:\|x\|_2\le1\},\qquad R_D(C)=\max_{x\in D}\min_{1\le i\le n}\|x-c_i\|_2,$$
+
+$$r_D(n)=\inf_{C\in(\mathbb R^2)^n}R_D(C).$$
+
+覆盖圆盘可以重叠，也可以超出单位圆盘。完整解决要求给出最优半径本身的**本原、首项系数为正、不可约整系数最小多项式**及**有理根隔离区间**，精确指定圆心，并证明整个圆盘被覆盖以及任何构型都不能更好。完整验收要求见题面。
+
+数值优化和有限采样可帮助找候选，但不能替代连续覆盖和全局最优性的证明。图片只是帮助理解题目。
+
+
+## 怎样测一次
+
+1. 选题，保存题面和仓库提交版本。记录模型及推理设置、起始材料、可用工具、联网规则、机器配置、时间和费用预算。单次测试即可发布，但须注明次数，不能据此宣称重复运行稳定性。
+2. 把完整题面交给模型，从测试开始持续记录自然经过时间。模型研究、程序计算、等待和核验均在这条时间线上。
+3. 保存得到的最小多项式、隔离区间、构型和证明材料；用核对脚本生成答案指纹。标准哈希公布后，可在本地比对。
+4. 用报告 Prompt 整理真实过程和交付物。区分答案匹配、完整解题以及证明是否已由他人核验。
+
+## 从答案到哈希
+
+把多项式系数保存为 UTF-8 的 `coefficients.json`。数组按**幂次从低到高**排列：常数项、一次项、二次项……，保留中间零项；不是按整数数值排序。大整数必须保持精确，不要经由 JavaScript `Number` 转换。
+
+在下载目录运行，替换下方半径占位文本：
+
+~~~text
+python tools/diskcover_answer.py --n N --coefficients coefficients.json --radius YOUR_HIGH_PRECISION_RADIUS
+~~~
+
+标准哈希发布后，增加：
+
+~~~text
+python tools/diskcover_answer.py --n N --coefficients coefficients.json --radius YOUR_HIGH_PRECISION_RADIUS --expected-sha256 PUBLISHED_64_HEX_HASH
+~~~
+
+脚本统一多项式的本原表示和正首项，将半径按 `ROUND_HALF_UP` 四舍五入为**小数点后20位**，再对固定 JSON 的 UTF-8 字节计算 SHA256。建议输入至少30—40位小数；靠近舍入边界时需要更多精度。输出包括规范化数据、参与哈希的原文与哈希值。
+
+比对成功输出 `matches_reference: true`，退出码0；不匹配退出码1；输入错误退出码2。没有标准哈希时仍可生成自己的指纹，但不能称为已匹配。
+
+**指纹匹配只核对所提交的答案数据。**它不检查不可约性、根隔离、几何证明、模型身份或耗时真实性。证明包可以保留在本地，是否已核验应单独标注。根隔离区间是数学交付物，当前 v1 哈希中不包含它；20位小数也不能替代实根唯一性证明。详见协议。
+
+## 分数怎么看
+
+$$S=\operatorname{RoundHalfUp}\!\left(200+100\log_2\frac{21600}{T}\right),\qquad T&gt;0\text{（秒）}.$$
+
+分数越高表示用时越短，不设上限。以6小时为基准，用6小时得200分，用时每减半增加100分，最后采用 `ROUND_HALF_UP` 四舍五入至整数；用3分钟得891分，后一数字只是公式示例。对于 n≤30，每题时限固定为12小时（43200秒）；超过12小时仍无符合该题验收要求的有效结果计0分，超时后完成仍计0分。截止时刻内完成（含截止时刻）才按效率公式计分。正式记录还须先冻结计时端点和有效完成条件；n&gt;30 的时限另定。未测试不等于0分。
+
+当前历史记录、具体时间口径及验收限制见 [results/README.md](records.zh.html)。不同 n 不以大小自动衡量难度，暂不汇总跨题总排名。
+
+## 发布状态
+
+当前提供 n = 11、12、14、16、19、22、25、26、27 的题面与参考指纹。n=25、26 的全局最优性证明已于 2026-09-26 获项目本地数学复核接受。n=26 最小多项式来源的独立复核仍待完成；这与全局最优性是不同事项。指纹匹配仅核对答案数据，不验证提交者的证明。系数、精确半径和隔离区间不在仓库发布。其余 n 将在材料准备并核对后加入；缺少指纹不表示该题已被证明无法解决。
+
+目前由发布者单方面公布记录，没有成绩上传接口、排行榜审核或奖励承诺。参考已有构型、已有求解代码和独立研究应分别披露；公开题目和哈希不提供防作弊保证。
+
+## 工具自检
+
+~~~text
+python tools/check_tools.py
+~~~
+
+此检查使用人工构造的输入验证指纹编码、整数处理、舍入及退出码，不运行圆盘覆盖求解，也不检验数学证明。运行条件与已测范围见 [交付说明](delivery.zh.html)。
+
+## 工具与页面发布
+
+运行 `python tools/check_tools.py` 检查指纹和计分工具。检查不运行数学求解器，也不证明覆盖或全局最优。网站源码在私有仓库维护，只发布已核定页面；公开库提供下载材料。</pre></div>
+  <pre id="test-prompt" hidden># 测试指南
+
+
+选题、复制题面与查看记录，请从[题目总览](index.zh.html)进入。这里说明所有题目共用的测试流程。
+
+命令中的 `N` 请替换为所选题号。[问题背景](background.zh.html) · [计分说明](scoring.zh.html) · [指纹协议](protocol.zh.html)。
+
+## 测什么
+
+设
+
+$$D=\{x\in\mathbb R^2:\|x\|_2\le1\},\qquad R_D(C)=\max_{x\in D}\min_{1\le i\le n}\|x-c_i\|_2,$$
+
+$$r_D(n)=\inf_{C\in(\mathbb R^2)^n}R_D(C).$$
+
+覆盖圆盘可以重叠，也可以超出单位圆盘。完整解决要求给出最优半径本身的**本原、首项系数为正、不可约整系数最小多项式**及**有理根隔离区间**，精确指定圆心，并证明整个圆盘被覆盖以及任何构型都不能更好。完整验收要求见题面。
+
+数值优化和有限采样可帮助找候选，但不能替代连续覆盖和全局最优性的证明。图片只是帮助理解题目。
+
+
+## 怎样测一次
+
+1. 选题，保存题面和仓库提交版本。记录模型及推理设置、起始材料、可用工具、联网规则、机器配置、时间和费用预算。单次测试即可发布，但须注明次数，不能据此宣称重复运行稳定性。
+2. 把完整题面交给模型，从测试开始持续记录自然经过时间。模型研究、程序计算、等待和核验均在这条时间线上。
+3. 保存得到的最小多项式、隔离区间、构型和证明材料；用核对脚本生成答案指纹。标准哈希公布后，可在本地比对。
+4. 用报告 Prompt 整理真实过程和交付物。区分答案匹配、完整解题以及证明是否已由他人核验。
+
+## 从答案到哈希
+
+把多项式系数保存为 UTF-8 的 `coefficients.json`。数组按**幂次从低到高**排列：常数项、一次项、二次项……，保留中间零项；不是按整数数值排序。大整数必须保持精确，不要经由 JavaScript `Number` 转换。
+
+在下载目录运行，替换下方半径占位文本：
+
+~~~text
+python tools/diskcover_answer.py --n N --coefficients coefficients.json --radius YOUR_HIGH_PRECISION_RADIUS
+~~~
+
+标准哈希发布后，增加：
+
+~~~text
+python tools/diskcover_answer.py --n N --coefficients coefficients.json --radius YOUR_HIGH_PRECISION_RADIUS --expected-sha256 PUBLISHED_64_HEX_HASH
+~~~
+
+脚本统一多项式的本原表示和正首项，将半径按 `ROUND_HALF_UP` 四舍五入为**小数点后20位**，再对固定 JSON 的 UTF-8 字节计算 SHA256。建议输入至少30—40位小数；靠近舍入边界时需要更多精度。输出包括规范化数据、参与哈希的原文与哈希值。
+
+比对成功输出 `matches_reference: true`，退出码0；不匹配退出码1；输入错误退出码2。没有标准哈希时仍可生成自己的指纹，但不能称为已匹配。
+
+**指纹匹配只核对所提交的答案数据。**它不检查不可约性、根隔离、几何证明、模型身份或耗时真实性。证明包可以保留在本地，是否已核验应单独标注。根隔离区间是数学交付物，当前 v1 哈希中不包含它；20位小数也不能替代实根唯一性证明。详见协议。
+
+## 分数怎么看
+
+$$S=\operatorname{RoundHalfUp}\!\left(200+100\log_2\frac{21600}{T}\right),\qquad T&gt;0\text{（秒）}.$$
+
+分数越高表示用时越短，不设上限。以6小时为基准，用6小时得200分，用时每减半增加100分，最后采用 `ROUND_HALF_UP` 四舍五入至整数；用3分钟得891分，后一数字只是公式示例。对于 n≤30，每题时限固定为12小时（43200秒）；超过12小时仍无符合该题验收要求的有效结果计0分，超时后完成仍计0分。截止时刻内完成（含截止时刻）才按效率公式计分。正式记录还须先冻结计时端点和有效完成条件；n&gt;30 的时限另定。未测试不等于0分。
+
+当前历史记录、具体时间口径及验收限制见 [results/README.md](records.zh.html)。不同 n 不以大小自动衡量难度，暂不汇总跨题总排名。
+
+## 发布状态
+
+当前提供 n = 11、12、14、16、19、22、25、26、27 的题面与参考指纹。n=25、26 的全局最优性证明已于 2026-09-26 获项目本地数学复核接受。n=26 最小多项式来源的独立复核仍待完成；这与全局最优性是不同事项。指纹匹配仅核对答案数据，不验证提交者的证明。系数、精确半径和隔离区间不在仓库发布。其余 n 将在材料准备并核对后加入；缺少指纹不表示该题已被证明无法解决。
+
+目前由发布者单方面公布记录，没有成绩上传接口、排行榜审核或奖励承诺。参考已有构型、已有求解代码和独立研究应分别披露；公开题目和哈希不提供防作弊保证。
+
+## 工具自检
+
+~~~text
+python tools/check_tools.py
+~~~
+
+此检查使用人工构造的输入验证指纹编码、整数处理、舍入及退出码，不运行圆盘覆盖求解，也不检验数学证明。运行条件与已测范围见 [交付说明](delivery.zh.html)。
+
+## 工具与页面发布
+
+运行 `python tools/check_tools.py` 检查指纹和计分工具。检查不运行数学求解器，也不证明覆盖或全局最优。网站源码在私有仓库维护，只发布已核定页面；公开库提供下载材料。</pre>
+  
+</main></body>
+</html>

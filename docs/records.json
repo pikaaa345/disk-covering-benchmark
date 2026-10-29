@@ -1,0 +1,397 @@
+{
+  "schema": "diskcover-public-test-reports-v1",
+  "n": 11,
+  "report_scope": "Historical source-based reports and an independently reviewed failed DeepSeek submission; mathematical answer data withheld. Existing global proofs were not rerun; the DeepSeek exact counterexample was replayed.",
+  "records_comparable": false,
+  "records": [
+    {
+      "record_id": "n11-astra-20260930",
+      "model": "gpt-6 astra/max",
+      "test_date_utc": "2026-09-30",
+      "status": "historical_demo_not_formal_pass",
+      "elapsed_seconds": "20895.189",
+      "main_natural_seconds": "20069.011",
+      "main_system_accumulated_seconds": "17881",
+      "followup_natural_seconds": "826.178",
+      "followup_system_accumulated_seconds": null,
+      "timing_scope": "sum_of_main_and_independent_required_followup_natural_intervals_excluding_gap",
+      "original_budget_seconds": "3600",
+      "within_original_budget": false,
+      "hardware": {
+        "cpu": "AMD Ryzen 9 8945HX with Radeon Graphics",
+        "memory_generation": "DDR5",
+        "memory_gib": 32,
+        "memory_bytes": 34359738368,
+        "snapshot_scope": "queried_during_original_sol_report_preparation_not_at_task_start",
+        "astra_scope": "shared_publisher_machine_reference_from_sol_report_no_separate_astra_snapshot"
+      },
+      "prompt_artifacts": [
+        {
+          "kind": "main",
+          "original_text_url": "reports/n11-astra-main-prompt.original.txt",
+          "sha256": "d761c10aed4fd064342bdef7775b2e533de7c519cd63b09d7a2351a34f5c19cf"
+        },
+        {
+          "kind": "followup",
+          "original_text_url": "reports/n11-astra-followup-prompt.original.txt",
+          "sha256": "52d9329a252304ebae2cad738fa157dc0243a1f10ba84dab968b19ded71e1e30"
+        }
+      ],
+      "phases": [
+        {
+          "start_relative_seconds": "0",
+          "end_relative_seconds": "3252.612",
+          "duration_seconds": "3252.612",
+          "activity_zh": "经典资料、候选重建与独立下界探索；找到网上已有的完整最优性证明材料",
+          "activity_en": "Background research, candidate reconstruction and independent lower bounds; find an existing complete optimality proof package online",
+          "outcome_zh": "得到候选与粗下界，尚未匹配；阶段末找到外部完整证明材料，全局证明并非模型独立发现。",
+          "outcome_en": "A candidate and coarse bounds were available but did not match; an external complete proof package was found at the end. Its global proof was not independently discovered by the model.",
+          "evidence_scope": "reconstructed_progress_intervals"
+        },
+        {
+          "start_relative_seconds": "3252.612",
+          "end_relative_seconds": "7437.363",
+          "duration_seconds": "4184.751",
+          "activity_zh": "获取、审查并重放外部已有的全盘覆盖与全局最优性证明",
+          "activity_en": "Acquire, review and replay the existing external full-disk coverage and global optimality proof",
+          "outcome_zh": "复用 DiskCoveringSolve 的证明、输入和验证代码，两轮全量重放通过；并行代数探索，仍缺显式一元多项式。",
+          "outcome_en": "Reuse the DiskCoveringSolve proof, inputs and verification code; two full replays passed. Algebraic work ran alongside replay, but an explicit univariate polynomial was still missing.",
+          "evidence_scope": "reconstructed_progress_intervals"
+        },
+        {
+          "start_relative_seconds": "7437.363",
+          "end_relative_seconds": "11127.284",
+          "duration_seconds": "3689.921",
+          "activity_zh": "几何降维、三变量与多变量消元尝试",
+          "activity_en": "Geometric reduction and elimination attempts",
+          "outcome_zh": "几何降维取得新方程；若干消元及整数关系搜索未成功。",
+          "outcome_en": "Geometric reduction produced new equations; several elimination and integer-relation searches failed.",
+          "evidence_scope": "reconstructed_progress_intervals"
+        },
+        {
+          "start_relative_seconds": "11127.284",
+          "end_relative_seconds": "12024.037",
+          "duration_seconds": "896.753",
+          "activity_zh": "清除退化分支，取得有限域消元结果",
+          "activity_en": "Remove degenerate branches and obtain finite-field elimination data",
+          "outcome_zh": "清除退化分支后有限域消元成功，确定待恢复的数据规模。",
+          "outcome_en": "Removing degenerate branches enabled finite-field elimination and established the recovery scale.",
+          "evidence_scope": "reconstructed_progress_intervals"
+        },
+        {
+          "start_relative_seconds": "12024.037",
+          "end_relative_seconds": "17352.345",
+          "duration_seconds": "5328.308",
+          "activity_zh": "参数化、唯一根盒与有理系数恢复尝试",
+          "activity_en": "Parametrization, a unique-root box and rational coefficient recovery attempts",
+          "outcome_zh": "根盒和重构论证推进；整体有理恢复失败，改为逐素数恢复。",
+          "outcome_en": "Root-box and reconstruction arguments progressed; failed automatic recovery led to a prime-by-prime route.",
+          "evidence_scope": "reconstructed_progress_intervals"
+        },
+        {
+          "start_relative_seconds": "17352.345",
+          "end_relative_seconds": "18351.374",
+          "duration_seconds": "999.029",
+          "activity_zh": "逐次提升、根隔离及精确代入连接",
+          "activity_en": "p-adic lifting, rational reconstruction, root isolation and exact substitution",
+          "outcome_zh": "逐次提升恢复全部系数；精确代入和唯一根连接通过。",
+          "outcome_en": "Successive lifting recovered the coefficients; exact substitution and the unique-root connection passed.",
+          "evidence_scope": "reconstructed_progress_intervals"
+        },
+        {
+          "start_relative_seconds": "18351.374",
+          "end_relative_seconds": "20069.011",
+          "duration_seconds": "1717.637",
+          "activity_zh": "独立验证器、证明说明与交付打包",
+          "activity_en": "Integrate independent verifiers, complete the arguments and package delivery",
+          "outcome_zh": "新增独立核验、分支检查及完整交付完成。",
+          "outcome_en": "Independent checks, branch selection and complete delivery were finished.",
+          "evidence_scope": "reconstructed_progress_intervals"
+        }
+      ],
+      "source_report": {
+        "filename": "cover11-work-report.md",
+        "sha256": "d2aa68c72384dc0ffb9732e076e0446f68406d0d093c3f17b1aa9a8a78ec1592",
+        "public_version": "answer_withheld_summary"
+      },
+      "report_urls": {
+        "zh": "record-n11-astra-20260930.zh.html",
+        "en": "record-n11-astra-20260930.html"
+      },
+      "external_work": {
+        "source_repository": "VonEquinox/DiskCoveringSolve",
+        "source_commit": "089584973f41e6374ce110f6e5b5ee456df19352",
+        "source_url": "https://github.com/VonEquinox/DiskCoveringSolve/tree/089584973f41e6374ce110f6e5b5ee456df19352/cover11/proof_bundle",
+        "proof_origin": "existing_external_work_obtained_online",
+        "independently_discovered_global_proof": false,
+        "reused_materials": [
+          "candidate_configuration_and_110_variable_KKT_root_certificate",
+          "full_disk_coverage_proof_and_certificates",
+          "general_configuration_Voronoi_reduction_and_exhaustive_enumeration",
+          "stress_continuous_branch_and_local_lower_bound_certificates",
+          "verification_code_and_inputs"
+        ],
+        "contribution_zh": "检索、审查与实际重放外部已有证明；补全显式半径多项式、圆心代数数据、认证连接及交付。",
+        "contribution_en": "Find, review and replay the existing external proof; supply an explicit radius polynomial, algebraic center data, certified connections and delivery.",
+        "timing_note_zh": "Astra 在 T+00:54:13 左右找到该来源；T+00:54:13—T+02:03:57 的约1小时9分45秒用于获取、审查与重放已有证明，并行进行代数探索，两轮全量重放通过。这是利用现成证明的复核阶段，不是从头发现全局证明的用时，也不是纯验证程序运行时间。主任务后续主要补足显式一元多项式及严格连接；最小多项式另有独立追加任务。",
+        "timing_note_en": "Astra found the source at about T+00:54:13. The approximately 1 h 9 min 45 s interval T+00:54:13–T+02:03:57 covered acquisition, review and replay of the existing proof, alongside algebraic exploration; two full replays passed. This was verification of an existing proof, not discovery of a global proof from scratch or pure verifier runtime. Subsequent main-task work chiefly supplied the explicit univariate polynomial and certified connections; the minimal polynomial was handled in a separate follow-up.",
+        "verification_scope": "historical_executed_replays; this website edit performs no new mathematical replay"
+      }
+    },
+    {
+      "record_id": "n11-sol-20260930",
+      "model": "gpt-6.1 sol/max",
+      "test_date_utc": "2026-09-30",
+      "status": "historical_demo_not_formal_pass",
+      "elapsed_seconds": "22648",
+      "main_natural_seconds": "22648",
+      "main_system_accumulated_seconds": "22431",
+      "followup_natural_seconds": null,
+      "followup_system_accumulated_seconds": null,
+      "timing_scope": "goal_creation_to_completion_natural_interval",
+      "original_budget_seconds": "3600",
+      "within_original_budget": false,
+      "hardware": {
+        "cpu": "AMD Ryzen 9 8945HX with Radeon Graphics",
+        "memory_generation": "DDR5",
+        "memory_gib": 32,
+        "memory_bytes": 34359738368,
+        "snapshot_scope": "queried_during_original_sol_report_preparation_not_at_task_start",
+        "astra_scope": "shared_publisher_machine_reference_from_sol_report_no_separate_astra_snapshot"
+      },
+      "prompt_artifacts": [
+        {
+          "kind": "main",
+          "original_text_url": "reports/n11-sol-main-prompt.original.txt",
+          "sha256": "70aa652abcb6f94b0616a6eeffbb1980b79370d28fc5e2914de599765168dbaa"
+        }
+      ],
+      "phases": [
+        {
+          "start_relative_seconds": "0",
+          "end_relative_seconds": "3493",
+          "duration_seconds": "3493",
+          "activity_zh": "网上取得已有的完整最优性证明材料、首轮复核与低次整数关系搜索",
+          "activity_en": "Obtain an existing complete optimality proof package online, perform first replay and low-degree integer-relation searches",
+          "outcome_zh": "已有全盘覆盖与全局最优性证明来自 DiskCoveringSolve，并非模型独立发现；176个公开文件哈希已核对，十四项验证通过，但缺显式一元多项式，限时未完成。",
+          "outcome_en": "The existing full-disk coverage and global optimality proof came from DiskCoveringSolve, not independent model discovery. Hashes of 176 public files were checked and fourteen checks passed, but the explicit univariate polynomial was missing and the original deadline was missed.",
+          "evidence_scope": "intervals_between_reported_file_save_nodes_not_exclusive_cpu_stages"
+        },
+        {
+          "start_relative_seconds": "3493",
+          "end_relative_seconds": "11130",
+          "duration_seconds": "7637",
+          "activity_zh": "限时续作、缩减系统与根连接",
+          "activity_en": "Continued work, a reduced system and root connection",
+          "outcome_zh": "第三小时补充包保存：覆盖与根连接推进，仍标记未完成。",
+          "outcome_en": "A later supplementary package was saved: coverage and root connections progressed, still incomplete.",
+          "evidence_scope": "intervals_between_reported_file_save_nodes_not_exclusive_cpu_stages"
+        },
+        {
+          "start_relative_seconds": "11130",
+          "end_relative_seconds": "18201",
+          "duration_seconds": "7071",
+          "activity_zh": "高精度求根与整数格关系识别",
+          "activity_en": "High-precision root computation and lattice relation searches",
+          "outcome_zh": "半径多项式数据保存；这不是首次发现关系的精确时刻。",
+          "outcome_en": "Polynomial data were saved; this is not a measured first-discovery time.",
+          "evidence_scope": "intervals_between_reported_file_save_nodes_not_exclusive_cpu_stages"
+        },
+        {
+          "start_relative_seconds": "18201",
+          "end_relative_seconds": "19323",
+          "duration_seconds": "1122",
+          "activity_zh": "圆心代数表达与唯一根对应",
+          "activity_en": "Algebraic center expressions and unique-root correspondence",
+          "outcome_zh": "根证书、坐标表达及连接证书依次保存。",
+          "outcome_en": "Root, coordinate and connection certificates were saved in sequence.",
+          "evidence_scope": "intervals_between_reported_file_save_nodes_not_exclusive_cpu_stages"
+        },
+        {
+          "start_relative_seconds": "19323",
+          "end_relative_seconds": "21380",
+          "duration_seconds": "2057",
+          "activity_zh": "并行重放外部全局证明、集成新增代数核验和交付修正",
+          "activity_en": "Replay the external global proof in parallel, integrate new algebraic checks and fix delivery errors",
+          "outcome_zh": "外部已有全局证明的完整重放结果与新增代数集成材料保存；新增代码错误修正后通过。",
+          "outcome_en": "Full replay results for the existing external global proof and new integrated algebraic materials were saved; implementation errors were fixed before successful checks.",
+          "evidence_scope": "intervals_between_reported_file_save_nodes_not_exclusive_cpu_stages"
+        },
+        {
+          "start_relative_seconds": "21380",
+          "end_relative_seconds": "22648",
+          "duration_seconds": "1268",
+          "activity_zh": "补充说明已有一般构型约化与局部下界，审计和打包",
+          "activity_en": "Explain the existing general-configuration reduction and local bound, audit and package",
+          "outcome_zh": "补全外部证明适用依据的说明，并非重新独立发现全局证明；证明包修订后，Goal标记完成，最终答复时刻未记录。",
+          "outcome_en": "Clarify why the external proof applies, rather than independently rediscovering its global proof. The package was revised and the Goal marked complete; the final-response timestamp is unavailable.",
+          "evidence_scope": "intervals_between_reported_file_save_nodes_not_exclusive_cpu_stages"
+        }
+      ],
+      "source_report": {
+        "filename": "research_work_report_zh.md",
+        "sha256": "c31a953e82ccaa56ecc0f03caf3031ef01f354f4be5779ea1e9968df9fa0972c",
+        "public_version": "answer_withheld_summary"
+      },
+      "report_urls": {
+        "zh": "record-n11-sol-20260930.zh.html",
+        "en": "record-n11-sol-20260930.html"
+      },
+      "external_work": {
+        "source_repository": "VonEquinox/DiskCoveringSolve",
+        "source_commit": "089584973f41e6374ce110f6e5b5ee456df19352",
+        "source_url": "https://github.com/VonEquinox/DiskCoveringSolve/tree/089584973f41e6374ce110f6e5b5ee456df19352/cover11/proof_bundle",
+        "proof_origin": "existing_external_work_obtained_online",
+        "independently_discovered_global_proof": false,
+        "reused_materials": [
+          "candidate_configuration_and_110_variable_KKT_root_certificate",
+          "full_disk_coverage_proof_and_certificates",
+          "general_configuration_Voronoi_reduction_and_exhaustive_enumeration",
+          "stress_continuous_branch_and_local_lower_bound_certificates",
+          "verification_code_and_inputs"
+        ],
+        "contribution_zh": "检索、审查与实际重放外部已有证明；补全显式半径多项式、圆心代数数据、认证连接及交付。",
+        "contribution_en": "Find, review and replay the existing external proof; supply an explicit radius polynomial, algebraic center data, certified connections and delivery.",
+        "timing_note_zh": "SOL 至迟在 T+00:58:13 保存首轮收据时已取得该来源的176个公开文件，核对哈希并运行通过十四项验证。首次找到和取得材料的精确时刻未记录；首个58分13秒还包含整数关系搜索等工作，不能全部算成纯验证用时。首轮十四项顺序检查的程序计时合计约14分12秒；最后一轮约14分1秒。它们不包含全部下载、装载和审查开销，也不能相加充当任务总用时。后续主要补足显式代数数据与严格连接；这份原交付尚未认证不可约性。",
+        "timing_note_en": "By the first receipt saved at T+00:58:13, SOL had obtained 176 public files from this source, checked their hashes and passed fourteen verification checks. The exact first-discovery and acquisition times are not recorded. The first 58 min 13 s also included integer-relation searches and other work, so it is not pure verification time. The first fourteen sequential checks totalled about 14 min 12 s of program time; the final round totalled about 14 min 1 s. These exclude all acquisition, loading and review overhead and must not be added to obtain task elapsed time. Later work chiefly supplied explicit algebraic data and certified connections; the original delivery did not certify irreducibility.",
+        "verification_scope": "historical_executed_replays; this website edit performs no new mathematical replay"
+      }
+    },
+    {
+      "record_id": "n11-deepseek-v4-pro-max-20261002",
+      "n": 11,
+      "model": "deepseek-v4-pro/max",
+      "model_id": "deepseek-v4-pro",
+      "reasoning_effort": "max",
+      "provider_recorded": "deepseek-official",
+      "test_date_utc": "2026-10-02",
+      "status": "failed_incorrect_proof",
+      "score": "0",
+      "elapsed_seconds": "39447.149",
+      "main_system_accumulated_seconds": null,
+      "timing_scope": "first_goal_create_to_final_substantive_assistant_message_includes_interruption_intervals",
+      "original_budget_seconds": "43200",
+      "submission_within_budget": true,
+      "valid_completion_within_budget": false,
+      "session_id": "session-6badb200-1360-4d95-a357-d9f54be3a468",
+      "source_session_sha256": "4dfa921440e6b9d4a219b80b63fd514609c1661163e5d82cd424a9b445c4744d",
+      "source_event_seqs": {
+        "start": 12,
+        "goal_mark_complete": 2514,
+        "final_submission": 2522,
+        "final_turn_end": 2525
+      },
+      "turn_interval_sum_seconds": "37027.526",
+      "turn_interval_sum_is_system_accumulated_time": false,
+      "token_usage": {
+        "inputTokens": 983404,
+        "outputTokens": 567001,
+        "cacheReadTokens": 161620608,
+        "cacheWriteTokens": 0,
+        "totalTokens": 163171013,
+        "usage_record_count": 373,
+        "currency_cost": null,
+        "scope": "saved_assistant_message_usage; not complete invoiced usage"
+      },
+      "hardware": {
+        "cpu": "AMD Ryzen 9 8945HX with Radeon Graphics",
+        "memory_generation": "DDR5",
+        "memory_gib": 32,
+        "memory_bytes": 34359738368,
+        "snapshot_scope": "queried_during_report_preparation_not_at_task_start"
+      },
+      "environment": {
+        "python": "3.12.3",
+        "numpy": "2.5.3",
+        "scipy": "1.18.1",
+        "sympy": "1.14.0",
+        "mpmath": "1.3.0",
+        "pari_gp": "2.15.4",
+        "fplll_tools": null,
+        "versions_source": "actual_test_tool_output",
+        "package_preinstallation_status": "not_fully_known"
+      },
+      "phases": [
+        {
+          "start_relative_seconds": "0",
+          "end_relative_seconds": "1673",
+          "activity_zh": "资料检索、图片重建与环境准备",
+          "activity_en": "Sources, image reconstruction and environment setup",
+          "outcome_zh": "查阅构型目录、Handbook 和 Fejes Tóth 论文，未取得适用于 n=11 的完整全局证明。",
+          "outcome_en": "Read the configuration collection, Handbook and Fejes Tóth paper; obtain no applicable complete global proof for n=11."
+        },
+        {
+          "start_relative_seconds": "1673",
+          "end_relative_seconds": "3310",
+          "activity_zh": "优化与高精度接触方程",
+          "activity_en": "Optimization and high-precision contact equations",
+          "outcome_zh": "首个局部结果较差；改善图片初值，修正半径评估器，得到更好的数值候选。",
+          "outcome_en": "Improve image-derived starting data after a poor local result, correct the radius evaluator, and obtain a better numerical candidate."
+        },
+        {
+          "start_relative_seconds": "3310",
+          "end_relative_seconds": "9984",
+          "activity_zh": "覆盖程序与类型分析",
+          "activity_en": "Coverage programs and type analysis",
+          "outcome_zh": "覆盖程序输出通过，对内圆数与 边界圆盘连续分组作局部数值分析；尚无严格全局下界。",
+          "outcome_en": "Coverage programs report success; local numerical searches examine interior counts and consecutive groups of boundary disks, without certified global lower bounds."
+        },
+        {
+          "start_relative_seconds": "9984",
+          "end_relative_seconds": "35130",
+          "activity_zh": "整数关系搜索及反复重算",
+          "activity_en": "Relation searches and repeated recomputation",
+          "outcome_zh": "多次提高精度、尝试 PSLQ 与 PARI/GP，否定多个伪关系；放弃退化的 Krawczyk 路线；首份交付承认缺最小多项式。",
+          "outcome_en": "Raise precision, try PSLQ and PARI/GP, reject several spurious relations, abandon a degenerate Krawczyk route, and acknowledge the missing minimal polynomial in the first delivery."
+        },
+        {
+          "start_relative_seconds": "35130",
+          "end_relative_seconds": "37822",
+          "activity_zh": "fplll 与后续核验",
+          "activity_en": "fplll and subsequent checks",
+          "outcome_zh": "加入非对称类型局部搜索；找到八次大系数关系，修正系数顺序后因子分解与 Sturm 输出通过；未建立其根等于最优半径。",
+          "outcome_en": "Add asymmetric local searches, find a degree-eight large-coefficient relation, and obtain passing factorization/Sturm outputs after correcting coefficient order; no exact connection to the optimum is proved."
+        },
+        {
+          "start_relative_seconds": "37822",
+          "end_relative_seconds": "39447.149",
+          "activity_zh": "圆心代数数据与最终交付",
+          "activity_en": "Algebraic centers and final delivery",
+          "outcome_zh": "生成圆心多项式，修复缺失 sqrt 和精度设置错误，自称完成。事后严格审核发现提交构型漏覆盖。",
+          "outcome_en": "Generate coordinate polynomials, fix a missing sqrt import and a precision setting, and claim completion. Subsequent exact review refutes coverage."
+        }
+      ],
+      "mathematical_review": {
+        "accepted": false,
+        "submitted_coverage_refuted": true,
+        "true_optimal_radius_refuted": false,
+        "answer_data_public": false,
+        "review_sha256": "492d601cc2d9969a9aecde1e0c0dd60ee49a0ee3c9e9e19f6d5a5102430ee251",
+        "failure_reasons": [
+          "exact_uncovered_point",
+          "incomplete_finite_reduction",
+          "unproved_classification_and_local_minimum_used_as_lower_bound"
+        ]
+      },
+      "prompt_artifacts": [
+        {
+          "kind": "goal_objective",
+          "original_text_url": "reports/n11-deepseek-main-prompt.original.txt",
+          "sha256": "2baffa2d41229eab1d48003c64f53975c0696961a6236219373a7090bb7ff892"
+        }
+      ],
+      "report_urls": {
+        "zh": "record-n11-deepseek-v4-pro-max-20261002.zh.html",
+        "en": "record-n11-deepseek-v4-pro-max-20261002.html"
+      },
+      "resource_compliance_audit": "not_complete; mathematical_failure_decisive",
+      "score_scope": "benchmark_failure_score",
+      "acceptance_status": "failed_incorrect_proof_exact_coverage_counterexample",
+      "source_report": {
+        "filename": "solution.md",
+        "sha256": "5ab2821e885697598ff2b869ee68d53e59f8c4d51845cf4cf358a19fb125e86b",
+        "public_version": "independent_answer_withheld_review"
+      }
+    }
+  ]
+}

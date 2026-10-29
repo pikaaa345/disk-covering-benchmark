@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en" data-page="record-n15-sol-24h-20261024">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>n=15 · gpt-6.1 sol/max test report · Unit Disk Covering Benchmark</title>
+  <script src="language.js"></script>
+  <script src="navigation.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="alternate" hreflang="zh-CN" href="record-n15-sol-24h-20261024.zh.html"><link rel="alternate" hreflang="en" href="record-n15-sol-24h-20261024.html">
+  <link rel="alternate" type="application/json" href="record-n15-sol-24h-20261024.json">
+  <script src="vendor/marked.js" defer></script>
+  <script src="vendor/dompurify.js" defer></script>
+  <script src="math-config.js" defer></script>
+  <script src="vendor/mathjax-tex-svg-full.js" defer></script>
+  <script src="prompt-render.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header" data-menu-open="false"><div class="site-header-inner"><a class="site-brand" href="index.html" title="Go to home page" aria-label="Go to home page"><svg class="site-brand-mark" viewBox="0 0 32 32" aria-hidden="true" fill="none"><circle cx="16" cy="16" r="14.3" stroke="currentColor" stroke-width="1.5"/><g stroke="currentColor" stroke-width="1.1" opacity=".65"><circle cx="11" cy="12" r="8"/><circle cx="21" cy="12" r="8"/><circle cx="16" cy="21" r="8"/></g></svg><span class="site-brand-copy"><span class="site-brand-title">AI Disk Benchmark</span><span class="site-brand-subtitle">Research-Level Mathematical Ability Test for Models</span></span></a><button class="site-menu-toggle" type="button" aria-controls="site-menu" aria-expanded="false" aria-label="Open navigation menu" data-open-label="Open navigation menu" data-close-label="Close navigation menu" hidden><svg class="menu-icon-open" viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14"/></svg><svg class="menu-icon-close" viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15"/></svg><span>Menu</span></button><div class="site-menu-panel" id="site-menu"><nav class="site-navigation" aria-label="Main navigation"><a class="site-nav-link" href="index.html">Problems</a><a class="site-nav-link" href="guide.html">Guide</a><a class="site-nav-link" href="scoring.html">Scoring</a><a class="site-nav-link" href="records.html" aria-current="true">Records</a><a class="site-nav-link" href="about.html">About</a></nav><div class="site-header-actions"><a class="repository-link" href="https://github.com/pikaaa345/disk-covering-benchmark" aria-label="Open GitHub repository">GitHub<svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13"/></svg></a><nav class="language-switch" aria-label="Language"><a href="record-n15-sol-24h-20261024.html?lang=en" data-language="en" lang="en" aria-current="page">English</a><a href="record-n15-sol-24h-20261024.zh.html?lang=zh" data-language="zh" lang="zh-CN">中文</a></nav></div></div></div></header>
+<main>
+  <script id="page-config" type="application/json">{"language":"en","referenceSha256":null}</script>
+  <p class="back"><a href="index.html">Unit Disk Covering Benchmark</a> · <a href="n15.html">n = 15</a></p>
+  <div class="prompt-heading"><h1>n=15 · gpt-6.1 sol/max test report</h1><div><button id="copy-prompt" class="copy">Copy full prompt</button><span id="copy-status" class="status" role="status"></span></div></div>
+  <div id="prompt-markdown" class="markdown-body" data-article="true" data-format="markdown"><pre class="prompt-fallback"># n=15 · gpt-6.1 sol/max (24h) test report
+
+[Back to n=15](n15.html?lang=en) · [Test records](records.html)
+
+This single test concerned optimal covering of the closed unit disk by fifteen congruent closed disks. It is recorded as **gpt-6.1-sol / max, with a 24-hour limit**. The task required every coefficient of the radius minimal polynomial, an exact configuration, continuous coverage and a global lower bound for arbitrary configurations. **No submission meeting all requirements was obtained. The score is 0.**
+
+The saved research includes exact configuration materials, geometric proof replay and partial algebraic results. The principal missing deliverable is the radius minimal polynomial with its required proofs. This page withholds the radius, centers, coefficients, isolation endpoints, certificates and detailed solution procedures. It is based on the original records; this revision did not resume mathematical computation or independently re-examine the entire proof.
+
+### Existing proof sources and the model&#x27;s contribution
+
+**The test used existing public n=15 geometric proof materials. The candidate configuration and global proof materials came from external work, rather than being discovered independently from scratch during this run.**
+
+The main source was [VonEquinox / DiskCoveringSolve at a fixed commit](https://github.com/VonEquinox/DiskCoveringSolve/tree/089584973f41e6374ce110f6e5b5ee456df19352/cover15/alternative_bundle). The research retained provenance, file inventories, identity checks and a complete replay receipt from a task working copy. These materials supplied an existing basis for configuration, coverage and global lower-bound work, but did not by themselves supply the minimal-polynomial submission required here.
+
+The model read and checked the public arguments, executed and examined verification materials, organized exact configuration definitions, checked their connection to algebraic objects, and pursued further computation while assessing whether the results met the acceptance standard. Reused work, newly performed checks and outstanding obligations are distinguished. Success in one part is not completion of the whole task.
+
+### Task and acceptance standard
+
+For the closed unit disk $D$ and an ordered tuple $C$ of fifteen centers, define
+
+$$
+R_D(C)=\max_{x\in D}\min_{1\le i\le15}\|x-c_i\|_2,
+\qquad r_D(15)=\inf_C R_D(C).
+$$
+
+Covering disks may overlap and extend outside the unit disk; centers are not initially restricted to it. All the following requirements must hold together:
+
+| Requirement | Required standard |
+| --- | --- |
+| Radius minimal polynomial | Every coefficient of its normalized primitive integer representation, with positive leading coefficient and an irreducibility proof over the rationals |
+| Root identification | Explicit rational isolation endpoints, nonzero endpoint values, exactly one real root in the interval and identification with the optimal radius |
+| Exact configuration | Fifteen ordered centers specified by finite algebraic data with uniqueness proved |
+| Continuous coverage | Coverage of the entire closed unit disk; any finite reduction must be sufficient and every necessary check completed |
+| Global lower bound | Valid for arbitrary configurations, without unjustified symmetry or contact assumptions and with relevant degeneracies handled |
+| Computational materials | Actual code, inputs, certificates, environment and results, with an explanation of their mathematical implications |
+
+Existence, algebraicity, an unfinished algorithm, a numerical candidate, sampling or an image is insufficient. Precisely defining a geometric root does not replace the minimal polynomial of the radius itself. The full prompt is on the [n=15 problem page](n15.html?lang=en). This section summarizes the acceptance conditions; it is not represented as a verbatim export of the original user message.
+
+### Test information and timing
+
+| Item | Record |
+| --- | --- |
+| Test ID | `T_20261024T024637Z_01a16bcd` |
+| Model | `gpt-6.1-sol / max` |
+| Test date (UTC) | 2026-10-24 |
+| Limit for this record | **24 hours** |
+| Independent model tests | One; debugging, replay and verification within the same research do not create additional independent tests |
+| Complete valid submission | Not obtained |
+| Successful completion time | None; neither the limit nor a partial program&#x27;s runtime is a substitute |
+| Website score | **0 (Incomplete)** |
+| Actual cost | Unavailable |
+
+The 24h label denotes this extended test&#x27;s limit, not a successful completion time. Its conditions differ from the usual 12-hour tests; it is not a same-condition formal ranking. Archiving, report preparation and publication are subsequent work, not additional mathematical achievements within the test.
+
+The available records do not provide a complete scoring-time ledger that reliably attributes exact durations to every research phase. No invented start or end times are assigned below, and separate program runtimes are not summed into a complete solution time. A fast partial verification does not yield a success score for an incomplete test.
+
+### Computing conditions and usage
+
+| Item | Supported scope |
+| --- | --- |
+| Execution environment | Local Windows and Ubuntu/WSL; commands and selected process states retained in task records |
+| Main tools | Python, SageMath and specialist algebraic-computation and exact-verification tools |
+| Computation | Integer, rational and algebraic work; numerical computations used for exploration rather than as final proof |
+| External computation | The user explicitly allowed submitting mathematical equations to the public Magma calculator; this did not produce the complete minimal polynomial |
+| Hardware and versions | The selected archive does not establish a complete test-start hardware and software-version snapshot; configurations from other tests are not copied into this record |
+| Goal usage | 5,748,463 tokens in the saved archival Goal accounting snapshot |
+| Thread cumulative usage | Input 243,440,538, including cached input 238,784,384; output 2,224,037; total 245,664,575 tokens |
+| Billing evidence | Unavailable; current prices are not used to fabricate actual expenditure |
+
+Goal and thread usage are different accounting scopes and are not added together. The thread figures come from the last cumulative usage event before archiving and include repeated context, not that many tokens of distinct research. Cached input is part of input and is not added again. Usage does not establish that every elapsed interval produced useful mathematical progress.
+
+Computational scale and memory demand affected progress. Resource limits, program failures and unfinished results remain in the detailed record. This page explains their effect on the submission without exposing internal parameters, exact structural sizes, tool modifications or reproducible solution strategies.
+
+### Main research phases
+
+This table follows work dependencies rather than claiming disjoint timed intervals. It identifies the work, evidence and remaining gap at each stage.
+
+| Phase | Work | Result and boundary |
+| --- | --- | --- |
+| Public sources and acceptance review | Locate existing work, distinguish candidate and geometric proof materials from minimal-polynomial obligations, and fix the sources actually used | External materials obtained; not evidence of independent discovery of the optimal configuration |
+| Geometric proof replay | Check inputs and verification materials, replay coverage and global-bound checks, and read the accompanying arguments | Complete replay receipt saved; its meaning depends on sufficient mathematical reductions, not just exit status |
+| Exact configuration and linkage | Organize fifteen ordered exact centers and check uniqueness and correspondence to the geometric proof objects | Configuration, root-uniqueness and linkage materials saved; no automatic radius minimal polynomial |
+| Algebraic computation and checking | Develop and adjust computational models, seek rigorous algebraic output and assess candidates against the requirements | Partial exact relations and intermediate outputs obtained; required univariate polynomial and proofs missing |
+| Final submission review | Compare all deliverables with the task, distinguishing partial progress from complete acceptance | Core algebraic obligations remained missing; record classified as incomplete with score 0 |
+
+### Changes of emphasis, difficulties and failure analysis
+
+Early work focused on understanding and checking the geometric results; later work concentrated on the algebraic deliverable. The connection between the exact configuration and the geometric root became clearer, but that connection is a different obligation from explicitly producing the radius minimal polynomial. More computation did not automatically bridge that gap.
+
+Later research involved repeated model adjustments, result checks and tool-level optimization. Computational size, memory demand and program stability limited several attempts. Intermediate results were saved, but no final output completing the rational-field proof was obtained. **The final direct algebraic computation produced no valid result, and its selected output file was empty. Saving progress or verifying a backup does not establish that the solution finished.**
+
+Higher numerical precision can help discover relations and assess consistency with the geometric target. It cannot alone prove that an integer relation holds exactly, or prove irreducibility. Exact relations and multivariate algebraic definitions likewise do not substitute for the requested univariate minimal polynomial.
+
+The immediate reason for failure is missing final deliverables, rather than an absence of verification work. The record supports geometric and partial algebraic progress, but does not establish the required degree, coefficient list or proofs. It also does not establish that more memory, storage or runtime would necessarily complete the task.
+
+### Verification, deliverables and limitations
+
+| Item | Saved materials | Full-task assessment |
+| --- | --- | --- |
+| Fifteen centers | Ordered exact data and uniqueness-verification materials | Partial delivery evidence; insufficient alone to pass the test |
+| Closed-disk coverage | Public argument and actual exact replay records | Depends on the complete continuous-to-finite reduction and its checks, not sampling |
+| Arbitrary-configuration lower bound | External proof package, replay receipt and geometric linkage explanation | External dependency explicit; no new independent mathematical certification by this page |
+| Radius minimal polynomial | No final submission meeting the requirements | **Incomplete** |
+| Irreducibility and root isolation | No complete proofs for the required polynomial | **Incomplete** |
+| Code, inputs and certificates | Task records, selected materials and locators for other computational files | A selected archive is not a complete successful proof package |
+| Answer fingerprint | No complete answer submission available for certification | The reference fingerprint on the problem page is not a match by this run |
+| Overall outcome | Substantial partial work, with core algebraic requirements missing | **Incomplete, score 0** |
+
+Any recorded pass applies only to its inputs, certificates and stated argument. Replaying a proof package does not automatically audit every mathematical reduction. Reducing a continuous problem to finite checks still requires showing that those checks exhaust the original problem. High-precision decimals, exit codes, checksums and backup integrity cannot replace these obligations.
+
+Source restrictions prohibited preexisting local research, skills and other chats as solution inputs, while allowing public sources and local WSL tools. Public materials, materials acquired for this task and newly generated results retain separate provenance. No operating-system-wide access trace was available, so this page does not certify full-run source-access compliance. Later archival and publication authorization cannot retrospectively become authorization for original solution inputs.
+
+### Archive and downloadable records
+
+The local archive contains 2,500 public messages or tool events, runtime fields, user instructions, a detailed report and selected evidence. It is labeled a partial public-field export, with omissions documented separately. Large computational files retain locators and existing verification information; they were not all copied into the test ZIP. The original archive remains unchanged. This revision expands the public report without changing the evidence or the zero-score outcome.
+
+The webpage is not a complete proof archive. Raw conversations, private paths, detailed solution steps and answers are outside this publication&#x27;s scope. One incomplete run does not establish a stable success rate or a general performance gap between models.
+
+[Machine-readable record](record-n15-sol-24h-20261024.json) · [Report Markdown](record-n15-sol-24h-20261024.en.md) · [n=15 record index](n15-history.json)
+</pre></div>
+  <pre id="test-prompt" hidden># n=15 · gpt-6.1 sol/max (24h) test report
+
+[Back to n=15](n15.html?lang=en) · [Test records](records.html)
+
+This single test concerned optimal covering of the closed unit disk by fifteen congruent closed disks. It is recorded as **gpt-6.1-sol / max, with a 24-hour limit**. The task required every coefficient of the radius minimal polynomial, an exact configuration, continuous coverage and a global lower bound for arbitrary configurations. **No submission meeting all requirements was obtained. The score is 0.**
+
+The saved research includes exact configuration materials, geometric proof replay and partial algebraic results. The principal missing deliverable is the radius minimal polynomial with its required proofs. This page withholds the radius, centers, coefficients, isolation endpoints, certificates and detailed solution procedures. It is based on the original records; this revision did not resume mathematical computation or independently re-examine the entire proof.
+
+### Existing proof sources and the model&#x27;s contribution
+
+**The test used existing public n=15 geometric proof materials. The candidate configuration and global proof materials came from external work, rather than being discovered independently from scratch during this run.**
+
+The main source was [VonEquinox / DiskCoveringSolve at a fixed commit](https://github.com/VonEquinox/DiskCoveringSolve/tree/089584973f41e6374ce110f6e5b5ee456df19352/cover15/alternative_bundle). The research retained provenance, file inventories, identity checks and a complete replay receipt from a task working copy. These materials supplied an existing basis for configuration, coverage and global lower-bound work, but did not by themselves supply the minimal-polynomial submission required here.
+
+The model read and checked the public arguments, executed and examined verification materials, organized exact configuration definitions, checked their connection to algebraic objects, and pursued further computation while assessing whether the results met the acceptance standard. Reused work, newly performed checks and outstanding obligations are distinguished. Success in one part is not completion of the whole task.
+
+### Task and acceptance standard
+
+For the closed unit disk $D$ and an ordered tuple $C$ of fifteen centers, define
+
+$$
+R_D(C)=\max_{x\in D}\min_{1\le i\le15}\|x-c_i\|_2,
+\qquad r_D(15)=\inf_C R_D(C).
+$$
+
+Covering disks may overlap and extend outside the unit disk; centers are not initially restricted to it. All the following requirements must hold together:
+
+| Requirement | Required standard |
+| --- | --- |
+| Radius minimal polynomial | Every coefficient of its normalized primitive integer representation, with positive leading coefficient and an irreducibility proof over the rationals |
+| Root identification | Explicit rational isolation endpoints, nonzero endpoint values, exactly one real root in the interval and identification with the optimal radius |
+| Exact configuration | Fifteen ordered centers specified by finite algebraic data with uniqueness proved |
+| Continuous coverage | Coverage of the entire closed unit disk; any finite reduction must be sufficient and every necessary check completed |
+| Global lower bound | Valid for arbitrary configurations, without unjustified symmetry or contact assumptions and with relevant degeneracies handled |
+| Computational materials | Actual code, inputs, certificates, environment and results, with an explanation of their mathematical implications |
+
+Existence, algebraicity, an unfinished algorithm, a numerical candidate, sampling or an image is insufficient. Precisely defining a geometric root does not replace the minimal polynomial of the radius itself. The full prompt is on the [n=15 problem page](n15.html?lang=en). This section summarizes the acceptance conditions; it is not represented as a verbatim export of the original user message.
+
+### Test information and timing
+
+| Item | Record |
+| --- | --- |
+| Test ID | `T_20261024T024637Z_01a16bcd` |
+| Model | `gpt-6.1-sol / max` |
+| Test date (UTC) | 2026-10-24 |
+| Limit for this record | **24 hours** |
+| Independent model tests | One; debugging, replay and verification within the same research do not create additional independent tests |
+| Complete valid submission | Not obtained |
+| Successful completion time | None; neither the limit nor a partial program&#x27;s runtime is a substitute |
+| Website score | **0 (Incomplete)** |
+| Actual cost | Unavailable |
+
+The 24h label denotes this extended test&#x27;s limit, not a successful completion time. Its conditions differ from the usual 12-hour tests; it is not a same-condition formal ranking. Archiving, report preparation and publication are subsequent work, not additional mathematical achievements within the test.
+
+The available records do not provide a complete scoring-time ledger that reliably attributes exact durations to every research phase. No invented start or end times are assigned below, and separate program runtimes are not summed into a complete solution time. A fast partial verification does not yield a success score for an incomplete test.
+
+### Computing conditions and usage
+
+| Item | Supported scope |
+| --- | --- |
+| Execution environment | Local Windows and Ubuntu/WSL; commands and selected process states retained in task records |
+| Main tools | Python, SageMath and specialist algebraic-computation and exact-verification tools |
+| Computation | Integer, rational and algebraic work; numerical computations used for exploration rather than as final proof |
+| External computation | The user explicitly allowed submitting mathematical equations to the public Magma calculator; this did not produce the complete minimal polynomial |
+| Hardware and versions | The selected archive does not establish a complete test-start hardware and software-version snapshot; configurations from other tests are not copied into this record |
+| Goal usage | 5,748,463 tokens in the saved archival Goal accounting snapshot |
+| Thread cumulative usage | Input 243,440,538, including cached input 238,784,384; output 2,224,037; total 245,664,575 tokens |
+| Billing evidence | Unavailable; current prices are not used to fabricate actual expenditure |
+
+Goal and thread usage are different accounting scopes and are not added together. The thread figures come from the last cumulative usage event before archiving and include repeated context, not that many tokens of distinct research. Cached input is part of input and is not added again. Usage does not establish that every elapsed interval produced useful mathematical progress.
+
+Computational scale and memory demand affected progress. Resource limits, program failures and unfinished results remain in the detailed record. This page explains their effect on the submission without exposing internal parameters, exact structural sizes, tool modifications or reproducible solution strategies.
+
+### Main research phases
+
+This table follows work dependencies rather than claiming disjoint timed intervals. It identifies the work, evidence and remaining gap at each stage.
+
+| Phase | Work | Result and boundary |
+| --- | --- | --- |
+| Public sources and acceptance review | Locate existing work, distinguish candidate and geometric proof materials from minimal-polynomial obligations, and fix the sources actually used | External materials obtained; not evidence of independent discovery of the optimal configuration |
+| Geometric proof replay | Check inputs and verification materials, replay coverage and global-bound checks, and read the accompanying arguments | Complete replay receipt saved; its meaning depends on sufficient mathematical reductions, not just exit status |
+| Exact configuration and linkage | Organize fifteen ordered exact centers and check uniqueness and correspondence to the geometric proof objects | Configuration, root-uniqueness and linkage materials saved; no automatic radius minimal polynomial |
+| Algebraic computation and checking | Develop and adjust computational models, seek rigorous algebraic output and assess candidates against the requirements | Partial exact relations and intermediate outputs obtained; required univariate polynomial and proofs missing |
+| Final submission review | Compare all deliverables with the task, distinguishing partial progress from complete acceptance | Core algebraic obligations remained missing; record classified as incomplete with score 0 |
+
+### Changes of emphasis, difficulties and failure analysis
+
+Early work focused on understanding and checking the geometric results; later work concentrated on the algebraic deliverable. The connection between the exact configuration and the geometric root became clearer, but that connection is a different obligation from explicitly producing the radius minimal polynomial. More computation did not automatically bridge that gap.
+
+Later research involved repeated model adjustments, result checks and tool-level optimization. Computational size, memory demand and program stability limited several attempts. Intermediate results were saved, but no final output completing the rational-field proof was obtained. **The final direct algebraic computation produced no valid result, and its selected output file was empty. Saving progress or verifying a backup does not establish that the solution finished.**
+
+Higher numerical precision can help discover relations and assess consistency with the geometric target. It cannot alone prove that an integer relation holds exactly, or prove irreducibility. Exact relations and multivariate algebraic definitions likewise do not substitute for the requested univariate minimal polynomial.
+
+The immediate reason for failure is missing final deliverables, rather than an absence of verification work. The record supports geometric and partial algebraic progress, but does not establish the required degree, coefficient list or proofs. It also does not establish that more memory, storage or runtime would necessarily complete the task.
+
+### Verification, deliverables and limitations
+
+| Item | Saved materials | Full-task assessment |
+| --- | --- | --- |
+| Fifteen centers | Ordered exact data and uniqueness-verification materials | Partial delivery evidence; insufficient alone to pass the test |
+| Closed-disk coverage | Public argument and actual exact replay records | Depends on the complete continuous-to-finite reduction and its checks, not sampling |
+| Arbitrary-configuration lower bound | External proof package, replay receipt and geometric linkage explanation | External dependency explicit; no new independent mathematical certification by this page |
+| Radius minimal polynomial | No final submission meeting the requirements | **Incomplete** |
+| Irreducibility and root isolation | No complete proofs for the required polynomial | **Incomplete** |
+| Code, inputs and certificates | Task records, selected materials and locators for other computational files | A selected archive is not a complete successful proof package |
+| Answer fingerprint | No complete answer submission available for certification | The reference fingerprint on the problem page is not a match by this run |
+| Overall outcome | Substantial partial work, with core algebraic requirements missing | **Incomplete, score 0** |
+
+Any recorded pass applies only to its inputs, certificates and stated argument. Replaying a proof package does not automatically audit every mathematical reduction. Reducing a continuous problem to finite checks still requires showing that those checks exhaust the original problem. High-precision decimals, exit codes, checksums and backup integrity cannot replace these obligations.
+
+Source restrictions prohibited preexisting local research, skills and other chats as solution inputs, while allowing public sources and local WSL tools. Public materials, materials acquired for this task and newly generated results retain separate provenance. No operating-system-wide access trace was available, so this page does not certify full-run source-access compliance. Later archival and publication authorization cannot retrospectively become authorization for original solution inputs.
+
+### Archive and downloadable records
+
+The local archive contains 2,500 public messages or tool events, runtime fields, user instructions, a detailed report and selected evidence. It is labeled a partial public-field export, with omissions documented separately. Large computational files retain locators and existing verification information; they were not all copied into the test ZIP. The original archive remains unchanged. This revision expands the public report without changing the evidence or the zero-score outcome.
+
+The webpage is not a complete proof archive. Raw conversations, private paths, detailed solution steps and answers are outside this publication&#x27;s scope. One incomplete run does not establish a stable success rate or a general performance gap between models.
+
+[Machine-readable record](record-n15-sol-24h-20261024.json) · [Report Markdown](record-n15-sol-24h-20261024.en.md) · [n=15 record index](n15-history.json)
+</pre>
+</main></body>
+</html>

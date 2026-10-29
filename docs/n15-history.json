@@ -1,0 +1,48 @@
+{
+  "schema": "diskcover-public-test-reports-v1",
+  "n": 15,
+  "report_scope": "One incomplete 24-hour model test; detailed methods and answers withheld.",
+  "records_comparable": false,
+  "records": [
+    {
+      "record_id": "n15-sol-24h-20261024",
+      "test_id": "T_20261024T024637Z_01a16bcd",
+      "model": "gpt-6.1 sol/max",
+      "model_id": "gpt-6.1-sol",
+      "reasoning_effort": "max",
+      "model_identity_status": "verified_original_model_id; public_effort_max_as_clarified_by_user",
+      "test_date_utc": "2026-10-24",
+      "report_date": "2026-10-29",
+      "status": "not_completed",
+      "score": 0,
+      "runs": 1,
+      "elapsed_seconds": null,
+      "valid_completion_elapsed_seconds": null,
+      "time_limit_label": "24h",
+      "test_limit_seconds": 86400,
+      "timing_scope": "24-hour extended-test limit; not a successful completion time",
+      "score_scope": "incomplete_zero; extended_test_not_same_condition_ranking",
+      "formal_ranking": false,
+      "records_comparable": false,
+      "paid_cost": null,
+      "failure_reason": "Radius minimal polynomial and required irreducibility and root-isolation verification not completed.",
+      "results": {
+        "exact_configuration_materials_saved": true,
+        "external_geometric_proof_replay_records_saved": true,
+        "minimal_polynomial_obtained": false,
+        "complete_submission": false
+      },
+      "external_sources": [
+        {
+          "title": "VonEquinox/DiskCoveringSolve cover15 alternative bundle",
+          "url": "https://github.com/VonEquinox/DiskCoveringSolve/tree/089584973f41e6374ce110f6e5b5ee456df19352/cover15/alternative_bundle"
+        }
+      ],
+      "prompt_artifacts": [],
+      "report_url": "record-n15-sol-24h-20261024.zh.html",
+      "report_url_en": "record-n15-sol-24h-20261024.html",
+      "mathematics_resumed_for_publication": false,
+      "publication_scope": "User-approved max/24h display label; abstract process only. Original local archive preserved."
+    }
+  ]
+}

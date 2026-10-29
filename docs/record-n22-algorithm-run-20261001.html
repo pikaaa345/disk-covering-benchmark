@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en" data-page="record-n22-algorithm-run-20261001">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>n=22 · Algorithm run report · Unit Disk Covering Benchmark</title>
+  <script src="language.js"></script>
+  <script src="navigation.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="alternate" hreflang="zh-CN" href="record-n22-algorithm-run-20261001.zh.html"><link rel="alternate" hreflang="en" href="record-n22-algorithm-run-20261001.html">
+  <link rel="alternate" type="application/json" href="record-n22-algorithm-run-20261001.json">
+  <script src="vendor/marked.js" defer></script>
+  <script src="vendor/dompurify.js" defer></script>
+  <script src="math-config.js" defer></script>
+  <script src="vendor/mathjax-tex-svg-full.js" defer></script>
+  <script src="prompt-render.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header" data-menu-open="false"><div class="site-header-inner"><a class="site-brand" href="index.html" title="Go to home page" aria-label="Go to home page"><svg class="site-brand-mark" viewBox="0 0 32 32" aria-hidden="true" fill="none"><circle cx="16" cy="16" r="14.3" stroke="currentColor" stroke-width="1.5"/><g stroke="currentColor" stroke-width="1.1" opacity=".65"><circle cx="11" cy="12" r="8"/><circle cx="21" cy="12" r="8"/><circle cx="16" cy="21" r="8"/></g></svg><span class="site-brand-copy"><span class="site-brand-title">AI Disk Benchmark</span><span class="site-brand-subtitle">Research-Level Mathematical Ability Test for Models</span></span></a><button class="site-menu-toggle" type="button" aria-controls="site-menu" aria-expanded="false" aria-label="Open navigation menu" data-open-label="Open navigation menu" data-close-label="Close navigation menu" hidden><svg class="menu-icon-open" viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14"/></svg><svg class="menu-icon-close" viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15"/></svg><span>Menu</span></button><div class="site-menu-panel" id="site-menu"><nav class="site-navigation" aria-label="Main navigation"><a class="site-nav-link" href="index.html">Problems</a><a class="site-nav-link" href="guide.html">Guide</a><a class="site-nav-link" href="scoring.html">Scoring</a><a class="site-nav-link" href="records.html" aria-current="true">Records</a><a class="site-nav-link" href="about.html">About</a></nav><div class="site-header-actions"><a class="repository-link" href="https://github.com/pikaaa345/disk-covering-benchmark" aria-label="Open GitHub repository">GitHub<svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13"/></svg></a><nav class="language-switch" aria-label="Language"><a href="record-n22-algorithm-run-20261001.html?lang=en" data-language="en" lang="en" aria-current="page">English</a><a href="record-n22-algorithm-run-20261001.zh.html?lang=zh" data-language="zh" lang="zh-CN">中文</a></nav></div></div></div></header>
+<main>
+  <script id="page-config" type="application/json">{"language":"en","referenceSha256":null}</script>
+  <p class="back"><a href="index.html">Unit Disk Covering Benchmark</a> · <a href="n22.html">n = 22</a></p>
+  <div class="prompt-heading"><h1>n=22 · Algorithm run report</h1><div><button id="copy-prompt" class="copy">Copy report</button><span id="copy-status" class="status" role="status"></span></div></div>
+  <div id="prompt-markdown" class="markdown-body" data-article="true" data-format="markdown"><pre class="prompt-fallback"># n=22 algorithm run report
+
+This records a locally executed algorithm developed and optimized through human–AI research. Development time is outside the measured program interval. It is not a foundation model solving the prompt independently.
+
+## Best recorded run
+
+| Item | Record |
+|---|---|
+| Run ID | `joint-v15-overlap-gmp-24-n22` |
+| Date (UTC) | 2026-10-01 |
+| Proof engine | DGC v62-G |
+| Minimal-polynomial engine | MinPoly v15 |
+| Complete elapsed time | 74.482 seconds |
+| Score | 1018 |
+| Logical-core limit | 24 |
+| Observations of this configuration | 1 |
+| Website SHA-256 comparison | Match |
+
+“Best” means the minimum complete measured time among the three archives checked for this publication: 40 accepted pipeline observations. This is not an exhaustive ranking of all project history. Single observations with different versions and core limits do not establish a stable speedup.
+
+## Local hardware and environment
+
+- CPU: AMD Ryzen 9 8945HX with Radeon Graphics; 32 host logical processors.
+- Memory: DDR5, 32 GiB on the host. Execution was in local Ubuntu under WSL2. The pre-run snapshot for the latest batch recorded MemTotal=15968388 KiB, approximately 15.23 GiB.
+- SageMath 10.7: exact algebra and original-equation/root-box consumers. Python 3.12.3: proof program and controller. The public fingerprint script uses the Python standard library.
+- No tools were installed during this batch. Earlier selected observations use the shared machine record; a separate hardware snapshot at each earlier run&#x27;s start was not preserved.
+
+## Algorithm versions
+
+The proof engine derives from DGC v62. `DGC v62-F` identifies frozen internal code `radius-code-feedback-v1`, which adds fresh-source geometry feedback. `DGC v62-G` identifies `radius-code-gmp-v1`, which adds a GMP exact-rational backend for local certificate verification. The minimal-polynomial engine has an independent version sequence: this selected run uses MinPoly v15 (`minpoly-code-v15`). Original run-file SHA-256 identities are recorded in the machine-readable data.
+
+Starting from n, the program discovers a new configuration and root system, generates and checks radius certificates, then extracts an irreducible radius polynomial from that new system and checks the original rational equations and root box. The controller requires both consumers to bind to the same final source. Overlap versions may start algebra after the provisional root system passes; provisional output cannot be accepted before final certificate and source binding.
+
+The run uses existing research algorithms and conditional lemmas. Algorithm development is outside this interval. No public reference coefficients or saved configuration were passed to the solver. Solver source remains unpublished.
+
+## Timing and principal stages
+
+T+00:00:00 is the per-case controller start. The final bound result was saved at T+74.482 seconds. Radius stage: 74.392 seconds; algebra stage: 50.340 seconds; overlap: 50.340 seconds. The controller independently measures complete time, including process startup, certificate consumers, final same-root binding and saved result. Overlapping stages must not be added.
+
+Fingerprint calculation and post-solve reference checks are outside the elapsed time used for scoring. “Cold start” means fresh processes starting from n, not an operating-system reboot or empty system caches. Research-development time, cost and task-system cumulative time were not recorded.
+
+The score uses the same formula as the model tests: `ROUND_HALF_UP(200 + 100 × log₂(21600 / t))`, where t is complete program time in seconds. Higher is better: six hours scores 200, and each halving of time adds 100 points. Both kinds of record use the same score scale to compare completion efficiency; their starting conditions, algorithm versions and hardware are documented in the reports.
+
+## Latest 32-core rerun
+
+The latest observation is `single32-n22`: DGC v62-G · MinPoly v15, 82.370 seconds, score 1003, at most 32 logical cores. Radius: 82.275 seconds; algebra: 62.349 seconds; overlap: 62.349 seconds. The latest run and historical minimum are retained separately.
+
+## Verification and publication scope
+
+The runs executed the radius and algebra consumers and checked final source identity. Subsequent checks for this case compared all coefficients, irreducibility and the same root, established rounding to 20 places after the decimal point from exact intervals, and checked both the unchanged website script and an independent canonical-JSON reconstruction.
+
+During publication preparation, the solver was not rerun. The selected historical result for this case was checked against its latest result for identical coefficients and intersecting certified root intervals; their fingerprints were recalculated with the shared website script and matched the registered values. Existing source-admission and finite-classification trust remains inherited; no new independent mathematical review or proof-assistant formalization was performed.
+
+This report and [machine-readable n=22 run records](record-n22-algorithm-run-20261001.json) are public. Solver code, radii, polynomial coefficients, root intervals and proof trees remain in the research assets. The checks performed and materials published have different scopes.
+</pre></div>
+  <pre id="test-prompt" hidden># n=22 algorithm run report
+
+This records a locally executed algorithm developed and optimized through human–AI research. Development time is outside the measured program interval. It is not a foundation model solving the prompt independently.
+
+## Best recorded run
+
+| Item | Record |
+|---|---|
+| Run ID | `joint-v15-overlap-gmp-24-n22` |
+| Date (UTC) | 2026-10-01 |
+| Proof engine | DGC v62-G |
+| Minimal-polynomial engine | MinPoly v15 |
+| Complete elapsed time | 74.482 seconds |
+| Score | 1018 |
+| Logical-core limit | 24 |
+| Observations of this configuration | 1 |
+| Website SHA-256 comparison | Match |
+
+“Best” means the minimum complete measured time among the three archives checked for this publication: 40 accepted pipeline observations. This is not an exhaustive ranking of all project history. Single observations with different versions and core limits do not establish a stable speedup.
+
+## Local hardware and environment
+
+- CPU: AMD Ryzen 9 8945HX with Radeon Graphics; 32 host logical processors.
+- Memory: DDR5, 32 GiB on the host. Execution was in local Ubuntu under WSL2. The pre-run snapshot for the latest batch recorded MemTotal=15968388 KiB, approximately 15.23 GiB.
+- SageMath 10.7: exact algebra and original-equation/root-box consumers. Python 3.12.3: proof program and controller. The public fingerprint script uses the Python standard library.
+- No tools were installed during this batch. Earlier selected observations use the shared machine record; a separate hardware snapshot at each earlier run&#x27;s start was not preserved.
+
+## Algorithm versions
+
+The proof engine derives from DGC v62. `DGC v62-F` identifies frozen internal code `radius-code-feedback-v1`, which adds fresh-source geometry feedback. `DGC v62-G` identifies `radius-code-gmp-v1`, which adds a GMP exact-rational backend for local certificate verification. The minimal-polynomial engine has an independent version sequence: this selected run uses MinPoly v15 (`minpoly-code-v15`). Original run-file SHA-256 identities are recorded in the machine-readable data.
+
+Starting from n, the program discovers a new configuration and root system, generates and checks radius certificates, then extracts an irreducible radius polynomial from that new system and checks the original rational equations and root box. The controller requires both consumers to bind to the same final source. Overlap versions may start algebra after the provisional root system passes; provisional output cannot be accepted before final certificate and source binding.
+
+The run uses existing research algorithms and conditional lemmas. Algorithm development is outside this interval. No public reference coefficients or saved configuration were passed to the solver. Solver source remains unpublished.
+
+## Timing and principal stages
+
+T+00:00:00 is the per-case controller start. The final bound result was saved at T+74.482 seconds. Radius stage: 74.392 seconds; algebra stage: 50.340 seconds; overlap: 50.340 seconds. The controller independently measures complete time, including process startup, certificate consumers, final same-root binding and saved result. Overlapping stages must not be added.
+
+Fingerprint calculation and post-solve reference checks are outside the elapsed time used for scoring. “Cold start” means fresh processes starting from n, not an operating-system reboot or empty system caches. Research-development time, cost and task-system cumulative time were not recorded.
+
+The score uses the same formula as the model tests: `ROUND_HALF_UP(200 + 100 × log₂(21600 / t))`, where t is complete program time in seconds. Higher is better: six hours scores 200, and each halving of time adds 100 points. Both kinds of record use the same score scale to compare completion efficiency; their starting conditions, algorithm versions and hardware are documented in the reports.
+
+## Latest 32-core rerun
+
+The latest observation is `single32-n22`: DGC v62-G · MinPoly v15, 82.370 seconds, score 1003, at most 32 logical cores. Radius: 82.275 seconds; algebra: 62.349 seconds; overlap: 62.349 seconds. The latest run and historical minimum are retained separately.
+
+## Verification and publication scope
+
+The runs executed the radius and algebra consumers and checked final source identity. Subsequent checks for this case compared all coefficients, irreducibility and the same root, established rounding to 20 places after the decimal point from exact intervals, and checked both the unchanged website script and an independent canonical-JSON reconstruction.
+
+During publication preparation, the solver was not rerun. The selected historical result for this case was checked against its latest result for identical coefficients and intersecting certified root intervals; their fingerprints were recalculated with the shared website script and matched the registered values. Existing source-admission and finite-classification trust remains inherited; no new independent mathematical review or proof-assistant formalization was performed.
+
+This report and [machine-readable n=22 run records](record-n22-algorithm-run-20261001.json) are public. Solver code, radii, polynomial coefficients, root intervals and proof trees remain in the research assets. The checks performed and materials published have different scopes.
+</pre>
+</main></body>
+</html>

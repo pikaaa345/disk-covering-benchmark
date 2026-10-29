@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en" data-page="scoring">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scoring and timing · Unit Disk Covering Benchmark</title>
+  <script src="language.js"></script>
+  <script src="navigation.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="alternate" hreflang="zh-CN" href="scoring.zh.html"><link rel="alternate" hreflang="en" href="scoring.html">
+  <script src="vendor/marked.js" defer></script>
+  <script src="vendor/dompurify.js" defer></script>
+  <script src="math-config.js" defer></script>
+  <script src="vendor/mathjax-tex-svg-full.js" defer></script>
+  <script src="prompt-render.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header" data-menu-open="false"><div class="site-header-inner"><a class="site-brand" href="index.html" title="Go to home page" aria-label="Go to home page"><svg class="site-brand-mark" viewBox="0 0 32 32" aria-hidden="true" fill="none"><circle cx="16" cy="16" r="14.3" stroke="currentColor" stroke-width="1.5"/><g stroke="currentColor" stroke-width="1.1" opacity=".65"><circle cx="11" cy="12" r="8"/><circle cx="21" cy="12" r="8"/><circle cx="16" cy="21" r="8"/></g></svg><span class="site-brand-copy"><span class="site-brand-title">AI Disk Benchmark</span><span class="site-brand-subtitle">Research-Level Mathematical Ability Test for Models</span></span></a><button class="site-menu-toggle" type="button" aria-controls="site-menu" aria-expanded="false" aria-label="Open navigation menu" data-open-label="Open navigation menu" data-close-label="Close navigation menu" hidden><svg class="menu-icon-open" viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14"/></svg><svg class="menu-icon-close" viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15"/></svg><span>Menu</span></button><div class="site-menu-panel" id="site-menu"><nav class="site-navigation" aria-label="Main navigation"><a class="site-nav-link" href="index.html">Problems</a><a class="site-nav-link" href="guide.html">Guide</a><a class="site-nav-link" href="scoring.html" aria-current="page">Scoring</a><a class="site-nav-link" href="records.html">Records</a><a class="site-nav-link" href="about.html">About</a></nav><div class="site-header-actions"><a class="repository-link" href="https://github.com/pikaaa345/disk-covering-benchmark" aria-label="Open GitHub repository">GitHub<svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13"/></svg></a><nav class="language-switch" aria-label="Language"><a href="scoring.html?lang=en" data-language="en" lang="en" aria-current="page">English</a><a href="scoring.zh.html?lang=zh" data-language="zh" lang="zh-CN">中文</a></nav></div></div></div></header>
+<main>
+  <script id="page-config" type="application/json">{"language":"en","referenceSha256":null}</script>
+  <p class="back"><a href="index.html">Unit Disk Covering Benchmark</a> · <a href="about.html">About</a></p>
+  <div class="prompt-heading"><h1>Scoring and timing</h1><div><button id="copy-prompt" class="copy">Copy text</button><span id="copy-status" class="status" role="status"></span></div></div>
+  <div id="prompt-markdown" class="markdown-body" data-article="true" data-format="markdown"><pre class="prompt-fallback"># Scoring and timing
+
+The current scores are historical demonstrations. A uniform contract for formal comparisons has not yet been frozen.
+
+## Scoring standard and baseline
+
+**Higher is better. The current historical n=11 display uses a 6-hour (21600-second) reference: valid completion in 6 hours scores 200; halving the time adds 100 points and doubling it subtracts 100 points.**
+
+$$
+S=\operatorname{RoundHalfUp}\!\left(200+100\log_2\frac{T_{\mathrm{ref}}}{T}\right).
+$$
+
+$T_{\mathrm{ref}}$ is the task&#x27;s predeclared reference time and $T$ is the actual time to a valid result under the agreed acceptance criteria. Use the same unit for both. Scores are rounded to integers using `ROUND_HALF_UP` and have no upper cap. Use each task&#x27;s published reference time; the 6-hour example does not imply equal difficulty across n or freeze the reference for other tasks.
+
+### Time-to-score table (6-hour reference)
+
+These are arithmetic examples assuming valid completion, not measured model results. A run with a shorter agreed budget must also meet that budget.
+
+| Time to valid completion | Score |
+|---|---:|
+| 12 hours | 100 |
+| 9 hours | 142 |
+| 7 hours | 178 |
+| 6 hours 30 minutes | 188 |
+| 6 hours (baseline) | 200 |
+| 3 hours | 300 |
+| 2 hours | 358 |
+| 1 hour | 458 |
+| 30 minutes | 558 |
+| 10 minutes | 717 |
+| 5 minutes | 817 |
+| 3 minutes | 891 |
+| 1 minute | 1049 |
+| More than 12 hours; failure or no valid result by the deadline | 0 |
+| Not tested | Not tested |
+
+**Valid completion at exactly 12 hours scores 100; completion after 12 hours scores 0.**
+
+## Fixed time limit for n≤30
+
+Every problem with n≤30 has a 12-hour (43200-second) time limit. If no valid result meeting that problem&#x27;s acceptance criteria is obtained within 12 hours, the score is 0; completion after the deadline also scores 0. Completion at the deadline is allowed, so T≤43200 seconds. Untested runs remain &quot;not tested&quot;, not 0. This rule appears on every problem page and in its machine-readable data; newly added n≤30 problems inherit it automatically. Time limits for n&gt;30 will be set separately.
+
+## Efficiency on one task
+
+When the agreed completion criteria are met within budget, S = RoundHalfUp(200 + 100 × log₂(T_ref / T)). Use the same time unit, with T strictly positive. Round the score to an integer using `ROUND_HALF_UP`. Higher is better; there is no cap. T_ref is a predeclared scale, not an automatic estimate of task difficulty.
+
+| Status | Display |
+|---|---|
+| Completed under the agreed contract within budget | Efficiency score |
+| Failure or timeout | 0, with the reason stated |
+| Not tested | Not tested |
+| Reference hash unpublished | Process and own fingerprint may be reported; match status remains pending |
+| Historical run with different timing or acceptance scope | Historical demonstration, excluded from formal rankings |
+
+The script does not judge mathematical completion or proof validity. The publisher must determine completion before declaring a status. An answer-match contract and a complete-proof contract must not be combined in one ranking.
+
+~~~text
+python tools/score.py --n 11 --reference-seconds 21600 --elapsed-seconds 180 --status completed
+~~~
+
+This synthetic arithmetic example produces 891. For n≤30 the script automatically applies the 12-hour limit; omitting `--n` also defaults to 12 hours. `--budget-seconds` may set a shorter budget but cannot extend the n≤30 limit. Explicit n&gt;30 has no automatic budget and requires a task-specific contract. The script does not certify completion.
+
+## Timing
+
+A formal run should measure natural elapsed time from task delivery to obtaining all required deliverables, including model work, program execution, waiting and verification. Record any system cumulative timer separately; it is not interchangeable with natural elapsed time.
+
+Time independent additional tasks separately. If an additional stage is necessary for the same acceptance criteria, sum the relevant intervals using the same timing basis and exclude the gap between tasks. Do not mix system cumulative time with natural elapsed time. Do not sum parallel program runtimes as total task time. Record mathematical completion and fingerprint completion separately; the contract must state which endpoint determines the score.
+
+A single run is allowed. Disclose the number of runs, costs and failures; ten-run averages are not required. One result cannot establish a success rate or statistical significance for a difference of several tens of minutes.
+
+## Still to be frozen
+
+Each task&#x27;s reference hash, acceptance criteria, reference time, timing endpoints, starting materials, tool and network rules, hardware and cost reporting. Maximum budgets for n&gt;30 remain to be set. Cross-task aggregation and repeated-run policies remain future work. No combined ranking across n or cost is generated at present.</pre></div>
+  <pre id="test-prompt" hidden># Scoring and timing
+
+The current scores are historical demonstrations. A uniform contract for formal comparisons has not yet been frozen.
+
+## Scoring standard and baseline
+
+**Higher is better. The current historical n=11 display uses a 6-hour (21600-second) reference: valid completion in 6 hours scores 200; halving the time adds 100 points and doubling it subtracts 100 points.**
+
+$$
+S=\operatorname{RoundHalfUp}\!\left(200+100\log_2\frac{T_{\mathrm{ref}}}{T}\right).
+$$
+
+$T_{\mathrm{ref}}$ is the task&#x27;s predeclared reference time and $T$ is the actual time to a valid result under the agreed acceptance criteria. Use the same unit for both. Scores are rounded to integers using `ROUND_HALF_UP` and have no upper cap. Use each task&#x27;s published reference time; the 6-hour example does not imply equal difficulty across n or freeze the reference for other tasks.
+
+### Time-to-score table (6-hour reference)
+
+These are arithmetic examples assuming valid completion, not measured model results. A run with a shorter agreed budget must also meet that budget.
+
+| Time to valid completion | Score |
+|---|---:|
+| 12 hours | 100 |
+| 9 hours | 142 |
+| 7 hours | 178 |
+| 6 hours 30 minutes | 188 |
+| 6 hours (baseline) | 200 |
+| 3 hours | 300 |
+| 2 hours | 358 |
+| 1 hour | 458 |
+| 30 minutes | 558 |
+| 10 minutes | 717 |
+| 5 minutes | 817 |
+| 3 minutes | 891 |
+| 1 minute | 1049 |
+| More than 12 hours; failure or no valid result by the deadline | 0 |
+| Not tested | Not tested |
+
+**Valid completion at exactly 12 hours scores 100; completion after 12 hours scores 0.**
+
+## Fixed time limit for n≤30
+
+Every problem with n≤30 has a 12-hour (43200-second) time limit. If no valid result meeting that problem&#x27;s acceptance criteria is obtained within 12 hours, the score is 0; completion after the deadline also scores 0. Completion at the deadline is allowed, so T≤43200 seconds. Untested runs remain &quot;not tested&quot;, not 0. This rule appears on every problem page and in its machine-readable data; newly added n≤30 problems inherit it automatically. Time limits for n&gt;30 will be set separately.
+
+## Efficiency on one task
+
+When the agreed completion criteria are met within budget, S = RoundHalfUp(200 + 100 × log₂(T_ref / T)). Use the same time unit, with T strictly positive. Round the score to an integer using `ROUND_HALF_UP`. Higher is better; there is no cap. T_ref is a predeclared scale, not an automatic estimate of task difficulty.
+
+| Status | Display |
+|---|---|
+| Completed under the agreed contract within budget | Efficiency score |
+| Failure or timeout | 0, with the reason stated |
+| Not tested | Not tested |
+| Reference hash unpublished | Process and own fingerprint may be reported; match status remains pending |
+| Historical run with different timing or acceptance scope | Historical demonstration, excluded from formal rankings |
+
+The script does not judge mathematical completion or proof validity. The publisher must determine completion before declaring a status. An answer-match contract and a complete-proof contract must not be combined in one ranking.
+
+~~~text
+python tools/score.py --n 11 --reference-seconds 21600 --elapsed-seconds 180 --status completed
+~~~
+
+This synthetic arithmetic example produces 891. For n≤30 the script automatically applies the 12-hour limit; omitting `--n` also defaults to 12 hours. `--budget-seconds` may set a shorter budget but cannot extend the n≤30 limit. Explicit n&gt;30 has no automatic budget and requires a task-specific contract. The script does not certify completion.
+
+## Timing
+
+A formal run should measure natural elapsed time from task delivery to obtaining all required deliverables, including model work, program execution, waiting and verification. Record any system cumulative timer separately; it is not interchangeable with natural elapsed time.
+
+Time independent additional tasks separately. If an additional stage is necessary for the same acceptance criteria, sum the relevant intervals using the same timing basis and exclude the gap between tasks. Do not mix system cumulative time with natural elapsed time. Do not sum parallel program runtimes as total task time. Record mathematical completion and fingerprint completion separately; the contract must state which endpoint determines the score.
+
+A single run is allowed. Disclose the number of runs, costs and failures; ten-run averages are not required. One result cannot establish a success rate or statistical significance for a difference of several tens of minutes.
+
+## Still to be frozen
+
+Each task&#x27;s reference hash, acceptance criteria, reference time, timing endpoints, starting materials, tool and network rules, hardware and cost reporting. Maximum budgets for n&gt;30 remain to be set. Cross-task aggregation and repeated-run policies remain future work. No combined ranking across n or cost is generated at present.</pre>
+  
+</main></body>
+</html>

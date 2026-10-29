@@ -1,0 +1,38 @@
+[
+  {
+    "name": "marked",
+    "version": "18.0.14",
+    "source": "https://registry.npmjs.org/marked/-/marked-18.0.14.tgz",
+    "registry_integrity_verified": true,
+    "file": "marked.js",
+    "bytes": 46891,
+    "sha256": "21568877a938d2c4e7d74e27f18e60da96bb73a68809610ca39216e1efebae62"
+  },
+  {
+    "name": "mathjax",
+    "version": "3.2.2",
+    "source": "https://registry.npmjs.org/mathjax/-/mathjax-3.2.2.tgz",
+    "registry_integrity_verified": true,
+    "file": "mathjax-tex-svg-full.js",
+    "bytes": 2275113,
+    "sha256": "a4354ff94fd868aea0cc6eaaa79a57fda0588646fc46ee3700a349ee0a11cbe6"
+  },
+  {
+    "name": "dompurify",
+    "version": "3.4.16",
+    "source": "https://github.com/cure53/DOMPurify/blob/3.4.16/dist/purify.min.js",
+    "source_git_blob_sha": "00742c47118a703f414f6a116ddff07965d8e59e",
+    "file": "dompurify.js",
+    "bytes": 28885,
+    "sha256": "2c90a9b46d6463f26038a29b686e82bc91de01fdac9d5229e7cfe3b360134ea2"
+  },
+  {
+    "name": "mathjax-ui-safe",
+    "version": "3.2.2",
+    "source": "https://github.com/mathjax/MathJax/blob/3.2.2/es5/ui/safe.js",
+    "source_git_blob_sha": "f6688f36a15633b15ca3fcb1ad6a6f24af35cd78",
+    "file": "mathjax-ui-safe.js",
+    "bytes": 11189,
+    "sha256": "9fef48d868277a8bc1852f7ba796b33ead812d38916a7131b0a29ea48961a6a4"
+  }
+]

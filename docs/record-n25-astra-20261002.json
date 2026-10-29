@@ -1,0 +1,181 @@
+{
+  "schema": "diskcover-public-test-reports-v1",
+  "n": 25,
+  "report_scope": "Source-attributed n25 test reports with individual acceptance findings; mathematical answer data withheld.",
+  "records_comparable": false,
+  "records": [
+    {
+      "record_id": "n25-astra-20261002",
+      "test_id": "T_20261002T095207Z_01a0fc07",
+      "model": "gpt-6 astra/max",
+      "model_id": "gpt-6-astra",
+      "reasoning_effort": "max",
+      "model_identity_evidence": "All 12 saved predeadline turn_context records; user confirmation agrees.",
+      "test_date_utc": "2026-10-02",
+      "report_date": "2026-10-03",
+      "status": "not_completed",
+      "failure_reason": "No complete global optimality proof for arbitrary 25-center configurations by the inclusive 12-hour deadline.",
+      "runs": 1,
+      "score": 0,
+      "score_scope": "benchmark_failure_score",
+      "acceptance_status": "failed_no_complete_valid_result_by_deadline",
+      "formal_ranking": false,
+      "elapsed_seconds": "43200",
+      "valid_completion_elapsed_seconds": null,
+      "original_budget_seconds": "43200",
+      "deadline_inclusive": true,
+      "timing_scope": "Fixed failed-run observation window, not completion time.",
+      "main_system_accumulated_seconds": "41930",
+      "timing": {
+        "goal_created_at_epoch": 1790934727,
+        "deadline_epoch": 1790977927,
+        "budget_seconds": 43200,
+        "deadline_inclusive": true,
+        "valid_completion_seconds": null,
+        "main_test_window_seconds": 43200,
+        "goal_system_cumulative_seconds": 41930,
+        "goal_last_updated_epoch": 1790985188,
+        "goal_last_update_natural_elapsed_seconds": 50461,
+        "report_evidence_cutoff_utc": "2026-10-03T01:04:39.748Z",
+        "natural_elapsed_to_report_evidence_cutoff_seconds": 54752.748,
+        "report_task_elapsed_seconds": 1370.807,
+        "report_task_timing_note": "Natural elapsed from report-request message create_time to saved metadata cutoff; final packaging/render later excluded",
+        "report_request_epoch": 1790988108.940816,
+        "failure_response_recorded_relative_seconds": 43267.592,
+        "failure_response_message_creation_epoch": 1790977965.753212
+      },
+      "usage": {
+        "goal_tokens_used": 3906233,
+        "scope": "System Goal counter including post-deadline administrative continuations; not full thread, not solely before deadline",
+        "input_tokens": 58597430,
+        "output_tokens": 905374,
+        "cached_tokens": 55492736,
+        "cost": null,
+        "predeadline_saved_response_count": 428,
+        "predeadline_saved_response_usage": {
+          "input_tokens": 58597430,
+          "cached_input_tokens": 55492736,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 905374,
+          "reasoning_output_tokens": 561373,
+          "total_tokens": 59502804
+        },
+        "usage_checkpoint_relative_seconds": 43177.792,
+        "usage_checkpoint_note": "Sum of deduplicated saved per-response usage; equals last corresponding thread_token_usage; excludes later administrative/report usage and may exclude an in-flight request at deadline",
+        "reasoning_output_tokens": 561373,
+        "thread_db_snapshot_tokens_used": 63271701,
+        "thread_db_scope": "Separate mutable thread DB snapshot; includes administrative and report work; not a deadline or final total"
+      },
+      "hardware": {
+        "cpu": "AMD Ryzen 9 8945HX with Radeon Graphics",
+        "memory_ddr": "DDR5",
+        "memory_gb": 32.0,
+        "SMBIOSMemoryType": [
+          34
+        ],
+        "note": "Report-preparation current CIM query, not a task-start snapshot",
+        "queried_at": "2026-10-02T21:00:51.7375979-04:00",
+        "memory_type_basis": "DMTF DSP0134 memory-device type 22h = DDR5; 34 decimal = 22h hexadecimal"
+      },
+      "environment": {
+        "execution": "local Ubuntu WSL",
+        "python": "3.12.3",
+        "sympy": "1.14.0",
+        "version_evidence": "original proof ZIP README; not a fresh environment query",
+        "preexisting_specialist_tools_used": [],
+        "task_obtained_tools": [
+          {
+            "name": "SymPy",
+            "version": "1.14.0",
+            "source": "public PyPI",
+            "use": "exact algebra and symbolic checks"
+          },
+          {
+            "name": "CaDiCaL",
+            "version": "1.9.5",
+            "source": "public upstream source; context summary",
+            "use": "unfinished SAT search, no global UNSAT"
+          },
+          {
+            "name": "drat-trim",
+            "version": null,
+            "source": "public upstream source; context summary",
+            "use": "planned proof conversion, no completed global trace"
+          }
+        ],
+        "remote_key_computation": false,
+        "wsl_failure": "CreateInstance/E_FAIL; cause not diagnosed"
+      },
+      "requirements": [
+        {
+          "id": 1,
+          "status": "incomplete",
+          "note": "Polynomial and isolated root supplied for explicit candidate only; no identification with global optimum"
+        },
+        {
+          "id": 2,
+          "status": "partial_result_documented",
+          "note": "Exact ordered 25-center candidate; globally optimal tuple unestablished"
+        },
+        {
+          "id": 3,
+          "status": "partial_result_documented",
+          "note": "Full closed-disk analytic coverage for candidate; historical exact checks retained"
+        },
+        {
+          "id": 4,
+          "status": "incomplete",
+          "note": "Weaker universal bound and bounded local theorem do not imply global optimality"
+        },
+        {
+          "id": 5,
+          "status": "incomplete_for_full_problem",
+          "note": "Code, inputs and logs for partial results retained; no exhaustive global exclusion certificate"
+        }
+      ],
+      "answer_check": {
+        "protocol": "diskcover-minpoly-v1",
+        "expected_sha256": "2cf89430e0f746fabd1f84298f3449cb9f755a8c3d41a198b2881dd042d06e12",
+        "sha256": "2cf89430e0f746fabd1f84298f3449cb9f755a8c3d41a198b2881dd042d06e12",
+        "matches_reference": true,
+        "reference_status": "candidate_upper_bound",
+        "executed": true,
+        "execution_scope": "post-test publication task; not a predeadline completion",
+        "rounding": "20 decimal places ROUND_HALF_UP, certified by exact rational interval and integer rounding",
+        "certified_global_optimum": false,
+        "source_commit": "7f1c64dc7103639fb9d53da7695cdd60408b9c97",
+        "coefficient_or_radius_disclosed": false
+      },
+      "score_execution": {
+        "status": "not_completed",
+        "score": "0",
+        "reference_seconds": "21600",
+        "elapsed_seconds": "43200",
+        "budget_seconds": "43200",
+        "budget_specified": true,
+        "n": 25,
+        "fixed_12_hour_limit_applies": true,
+        "scoring_version": "diskcover-log-score-v1",
+        "score_formula": "round_half_up(200 + 100 * log2(reference_time_seconds / elapsed_seconds))",
+        "score_rounding": "decimal_ROUND_HALF_UP_integer",
+        "deadline_inclusive": true,
+        "completion_independently_verified": false
+      },
+      "original_math_replayed_in_publication": false,
+      "archive_scope": "Selected runtime evidence and original partial deliverable, not a full chat archive.",
+      "private_proof_package_public": false,
+      "prompt_artifacts": [
+        {
+          "original_text_url": "reports/n25-astra-main-prompt.original.txt",
+          "preserve_original_bytes": true,
+          "scope": "Original user instruction from saved Goal objective; no task-start web-byte snapshot."
+        }
+      ]
+    }
+  ],
+  "reference_status_correction": {
+    "date": "2026-10-03",
+    "note": "The global optimality proofs for n=25 and n=26 were accepted by the project’s local mathematical review on 2026-09-26. Independent review of the n=26 minimal-polynomial source remains pending; this is separate from global optimality. Fingerprint matching compares answer data and does not verify a submitted proof.",
+    "retained_scope": "Original test observations, failed score and historical reference_status fields are preserved."
+  }
+}

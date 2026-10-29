@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en" data-page="record-n25-astra-20261002">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>n=25 · gpt-6 astra/max test report · Unit Disk Covering Benchmark</title>
+  <script src="language.js"></script>
+  <script src="navigation.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="alternate" hreflang="zh-CN" href="record-n25-astra-20261002.zh.html"><link rel="alternate" hreflang="en" href="record-n25-astra-20261002.html">
+  <link rel="alternate" type="application/json" href="record-n25-astra-20261002.json">
+  <script src="vendor/marked.js" defer></script>
+  <script src="vendor/dompurify.js" defer></script>
+  <script src="math-config.js" defer></script>
+  <script src="vendor/mathjax-tex-svg-full.js" defer></script>
+  <script src="prompt-render.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header" data-menu-open="false"><div class="site-header-inner"><a class="site-brand" href="index.html" title="Go to home page" aria-label="Go to home page"><svg class="site-brand-mark" viewBox="0 0 32 32" aria-hidden="true" fill="none"><circle cx="16" cy="16" r="14.3" stroke="currentColor" stroke-width="1.5"/><g stroke="currentColor" stroke-width="1.1" opacity=".65"><circle cx="11" cy="12" r="8"/><circle cx="21" cy="12" r="8"/><circle cx="16" cy="21" r="8"/></g></svg><span class="site-brand-copy"><span class="site-brand-title">AI Disk Benchmark</span><span class="site-brand-subtitle">Research-Level Mathematical Ability Test for Models</span></span></a><button class="site-menu-toggle" type="button" aria-controls="site-menu" aria-expanded="false" aria-label="Open navigation menu" data-open-label="Open navigation menu" data-close-label="Close navigation menu" hidden><svg class="menu-icon-open" viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14"/></svg><svg class="menu-icon-close" viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15"/></svg><span>Menu</span></button><div class="site-menu-panel" id="site-menu"><nav class="site-navigation" aria-label="Main navigation"><a class="site-nav-link" href="index.html">Problems</a><a class="site-nav-link" href="guide.html">Guide</a><a class="site-nav-link" href="scoring.html">Scoring</a><a class="site-nav-link" href="records.html" aria-current="true">Records</a><a class="site-nav-link" href="about.html">About</a></nav><div class="site-header-actions"><a class="repository-link" href="https://github.com/pikaaa345/disk-covering-benchmark" aria-label="Open GitHub repository">GitHub<svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13"/></svg></a><nav class="language-switch" aria-label="Language"><a href="record-n25-astra-20261002.html?lang=en" data-language="en" lang="en" aria-current="page">English</a><a href="record-n25-astra-20261002.zh.html?lang=zh" data-language="zh" lang="zh-CN">中文</a></nav></div></div></div></header>
+<main>
+  <script id="page-config" type="application/json">{"language":"en","referenceSha256":null}</script>
+  <p class="back"><a href="index.html">Unit Disk Covering Benchmark</a> · <a href="n25.html">n = 25</a></p>
+  <div class="prompt-heading"><h1>n=25 · gpt-6 astra/max test report</h1><div><button id="copy-prompt" class="copy">Copy full prompt</button><span id="copy-status" class="status" role="status"></span></div></div>
+  <div id="prompt-markdown" class="markdown-body" data-article="true" data-format="markdown"><pre class="prompt-fallback"># n=25 · gpt-6 astra/max test report
+
+[Back to n=25](n25.html) · [Test records](records.html)
+
+**Score: 0 (Incomplete).** The test began on 2026-10-02 UTC with a 12-hour limit. No matching global lower bound for arbitrary center configurations was completed by the deadline. Test ID: `T_20261002T095207Z_01a0fc07`. All 12 saved predeadline runtime contexts identify gpt-6-astra / max; later report preparation used gpt-6.1-sol / xhigh.
+
+## 25-disk covering: 6.1 Sol vs 6 Astra — an analysis of the experiments
+
+Sol&#x27;s performance on this 25-disk covering test surprised me. Before the experiments, I expected neither model to solve the problem on its first attempt: both would run for twelve hours and score zero. Astra/Max&#x27;s result matched that expectation, but GPT‑6.1 Sol/Max completed the proof in about five hours and scored 230. I wanted to understand what Sol had done right, and why it was so much faster.
+
+My first suspicion was that the difference came mainly from finding reference material. Sol found a public 20-disk covering project early on, containing a complete proof and programs that could provide a starting point for the 25-disk problem. I therefore ran another experiment, putting the references and hints about adapting them directly into Astra&#x27;s prompt. With no need to find the material itself, I expected Astra might finish in about five hours, or even sooner.
+
+Instead, the second Astra run was interrupted after more than seven hours, still without a complete proof.
+
+### The hard part of the proof
+
+The task asks for the smallest common radius of at most 25 congruent disks covering the entire closed unit disk, a rigorous proof of optimality, and the minimal polynomial of that algebraic radius. The minimal polynomial has degree four. The harder work is proving that the disks cover the target disk and that the radius cannot be smaller.
+
+Sol used adjacency relations between centers to reduce the coverings that needed consideration to finitely many structures. It then ruled out, class by class, the possibilities that might cover the disk with a smaller radius. There are many structures, with infinitely many placements of the centers within each structure, so excluding all these possibilities can require substantial computation. To save time, one needs conditions that are cheap to check but eliminate many possibilities. Once a whole class of structures or a batch of branches is rigorously shown unable to yield a better covering, it can be skipped without calculating each individual case. Finding and using such conditions early can make a large difference to the proof&#x27;s running time.
+
+### From a 20-disk proof to a 25-disk proof
+
+When I first saw Sol&#x27;s result, I suspected that its proof might be wrong. After repeatedly checking it against our existing research assets, I confirmed that it was correct. How had Sol managed it?
+
+The experiment records show that Sol located a complete public 20-disk covering proof on GitHub a little over ten minutes into the run. It used the derivations and programs to build a proof framework for 25 disks, then continued studying how to reduce the number of structures that needed exclusion. By about 1 hour 53 minutes and 2 hours 51 minutes, respectively, two conditions that were very cheap to check had been incorporated into the program.
+
+These conditions eliminated many impossible structures. Some branches could be rejected before a complete graph had been generated, saving all the calculations that would otherwise have followed those branches. Sol borrowed from the 20-disk proof, found methods suited to the 25-disk problem, and finished in about five hours, earning 230 points.
+
+### Was Astra just unlucky?
+
+The first Astra run lasted the full twelve hours and scored zero. It produced a candidate covering, local proofs and geometric conclusions, but never completed the global optimality proof. It also did not find and make effective use of an equally efficient set of exclusion conditions.
+
+At that point, I had not concluded that Astra was less capable than Sol. Sol had found the 20-disk proof early, whereas the first Astra run&#x27;s public execution records did not show it finding or consulting that material. I wondered whether the difference might mainly come from reference retrieval.
+
+I designed a comparison experiment: keep the overall Goal prompt unchanged, give Astra the relevant GitHub links directly, and explicitly ask it to consult that proof before trying again.
+
+### Give Astra the references and try again
+
+I expected that Astra might outperform Sol now that the material was already in front of it. It did consult the references and quickly built a similar proof framework, but it still did not finish the subsequent work.
+
+Sol completed the scored task in less than five hours. Astra did not explicitly state the first exclusion condition until about 5 hours 50 minutes, after which it proved the condition and put it into computation. When the experiment was interrupted at about 7 hours 10 minutes 38 seconds, the global proof remained incomplete. The records also did not show the second condition being fully derived and used for exclusion. The first condition arrived late; the run ended before the second had been fully put to use.
+
+Providing the references and adaptation hints still did not let Astra catch up with Sol. The first run was incomplete after twelve hours; the second was incomplete when stopped after more than seven hours.
+
+### Sol won this round
+
+After the comparison experiment, my initial explanation — perhaps Astra was simply unlucky and had not found the references — was no longer enough. Astra had been given the material, had consulted it, and still had not finished.
+
+What Sol did well in that run was adapt the 20-disk proof to 25 disks, find low-cost exclusion conditions early, and use them in computation. Those conditions saved a great deal of work. Even with the same references available, Astra did not accomplish that step in time. In these 25-disk experiments, Astra clearly lost to Sol. I had given it a second chance, and the result was still the same.
+
+Whether Sol is stronger than Astra across mathematical research as a whole is a question these experiments cannot answer.
+
+### Results and reference material from the three experiments
+
+| Test | Reference material | Result |
+|---|---|---|
+| GPT‑6.1 Sol/Max | Neither of the two targeted sets of references supplied in advance; retrieved material itself | 230 points; scored time 4 h 52 min 19 s; final chat response at approximately 5 h 05 min |
+| Astra/Max, first run | Neither set of references supplied in advance | 0 points; global optimality proof incomplete at the twelve-hour deadline |
+| Astra/Max, reference-material experiment | General theory, the complete 20-disk proof and programs explicitly supplied, with adaptation hints | Incomplete when interrupted at approximately 7 h 10 min 38 s; no website score registered |
+
+The first Astra run&#x27;s zero score means that it did not complete all the required proofs within the limit, not that every local result was wrong. The second run did not last the full twelve hours and has no registered website score. Sol&#x27;s 230 points retain the existing test review result.
+
+The comparison experiment used public versions that already existed before it began: [general exact-algorithm theory](https://github.com/VonEquinox/DiskCoveringSolve/blob/089584973f41e6374ce110f6e5b5ee456df19352/theory/single_exponential_exact_algorithm_zh.md), [the complete 20-disk proof](https://github.com/VonEquinox/DiskCoveringSolve/blob/089584973f41e6374ce110f6e5b5ee456df19352/cover20/docs/r20_proof_zh.md), and [the 20-disk program bundle](https://github.com/VonEquinox/DiskCoveringSolve/tree/089584973f41e6374ce110f6e5b5ee456df19352/cover20/proof_bundle). The published score explanations are in the [Sol test report](https://pikaaa345.github.io/disk-covering-benchmark/record-n25-sol-20261002.html?lang=en) and the [first Astra test report](https://pikaaa345.github.io/disk-covering-benchmark/record-n25-astra-20261002.html?lang=en).
+
+## Detailed test report
+
+### Existing results and the model&#x27;s contribution
+
+The original run obtained a known 25-disk candidate from [Friedman&#x27;s covering table](https://erich-friedman.github.io/packing/circovcir/), attributed in the original deliverable to Jeremy Tan (2018). The model supplied exact candidate algebra, an analytic covering argument for the entire closed disk, a weaker universal lower bound, and certificates restricted to local neighborhoods, while attempting global exclusion.
+
+**No complete n=25 global optimality proof was obtained or completed.** This differs from the n=11 historical report&#x27;s reuse of an existing complete external proof package. Candidate coverage, local optimality and global optimality are distinct conclusions.
+
+### Task and timing
+
+| Scope | Record |
+|---|---|
+| Original start | 2026-10-02 09:52:07 UTC, Goal creation |
+| Inclusive deadline | 2026-10-02 21:52:07 UTC |
+| Displayed observation window | **12 hours (43200 seconds)**; failed-run window, not completion time |
+| Valid completion time | null; no complete valid result |
+| Saved Goal accumulated time | 11 h 38 min 50 s (41930 s); includes later administration, not natural elapsed time |
+| Failure response | message create_time approximately T+12:00:39; JSONL write approximately T+12:01:08; neither is successful completion |
+| Original report evidence cutoff | 2026-10-03 01:04:39.748 UTC, T+15:12:33; includes waiting and a separate report task |
+| Original report preparation | Approximately 22 min 51 s from its request to that cutoff; excludes later packaging, archiving and this publication |
+
+Failure is scored zero before applying the efficiency formula. Parallel program durations are not added to natural elapsed time. Later hashing, reporting and publication do not extend the original deadline.
+
+### Computing conditions
+
+| Item | Record |
+|---|---|
+| CPU | AMD Ryzen 9 8945HX with Radeon Graphics |
+| Memory | DDR5, 32 GB; 34359738368 bytes |
+| Hardware evidence | Windows CIM query during original report preparation, not a task-start snapshot |
+| Execution | Local Ubuntu WSL; no key remote computation visible in the selected evidence |
+| Software | Original package records Python 3.12.3 and SymPy 1.14.0; actual Sage/Wolfram evaluation unverified |
+| Acquired tools | Public CaDiCaL 1.9.5 and drat-trim (version unknown); no completed global UNSAT certificate |
+
+Deduplicated saved predeadline usage covers 428 responses: 58,597,430 input tokens, including 55,492,736 cached input; 905,374 output tokens, including 561,373 reasoning output; total 59,502,804. The final saved checkpoint is approximately T+11:59:38 and may exclude an in-flight request at the deadline. Cached input and reasoning output are subsets, not additional totals. The separate Goal count, 3,906,233, includes later administration. Billing is unknown and recorded as null.
+
+### Input prompt
+
+The original user requested the n25 Chinese page&#x27;s test prompt and prohibited preexisting local materials, skills, other chats, archived chats and stored WSL research files. Public web sources and WSL tools were allowed. A complete correct result was required within 12 hours. Numerical optimization, uncontrolled floating-point results, finite sampling, boundary checks, images and unfinished enumeration cannot replace proof.
+
+[Download the actual original user instruction](reports/n25-astra-main-prompt.original.txt), preserved from the saved Goal objective. There is no task-start web-byte snapshot, so today&#x27;s prompt is not presented as the historical original.
+
+&lt;details&gt;&lt;summary&gt;Expand the recoverable task requirements&lt;/summary&gt;
+
+For the closed unit disk $D$ and 25 arbitrary centers, determine
+
+$$R_D(C)=\max_{x\in D}\min_{1\le i\le25}\|x-c_i\|_2,\qquad r_D(25)=\inf_{C\in(\mathbb R^2)^{25}}R_D(C).$$
+
+Supply the radius&#x27;s primitive irreducible integer minimal polynomial, rational isolating interval and unique-root proof; uniquely specify the ordered algebraic centers; prove coverage of the entire closed disk; prove a matching global lower bound for arbitrary configurations, including degeneracies. Symmetry or combinatorial restrictions require complete justification. Computer-assisted proof requires actual code, inputs, certificates and verification materials. Existence, algebraicity, algorithms or candidates alone are insufficient.
+
+This is a recoverable summary from the original instruction, deliverable and report, not a byte-for-byte opening web prompt. Post-test permission to read local report evidence does not retroactively alter the original restrictions. No comprehensive compliance audit was performed; incompleteness already determines the score.
+
+&lt;/details&gt;
+
+### Main stages
+
+T+00:00:00 is Goal creation. These are saved progress/tool observation times, not inferred first-discovery times or disjoint CPU intervals.
+
+| Relative natural time | Work and result |
+|---|---|
+| Approximately T+00:04:08—00:04:43 | Public candidate/source searches; no complete n25 global proof found |
+| Approximately T+00:44:15—00:46:49 | Weaker-bound arithmetic and first partial delivery: candidate algebra and full-disk coverage documented, matching global bound missing |
+| Subsequent predeadline work | 48 local necessary constraints, exact stationarity and Taylor/Loewner remainder certificates; global search incomplete |
+| Approximately T+10:19:49—10:43:10 | Integer certificates and independent logs for restricted neighborhoods, with no reduction of all configurations to those neighborhoods |
+| Approximately T+11:35:28 | 4,719,313 SAT input clauses checked, program approximately 433 s; explicitly NOT_GLOBAL_UNSAT |
+| Approximately T+11:44:51—11:54:20 | WSL E_UNEXPECTED, Stopped and CreateInstance/E_FAIL interrupted final computations; cause undiagnosed |
+| T+12:00:00 | Complete global optimality proof still absent; original test failed |
+| After deadline | Administration and separately requested reports/publication; no resumed mathematical solve |
+
+The WSL failure interrupted computation, but a complete proof was already absent before the failure. No on-time completion under a hypothetical healthy environment is inferred.
+
+### Post-test candidate fingerprint check
+
+This separately authorized publication task used `diskcover-minpoly-v1` from the latest checked source. The original partial deliverable&#x27;s candidate minimal polynomial and selected root were evaluated using **exact rational bisection, integer sign tests and integer rounding**, certifying the same 20-decimal ROUND_HALF_UP value at both interval endpoints. The canonical UTF-8 JSON was then hashed with SHA-256. No uncontrolled floating-point approximation was used for rounding.
+
+Computed digest: `2cf89430e0f746fabd1f84298f3449cb9f755a8c3d41a198b2881dd042d06e12`.
+
+**It matches the n25 reference fingerprint.** The original publication described the reference as `candidate_upper_bound`; that reference label was corrected on 2026-10-03 using the accepted 2026-09-26 local global-optimality review. The original Astra test still did not submit a complete global proof by its deadline and remains scored 0. Matching does not verify the submitted proof. Radius, coefficients and isolation endpoints remain undisclosed.
+
+### Verification, delivery and limitations
+
+The original partial package documents candidate algebra, analytic coverage, a weaker universal lower bound and local certificates; the global exclusion chain is missing. Its ZIP has 37 entries, with 36 internal manifest entries previously checked for SHA-256 and ZIP CRC without mismatches. The mathematics was not fully replayed in this publication. Original package SHA-256: `892ed4ee2a545d673dc719579484abaa45fe0e2525037dbc84a76cb8db3bcb5a`.
+
+New work comprises exact fingerprint calculation, execution of the failure scoring script and website build/publication checks. These do not replace mathematical proof. Only reports, the original user instruction, machine-readable records and the fingerprint are public. Private proof and selected runtime evidence stay local; the selected evidence archive is not a full chat archive. Original report/evidence bytes are preserved, with this public version saved separately.
+
+## Downloadable records
+
+[Machine-readable test record](record-n25-astra-20261002.json) · [Report Markdown](record-n25-astra-20261002.md)
+</pre></div>
+  <pre id="test-prompt" hidden># n=25 · gpt-6 astra/max test report
+
+[Back to n=25](n25.html) · [Test records](records.html)
+
+**Score: 0 (Incomplete).** The test began on 2026-10-02 UTC with a 12-hour limit. No matching global lower bound for arbitrary center configurations was completed by the deadline. Test ID: `T_20261002T095207Z_01a0fc07`. All 12 saved predeadline runtime contexts identify gpt-6-astra / max; later report preparation used gpt-6.1-sol / xhigh.
+
+## 25-disk covering: 6.1 Sol vs 6 Astra — an analysis of the experiments
+
+Sol&#x27;s performance on this 25-disk covering test surprised me. Before the experiments, I expected neither model to solve the problem on its first attempt: both would run for twelve hours and score zero. Astra/Max&#x27;s result matched that expectation, but GPT‑6.1 Sol/Max completed the proof in about five hours and scored 230. I wanted to understand what Sol had done right, and why it was so much faster.
+
+My first suspicion was that the difference came mainly from finding reference material. Sol found a public 20-disk covering project early on, containing a complete proof and programs that could provide a starting point for the 25-disk problem. I therefore ran another experiment, putting the references and hints about adapting them directly into Astra&#x27;s prompt. With no need to find the material itself, I expected Astra might finish in about five hours, or even sooner.
+
+Instead, the second Astra run was interrupted after more than seven hours, still without a complete proof.
+
+### The hard part of the proof
+
+The task asks for the smallest common radius of at most 25 congruent disks covering the entire closed unit disk, a rigorous proof of optimality, and the minimal polynomial of that algebraic radius. The minimal polynomial has degree four. The harder work is proving that the disks cover the target disk and that the radius cannot be smaller.
+
+Sol used adjacency relations between centers to reduce the coverings that needed consideration to finitely many structures. It then ruled out, class by class, the possibilities that might cover the disk with a smaller radius. There are many structures, with infinitely many placements of the centers within each structure, so excluding all these possibilities can require substantial computation. To save time, one needs conditions that are cheap to check but eliminate many possibilities. Once a whole class of structures or a batch of branches is rigorously shown unable to yield a better covering, it can be skipped without calculating each individual case. Finding and using such conditions early can make a large difference to the proof&#x27;s running time.
+
+### From a 20-disk proof to a 25-disk proof
+
+When I first saw Sol&#x27;s result, I suspected that its proof might be wrong. After repeatedly checking it against our existing research assets, I confirmed that it was correct. How had Sol managed it?
+
+The experiment records show that Sol located a complete public 20-disk covering proof on GitHub a little over ten minutes into the run. It used the derivations and programs to build a proof framework for 25 disks, then continued studying how to reduce the number of structures that needed exclusion. By about 1 hour 53 minutes and 2 hours 51 minutes, respectively, two conditions that were very cheap to check had been incorporated into the program.
+
+These conditions eliminated many impossible structures. Some branches could be rejected before a complete graph had been generated, saving all the calculations that would otherwise have followed those branches. Sol borrowed from the 20-disk proof, found methods suited to the 25-disk problem, and finished in about five hours, earning 230 points.
+
+### Was Astra just unlucky?
+
+The first Astra run lasted the full twelve hours and scored zero. It produced a candidate covering, local proofs and geometric conclusions, but never completed the global optimality proof. It also did not find and make effective use of an equally efficient set of exclusion conditions.
+
+At that point, I had not concluded that Astra was less capable than Sol. Sol had found the 20-disk proof early, whereas the first Astra run&#x27;s public execution records did not show it finding or consulting that material. I wondered whether the difference might mainly come from reference retrieval.
+
+I designed a comparison experiment: keep the overall Goal prompt unchanged, give Astra the relevant GitHub links directly, and explicitly ask it to consult that proof before trying again.
+
+### Give Astra the references and try again
+
+I expected that Astra might outperform Sol now that the material was already in front of it. It did consult the references and quickly built a similar proof framework, but it still did not finish the subsequent work.
+
+Sol completed the scored task in less than five hours. Astra did not explicitly state the first exclusion condition until about 5 hours 50 minutes, after which it proved the condition and put it into computation. When the experiment was interrupted at about 7 hours 10 minutes 38 seconds, the global proof remained incomplete. The records also did not show the second condition being fully derived and used for exclusion. The first condition arrived late; the run ended before the second had been fully put to use.
+
+Providing the references and adaptation hints still did not let Astra catch up with Sol. The first run was incomplete after twelve hours; the second was incomplete when stopped after more than seven hours.
+
+### Sol won this round
+
+After the comparison experiment, my initial explanation — perhaps Astra was simply unlucky and had not found the references — was no longer enough. Astra had been given the material, had consulted it, and still had not finished.
+
+What Sol did well in that run was adapt the 20-disk proof to 25 disks, find low-cost exclusion conditions early, and use them in computation. Those conditions saved a great deal of work. Even with the same references available, Astra did not accomplish that step in time. In these 25-disk experiments, Astra clearly lost to Sol. I had given it a second chance, and the result was still the same.
+
+Whether Sol is stronger than Astra across mathematical research as a whole is a question these experiments cannot answer.
+
+### Results and reference material from the three experiments
+
+| Test | Reference material | Result |
+|---|---|---|
+| GPT‑6.1 Sol/Max | Neither of the two targeted sets of references supplied in advance; retrieved material itself | 230 points; scored time 4 h 52 min 19 s; final chat response at approximately 5 h 05 min |
+| Astra/Max, first run | Neither set of references supplied in advance | 0 points; global optimality proof incomplete at the twelve-hour deadline |
+| Astra/Max, reference-material experiment | General theory, the complete 20-disk proof and programs explicitly supplied, with adaptation hints | Incomplete when interrupted at approximately 7 h 10 min 38 s; no website score registered |
+
+The first Astra run&#x27;s zero score means that it did not complete all the required proofs within the limit, not that every local result was wrong. The second run did not last the full twelve hours and has no registered website score. Sol&#x27;s 230 points retain the existing test review result.
+
+The comparison experiment used public versions that already existed before it began: [general exact-algorithm theory](https://github.com/VonEquinox/DiskCoveringSolve/blob/089584973f41e6374ce110f6e5b5ee456df19352/theory/single_exponential_exact_algorithm_zh.md), [the complete 20-disk proof](https://github.com/VonEquinox/DiskCoveringSolve/blob/089584973f41e6374ce110f6e5b5ee456df19352/cover20/docs/r20_proof_zh.md), and [the 20-disk program bundle](https://github.com/VonEquinox/DiskCoveringSolve/tree/089584973f41e6374ce110f6e5b5ee456df19352/cover20/proof_bundle). The published score explanations are in the [Sol test report](https://pikaaa345.github.io/disk-covering-benchmark/record-n25-sol-20261002.html?lang=en) and the [first Astra test report](https://pikaaa345.github.io/disk-covering-benchmark/record-n25-astra-20261002.html?lang=en).
+
+## Detailed test report
+
+### Existing results and the model&#x27;s contribution
+
+The original run obtained a known 25-disk candidate from [Friedman&#x27;s covering table](https://erich-friedman.github.io/packing/circovcir/), attributed in the original deliverable to Jeremy Tan (2018). The model supplied exact candidate algebra, an analytic covering argument for the entire closed disk, a weaker universal lower bound, and certificates restricted to local neighborhoods, while attempting global exclusion.
+
+**No complete n=25 global optimality proof was obtained or completed.** This differs from the n=11 historical report&#x27;s reuse of an existing complete external proof package. Candidate coverage, local optimality and global optimality are distinct conclusions.
+
+### Task and timing
+
+| Scope | Record |
+|---|---|
+| Original start | 2026-10-02 09:52:07 UTC, Goal creation |
+| Inclusive deadline | 2026-10-02 21:52:07 UTC |
+| Displayed observation window | **12 hours (43200 seconds)**; failed-run window, not completion time |
+| Valid completion time | null; no complete valid result |
+| Saved Goal accumulated time | 11 h 38 min 50 s (41930 s); includes later administration, not natural elapsed time |
+| Failure response | message create_time approximately T+12:00:39; JSONL write approximately T+12:01:08; neither is successful completion |
+| Original report evidence cutoff | 2026-10-03 01:04:39.748 UTC, T+15:12:33; includes waiting and a separate report task |
+| Original report preparation | Approximately 22 min 51 s from its request to that cutoff; excludes later packaging, archiving and this publication |
+
+Failure is scored zero before applying the efficiency formula. Parallel program durations are not added to natural elapsed time. Later hashing, reporting and publication do not extend the original deadline.
+
+### Computing conditions
+
+| Item | Record |
+|---|---|
+| CPU | AMD Ryzen 9 8945HX with Radeon Graphics |
+| Memory | DDR5, 32 GB; 34359738368 bytes |
+| Hardware evidence | Windows CIM query during original report preparation, not a task-start snapshot |
+| Execution | Local Ubuntu WSL; no key remote computation visible in the selected evidence |
+| Software | Original package records Python 3.12.3 and SymPy 1.14.0; actual Sage/Wolfram evaluation unverified |
+| Acquired tools | Public CaDiCaL 1.9.5 and drat-trim (version unknown); no completed global UNSAT certificate |
+
+Deduplicated saved predeadline usage covers 428 responses: 58,597,430 input tokens, including 55,492,736 cached input; 905,374 output tokens, including 561,373 reasoning output; total 59,502,804. The final saved checkpoint is approximately T+11:59:38 and may exclude an in-flight request at the deadline. Cached input and reasoning output are subsets, not additional totals. The separate Goal count, 3,906,233, includes later administration. Billing is unknown and recorded as null.
+
+### Input prompt
+
+The original user requested the n25 Chinese page&#x27;s test prompt and prohibited preexisting local materials, skills, other chats, archived chats and stored WSL research files. Public web sources and WSL tools were allowed. A complete correct result was required within 12 hours. Numerical optimization, uncontrolled floating-point results, finite sampling, boundary checks, images and unfinished enumeration cannot replace proof.
+
+[Download the actual original user instruction](reports/n25-astra-main-prompt.original.txt), preserved from the saved Goal objective. There is no task-start web-byte snapshot, so today&#x27;s prompt is not presented as the historical original.
+
+&lt;details&gt;&lt;summary&gt;Expand the recoverable task requirements&lt;/summary&gt;
+
+For the closed unit disk $D$ and 25 arbitrary centers, determine
+
+$$R_D(C)=\max_{x\in D}\min_{1\le i\le25}\|x-c_i\|_2,\qquad r_D(25)=\inf_{C\in(\mathbb R^2)^{25}}R_D(C).$$
+
+Supply the radius&#x27;s primitive irreducible integer minimal polynomial, rational isolating interval and unique-root proof; uniquely specify the ordered algebraic centers; prove coverage of the entire closed disk; prove a matching global lower bound for arbitrary configurations, including degeneracies. Symmetry or combinatorial restrictions require complete justification. Computer-assisted proof requires actual code, inputs, certificates and verification materials. Existence, algebraicity, algorithms or candidates alone are insufficient.
+
+This is a recoverable summary from the original instruction, deliverable and report, not a byte-for-byte opening web prompt. Post-test permission to read local report evidence does not retroactively alter the original restrictions. No comprehensive compliance audit was performed; incompleteness already determines the score.
+
+&lt;/details&gt;
+
+### Main stages
+
+T+00:00:00 is Goal creation. These are saved progress/tool observation times, not inferred first-discovery times or disjoint CPU intervals.
+
+| Relative natural time | Work and result |
+|---|---|
+| Approximately T+00:04:08—00:04:43 | Public candidate/source searches; no complete n25 global proof found |
+| Approximately T+00:44:15—00:46:49 | Weaker-bound arithmetic and first partial delivery: candidate algebra and full-disk coverage documented, matching global bound missing |
+| Subsequent predeadline work | 48 local necessary constraints, exact stationarity and Taylor/Loewner remainder certificates; global search incomplete |
+| Approximately T+10:19:49—10:43:10 | Integer certificates and independent logs for restricted neighborhoods, with no reduction of all configurations to those neighborhoods |
+| Approximately T+11:35:28 | 4,719,313 SAT input clauses checked, program approximately 433 s; explicitly NOT_GLOBAL_UNSAT |
+| Approximately T+11:44:51—11:54:20 | WSL E_UNEXPECTED, Stopped and CreateInstance/E_FAIL interrupted final computations; cause undiagnosed |
+| T+12:00:00 | Complete global optimality proof still absent; original test failed |
+| After deadline | Administration and separately requested reports/publication; no resumed mathematical solve |
+
+The WSL failure interrupted computation, but a complete proof was already absent before the failure. No on-time completion under a hypothetical healthy environment is inferred.
+
+### Post-test candidate fingerprint check
+
+This separately authorized publication task used `diskcover-minpoly-v1` from the latest checked source. The original partial deliverable&#x27;s candidate minimal polynomial and selected root were evaluated using **exact rational bisection, integer sign tests and integer rounding**, certifying the same 20-decimal ROUND_HALF_UP value at both interval endpoints. The canonical UTF-8 JSON was then hashed with SHA-256. No uncontrolled floating-point approximation was used for rounding.
+
+Computed digest: `2cf89430e0f746fabd1f84298f3449cb9f755a8c3d41a198b2881dd042d06e12`.
+
+**It matches the n25 reference fingerprint.** The original publication described the reference as `candidate_upper_bound`; that reference label was corrected on 2026-10-03 using the accepted 2026-09-26 local global-optimality review. The original Astra test still did not submit a complete global proof by its deadline and remains scored 0. Matching does not verify the submitted proof. Radius, coefficients and isolation endpoints remain undisclosed.
+
+### Verification, delivery and limitations
+
+The original partial package documents candidate algebra, analytic coverage, a weaker universal lower bound and local certificates; the global exclusion chain is missing. Its ZIP has 37 entries, with 36 internal manifest entries previously checked for SHA-256 and ZIP CRC without mismatches. The mathematics was not fully replayed in this publication. Original package SHA-256: `892ed4ee2a545d673dc719579484abaa45fe0e2525037dbc84a76cb8db3bcb5a`.
+
+New work comprises exact fingerprint calculation, execution of the failure scoring script and website build/publication checks. These do not replace mathematical proof. Only reports, the original user instruction, machine-readable records and the fingerprint are public. Private proof and selected runtime evidence stay local; the selected evidence archive is not a full chat archive. Original report/evidence bytes are preserved, with this public version saved separately.
+
+## Downloadable records
+
+[Machine-readable test record](record-n25-astra-20261002.json) · [Report Markdown](record-n25-astra-20261002.md)
+</pre>
+</main></body>
+</html>

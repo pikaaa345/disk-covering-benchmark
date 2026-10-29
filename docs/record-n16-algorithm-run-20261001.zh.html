@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="zh-CN" data-page="record-n16-algorithm-run-20261001">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>n=16 · 算法运行报告 · 单位圆盘覆盖测试</title>
+  <script src="language.js"></script>
+  <script src="navigation.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="alternate" hreflang="zh-CN" href="record-n16-algorithm-run-20261001.zh.html"><link rel="alternate" hreflang="en" href="record-n16-algorithm-run-20261001.html">
+  <link rel="alternate" type="application/json" href="record-n16-algorithm-run-20261001.json">
+  <script src="vendor/marked.js" defer></script>
+  <script src="vendor/dompurify.js" defer></script>
+  <script src="math-config.js" defer></script>
+  <script src="vendor/mathjax-tex-svg-full.js" defer></script>
+  <script src="prompt-render.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header" data-menu-open="false"><div class="site-header-inner"><a class="site-brand" href="index.zh.html" title="返回网站首页" aria-label="返回网站首页"><svg class="site-brand-mark" viewBox="0 0 32 32" aria-hidden="true" fill="none"><circle cx="16" cy="16" r="14.3" stroke="currentColor" stroke-width="1.5"/><g stroke="currentColor" stroke-width="1.1" opacity=".65"><circle cx="11" cy="12" r="8"/><circle cx="21" cy="12" r="8"/><circle cx="16" cy="21" r="8"/></g></svg><span class="site-brand-copy"><span class="site-brand-title">AI圆盘测试</span><span class="site-brand-subtitle">模型研究级数学能力测试</span></span></a><button class="site-menu-toggle" type="button" aria-controls="site-menu" aria-expanded="false" aria-label="打开导航菜单" data-open-label="打开导航菜单" data-close-label="关闭导航菜单" hidden><svg class="menu-icon-open" viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14"/></svg><svg class="menu-icon-close" viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15"/></svg><span>菜单</span></button><div class="site-menu-panel" id="site-menu"><nav class="site-navigation" aria-label="主要导航"><a class="site-nav-link" href="index.zh.html">题目</a><a class="site-nav-link" href="guide.zh.html">测试指南</a><a class="site-nav-link" href="scoring.zh.html">评分</a><a class="site-nav-link" href="records.zh.html" aria-current="true">测试记录</a><a class="site-nav-link" href="about.zh.html">关于项目</a></nav><div class="site-header-actions"><a class="repository-link" href="https://github.com/pikaaa345/disk-covering-benchmark" aria-label="打开 GitHub 仓库">GitHub 仓库<svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13"/></svg></a><nav class="language-switch" aria-label="语言"><a href="record-n16-algorithm-run-20261001.html?lang=en" data-language="en" lang="en">English</a><a href="record-n16-algorithm-run-20261001.zh.html?lang=zh" data-language="zh" lang="zh-CN" aria-current="page">中文</a></nav></div></div></div></header>
+<main>
+  <script id="page-config" type="application/json">{"language":"zh","referenceSha256":null}</script>
+  <p class="back"><a href="index.zh.html">单位圆盘覆盖测试</a> · <a href="n16.zh.html">n = 16</a></p>
+  <div class="prompt-heading"><h1>n=16 · 算法运行报告</h1><div><button id="copy-prompt" class="copy">复制报告</button><span id="copy-status" class="status" role="status"></span></div></div>
+  <div id="prompt-markdown" class="markdown-body" data-article="true" data-format="markdown"><pre class="prompt-fallback"># n=16 算法运行报告
+
+这是人类与 AI 协作研发和优化后的算法系统在本机的运行记录，开发时间不计入此次程序用时，不是模型从题面独立解题的成绩。
+
+## 最佳已记录运行
+
+| 项目 | 记录 |
+|---|---|
+| 运行 ID | `v13-full-scope-32core-n16` |
+| 日期（UTC） | 2026-10-01 |
+| 证明引擎 | DGC v62-F |
+| 最小多项式引擎 | MinPoly v13 |
+| 完整用时 | 178.990 秒 |
+| 分数 | 892 |
+| 逻辑核心上限 | 32 |
+| 同配置观测次数 | 1 |
+| 网站 SHA-256 核对 | 一致 |
+
+“最佳”仅指本次核对的三组完整流程归档中的最低用时，共检查40条已接受运行记录，不是整个项目历史的穷尽排名。不同版本、不同核数的单次观测不能证明稳定加速比。
+
+## 本机配置与环境
+
+- CPU：AMD Ryzen 9 8945HX with Radeon Graphics，主机32个逻辑核心。
+- 内存：DDR5，32 GiB；实际执行在本机 Ubuntu WSL2，最新批次开跑前记录的 MemTotal 为15968388 KiB，约15.23 GiB。
+- SageMath 10.7：精确代数、原方程与根盒验算；Python 3.12.3：证明程序与控制器。核对脚本使用 Python 标准库。
+- 未在本次运行中临时安装工具。早期入选运行引用同机共享环境记录，未保存每次开跑时的独立硬件快照。
+
+## 算法版本
+
+证明引擎的基础代际是 DGC v62。`DGC v62-F` 对应内部冻结代码 `radius-code-feedback-v1`，加入新来源几何反馈；`DGC v62-G` 对应 `radius-code-gmp-v1`，在该版本上加入局部证书验证的 GMP 精确有理数后端。最小多项式引擎独立编号，本次入选为 MinPoly v13，内部代码名 `minpoly-code-v13`。名称不代替代码身份，原运行文件的 SHA-256 在机器可读记录中列出。
+
+程序从 n 输入开始，重新发现构型和根系统，生成并检查半径证书；代数引擎从该新系统提取不可约多项式并验证原始有理方程和根盒。整合控制器最终要求双方使用同一来源根系统。重叠版本可以在根系统通过检查后开始代数计算；临时结果必须等待最终证书与来源绑定。
+
+这是基于既有研究算法和条件引理的程序运行；没有重新从题目研发算法，也没有以公开参考系数或旧构型作为求解输入。源码目前不公开。
+
+## 计时与主要阶段
+
+每个案例的控制器启动为 T+00:00:00；T+178.990 秒保存最终绑定结果。半径阶段 108.272 秒，代数阶段 70.698 秒，两阶段重叠 0.000 秒。完整用时由控制器单独测量，包含启动、证明与代数消费者、最终同根绑定及结果写出；重叠阶段不得相加。
+
+计算 SHA-256 与求解后的参考复核另行进行，不计入计分用时。这里的冷启动指新进程从 n 开始，不代表重启操作系统或清空全部系统缓存。研发耗时、费用和任务系统累计耗时未记录。
+
+分数采用与模型测试相同的计分公式：`ROUND_HALF_UP(200 + 100 × log₂(21600 / t))`，其中 t 是完整程序用时（秒）。分数越高越好；6小时为200分，用时每减半增加100分。两类记录使用同一分数尺度比较完成效率，报告保留各自的起始条件、算法版本和计算环境。
+
+## 最新32核复测
+
+最新一次是 `single32-n16`：DGC v62-G · MinPoly v15，190.738 秒，分数 882，最多32个逻辑核心。半径 111.136 秒；代数 79.559 秒；重叠 0.000 秒。最新运行与历史最佳分开保存。
+
+## 核验与交付边界
+
+运行时实际执行半径与代数消费者，并检查最终来源相同；随后对本例核对全部系数、不可约性及同一根，检查精确区间所确定的小数点后20位舍入，再调用网站原脚本和独立规范 JSON 重建核对哈希。
+
+本次发布准备时，没有重跑求解器；重新检查入选历史结果与本例最新结果的全部系数相同、认证根区间相交，并用网站共用脚本重算指纹，结果与登记值相同。既有来源准入与有限分类信任基础仍保留，没有新增独立数学审查或形式化证明。
+
+公开提供本报告和[n=16 机器可读运行记录](record-n16-algorithm-run-20261001.json)。完整求解代码、半径、多项式系数、隔离区间和证明树留在研究资产库，不随报告公开。核验与公开材料的范围须分开理解。
+</pre></div>
+  <pre id="test-prompt" hidden># n=16 算法运行报告
+
+这是人类与 AI 协作研发和优化后的算法系统在本机的运行记录，开发时间不计入此次程序用时，不是模型从题面独立解题的成绩。
+
+## 最佳已记录运行
+
+| 项目 | 记录 |
+|---|---|
+| 运行 ID | `v13-full-scope-32core-n16` |
+| 日期（UTC） | 2026-10-01 |
+| 证明引擎 | DGC v62-F |
+| 最小多项式引擎 | MinPoly v13 |
+| 完整用时 | 178.990 秒 |
+| 分数 | 892 |
+| 逻辑核心上限 | 32 |
+| 同配置观测次数 | 1 |
+| 网站 SHA-256 核对 | 一致 |
+
+“最佳”仅指本次核对的三组完整流程归档中的最低用时，共检查40条已接受运行记录，不是整个项目历史的穷尽排名。不同版本、不同核数的单次观测不能证明稳定加速比。
+
+## 本机配置与环境
+
+- CPU：AMD Ryzen 9 8945HX with Radeon Graphics，主机32个逻辑核心。
+- 内存：DDR5，32 GiB；实际执行在本机 Ubuntu WSL2，最新批次开跑前记录的 MemTotal 为15968388 KiB，约15.23 GiB。
+- SageMath 10.7：精确代数、原方程与根盒验算；Python 3.12.3：证明程序与控制器。核对脚本使用 Python 标准库。
+- 未在本次运行中临时安装工具。早期入选运行引用同机共享环境记录，未保存每次开跑时的独立硬件快照。
+
+## 算法版本
+
+证明引擎的基础代际是 DGC v62。`DGC v62-F` 对应内部冻结代码 `radius-code-feedback-v1`，加入新来源几何反馈；`DGC v62-G` 对应 `radius-code-gmp-v1`，在该版本上加入局部证书验证的 GMP 精确有理数后端。最小多项式引擎独立编号，本次入选为 MinPoly v13，内部代码名 `minpoly-code-v13`。名称不代替代码身份，原运行文件的 SHA-256 在机器可读记录中列出。
+
+程序从 n 输入开始，重新发现构型和根系统，生成并检查半径证书；代数引擎从该新系统提取不可约多项式并验证原始有理方程和根盒。整合控制器最终要求双方使用同一来源根系统。重叠版本可以在根系统通过检查后开始代数计算；临时结果必须等待最终证书与来源绑定。
+
+这是基于既有研究算法和条件引理的程序运行；没有重新从题目研发算法，也没有以公开参考系数或旧构型作为求解输入。源码目前不公开。
+
+## 计时与主要阶段
+
+每个案例的控制器启动为 T+00:00:00；T+178.990 秒保存最终绑定结果。半径阶段 108.272 秒，代数阶段 70.698 秒，两阶段重叠 0.000 秒。完整用时由控制器单独测量，包含启动、证明与代数消费者、最终同根绑定及结果写出；重叠阶段不得相加。
+
+计算 SHA-256 与求解后的参考复核另行进行，不计入计分用时。这里的冷启动指新进程从 n 开始，不代表重启操作系统或清空全部系统缓存。研发耗时、费用和任务系统累计耗时未记录。
+
+分数采用与模型测试相同的计分公式：`ROUND_HALF_UP(200 + 100 × log₂(21600 / t))`，其中 t 是完整程序用时（秒）。分数越高越好；6小时为200分，用时每减半增加100分。两类记录使用同一分数尺度比较完成效率，报告保留各自的起始条件、算法版本和计算环境。
+
+## 最新32核复测
+
+最新一次是 `single32-n16`：DGC v62-G · MinPoly v15，190.738 秒，分数 882，最多32个逻辑核心。半径 111.136 秒；代数 79.559 秒；重叠 0.000 秒。最新运行与历史最佳分开保存。
+
+## 核验与交付边界
+
+运行时实际执行半径与代数消费者，并检查最终来源相同；随后对本例核对全部系数、不可约性及同一根，检查精确区间所确定的小数点后20位舍入，再调用网站原脚本和独立规范 JSON 重建核对哈希。
+
+本次发布准备时，没有重跑求解器；重新检查入选历史结果与本例最新结果的全部系数相同、认证根区间相交，并用网站共用脚本重算指纹，结果与登记值相同。既有来源准入与有限分类信任基础仍保留，没有新增独立数学审查或形式化证明。
+
+公开提供本报告和[n=16 机器可读运行记录](record-n16-algorithm-run-20261001.json)。完整求解代码、半径、多项式系数、隔离区间和证明树留在研究资产库，不随报告公开。核验与公开材料的范围须分开理解。
+</pre>
+</main></body>
+</html>

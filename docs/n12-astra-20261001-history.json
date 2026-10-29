@@ -1,0 +1,115 @@
+{
+  "schema": "diskcover-public-test-reports-v1",
+  "n": 12,
+  "report_scope": "Retrospective single-run records with answers withheld; the publisher clarified that the file ban covers only local materials existing before the test.",
+  "records_comparable": false,
+  "records": [
+    {
+      "record_id": "n12-astra-20261001",
+      "model": "gpt-6 astra/max",
+      "model_id": "gpt-6-astra",
+      "reasoning_effort": "max",
+      "test_date_utc": "2026-10-01",
+      "status": "post_hoc_reported_result_under_clarified_resource_rule",
+      "runs": 1,
+      "elapsed_seconds": "3175.402",
+      "timing_scope": "first complete problem received through final answer fully recorded",
+      "goal_counter_seconds_supplemental_only": 2705,
+      "audit_followup_seconds": "997.186",
+      "report_followup_seconds_at_check_cutoff": "1747.02885",
+      "time_budget_seconds": 43200,
+      "within_time_limit": true,
+      "score": 477,
+      "score_scope": "benchmark_score",
+      "strict_original_task_score": 477,
+      "strict_original_task_acceptance": "accepted_on_reviewed_evidence_under_clarified_resource_rule",
+      "formal_ranking": false,
+      "completion_independently_verified": false,
+      "answer_protocol": "diskcover-minpoly-v1",
+      "score_protocol": "diskcover-log-score-v1",
+      "reference_seconds": "21600",
+      "benchmark_commit_for_post_hoc_validation": "f106832febe525afe740a3d4504b57d51d75189b",
+      "benchmark_commit_at_original_start": null,
+      "answer_check": {
+        "matches_reference": true,
+        "exit_code": 0,
+        "sha256": "35d604a5ea1b1fe5c52c30337743c1a8142b69827023284f9597e1ca9cb8f947"
+      },
+      "tools_self_check": {
+        "synthetic_checks_passed": 39,
+        "mathematical_solver_executed": false
+      },
+      "mathematics": {
+        "submission": "complete_proof_and_certificates_submitted",
+        "original_three_stage_replay_passed": true,
+        "prior_audit_three_stage_replay_passed": true,
+        "geometry_replayed_again_in_this_report_task": false,
+        "independent_external_proof_review": false
+      },
+      "provenance": {
+        "used_existing_public_construction_and_solver_certificates": true,
+        "public_solver_commit": "089584973f41e6374ce110f6e5b5ee456df19352",
+        "from_scratch_independent_discovery": false,
+        "starting_materials": "user problem and environment facts; public sources subsequently retrieved"
+      },
+      "hardware": {
+        "measurement_scope": "current_host_at_report_preparation_not_task_start_snapshot",
+        "cpu": "AMD Ryzen 9 8945HX with Radeon Graphics",
+        "physical_memory_bytes": 34359738368,
+        "physical_memory_gib": 32,
+        "memory_generation": "DDR5"
+      },
+      "software": {
+        "os": "Ubuntu WSL2",
+        "python": "3.12.3",
+        "kernel": "6.6.87.2",
+        "sympy": "1.14.0",
+        "numpy": "2.2.6",
+        "scipy": "1.15.3",
+        "mpmath": "1.3.0"
+      },
+      "resources": {
+        "money_budget": null,
+        "money_spent": null,
+        "money_evidence": "not recorded",
+        "goal_token_counter": 319768,
+        "goal_token_counter_definition": {
+          "label_zh": "Codex Goal 累计计数",
+          "label_en": "Codex Goal cumulative counter",
+          "owner": "Codex Goal",
+          "industry_standard_metric": false,
+          "verified_reference_implementation": "Codex 0.159.2",
+          "reference_formula": "input_tokens - cached_input_tokens + output_tokens",
+          "reasoning_tokens": "included in output_tokens; do not add again",
+          "scope": "Goal-accounted usage increments; not whole-chat total, billed tokens or monetary cost",
+          "version_note": "Historical versions follow their own implementation.",
+          "reference_source_url": "https://github.com/openai/codex/blob/rust-v0.159.2/codex-rs/ext/goal/src/accounting.rs#L527-L532"
+        },
+        "billed_tokens": null,
+        "time_budget_seconds": 43200
+      },
+      "subagents_used_in_original_solve": false,
+      "prompt_artifacts": [
+        {
+          "kind": "main",
+          "original_text_url": "reports/n12-astra-main-prompt.original.txt",
+          "sha256": "7281808b304f0ece5b719eac624ca0070ce543ddcf2d296953897bb594e6e9a2"
+        }
+      ],
+      "limitations": [
+        "Existing public construction and certificates were used; not a from-scratch independent discovery.",
+        "Fingerprint match and successful replay are not external mathematical certification.",
+        "No frozen opening benchmark version, opening hardware snapshot or monetary cost evidence."
+      ],
+      "answer_disclosure": "fingerprint_only_no_mathematical_answers_or_private_chats",
+      "resource_rule_clarification": {
+        "clarified_by": "publisher",
+        "clarification_date": "2026-10-02",
+        "prohibited": "local_materials_existing_before_test_start",
+        "new_downloaded_or_generated_task_files_permitted": true,
+        "audit_scope": "existing_review_of_explicit_accesses; no new OS trace or mathematical replay",
+        "reviewed_preexisting_material_access_violation_found": false
+      }
+    }
+  ]
+}
