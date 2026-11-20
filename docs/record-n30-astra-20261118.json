@@ -1,0 +1,53 @@
+{
+  "schema": "diskcover-public-test-reports-v1",
+  "n": 30,
+  "report_scope": "One incomplete test with a 12-hour accumulated Goal limit; fingerprint-only answer disclosure.",
+  "records_comparable": false,
+  "records": [
+    {
+      "model": "gpt 6.2 astra/max",
+      "model_id": "gpt-6.2-astra",
+      "reasoning_effort": "max",
+      "model_identity_status": "verified_model_and_effort; user_supplied_display_label",
+      "status": "not_completed",
+      "score": 0,
+      "runs": 1,
+      "elapsed_seconds": null,
+      "test_date_utc": "2026-11-18",
+      "timing_scope": "12-hour accumulated Goal limit; no valid completion time",
+      "score_scope": "incomplete_zero",
+      "acceptance_status": "incomplete",
+      "verification_status": "candidate_fingerprint_matched; continuous_coverage_verified; global_optimality_incomplete",
+      "report_url": "record-n30-astra-20261118.zh.html",
+      "report_url_en": "record-n30-astra-20261118.html",
+      "record_id": "n30-astra-20261118",
+      "test_id": "T_20261118T004433Z_01a1ec1c",
+      "report_date": "2026-11-19",
+      "valid_completion_elapsed_seconds": null,
+      "test_limit_seconds": 43200,
+      "natural_elapsed_seconds": 47559.262,
+      "goal_time_used_seconds_at_pause_after_test_report": 43245,
+      "formal_ranking": false,
+      "records_comparable": false,
+      "paid_cost": null,
+      "failure_reason": "A global lower bound matching the candidate covering radius was not proved by the deadline.",
+      "results": {
+        "exact_candidate_configuration_saved": true,
+        "continuous_coverage_verified": true,
+        "minimal_polynomial_for_candidate_obtained": true,
+        "candidate_fingerprint_matches": true,
+        "unconditional_radius_lower_bound": "0.215",
+        "global_optimality_proved": false,
+        "complete_submission": false
+      },
+      "external_sources": [
+        {
+          "title": "Public n=20 proof (method reference)",
+          "url": "https://raw.githubusercontent.com/VonEquinox/DiskCoveringSolve/main/cover20/docs/r20_proof_zh.md"
+        }
+      ],
+      "prompt_artifacts": [],
+      "mathematics_resumed_for_publication": false
+    }
+  ]
+}

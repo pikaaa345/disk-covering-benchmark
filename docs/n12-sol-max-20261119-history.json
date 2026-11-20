@@ -1,0 +1,41 @@
+{
+  "schema": "diskcover-public-test-reports-v1",
+  "n": 12,
+  "report_scope": "Retrospective single-run public records with solutions withheld",
+  "records_comparable": false,
+  "records": [
+    {
+      "model": "gpt-6.2 sol/max",
+      "status": "reported",
+      "score": 711,
+      "elapsed_seconds": "625.204",
+      "model_id": "gpt-6.2-sol",
+      "reasoning_effort": "max",
+      "runs": 1,
+      "timing_scope": "original_task_started_to_task_complete",
+      "model_identity_status": "verified_original_solver_turn_context",
+      "verification_status": "reference_hash_match_and_exact_certificate_replay",
+      "score_scope": "benchmark_score",
+      "acceptance_status": "solver_delivered_and_replayed_certificates",
+      "test_date_utc": "2026-11-20",
+      "report_url": "record-n12-sol-max-20261119.zh.html",
+      "report_url_en": "record-n12-sol-max-20261119.html",
+      "record_id": "n12-sol-max-20261119",
+      "test_date_local": "2026-11-19",
+      "local_timezone": "America/New_York",
+      "main_natural_seconds": 625.204,
+      "system_accumulated_seconds": 595,
+      "original_budget_seconds": 43200,
+      "within_original_time_budget": true,
+      "actual_cost": null,
+      "formal_ranking": false,
+      "completion_independently_verified": false,
+      "answer_check": {
+        "protocol": "diskcover-minpoly-v1",
+        "matches_reference": true,
+        "sha256": "35d604a5ea1b1fe5c52c30337743c1a8142b69827023284f9597e1ca9cb8f947"
+      },
+      "prompt_artifacts": []
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="zh-CN" data-page="record-n12-sol-max-20261119">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>n=12 · gpt-6.2 sol/max 测试报告 · 单位圆盘覆盖测试</title>
+  <script src="language.js"></script>
+  <script src="navigation.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="alternate" hreflang="zh-CN" href="record-n12-sol-max-20261119.zh.html"><link rel="alternate" hreflang="en" href="record-n12-sol-max-20261119.html">
+  <link rel="alternate" type="application/json" href="record-n12-sol-max-20261119.json">
+  <script src="vendor/marked.js" defer></script>
+  <script src="vendor/dompurify.js" defer></script>
+  <script src="math-config.js" defer></script>
+  <script src="vendor/mathjax-tex-svg-full.js" defer></script>
+  <script src="prompt-render.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header" data-menu-open="false"><div class="site-header-inner"><a class="site-brand" href="index.zh.html" title="返回网站首页" aria-label="返回网站首页"><svg class="site-brand-mark" viewBox="0 0 32 32" aria-hidden="true" fill="none"><circle cx="16" cy="16" r="14.3" stroke="currentColor" stroke-width="1.5"/><g stroke="currentColor" stroke-width="1.1" opacity=".65"><circle cx="11" cy="12" r="8"/><circle cx="21" cy="12" r="8"/><circle cx="16" cy="21" r="8"/></g></svg><span class="site-brand-copy"><span class="site-brand-title">AI圆盘测试</span><span class="site-brand-subtitle">模型研究级数学能力测试</span></span></a><button class="site-menu-toggle" type="button" aria-controls="site-menu" aria-expanded="false" aria-label="打开导航菜单" data-open-label="打开导航菜单" data-close-label="关闭导航菜单" hidden><svg class="menu-icon-open" viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14"/></svg><svg class="menu-icon-close" viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15"/></svg><span>菜单</span></button><div class="site-menu-panel" id="site-menu"><nav class="site-navigation" aria-label="主要导航"><a class="site-nav-link" href="index.zh.html">题目</a><a class="site-nav-link" href="guide.zh.html">测试指南</a><a class="site-nav-link" href="scoring.zh.html">评分</a><a class="site-nav-link" href="records.zh.html" aria-current="true">测试记录</a><a class="site-nav-link" href="about.zh.html">关于项目</a></nav><div class="site-header-actions"><a class="repository-link" href="https://github.com/pikaaa345/disk-covering-benchmark" aria-label="打开 GitHub 仓库">GitHub 仓库<svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13"/></svg></a><nav class="language-switch" aria-label="语言"><a href="record-n12-sol-max-20261119.html?lang=en" data-language="en" lang="en">English</a><a href="record-n12-sol-max-20261119.zh.html?lang=zh" data-language="zh" lang="zh-CN" aria-current="page">中文</a></nav></div></div></div></header>
+<main>
+  <script id="page-config" type="application/json">{"language":"zh","referenceSha256":null}</script>
+  <p class="back"><a href="index.zh.html">单位圆盘覆盖测试</a> · <a href="n12.zh.html">n = 12</a></p>
+  <div class="prompt-heading"><h1>n=12 · gpt-6.2 sol/max 测试报告</h1><div><button id="copy-prompt" class="copy">复制全文</button><span id="copy-status" class="status" role="status"></span></div></div>
+  <div id="prompt-markdown" class="markdown-body" data-article="true" data-format="markdown"><pre class="prompt-fallback">本次单次测试提交了精确解与可复验的证书。答案指纹一致，几何和代数检查由当次助手重放。按现有公式补算的自报展示成绩为 **711 分**。本次未建立独立数学审查或正式排名资格。
+
+### 复用的公开证明与本次工作
+
+本次复用了[固定提交的公开 Cover12 证明包](https://github.com/VonEquinox/DiskCoveringSolve/tree/089584973f41e6374ce110f6e5b5ee456df19352/cover12)的几何和拓扑证书，补充半径消元、与构型根的精确关联和有限域不可约性验证。
+
+### 任务与计时
+
+| 口径 | 记录 |
+|---|---|
+| 主测试自然经过时间 | **625.204 秒**，截至最终答复交付完成 |
+| Goal 累计时间 | 595 秒，最终答复交付前记录 |
+| 原截止 | 12 小时，按期交付 |
+
+测试始于纽约时间 2026 年 11 月 19 日 19:35，对应 11 月 20 日 00:35 UTC。几何重放用时 52.95 秒，计入主测试。后续归档与发布另计。
+
+### 计算条件
+
+Windows x64、CPython 3.13.13、SymPy 1.14.0、NumPy 2.3.5 和 SciPy 1.17.0。制作报告时只读查询本机，得到 AMD Ryzen 9 8945HX 和约 31.2 GiB 可用物理内存。测试开始时的硬件快照和实付费用未记录。
+
+### 输入提示词
+
+原请求引用 [n=12 题面](n12.zh.html?lang=zh)，要求尽快给出证明和解答，禁止使用本地技能与当前会话工作目录外的本地资料，允许网络资料。
+
+### 主要阶段
+
+八个几何模块全部通过，包括连续覆盖剖分及 38,208 个拓扑轨道的核验，其中 38,076 个由 Farkas 证书排除、131 个由图能量排除，最后一个由全局凸性证书处理。整数与有理运算验证了隔离根与最小多项式的对应关系。
+
+### 路线调整与问题
+
+网页读取失败后，从基准仓库取得题面。上游压缩包下载超时时，所需成员已到达。助手在工作目录提取所需成员，核对 21 个上游输入的哈希后运行验证。
+
+### 验证、交付与限制
+
+diskcover-minpoly-v1 指纹与基准参考值一致。精确解答和复验包保存在私有测试档案中。证据范围是一次运行及其执行的检查。
+
+### 可下载记录
+
+[结构化测试记录](record-n12-sol-max-20261119.json) · [中文报告](record-n12-sol-max-20261119.zh.md) · [机器可读历史](n12-sol-max-20261119-history.json)。
+</pre></div>
+  <pre id="test-prompt" hidden>本次单次测试提交了精确解与可复验的证书。答案指纹一致，几何和代数检查由当次助手重放。按现有公式补算的自报展示成绩为 **711 分**。本次未建立独立数学审查或正式排名资格。
+
+### 复用的公开证明与本次工作
+
+本次复用了[固定提交的公开 Cover12 证明包](https://github.com/VonEquinox/DiskCoveringSolve/tree/089584973f41e6374ce110f6e5b5ee456df19352/cover12)的几何和拓扑证书，补充半径消元、与构型根的精确关联和有限域不可约性验证。
+
+### 任务与计时
+
+| 口径 | 记录 |
+|---|---|
+| 主测试自然经过时间 | **625.204 秒**，截至最终答复交付完成 |
+| Goal 累计时间 | 595 秒，最终答复交付前记录 |
+| 原截止 | 12 小时，按期交付 |
+
+测试始于纽约时间 2026 年 11 月 19 日 19:35，对应 11 月 20 日 00:35 UTC。几何重放用时 52.95 秒，计入主测试。后续归档与发布另计。
+
+### 计算条件
+
+Windows x64、CPython 3.13.13、SymPy 1.14.0、NumPy 2.3.5 和 SciPy 1.17.0。制作报告时只读查询本机，得到 AMD Ryzen 9 8945HX 和约 31.2 GiB 可用物理内存。测试开始时的硬件快照和实付费用未记录。
+
+### 输入提示词
+
+原请求引用 [n=12 题面](n12.zh.html?lang=zh)，要求尽快给出证明和解答，禁止使用本地技能与当前会话工作目录外的本地资料，允许网络资料。
+
+### 主要阶段
+
+八个几何模块全部通过，包括连续覆盖剖分及 38,208 个拓扑轨道的核验，其中 38,076 个由 Farkas 证书排除、131 个由图能量排除，最后一个由全局凸性证书处理。整数与有理运算验证了隔离根与最小多项式的对应关系。
+
+### 路线调整与问题
+
+网页读取失败后，从基准仓库取得题面。上游压缩包下载超时时，所需成员已到达。助手在工作目录提取所需成员，核对 21 个上游输入的哈希后运行验证。
+
+### 验证、交付与限制
+
+diskcover-minpoly-v1 指纹与基准参考值一致。精确解答和复验包保存在私有测试档案中。证据范围是一次运行及其执行的检查。
+
+### 可下载记录
+
+[结构化测试记录](record-n12-sol-max-20261119.json) · [中文报告](record-n12-sol-max-20261119.zh.md) · [机器可读历史](n12-sol-max-20261119-history.json)。
+</pre>
+</main></body>
+</html>

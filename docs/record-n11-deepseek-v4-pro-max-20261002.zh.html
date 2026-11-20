@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="zh-CN" data-page="record-n11-deepseek-v4-pro-max-20261002">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>n=11 · deepseek-v4-pro/max 测试报告 · 单位圆盘覆盖测试</title>
+  <script src="language.js"></script>
+  <script src="navigation.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="alternate" hreflang="zh-CN" href="record-n11-deepseek-v4-pro-max-20261002.zh.html"><link rel="alternate" hreflang="en" href="record-n11-deepseek-v4-pro-max-20261002.html">
+  <link rel="alternate" type="application/json" href="record-n11-deepseek-v4-pro-max-20261002.json">
+  <script src="vendor/marked.js" defer></script>
+  <script src="vendor/dompurify.js" defer></script>
+  <script src="math-config.js" defer></script>
+  <script src="vendor/mathjax-tex-svg-full.js" defer></script>
+  <script src="prompt-render.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header" data-menu-open="false"><div class="site-header-inner"><a class="site-brand" href="index.zh.html" title="返回网站首页" aria-label="返回网站首页"><svg class="site-brand-mark" viewBox="0 0 32 32" aria-hidden="true" fill="none"><circle cx="16" cy="16" r="14.3" stroke="currentColor" stroke-width="1.5"/><g stroke="currentColor" stroke-width="1.1" opacity=".65"><circle cx="11" cy="12" r="8"/><circle cx="21" cy="12" r="8"/><circle cx="16" cy="21" r="8"/></g></svg><span class="site-brand-copy"><span class="site-brand-title">AI圆盘测试</span><span class="site-brand-subtitle">模型研究级数学能力测试</span></span></a><button class="site-menu-toggle" type="button" aria-controls="site-menu" aria-expanded="false" aria-label="打开导航菜单" data-open-label="打开导航菜单" data-close-label="关闭导航菜单" hidden><svg class="menu-icon-open" viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14"/></svg><svg class="menu-icon-close" viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15"/></svg><span>菜单</span></button><div class="site-menu-panel" id="site-menu"><nav class="site-navigation" aria-label="主要导航"><a class="site-nav-link" href="index.zh.html">题目</a><a class="site-nav-link" href="guide.zh.html">测试指南</a><a class="site-nav-link" href="scoring.zh.html">评分</a><a class="site-nav-link" href="records.zh.html" aria-current="true">测试记录</a><a class="site-nav-link" href="about.zh.html">关于项目</a></nav><div class="site-header-actions"><a class="repository-link" href="https://github.com/pikaaa345/disk-covering-benchmark" aria-label="打开 GitHub 仓库">GitHub 仓库<svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13"/></svg></a><nav class="language-switch" aria-label="语言"><a href="record-n11-deepseek-v4-pro-max-20261002.html?lang=en" data-language="en" lang="en">English</a><a href="record-n11-deepseek-v4-pro-max-20261002.zh.html?lang=zh" data-language="zh" lang="zh-CN" aria-current="page">中文</a></nav></div></div></div></header>
+<main>
+  <script id="page-config" type="application/json">{"language":"zh","referenceSha256":null}</script>
+  <p class="back"><a href="index.zh.html">单位圆盘覆盖测试</a> · <a href="n11.zh.html">n = 11</a></p>
+  <div class="prompt-heading"><h1>n=11 · deepseek-v4-pro/max 测试报告</h1><div><button id="copy-prompt" class="copy">复制全文</button><span id="copy-status" class="status" role="status"></span></div></div>
+  <div id="prompt-markdown" class="markdown-body" data-article="true" data-format="markdown"><pre class="prompt-fallback"># n=11 · deepseek-v4-pro/max 测试报告
+
+[返回 n=11](n11.zh.html) · [测试记录目录](records.zh.html)
+
+**成绩：0 分。验收：失败，提交的证明错误。** 测试日期为 2026-10-02（UTC）。模型在 12 小时内提交并声称完成，但提交的精确代数构型不能覆盖整个单位圆盘，全局最优性论证也不成立。错误提交按失败判据计零分。
+
+本报告由独立审核者读取 DeepSeek Harness 的本地 session、程序及交付物整理，没有要求 DeepSeek 生成报告。正文不公开半径、系数、圆心及反例点坐标；完整对话和详细数学证据留在本地。本次成绩只反映一次运行。
+
+### 任务与完成情况
+
+实际输入要求最优半径的本原、正首项、不可约整系数最小多项式与有理根隔离区间；唯一确定的 11 个有序代数圆心；严格全盘覆盖及对任意构型的全局下界；实际代码、输入、证书和核验结果。
+
+交付物包括 &lt;code&gt;solution.md&lt;/code&gt;、&lt;code&gt;SUMMARY.md&lt;/code&gt;、&lt;code&gt;coord_polys_verified.json&lt;/code&gt;，以及优化、整数关系、覆盖和类型分析程序。部分程序确实运行并输出结果，但覆盖要求被精确反例否定，完备分类和各类严格全局下界也未建立。未完成任务。
+
+### 任务与时间
+
+以首次 &lt;code&gt;goal/change: create&lt;/code&gt; 为 T+00:00:00，以最后一次正式提交的 &lt;code&gt;assistant/message&lt;/code&gt; 为提交终点。
+
+| 口径 | 记录 |
+|---|---|
+| 开始至最终提交的自然经过时间 | **10 小时 57 分 27 秒（39447.149 秒）** |
+| 开始至该轮结束 | 39447.192 秒，比提交消息晚约 0.04 秒 |
+| Goal 自行标记完成 | T+10:57:13；是系统状态，不是数学验收 |
+| 系统累计任务耗时 | 未取得；已保存的 get_goal 结果没有此字段 |
+| 前五轮开始至结束的区间长度之和 | 10 小时 17 分 8 秒（37027.526 秒），由事件计算；包含工具等待，不是系统累计工时或纯推理耗时 |
+| 自然时间与上述区间和的差额 | 约 40 分 20 秒，主要对应两次传输错误后的轮间间隔 |
+| 原时限 | 12 小时；提交在时限内，完整且正确的结果未完成 |
+| 第六轮 | T+11:58:49 左右由旧后台任务通知触发，随后用户中止；没有新的正式数学提交 |
+
+第一轮在 T+01:08:30 左右因 TRANSPORT 错误结束，T+01:27:05 左右恢复；第四轮在 T+10:33:09 左右发生同类错误，T+10:54:54 左右恢复。另有 14 条重试事件。日志能确认错误和间隔，不能把间隔全部归为服务器计算、用户暂停或其他特定原因。
+
+Goal 续轮和恢复属于同一测试，不能把最后一轮的约 153 秒当作本题用时。数学审核与报告整理是后续工作，不回填进原求解时间。
+
+本次报告整理的独立总耗时未单独计量；证据包生成时间有记录，不能以它反推完整整理耗时。
+
+### 计算条件
+
+| 项目 | 记录 |
+|---|---|
+| CPU | AMD Ryzen 9 8945HX with Radeon Graphics |
+| 内存 | DDR5，32 GB |
+| 执行位置 | 本机 Windows 与本机 Ubuntu WSL；核心程序记录为本地 WSL 执行，未见关键远程计算记录 |
+| 硬件证据 | 本报告整理时的 Windows CIM 查询，不是开题时的快照 |
+| 模型 | deepseek-v4-pro；reasoningEffort=max；provider=deepseek-official |
+| Harness 模式 | agentPreset=standard；截图显示 DeepSeek-V4-Pro Max |
+
+开题后环境查询记录 WSL **Python 3.12.3**、pip 与 GCC；未找到 Sage 或 PARI/GP。这是有限查询，不能据此宣称本机不存在其他专业工具。
+
+任务内执行了包安装命令。T+00:27:53 实际输出为 **NumPy 2.5.3、SciPy 1.18.1、SymPy 1.14.0、mpmath 1.3.0**，用于数值几何、局部优化、多项式处理、高精度计算和整数关系搜索。哪些包此前已经安装无法确认，不能全部列为已核实的预装环境。pypdf、Pillow、OpenCV 用于论文文字或图片处理，部分版本未记录。
+
+任务内取得 **PARI/GP 2.15.4**（日志中的版本），用于 algdep 与格搜索；T+09:46:47 左右开始安装 **fplll-tools**，用于整数格基约化，确切版本未归档。未见 SageMath、Wolfram 或远程集群参与核心计算。
+
+### Token 与费用记录
+
+| 字段 | 373 条带 usage 的模型回复之和 |
+|---|---:|
+| inputTokens | 983,404 |
+| cacheReadTokens | 161,620,608 |
+| outputTokens | 567,001 |
+| cacheWriteTokens | 0 |
+| totalTokens | **163,171,013** |
+| 货币费用 | 未取得账单或实扣记录，未知 |
+
+这些字段满足 totalTokens = inputTokens + cacheReadTokens + outputTokens；本记录的 inputTokens 不含缓存读取。缓存读取占总输入约 **99.40%**，与界面的“163M tok / Cache hit 99%”相符。反复发送上下文计入累计输入，不能写成模型新生成了 1.63 亿 token。输出未另分推理 token。失败请求、后台搜索和标题生成是否另有费用未确认，此和不是账单确认的全部费用。
+
+session 共保存 6 个 turn、376 个 step、374 条 assistant/message；最后一条没有 usage。本次报告整理没有新增 DeepSeek 模型请求。
+
+### 输入提示词
+
+[下载 Goal 中保存的实际任务文本](reports/n11-deepseek-main-prompt.original.txt)。本地证据包同时保存原 /goal 命令参数。下文只规范换行及排版，没有替换成其他题面。
+
+附加限制禁止本地资料、技能、chat 与 archived chat；允许网络和 WSL 工具，但禁止访问其中已存资料或文件；违反任一条规则即失败；12 小时后没有完整正确结果也失败。此次判零分已有数学反证；未进行完整文件访问审计，不宣称已经确认资源规则全部遵守。
+
+&lt;details&gt;&lt;summary&gt;展开实际测试输入&lt;/summary&gt;
+
+&quot;单位圆盘的 11 圆最优覆盖问题
+
+设
+
+$$
+
+D=\{x\in\mathbb R^2:\|x\|_2\le1\},\qquad
+
+R_D(C)=\max_{x\in D}\min_{1\le i\le11}\|x-c_i\|_2,
+
+$$
+
+其中 $C=(c_1,\ldots,c_{11})\in(\mathbb R^2)^{11}$，并定义
+
+$$
+
+r_D(11)=\inf_{C\in(\mathbb R^2)^{11}}R_D(C).
+
+$$
+
+覆盖圆盘均为闭圆盘，允许相互重叠和超出 $D$；圆心不预先限制在 $D$ 内。
+
+确定 $r_D(11)$，并完成以下要求：
+
+1. **最小多项式与根隔离区间：**实际列出最优半径 $r_D(11)$ 在 $\mathbb Q$ 上的最小多项式的规范化整系数表示 $P(t)\in\mathbb Z[t]$ 的全部系数：要求 $P$ 非常数、本原、首项系数为正，并证明其在 $\mathbb Q[t]$ 中不可约。给出具体有理数 $0\le a&lt;b$，证明 $P(a)P(b)\ne0$，且 $P$ 在 $(a,b)$ 内恰有一个实根 $\alpha$；结合以下构型与证明，确定 $r_D(11)=\alpha$。
+
+2. **具体构型：**给出一组确定的有序圆心坐标 $C_*=(c_1^*,\ldots,c_{11}^*)$，采用根式、多项式与有理隔离区间，或其他实际列出的、具有唯一性证明的有限代数数据精确指定。这里的唯一性指所提交的数据唯一指定该组圆心坐标，不要求证明最优构型唯一。
+
+3. **覆盖性：**严格证明
+
+   $$
+
+   \forall x\in D,\quad\exists i\in\{1,\ldots,11\},\quad
+
+   \|x-c_i^*\|_2\le\alpha.
+
+   $$
+
+   若将连续覆盖归约为有限检查，须证明该归约充分，并严格完成全部检查。
+
+4. **全局最优性：**严格证明
+
+   $$
+
+   \forall C\in(\mathbb R^2)^{11},\quad R_D(C)\ge\alpha,
+
+   $$
+
+   从而 $R_D(C_*)=r_D(11)=\alpha$。不得未经证明限制构型的对称性、接触关系或组合结构。任何规范化、分类、枚举或剪枝都须证明不会遗漏可能的更优构型，并处理圆心重合、冗余圆盘及其他相关退化情形。
+
+5. **计算机辅助证明：**若证明依赖计算，须交付实际使用的完整代码、输入、证书、必要环境说明及实际核验结果，并说明核验结果为何推出上述数学命题。
+
+**最终提交：**明确列出 $P(t)$ 的全部系数与有理根隔离区间 $(a,b)$，并附上上述构型、完整证明及必要核验材料。必须提交最优半径本身的最小多项式；仅给出半径平方或其他辅助量的多项式，或未证明不可约的消元多项式，不满足要求。
+
+允许任何严格方法，但仅证明存在性、代数性，或仅给出尚未完成的枚举、求解算法、数值候选，均不视为完成。数值优化成功、程序输出“通过”及未经严格误差控制的浮点结果不能代替证明；只检查有限采样点、边界或数值图像，也不能代替整个闭圆盘被覆盖的证明。&quot; 限制：不允许使用任何本地资料、技能、chat、archived chat等资料、可以使用网络、本地的WSL当中的工具（但是绝对不能访问其中任何已经存储的资料或文件），一旦违反任何一条规则即视为任务失败。任务限时12小时，超时没有得到完整且正确的结果也视为失败。完成时间越短越好。
+
+&lt;/details&gt;
+
+### 主要阶段
+
+采用自然经过时间，包含中断间隔和并行等待；节点取自带时间戳消息或实际工具结果，约至秒，不表示区间只执行一种活动。
+
+| 相对自然时间 | 主要工作 | 阶段末状态 |
+|---|---|---|
+| T+00:00:00—T+00:27:53 | 资料检索、图片重建与环境准备 | 查阅构型目录、Handbook 和 Fejes Tóth 论文，未取得适用于 n=11 的完整全局证明。 |
+| T+00:27:53—T+00:55:10 | 优化与高精度接触方程 | 首个局部结果较差；改善图片初值，修正半径评估器，得到更好的数值候选。 |
+| T+00:55:10—T+02:46:24 | 覆盖程序与类型分析 | 覆盖程序输出通过，对内部圆盘数量及边界圆盘的连续分组作局部数值分析；尚无严格全局下界。 |
+| T+02:46:24—T+09:45:30 | 整数关系搜索及反复重算 | 多次提高精度、尝试 PSLQ 与 PARI/GP，否定多个伪关系；放弃方程组退化的区间求根认证路线（Krawczyk 方法）；首份交付承认缺最小多项式。 |
+| T+09:45:30—T+10:30:22 | fplll 与后续核验 | 加入非对称类型局部搜索；找到八次大系数关系，修正系数顺序后因子分解与实根计数（Sturm 方法）输出通过；未建立其根等于最优半径。 |
+| T+10:30:22—T+10:57:27 | 圆心代数数据与最终交付 | 生成圆心多项式，修复缺失 sqrt 和精度设置错误，自称完成。事后严格审核发现提交构型漏覆盖。 |
+
+### 资料来源与本次新增工作
+
+T+00:05 左右读取 [Erich Friedman 构型目录](https://erich-friedman.github.io/packing/circovcir/)，随后下载并处理 n=11 图片作为初值。T+00:11—00:13 左右取得并提取 [Handbook covering 章节](http://www.csun.edu/~ctoth/Handbook/chap2.pdf)。T+00:22:31 左右下载、阅读 [Fejes Tóth 2005 论文](https://library.slmath.org/books/Book52/files/18fejes.pdf)，尝试扩展较小 n 的方法。
+
+模型把自己的检索不足概括为“n=11 没有已发表证明”，本报告不将该说法用作当前文献状态。未见这次运行取得并重放 9 月 30 日两份报告使用的 DiskCoveringSolve 全套证明包，不能把此前模型的重放成果计到此次 DeepSeek 名下。
+
+本次新增数值构型重建、接触方程、高精度与整数关系搜索、局部覆盖和类型分析代码、代数数据及论证。代码存在、极小数值残差或历史粗界不自动构成证明。
+
+### 路线变化与具体错误
+
+首个局部结果较差，模型改进图片初值，修正半径评估器未对全部圆心取最近距离的错误。后续主动否定多个伪整数关系，这些纠错有实际记录。
+
+但最后一次八次大系数关系仅凭极小残差就被升级为真实最小多项式。因子分解与根隔离只能认证该多项式的性质，不能证明其根等于最优半径。圆心流程只投影到接触方程流形，没有对应的驻点最小化，半径与圆心来自不同数值流程，未建立严格精确连接。
+
+全局论证把单一初值、有限步局部下降的输出当成某族构型的全局最小值。局部可行值通常给该族最小值的上界，与排除更优构型所需的下界方向相反。数学错误不能归因于网络故障。
+
+### 验证、交付与验收
+
+**验收结论：错误证明，拒绝认证，0 分。** 以下按原交付物的章节和程序说明错误位置。原文的半径、圆心、多项式系数、根隔离端点及反例坐标保留在本地；网页不披露这些答案数据。
+
+#### 1. 提交的精确构型存在未覆盖点——§2.2 与 §3
+
+审核对象是 §1 的多项式所指定的半径，以及 §2.2 和 &lt;code&gt;coord_polys_verified.json&lt;/code&gt; 所指定的圆心。每个数均按“某个多项式在指定区间内的唯一实根”解释，不能用附近的浮点数替代。
+
+审核者对 12 个标量根建立宽度为 $10^{-75}$ 的有理包围区间。先精确验证端点异号，再验证导数在原隔离区间内符号不变，证明包围的确实是原文指定的唯一根。随后使用 Python 标准库 &lt;code&gt;Fraction&lt;/code&gt;（精确分数运算）验证：存在严格位于单位圆盘内的有理点 $p$，满足
+
+$$
+\forall i\in\{1,\ldots,11\},\qquad
+\|p-c_i\|^2-\alpha^2&gt;5.4\times10^{-36}&gt;0.
+$$
+
+因此 $p$ 不在任何一个提交的闭圆盘内。这里比较的是精确有理下界与上界，结论不是浮点误差；差距虽小，仍足以否定“整个圆盘都被覆盖”。独立核验器复算输出 **VERIFIED_EXACT_COUNTEREXAMPLE**。这一项已足以判零分。
+
+数据不一致也可定位到 &lt;code&gt;coord_polys_final.py&lt;/code&gt; 第 85 行：程序把初值投影到 10 个接触方程、12 个未知量所定义的解集，然后直接生成坐标多项式，没有完成该解集上的半径最小化。所谓接触方程，只规定若干接触距离恰等于半径；满足它们不自动意味着半径已最小。半径数据则来自另一条优化流程。两条流程之间缺少精确等式的证明，正文显示的小数圆心与多项式定义的圆心也不一致。
+
+#### 2. “连续覆盖只需检查有限点”的归约漏项——§3.1
+
+§3.1 只列出三圆心外心，以及两圆心垂直平分线与单位圆的交点。这会遗漏圆周上由一个圆心单独决定最远距离的点。
+
+按最近圆心划分的区域称为 Voronoi 区域。它与单位圆盘相交后，边界含有光滑圆弧；距离的最大值可能出现在圆弧中间，不一定出现在两条边界相交的角点。例如把 11 个互异圆心放在横轴正半轴上，最远点可以是单位圆周的最左端，此处最近圆心唯一，既不是三圆心外心，也不在任意两圆心的垂直平分线上。故原文列出的有限候选点不完整。
+
+正确的归约还须检查圆周光滑段上的距离极大点，并处理重复圆心、共线等退化情形。审核所参照的已有精确覆盖工具包含这类点；原证明的遗漏不能由“凸函数在极点取最大值”修复，因为光滑圆弧上的点也可能是凸集的极点。
+
+#### 3. 覆盖程序的“通过”没有认证最终输入——§3.3–3.4
+
+运行内的覆盖程序确实输出“239 次细分、0 失败盒”。这里的“盒”是被细分的矩形区域，程序试图逐块证明其覆盖。但 &lt;code&gt;coverage_bb.py&lt;/code&gt; 读取的是另一份 &lt;code&gt;config_hp1200.txt&lt;/code&gt;，并没有用严格区间包围把它绑定到最终提交的代数圆心。
+
+&lt;code&gt;coverage_certs.py&lt;/code&gt; 还用 NumPy 普通浮点数计算三重点及局部覆盖条件。&lt;code&gt;coverage_bb.py&lt;/code&gt; 随后把落入这些局部区域的矩形跳过，却没有严格认证相应前提。提高小数精度或缩小一个半径常数，不能同时控制所有圆心和接触点误差。
+
+严格区间运算需要保证：每个区间始终包含真实值；舍入时下端向下、上端向上扩张。原程序没有这种误差保证，所以成功输出不能推出最终代数构型的全盘覆盖。第 1 项的精确反例已经直接否定这一覆盖结论。
+
+#### 4. 类型表不完备，局部优化不能证明全局下界——§4
+
+§4 的“临界化引理”声称任意可能更优的覆盖都能变形为列举的接触类型，并且半径不增加。但原文没有证明这一步，也没有完整处理其他接触关系、重合圆心和冗余圆盘。所引用的较小规模圆盘覆盖论证不能直接成为 $n=11$ 的完整分类定理。
+
+实现与声明也不一致。&lt;code&gt;types_m1.py&lt;/code&gt; 只求解一个镜像对称系统，没有实现正文宣称的其他类型枚举。&lt;code&gt;types_m2.py&lt;/code&gt; 和 &lt;code&gt;types_m2_general.py&lt;/code&gt; 从选定初值做有限局部搜索，没有证明覆盖全部参数范围或所有解分支。后者改变边界圆盘分组时，部分接触下标却保持不变，求出的系统也未必对应所声明的类型。
+
+即使某次局部搜索找到了精确可行点 $u_0$，对该类可行构型 $\mathcal F$ 也只能得到
+
+$$
+\inf_{u\in\mathcal F}r(u)\le r(u_0).
+$$
+
+这给出的是该类最小值的**上界**。排除更优构型需要证明该类所有点的半径都不低于目标值，即取得**下界**。原文将局部输出当成全类最小值，不等式方向颠倒；增加精度或发现较大的数值差距都不能补上这一证明。
+
+#### 5. 极小残差不能把候选多项式认证为最小多项式——§1
+
+&lt;code&gt;fplll_search3.py&lt;/code&gt; 通过整数关系搜索产生大系数多项式，&lt;code&gt;verify_P_final.py&lt;/code&gt; 的数值代入得到极小残差。残差小只能表示多项式在这个数值近似点处接近零，不能证明在真实几何最优半径处恰好为零。
+
+因子分解、不可约性检查和实根计数即使正确，也只说明这个多项式本身及其指定根的性质。还需要严格证明该根与覆盖问题的最优半径是同一个数；原交付没有建立这个连接。审核使用这个根否定提交的覆盖，并未认证它是最优半径的最小多项式。
+
+**审核范围与证据：** 已审读原证明及直接支撑结论的程序，保存原字节与哈希，复算精确反例并核对时间、用量记录。没有重新全量运行数千位优化和整数关系搜索。完整 session、原输入、数学审核报告、根包围证书和核验器均保存本地；没有要求 DeepSeek 生成或上传这份报告。
+
+另一个稍放宽半径的有理构型通过已有精确覆盖工具，只证明一个较弱上界，不能补足全局最优性。本次反证针对此次提交的精确数据与论证，不声称已经证明真实最优值与模型所报近似值不同。
+
+### 可下载记录
+
+[机器记录](record-n11-deepseek-v4-pro-max-20261002.json) · [本报告 Markdown](record-n11-deepseek-v4-pro-max-20261002.zh.md)
+</pre></div>
+  <pre id="test-prompt" hidden># n=11 · deepseek-v4-pro/max 测试报告
+
+[返回 n=11](n11.zh.html) · [测试记录目录](records.zh.html)
+
+**成绩：0 分。验收：失败，提交的证明错误。** 测试日期为 2026-10-02（UTC）。模型在 12 小时内提交并声称完成，但提交的精确代数构型不能覆盖整个单位圆盘，全局最优性论证也不成立。错误提交按失败判据计零分。
+
+本报告由独立审核者读取 DeepSeek Harness 的本地 session、程序及交付物整理，没有要求 DeepSeek 生成报告。正文不公开半径、系数、圆心及反例点坐标；完整对话和详细数学证据留在本地。本次成绩只反映一次运行。
+
+### 任务与完成情况
+
+实际输入要求最优半径的本原、正首项、不可约整系数最小多项式与有理根隔离区间；唯一确定的 11 个有序代数圆心；严格全盘覆盖及对任意构型的全局下界；实际代码、输入、证书和核验结果。
+
+交付物包括 &lt;code&gt;solution.md&lt;/code&gt;、&lt;code&gt;SUMMARY.md&lt;/code&gt;、&lt;code&gt;coord_polys_verified.json&lt;/code&gt;，以及优化、整数关系、覆盖和类型分析程序。部分程序确实运行并输出结果，但覆盖要求被精确反例否定，完备分类和各类严格全局下界也未建立。未完成任务。
+
+### 任务与时间
+
+以首次 &lt;code&gt;goal/change: create&lt;/code&gt; 为 T+00:00:00，以最后一次正式提交的 &lt;code&gt;assistant/message&lt;/code&gt; 为提交终点。
+
+| 口径 | 记录 |
+|---|---|
+| 开始至最终提交的自然经过时间 | **10 小时 57 分 27 秒（39447.149 秒）** |
+| 开始至该轮结束 | 39447.192 秒，比提交消息晚约 0.04 秒 |
+| Goal 自行标记完成 | T+10:57:13；是系统状态，不是数学验收 |
+| 系统累计任务耗时 | 未取得；已保存的 get_goal 结果没有此字段 |
+| 前五轮开始至结束的区间长度之和 | 10 小时 17 分 8 秒（37027.526 秒），由事件计算；包含工具等待，不是系统累计工时或纯推理耗时 |
+| 自然时间与上述区间和的差额 | 约 40 分 20 秒，主要对应两次传输错误后的轮间间隔 |
+| 原时限 | 12 小时；提交在时限内，完整且正确的结果未完成 |
+| 第六轮 | T+11:58:49 左右由旧后台任务通知触发，随后用户中止；没有新的正式数学提交 |
+
+第一轮在 T+01:08:30 左右因 TRANSPORT 错误结束，T+01:27:05 左右恢复；第四轮在 T+10:33:09 左右发生同类错误，T+10:54:54 左右恢复。另有 14 条重试事件。日志能确认错误和间隔，不能把间隔全部归为服务器计算、用户暂停或其他特定原因。
+
+Goal 续轮和恢复属于同一测试，不能把最后一轮的约 153 秒当作本题用时。数学审核与报告整理是后续工作，不回填进原求解时间。
+
+本次报告整理的独立总耗时未单独计量；证据包生成时间有记录，不能以它反推完整整理耗时。
+
+### 计算条件
+
+| 项目 | 记录 |
+|---|---|
+| CPU | AMD Ryzen 9 8945HX with Radeon Graphics |
+| 内存 | DDR5，32 GB |
+| 执行位置 | 本机 Windows 与本机 Ubuntu WSL；核心程序记录为本地 WSL 执行，未见关键远程计算记录 |
+| 硬件证据 | 本报告整理时的 Windows CIM 查询，不是开题时的快照 |
+| 模型 | deepseek-v4-pro；reasoningEffort=max；provider=deepseek-official |
+| Harness 模式 | agentPreset=standard；截图显示 DeepSeek-V4-Pro Max |
+
+开题后环境查询记录 WSL **Python 3.12.3**、pip 与 GCC；未找到 Sage 或 PARI/GP。这是有限查询，不能据此宣称本机不存在其他专业工具。
+
+任务内执行了包安装命令。T+00:27:53 实际输出为 **NumPy 2.5.3、SciPy 1.18.1、SymPy 1.14.0、mpmath 1.3.0**，用于数值几何、局部优化、多项式处理、高精度计算和整数关系搜索。哪些包此前已经安装无法确认，不能全部列为已核实的预装环境。pypdf、Pillow、OpenCV 用于论文文字或图片处理，部分版本未记录。
+
+任务内取得 **PARI/GP 2.15.4**（日志中的版本），用于 algdep 与格搜索；T+09:46:47 左右开始安装 **fplll-tools**，用于整数格基约化，确切版本未归档。未见 SageMath、Wolfram 或远程集群参与核心计算。
+
+### Token 与费用记录
+
+| 字段 | 373 条带 usage 的模型回复之和 |
+|---|---:|
+| inputTokens | 983,404 |
+| cacheReadTokens | 161,620,608 |
+| outputTokens | 567,001 |
+| cacheWriteTokens | 0 |
+| totalTokens | **163,171,013** |
+| 货币费用 | 未取得账单或实扣记录，未知 |
+
+这些字段满足 totalTokens = inputTokens + cacheReadTokens + outputTokens；本记录的 inputTokens 不含缓存读取。缓存读取占总输入约 **99.40%**，与界面的“163M tok / Cache hit 99%”相符。反复发送上下文计入累计输入，不能写成模型新生成了 1.63 亿 token。输出未另分推理 token。失败请求、后台搜索和标题生成是否另有费用未确认，此和不是账单确认的全部费用。
+
+session 共保存 6 个 turn、376 个 step、374 条 assistant/message；最后一条没有 usage。本次报告整理没有新增 DeepSeek 模型请求。
+
+### 输入提示词
+
+[下载 Goal 中保存的实际任务文本](reports/n11-deepseek-main-prompt.original.txt)。本地证据包同时保存原 /goal 命令参数。下文只规范换行及排版，没有替换成其他题面。
+
+附加限制禁止本地资料、技能、chat 与 archived chat；允许网络和 WSL 工具，但禁止访问其中已存资料或文件；违反任一条规则即失败；12 小时后没有完整正确结果也失败。此次判零分已有数学反证；未进行完整文件访问审计，不宣称已经确认资源规则全部遵守。
+
+&lt;details&gt;&lt;summary&gt;展开实际测试输入&lt;/summary&gt;
+
+&quot;单位圆盘的 11 圆最优覆盖问题
+
+设
+
+$$
+
+D=\{x\in\mathbb R^2:\|x\|_2\le1\},\qquad
+
+R_D(C)=\max_{x\in D}\min_{1\le i\le11}\|x-c_i\|_2,
+
+$$
+
+其中 $C=(c_1,\ldots,c_{11})\in(\mathbb R^2)^{11}$，并定义
+
+$$
+
+r_D(11)=\inf_{C\in(\mathbb R^2)^{11}}R_D(C).
+
+$$
+
+覆盖圆盘均为闭圆盘，允许相互重叠和超出 $D$；圆心不预先限制在 $D$ 内。
+
+确定 $r_D(11)$，并完成以下要求：
+
+1. **最小多项式与根隔离区间：**实际列出最优半径 $r_D(11)$ 在 $\mathbb Q$ 上的最小多项式的规范化整系数表示 $P(t)\in\mathbb Z[t]$ 的全部系数：要求 $P$ 非常数、本原、首项系数为正，并证明其在 $\mathbb Q[t]$ 中不可约。给出具体有理数 $0\le a&lt;b$，证明 $P(a)P(b)\ne0$，且 $P$ 在 $(a,b)$ 内恰有一个实根 $\alpha$；结合以下构型与证明，确定 $r_D(11)=\alpha$。
+
+2. **具体构型：**给出一组确定的有序圆心坐标 $C_*=(c_1^*,\ldots,c_{11}^*)$，采用根式、多项式与有理隔离区间，或其他实际列出的、具有唯一性证明的有限代数数据精确指定。这里的唯一性指所提交的数据唯一指定该组圆心坐标，不要求证明最优构型唯一。
+
+3. **覆盖性：**严格证明
+
+   $$
+
+   \forall x\in D,\quad\exists i\in\{1,\ldots,11\},\quad
+
+   \|x-c_i^*\|_2\le\alpha.
+
+   $$
+
+   若将连续覆盖归约为有限检查，须证明该归约充分，并严格完成全部检查。
+
+4. **全局最优性：**严格证明
+
+   $$
+
+   \forall C\in(\mathbb R^2)^{11},\quad R_D(C)\ge\alpha,
+
+   $$
+
+   从而 $R_D(C_*)=r_D(11)=\alpha$。不得未经证明限制构型的对称性、接触关系或组合结构。任何规范化、分类、枚举或剪枝都须证明不会遗漏可能的更优构型，并处理圆心重合、冗余圆盘及其他相关退化情形。
+
+5. **计算机辅助证明：**若证明依赖计算，须交付实际使用的完整代码、输入、证书、必要环境说明及实际核验结果，并说明核验结果为何推出上述数学命题。
+
+**最终提交：**明确列出 $P(t)$ 的全部系数与有理根隔离区间 $(a,b)$，并附上上述构型、完整证明及必要核验材料。必须提交最优半径本身的最小多项式；仅给出半径平方或其他辅助量的多项式，或未证明不可约的消元多项式，不满足要求。
+
+允许任何严格方法，但仅证明存在性、代数性，或仅给出尚未完成的枚举、求解算法、数值候选，均不视为完成。数值优化成功、程序输出“通过”及未经严格误差控制的浮点结果不能代替证明；只检查有限采样点、边界或数值图像，也不能代替整个闭圆盘被覆盖的证明。&quot; 限制：不允许使用任何本地资料、技能、chat、archived chat等资料、可以使用网络、本地的WSL当中的工具（但是绝对不能访问其中任何已经存储的资料或文件），一旦违反任何一条规则即视为任务失败。任务限时12小时，超时没有得到完整且正确的结果也视为失败。完成时间越短越好。
+
+&lt;/details&gt;
+
+### 主要阶段
+
+采用自然经过时间，包含中断间隔和并行等待；节点取自带时间戳消息或实际工具结果，约至秒，不表示区间只执行一种活动。
+
+| 相对自然时间 | 主要工作 | 阶段末状态 |
+|---|---|---|
+| T+00:00:00—T+00:27:53 | 资料检索、图片重建与环境准备 | 查阅构型目录、Handbook 和 Fejes Tóth 论文，未取得适用于 n=11 的完整全局证明。 |
+| T+00:27:53—T+00:55:10 | 优化与高精度接触方程 | 首个局部结果较差；改善图片初值，修正半径评估器，得到更好的数值候选。 |
+| T+00:55:10—T+02:46:24 | 覆盖程序与类型分析 | 覆盖程序输出通过，对内部圆盘数量及边界圆盘的连续分组作局部数值分析；尚无严格全局下界。 |
+| T+02:46:24—T+09:45:30 | 整数关系搜索及反复重算 | 多次提高精度、尝试 PSLQ 与 PARI/GP，否定多个伪关系；放弃方程组退化的区间求根认证路线（Krawczyk 方法）；首份交付承认缺最小多项式。 |
+| T+09:45:30—T+10:30:22 | fplll 与后续核验 | 加入非对称类型局部搜索；找到八次大系数关系，修正系数顺序后因子分解与实根计数（Sturm 方法）输出通过；未建立其根等于最优半径。 |
+| T+10:30:22—T+10:57:27 | 圆心代数数据与最终交付 | 生成圆心多项式，修复缺失 sqrt 和精度设置错误，自称完成。事后严格审核发现提交构型漏覆盖。 |
+
+### 资料来源与本次新增工作
+
+T+00:05 左右读取 [Erich Friedman 构型目录](https://erich-friedman.github.io/packing/circovcir/)，随后下载并处理 n=11 图片作为初值。T+00:11—00:13 左右取得并提取 [Handbook covering 章节](http://www.csun.edu/~ctoth/Handbook/chap2.pdf)。T+00:22:31 左右下载、阅读 [Fejes Tóth 2005 论文](https://library.slmath.org/books/Book52/files/18fejes.pdf)，尝试扩展较小 n 的方法。
+
+模型把自己的检索不足概括为“n=11 没有已发表证明”，本报告不将该说法用作当前文献状态。未见这次运行取得并重放 9 月 30 日两份报告使用的 DiskCoveringSolve 全套证明包，不能把此前模型的重放成果计到此次 DeepSeek 名下。
+
+本次新增数值构型重建、接触方程、高精度与整数关系搜索、局部覆盖和类型分析代码、代数数据及论证。代码存在、极小数值残差或历史粗界不自动构成证明。
+
+### 路线变化与具体错误
+
+首个局部结果较差，模型改进图片初值，修正半径评估器未对全部圆心取最近距离的错误。后续主动否定多个伪整数关系，这些纠错有实际记录。
+
+但最后一次八次大系数关系仅凭极小残差就被升级为真实最小多项式。因子分解与根隔离只能认证该多项式的性质，不能证明其根等于最优半径。圆心流程只投影到接触方程流形，没有对应的驻点最小化，半径与圆心来自不同数值流程，未建立严格精确连接。
+
+全局论证把单一初值、有限步局部下降的输出当成某族构型的全局最小值。局部可行值通常给该族最小值的上界，与排除更优构型所需的下界方向相反。数学错误不能归因于网络故障。
+
+### 验证、交付与验收
+
+**验收结论：错误证明，拒绝认证，0 分。** 以下按原交付物的章节和程序说明错误位置。原文的半径、圆心、多项式系数、根隔离端点及反例坐标保留在本地；网页不披露这些答案数据。
+
+#### 1. 提交的精确构型存在未覆盖点——§2.2 与 §3
+
+审核对象是 §1 的多项式所指定的半径，以及 §2.2 和 &lt;code&gt;coord_polys_verified.json&lt;/code&gt; 所指定的圆心。每个数均按“某个多项式在指定区间内的唯一实根”解释，不能用附近的浮点数替代。
+
+审核者对 12 个标量根建立宽度为 $10^{-75}$ 的有理包围区间。先精确验证端点异号，再验证导数在原隔离区间内符号不变，证明包围的确实是原文指定的唯一根。随后使用 Python 标准库 &lt;code&gt;Fraction&lt;/code&gt;（精确分数运算）验证：存在严格位于单位圆盘内的有理点 $p$，满足
+
+$$
+\forall i\in\{1,\ldots,11\},\qquad
+\|p-c_i\|^2-\alpha^2&gt;5.4\times10^{-36}&gt;0.
+$$
+
+因此 $p$ 不在任何一个提交的闭圆盘内。这里比较的是精确有理下界与上界，结论不是浮点误差；差距虽小，仍足以否定“整个圆盘都被覆盖”。独立核验器复算输出 **VERIFIED_EXACT_COUNTEREXAMPLE**。这一项已足以判零分。
+
+数据不一致也可定位到 &lt;code&gt;coord_polys_final.py&lt;/code&gt; 第 85 行：程序把初值投影到 10 个接触方程、12 个未知量所定义的解集，然后直接生成坐标多项式，没有完成该解集上的半径最小化。所谓接触方程，只规定若干接触距离恰等于半径；满足它们不自动意味着半径已最小。半径数据则来自另一条优化流程。两条流程之间缺少精确等式的证明，正文显示的小数圆心与多项式定义的圆心也不一致。
+
+#### 2. “连续覆盖只需检查有限点”的归约漏项——§3.1
+
+§3.1 只列出三圆心外心，以及两圆心垂直平分线与单位圆的交点。这会遗漏圆周上由一个圆心单独决定最远距离的点。
+
+按最近圆心划分的区域称为 Voronoi 区域。它与单位圆盘相交后，边界含有光滑圆弧；距离的最大值可能出现在圆弧中间，不一定出现在两条边界相交的角点。例如把 11 个互异圆心放在横轴正半轴上，最远点可以是单位圆周的最左端，此处最近圆心唯一，既不是三圆心外心，也不在任意两圆心的垂直平分线上。故原文列出的有限候选点不完整。
+
+正确的归约还须检查圆周光滑段上的距离极大点，并处理重复圆心、共线等退化情形。审核所参照的已有精确覆盖工具包含这类点；原证明的遗漏不能由“凸函数在极点取最大值”修复，因为光滑圆弧上的点也可能是凸集的极点。
+
+#### 3. 覆盖程序的“通过”没有认证最终输入——§3.3–3.4
+
+运行内的覆盖程序确实输出“239 次细分、0 失败盒”。这里的“盒”是被细分的矩形区域，程序试图逐块证明其覆盖。但 &lt;code&gt;coverage_bb.py&lt;/code&gt; 读取的是另一份 &lt;code&gt;config_hp1200.txt&lt;/code&gt;，并没有用严格区间包围把它绑定到最终提交的代数圆心。
+
+&lt;code&gt;coverage_certs.py&lt;/code&gt; 还用 NumPy 普通浮点数计算三重点及局部覆盖条件。&lt;code&gt;coverage_bb.py&lt;/code&gt; 随后把落入这些局部区域的矩形跳过，却没有严格认证相应前提。提高小数精度或缩小一个半径常数，不能同时控制所有圆心和接触点误差。
+
+严格区间运算需要保证：每个区间始终包含真实值；舍入时下端向下、上端向上扩张。原程序没有这种误差保证，所以成功输出不能推出最终代数构型的全盘覆盖。第 1 项的精确反例已经直接否定这一覆盖结论。
+
+#### 4. 类型表不完备，局部优化不能证明全局下界——§4
+
+§4 的“临界化引理”声称任意可能更优的覆盖都能变形为列举的接触类型，并且半径不增加。但原文没有证明这一步，也没有完整处理其他接触关系、重合圆心和冗余圆盘。所引用的较小规模圆盘覆盖论证不能直接成为 $n=11$ 的完整分类定理。
+
+实现与声明也不一致。&lt;code&gt;types_m1.py&lt;/code&gt; 只求解一个镜像对称系统，没有实现正文宣称的其他类型枚举。&lt;code&gt;types_m2.py&lt;/code&gt; 和 &lt;code&gt;types_m2_general.py&lt;/code&gt; 从选定初值做有限局部搜索，没有证明覆盖全部参数范围或所有解分支。后者改变边界圆盘分组时，部分接触下标却保持不变，求出的系统也未必对应所声明的类型。
+
+即使某次局部搜索找到了精确可行点 $u_0$，对该类可行构型 $\mathcal F$ 也只能得到
+
+$$
+\inf_{u\in\mathcal F}r(u)\le r(u_0).
+$$
+
+这给出的是该类最小值的**上界**。排除更优构型需要证明该类所有点的半径都不低于目标值，即取得**下界**。原文将局部输出当成全类最小值，不等式方向颠倒；增加精度或发现较大的数值差距都不能补上这一证明。
+
+#### 5. 极小残差不能把候选多项式认证为最小多项式——§1
+
+&lt;code&gt;fplll_search3.py&lt;/code&gt; 通过整数关系搜索产生大系数多项式，&lt;code&gt;verify_P_final.py&lt;/code&gt; 的数值代入得到极小残差。残差小只能表示多项式在这个数值近似点处接近零，不能证明在真实几何最优半径处恰好为零。
+
+因子分解、不可约性检查和实根计数即使正确，也只说明这个多项式本身及其指定根的性质。还需要严格证明该根与覆盖问题的最优半径是同一个数；原交付没有建立这个连接。审核使用这个根否定提交的覆盖，并未认证它是最优半径的最小多项式。
+
+**审核范围与证据：** 已审读原证明及直接支撑结论的程序，保存原字节与哈希，复算精确反例并核对时间、用量记录。没有重新全量运行数千位优化和整数关系搜索。完整 session、原输入、数学审核报告、根包围证书和核验器均保存本地；没有要求 DeepSeek 生成或上传这份报告。
+
+另一个稍放宽半径的有理构型通过已有精确覆盖工具，只证明一个较弱上界，不能补足全局最优性。本次反证针对此次提交的精确数据与论证，不声称已经证明真实最优值与模型所报近似值不同。
+
+### 可下载记录
+
+[机器记录](record-n11-deepseek-v4-pro-max-20261002.json) · [本报告 Markdown](record-n11-deepseek-v4-pro-max-20261002.zh.md)
+</pre>
+</main></body>
+</html>

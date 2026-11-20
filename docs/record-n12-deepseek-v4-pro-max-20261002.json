@@ -1,0 +1,108 @@
+{
+  "schema": "diskcover-public-test-reports-v1",
+  "n": 12,
+  "report_scope": "Retrospective single-run records with answers withheld; the publisher clarified that the file ban covers only local materials existing before the test.",
+  "records_comparable": false,
+  "records": [
+    {
+      "record_id": "n12-deepseek-v4-pro-max-20261002",
+      "test_id": "T_20261003T005110Z_db9dfa6a",
+      "n": 12,
+      "model": "deepseek-v4-pro/max",
+      "model_id": "deepseek-v4-pro",
+      "reasoning_effort": "max",
+      "provider_recorded": "deepseek-official",
+      "test_date_utc": "2026-10-03",
+      "test_date_local": "2026-10-02",
+      "local_timezone": "America/New_York",
+      "status": "failed_incorrect_optimal_radius",
+      "score": "0",
+      "score_scope": "benchmark_failure_score",
+      "acceptance_status": "failed_incorrect_optimal_radius_exact_better_cover",
+      "runs": 1,
+      "elapsed_seconds": "8015.612",
+      "main_system_accumulated_seconds": null,
+      "goal_cumulative_seconds": null,
+      "timing_scope": "first_goal_create_to_final_substantive_assistant_message_includes_recovery_and_blocked_waiting",
+      "test_start_utc": "2026-10-03T00:51:10.682000+00:00",
+      "final_submission_utc": "2026-10-03T03:04:46.294000+00:00",
+      "deadline_utc": "2026-10-03T12:51:10.682000+00:00",
+      "original_budget_seconds": "43200",
+      "submission_within_budget": true,
+      "valid_completion_within_budget": false,
+      "source_event_seqs": {
+        "start": 10,
+        "goal_blocked": 1140,
+        "goal_mark_complete": 1188,
+        "final_submission": 1193,
+        "final_turn_end": 1196
+      },
+      "turn_interval_sum_seconds": "4849.269",
+      "turn_interval_sum_is_system_accumulated_time": false,
+      "token_usage": {
+        "inputTokens": 163009,
+        "outputTokens": 382409,
+        "cacheReadTokens": 36592640,
+        "cacheWriteTokens": 0,
+        "totalTokens": 37138058,
+        "usage_record_count": 161,
+        "goal_tokens": null,
+        "currency_cost": null,
+        "scope": "saved_assistant_message_usage; not complete invoiced usage"
+      },
+      "hardware": {
+        "cpu": "AMD Ryzen 9 8945HX with Radeon Graphics",
+        "memory_generation": "DDR5",
+        "memory_gib": 32,
+        "snapshot_scope": "queried_during_report_preparation_not_at_task_start"
+      },
+      "environment": {
+        "python": "3.12.3",
+        "sympy": "1.14.0",
+        "mpmath": "1.3.0",
+        "numpy": "2.5.3",
+        "gcc": "13.3.0",
+        "scipy": "1.18.1",
+        "scipy_version_source": "original_submission_declaration_not_separate_start_snapshot",
+        "versions_source": "actual_test_tool_output_except_scipy",
+        "package_preinstallation_status": "not_fully_known"
+      },
+      "verification": {
+        "outcome": "exact_strictly_better_continuous_cover_refutes_submitted_optimum",
+        "distinct_critical_candidates": 293,
+        "exact_distance_comparisons": 2071,
+        "result": "ACCEPT",
+        "isolated_packaged_replay_passed": true,
+        "true_global_optimum_certified": false,
+        "original_candidate_cover_failure_asserted": false,
+        "original_optimization_pipeline_fully_replayed": false
+      },
+      "archive_scope": {
+        "records": 1198,
+        "header_plus_contiguous_seq": "header + seq 0..1196",
+        "original_truncated_tool_results": 18,
+        "completeness": "complete_available_local_snapshot; not provider_internal_full_records"
+      },
+      "resource_compliance_audit": "not_complete; mathematical_failure_decisive",
+      "prompt_artifacts": [
+        {
+          "kind": "main",
+          "original_text_url": "reports/n12-deepseek-main-prompt.original.txt",
+          "sha256": "b4489ab90a3fc8ac5e42457ed5c1f804c7683a85df7cdd4cbf5ae9863516ba1d",
+          "preserve_original_bytes": true
+        }
+      ],
+      "report_urls": {
+        "zh": "record-n12-deepseek-v4-pro-max-20261002.zh.html",
+        "en": "record-n12-deepseek-v4-pro-max-20261002.html"
+      },
+      "answer_disclosure": "no_radii_coefficients_centers_or_private_conversations",
+      "limitations": [
+        "One run; no frozen formal comparison contract.",
+        "Exact counterexample refutes this submission; it does not identify the true global optimum.",
+        "Full source conversations and mathematical evidence remain private locally.",
+        "System cumulative time, separate Goal usage and invoiced cost are unavailable."
+      ]
+    }
+  ]
+}

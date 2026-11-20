@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="zh-CN" data-page="agents">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI 操作说明 · 单位圆盘覆盖测试</title>
+  <script src="language.js"></script>
+  <script src="navigation.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="alternate" hreflang="zh-CN" href="agents.zh.html"><link rel="alternate" hreflang="en" href="agents.html">
+  <script src="vendor/marked.js" defer></script>
+  <script src="vendor/dompurify.js" defer></script>
+  <script src="math-config.js" defer></script>
+  <script src="vendor/mathjax-tex-svg-full.js" defer></script>
+  <script src="prompt-render.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header" data-menu-open="false"><div class="site-header-inner"><a class="site-brand" href="index.zh.html" title="返回网站首页" aria-label="返回网站首页"><svg class="site-brand-mark" viewBox="0 0 32 32" aria-hidden="true" fill="none"><circle cx="16" cy="16" r="14.3" stroke="currentColor" stroke-width="1.5"/><g stroke="currentColor" stroke-width="1.1" opacity=".65"><circle cx="11" cy="12" r="8"/><circle cx="21" cy="12" r="8"/><circle cx="16" cy="21" r="8"/></g></svg><span class="site-brand-copy"><span class="site-brand-title">AI圆盘测试</span><span class="site-brand-subtitle">模型研究级数学能力测试</span></span></a><button class="site-menu-toggle" type="button" aria-controls="site-menu" aria-expanded="false" aria-label="打开导航菜单" data-open-label="打开导航菜单" data-close-label="关闭导航菜单" hidden><svg class="menu-icon-open" viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14"/></svg><svg class="menu-icon-close" viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15"/></svg><span>菜单</span></button><div class="site-menu-panel" id="site-menu"><nav class="site-navigation" aria-label="主要导航"><a class="site-nav-link" href="index.zh.html">题目</a><a class="site-nav-link" href="guide.zh.html" aria-current="true">测试指南</a><a class="site-nav-link" href="scoring.zh.html">评分</a><a class="site-nav-link" href="records.zh.html">测试记录</a><a class="site-nav-link" href="about.zh.html">关于项目</a></nav><div class="site-header-actions"><a class="repository-link" href="https://github.com/pikaaa345/disk-covering-benchmark" aria-label="打开 GitHub 仓库">GitHub 仓库<svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13"/></svg></a><nav class="language-switch" aria-label="语言"><a href="agents.html?lang=en" data-language="en" lang="en">English</a><a href="agents.zh.html?lang=zh" data-language="zh" lang="zh-CN" aria-current="page">中文</a></nav></div></div></div></header>
+<main>
+  <script id="page-config" type="application/json">{"language":"zh","referenceSha256":null}</script>
+  <p class="back"><a href="index.zh.html">单位圆盘覆盖测试</a> · <a href="about.zh.html">项目说明</a></p>
+  <div class="prompt-heading"><h1>AI 操作说明</h1><div><button id="copy-prompt" class="copy">复制全文</button><span id="copy-status" class="status" role="status"></span></div></div>
+  <div id="prompt-markdown" class="markdown-body" data-article="true" data-format="markdown"><pre class="prompt-fallback"># AI 使用本仓库
+
+
+这是单位圆盘覆盖测评的公开入口，不是求解器。先读 README.md，再读 benchmark.json。
+
+## 执行一次测试
+
+1. 查看 benchmark.json 中目标题目的 localized_prompts，读取所选 n 的完整中文题面。记录当前 Git 提交 SHA、题面和协议版本。
+2. 明确模型/推理设置、起始材料、工具、联网规则、硬件、时间和费用预算。合同未冻结时，不自行声称正式排名。
+3. 按题面完成研究；不得把候选图、浮点优化、有限采样或哈希匹配称为严格证明。未知项如实报告，不编造多项式、区间或证书。
+4. 将答案系数 JSON 和高精度半径保存在本地，读 docs/answer-protocol.txt，运行 tools/diskcover_answer.py。不要把巨大整数经过浮点转换。
+5. reference_sha256 为 null 时，只能生成自身指纹；有标准值时传 --expected-sha256。退出码0是工具成功或答案匹配，1是不匹配，2是输入错误。工具不证明最小性或不可约性。
+6. 保存有理隔离区间和完整证明；它们不包含在 v1 哈希内。用 prompts/research-work-report.txt 生成基于真实记录的报告。
+7. 分数用 tools/score.py 按事先约定条件计算；历史记录不可默认为当前合同通过。公众提交关闭，不自动创建 Issue/PR、上传答案或公布研究材料。 n≤30 的时限固定为43200秒，截止时刻内取得有效结果才可计非零分，超时后完成仍为0分；调用时传 --n N。
+
+## 环境与修复
+
+先发现本机 Python 命令与版本，要求3.9+。只需标准库，无需 pip 安装。Windows 可使用 python 或 py -3；Linux/macOS 常用 python3。Python缺失时说明所需环境，由运行者选择安装方式，不自动改动全局环境。
+
+运行 python tools/check_tools.py：退出码0表示工具自检通过，非0须查看报错。自检使用合成数据，不解决数学题。修改工具编码前先核对协议；字段、舍入或编码变化须升级协议版本，不能静默沿用旧哈希。
+
+## 维护边界
+
+没有参考哈希、报告或运行配置时保留 null。只添加发布者授权公开的内容，不自动读取本机研究目录、聊天日志、凭据或私人证明。新增 n 须同步题面和 benchmark.json，复核链接、工具自检与隐私。禁止把演示输入当作标准答案。
+
+公开仓库提供下载工具与测试材料；网站源码在私有仓库维护。不得自动发布答案或更改网站部署。</pre></div>
+  <pre id="test-prompt" hidden># AI 使用本仓库
+
+
+这是单位圆盘覆盖测评的公开入口，不是求解器。先读 README.md，再读 benchmark.json。
+
+## 执行一次测试
+
+1. 查看 benchmark.json 中目标题目的 localized_prompts，读取所选 n 的完整中文题面。记录当前 Git 提交 SHA、题面和协议版本。
+2. 明确模型/推理设置、起始材料、工具、联网规则、硬件、时间和费用预算。合同未冻结时，不自行声称正式排名。
+3. 按题面完成研究；不得把候选图、浮点优化、有限采样或哈希匹配称为严格证明。未知项如实报告，不编造多项式、区间或证书。
+4. 将答案系数 JSON 和高精度半径保存在本地，读 docs/answer-protocol.txt，运行 tools/diskcover_answer.py。不要把巨大整数经过浮点转换。
+5. reference_sha256 为 null 时，只能生成自身指纹；有标准值时传 --expected-sha256。退出码0是工具成功或答案匹配，1是不匹配，2是输入错误。工具不证明最小性或不可约性。
+6. 保存有理隔离区间和完整证明；它们不包含在 v1 哈希内。用 prompts/research-work-report.txt 生成基于真实记录的报告。
+7. 分数用 tools/score.py 按事先约定条件计算；历史记录不可默认为当前合同通过。公众提交关闭，不自动创建 Issue/PR、上传答案或公布研究材料。 n≤30 的时限固定为43200秒，截止时刻内取得有效结果才可计非零分，超时后完成仍为0分；调用时传 --n N。
+
+## 环境与修复
+
+先发现本机 Python 命令与版本，要求3.9+。只需标准库，无需 pip 安装。Windows 可使用 python 或 py -3；Linux/macOS 常用 python3。Python缺失时说明所需环境，由运行者选择安装方式，不自动改动全局环境。
+
+运行 python tools/check_tools.py：退出码0表示工具自检通过，非0须查看报错。自检使用合成数据，不解决数学题。修改工具编码前先核对协议；字段、舍入或编码变化须升级协议版本，不能静默沿用旧哈希。
+
+## 维护边界
+
+没有参考哈希、报告或运行配置时保留 null。只添加发布者授权公开的内容，不自动读取本机研究目录、聊天日志、凭据或私人证明。新增 n 须同步题面和 benchmark.json，复核链接、工具自检与隐私。禁止把演示输入当作标准答案。
+
+公开仓库提供下载工具与测试材料；网站源码在私有仓库维护。不得自动发布答案或更改网站部署。</pre>
+  
+</main></body>
+</html>

@@ -1,0 +1,543 @@
+{
+  "schema": "diskcover-public-algorithm-runs-v1",
+  "record_scope": "AI + human research and algorithm optimization + local computer; not independent foundation-model performance",
+  "selection_scope": {
+    "accepted_observations_checked": 40,
+    "archives": [
+      "DGC-radius-minpoly-integration-20260930",
+      "DGC-joint-fourcases-20261001",
+      "DGC-eight-coldstart-20261001-32core"
+    ],
+    "selection_rule": "Minimum measured complete pipeline time per n in these explicitly checked archives. Not a statistical guarantee or exhaustive all-project history audit."
+  },
+  "hardware": {
+    "cpu": "AMD Ryzen 9 8945HX with Radeon Graphics",
+    "host_memory_generation": "DDR5",
+    "host_memory_gib": 32,
+    "host_logical_processors": 32,
+    "execution_location": "Local daily Ubuntu under WSL2",
+    "wsl_memtotal_kib": 15968388,
+    "snapshot_scope": "Queried before the latest eight-case batch; shared host record for earlier selected runs, not a separate task-start snapshot for each earlier run."
+  },
+  "environment": {
+    "sage": "10.7",
+    "python": "3.12.3",
+    "installed_during_run": [],
+    "solver_source_public": false
+  },
+  "algorithm_versions": {
+    "DGC v62-F": {
+      "base": "DGC v62",
+      "internal_name": "radius-code-feedback-v1",
+      "variant": "Fresh source geometry feedback"
+    },
+    "DGC v62-G": {
+      "base": "DGC v62-F",
+      "internal_name": "radius-code-gmp-v1",
+      "variant": "GMP exact rational arithmetic for local certificate verification"
+    },
+    "minpoly_versions": [
+      "v9",
+      "v13",
+      "v15"
+    ],
+    "latest_controller": "joint v15; eight-case/32-core scope extension only"
+  },
+  "timing_scope": "Per-case controller start with input n through radius and minpoly consumers, final same-root binding and saved result. Hash and post-solve reference checks excluded. Overlapping stages are not added.",
+  "score_formula": "ROUND_HALF_UP(200 + 100 * log2(21600 / elapsed_seconds))",
+  "best_recorded_runs": [
+    {
+      "n": 11,
+      "run_id": "final-default-n11",
+      "proof_engine": "DGC v62-F",
+      "minpoly_engine": "MinPoly v9",
+      "proof_code_identity": "radius-code-feedback-v1",
+      "minpoly_code_identity": "minpoly-code-v9",
+      "elapsed_seconds": "88.07142544200042",
+      "score": "994",
+      "score_scope": "benchmark_score",
+      "logical_cores": 24,
+      "test_date_utc": "2026-09-30",
+      "observations": 1,
+      "radius_stage_seconds": "16.289750688999902",
+      "minpoly_stage_seconds": "71.76594734899982",
+      "stage_overlap_seconds": "0",
+      "sha256": "835618182f47e61482895149e99df7c6d3af52b1570816a6f01f4c5d2c831d44",
+      "hash_matches": true,
+      "verification_scope": "Same coefficients and intersecting certified root intervals as the independently checked latest run; public fingerprint recomputed during publication preparation. No new solver run or mathematical review.",
+      "source_files": {
+        "integration": {
+          "file": "final-default-n11-integration.json",
+          "sha256": "09b2541525d412f26218ddc6bd225bc9875149b58b064ba1ded885939ec18f9b"
+        },
+        "minpoly": {
+          "file": "final-default-n11-minpoly.json",
+          "sha256": "5f0a12b9e357128d5b855acae4517c5ddd8f92880b64c3d285b370c009e44ee4"
+        }
+      }
+    },
+    {
+      "n": 12,
+      "run_id": "joint-v15-overlap-gmp-24-n12",
+      "proof_engine": "DGC v62-G",
+      "minpoly_engine": "MinPoly v15",
+      "proof_code_identity": "radius-code-gmp-v1",
+      "minpoly_code_identity": "minpoly-code-v15",
+      "elapsed_seconds": "37.49846543500001",
+      "score": "1117",
+      "score_scope": "benchmark_score",
+      "logical_cores": 24,
+      "test_date_utc": "2026-10-01",
+      "observations": 1,
+      "radius_stage_seconds": "15.348174101999994",
+      "minpoly_stage_seconds": "34.724330078",
+      "stage_overlap_seconds": "12.584732221999992",
+      "sha256": "35d604a5ea1b1fe5c52c30337743c1a8142b69827023284f9597e1ca9cb8f947",
+      "hash_matches": true,
+      "verification_scope": "Same coefficients and intersecting certified root intervals as the independently checked latest run; public fingerprint recomputed during publication preparation. No new solver run or mathematical review.",
+      "source_files": {
+        "integration": {
+          "file": "joint-v15-overlap-gmp-24-n12-integration.json",
+          "sha256": "1b998757fa5317d920189a8c4bc10c8993b99dc5ff698953e0f8431d937b81da"
+        },
+        "minpoly": {
+          "file": "joint-v15-overlap-gmp-24-n12-minpoly.json",
+          "sha256": "03b8cddab7953d65f98b13a17eaa37cf58c96560460a8753e7f5313adc6c3ef0"
+        }
+      }
+    },
+    {
+      "n": 14,
+      "run_id": "joint-v15-overlap-gmp-24-n14",
+      "proof_engine": "DGC v62-G",
+      "minpoly_engine": "MinPoly v15",
+      "proof_code_identity": "radius-code-gmp-v1",
+      "minpoly_code_identity": "minpoly-code-v15",
+      "elapsed_seconds": "32.44493790999999",
+      "score": "1138",
+      "score_scope": "benchmark_score",
+      "logical_cores": 24,
+      "test_date_utc": "2026-10-01",
+      "observations": 1,
+      "radius_stage_seconds": "15.598630556000003",
+      "minpoly_stage_seconds": "29.664690261999993",
+      "stage_overlap_seconds": "12.832765946999999",
+      "sha256": "f880691b49037d01702a2850c2caf09864193649b08323795a68c495bfa38b63",
+      "hash_matches": true,
+      "verification_scope": "Same coefficients and intersecting certified root intervals as the independently checked latest run; public fingerprint recomputed during publication preparation. No new solver run or mathematical review.",
+      "source_files": {
+        "integration": {
+          "file": "joint-v15-overlap-gmp-24-n14-integration.json",
+          "sha256": "44ca62721c25da3c949f7b96bcd831c13662ee9985c67a2bb2b323230f76644b"
+        },
+        "minpoly": {
+          "file": "joint-v15-overlap-gmp-24-n14-minpoly.json",
+          "sha256": "af44ab6b7fa09d733a67907369968b8a06acd284b4be79d37169bd577579985f"
+        }
+      }
+    },
+    {
+      "n": 16,
+      "run_id": "v13-full-scope-32core-n16",
+      "proof_engine": "DGC v62-F",
+      "minpoly_engine": "MinPoly v13",
+      "proof_code_identity": "radius-code-feedback-v1",
+      "minpoly_code_identity": "minpoly-code-v13",
+      "elapsed_seconds": "178.99038192000012",
+      "score": "892",
+      "score_scope": "benchmark_score",
+      "logical_cores": 32,
+      "test_date_utc": "2026-10-01",
+      "observations": 1,
+      "radius_stage_seconds": "108.27150620299994",
+      "minpoly_stage_seconds": "70.69789064700012",
+      "stage_overlap_seconds": "0",
+      "sha256": "09c2f624ea43b59f78cd405155c969ad5a3ba05e934386c3670a25cc73e3dd3e",
+      "hash_matches": true,
+      "verification_scope": "Same coefficients and intersecting certified root intervals as the independently checked latest run; public fingerprint recomputed during publication preparation. No new solver run or mathematical review.",
+      "source_files": {
+        "integration": {
+          "file": "v13-full-scope-32core-n16-integration.json",
+          "sha256": "cedd74dca03b757687e818012e5f01307bb885bd2beca9a9595ca6335d5ea80b"
+        },
+        "minpoly": {
+          "file": "v13-full-scope-32core-n16-minpoly.json",
+          "sha256": "4e0454c373c12d21e722bdd6cdfc6bf3d79d7261745ce58980f59651a8c9a3b6"
+        }
+      }
+    },
+    {
+      "n": 19,
+      "run_id": "joint-v15-overlap-gmp-24-n19",
+      "proof_engine": "DGC v62-G",
+      "minpoly_engine": "MinPoly v15",
+      "proof_code_identity": "radius-code-gmp-v1",
+      "minpoly_code_identity": "minpoly-code-v15",
+      "elapsed_seconds": "36.0441555",
+      "score": "1123",
+      "score_scope": "benchmark_score",
+      "logical_cores": 24,
+      "test_date_utc": "2026-10-01",
+      "observations": 1,
+      "radius_stage_seconds": "36.02578097200001",
+      "minpoly_stage_seconds": "11.138446872000003",
+      "stage_overlap_seconds": "11.138446872000003",
+      "sha256": "7ead184fdc6f594d545b571276c44c23a261d93d22f69d78e799f69d6b684e7a",
+      "hash_matches": true,
+      "verification_scope": "Same coefficients and intersecting certified root intervals as the independently checked latest run; public fingerprint recomputed during publication preparation. No new solver run or mathematical review.",
+      "source_files": {
+        "integration": {
+          "file": "joint-v15-overlap-gmp-24-n19-integration.json",
+          "sha256": "98e197881272255176011093a3cd9de5705f1b0d9e3cfe974135b7a36d8bc94b"
+        },
+        "minpoly": {
+          "file": "joint-v15-overlap-gmp-24-n19-minpoly.json",
+          "sha256": "52543d3c5dd18e016ee5aaf2183cd59891ed0162687dd6113d4896544c12f576"
+        }
+      }
+    },
+    {
+      "n": 22,
+      "run_id": "joint-v15-overlap-gmp-24-n22",
+      "proof_engine": "DGC v62-G",
+      "minpoly_engine": "MinPoly v15",
+      "proof_code_identity": "radius-code-gmp-v1",
+      "minpoly_code_identity": "minpoly-code-v15",
+      "elapsed_seconds": "74.48228510000001",
+      "score": "1018",
+      "score_scope": "benchmark_score",
+      "logical_cores": 24,
+      "test_date_utc": "2026-10-01",
+      "observations": 1,
+      "radius_stage_seconds": "74.39152059699998",
+      "minpoly_stage_seconds": "50.33980944999999",
+      "stage_overlap_seconds": "50.33980944999999",
+      "sha256": "b50156a62469fc3acf589550f64b0a9a672bfa73c38d3d9ab60fb3922c88205d",
+      "hash_matches": true,
+      "verification_scope": "Same coefficients and intersecting certified root intervals as the independently checked latest run; public fingerprint recomputed during publication preparation. No new solver run or mathematical review.",
+      "source_files": {
+        "integration": {
+          "file": "joint-v15-overlap-gmp-24-n22-integration.json",
+          "sha256": "c0b3d33cf940a77a4c837bcde2f5e69fd68c8e3127a86ae8515eaa26bf65add7"
+        },
+        "minpoly": {
+          "file": "joint-v15-overlap-gmp-24-n22-minpoly.json",
+          "sha256": "50984d119dbc134df9fe3ffd59244a4e42360edda9bd0f59099cf5053bc5ea40"
+        }
+      }
+    },
+    {
+      "n": 25,
+      "run_id": "single32-n25",
+      "proof_engine": "DGC v62-G",
+      "minpoly_engine": "MinPoly v15",
+      "proof_code_identity": "radius-code-gmp-v1",
+      "minpoly_code_identity": "minpoly-code-v15",
+      "elapsed_seconds": "189.333344023",
+      "score": "883",
+      "score_scope": "benchmark_score",
+      "logical_cores": 32,
+      "test_date_utc": "2026-10-01",
+      "observations": 1,
+      "radius_stage_seconds": "189.24998095299998",
+      "minpoly_stage_seconds": "36.095503936",
+      "stage_overlap_seconds": "36.095503936",
+      "sha256": "2cf89430e0f746fabd1f84298f3449cb9f755a8c3d41a198b2881dd042d06e12",
+      "hash_matches": true,
+      "verification_scope": "Same coefficients and intersecting certified root intervals as the independently checked latest run; public fingerprint recomputed during publication preparation. No new solver run or mathematical review.",
+      "source_files": {
+        "integration": {
+          "file": "single32-n25-integration.json",
+          "sha256": "3c1e224d74b364ba5e9bc5738cf1a19ef7756b12f2f08bc6809c5134244c688b"
+        },
+        "minpoly": {
+          "file": "single32-n25-minpoly.json",
+          "sha256": "f293663cdb37b53910bbfd1a64e61cbbd0aa1afdd305f60142761cb49017afcb"
+        }
+      }
+    },
+    {
+      "n": 26,
+      "run_id": "single32-n26",
+      "proof_engine": "DGC v62-G",
+      "minpoly_engine": "MinPoly v15",
+      "proof_code_identity": "radius-code-gmp-v1",
+      "minpoly_code_identity": "minpoly-code-v15",
+      "elapsed_seconds": "445.21964570800003",
+      "score": "760",
+      "score_scope": "benchmark_score",
+      "logical_cores": 32,
+      "test_date_utc": "2026-10-01",
+      "observations": 1,
+      "radius_stage_seconds": "303.37139938200005",
+      "minpoly_stage_seconds": "429.44483781200006",
+      "stage_overlap_seconds": "287.6529133060001",
+      "sha256": "668e35b36865e692e27ee2377a1dd970d0836c06821140867e4e0962e7b9108e",
+      "hash_matches": true,
+      "verification_scope": "Same coefficients and intersecting certified root intervals as the independently checked latest run; public fingerprint recomputed during publication preparation. No new solver run or mathematical review.",
+      "source_files": {
+        "integration": {
+          "file": "single32-n26-integration.json",
+          "sha256": "91ee995d372a32764a31a37256912e6f3791e5126a4a05033216c053bb73fe28"
+        },
+        "minpoly": {
+          "file": "single32-n26-minpoly.json",
+          "sha256": "0870f404bab4744d21850625c2316e31e5bc957d8224151a1d330ac3a30a59f6"
+        }
+      }
+    }
+  ],
+  "latest_32core_runs": [
+    {
+      "n": 11,
+      "run_id": "single32-n11",
+      "proof_engine": "DGC v62-G",
+      "minpoly_engine": "MinPoly v15",
+      "proof_code_identity": "radius-code-gmp-v1",
+      "minpoly_code_identity": "minpoly-code-v15",
+      "elapsed_seconds": "107.828098933",
+      "score": "965",
+      "score_scope": "benchmark_score",
+      "logical_cores": 32,
+      "test_date_utc": "2026-10-01",
+      "observations": 1,
+      "radius_stage_seconds": "18.165110591",
+      "minpoly_stage_seconds": "104.23968772100001",
+      "stage_overlap_seconds": "14.592042909000002",
+      "sha256": "835618182f47e61482895149e99df7c6d3af52b1570816a6f01f4c5d2c831d44",
+      "hash_matches": true,
+      "verification_scope": "Same coefficients and intersecting certified root intervals as the independently checked latest run; public fingerprint recomputed during publication preparation. No new solver run or mathematical review.",
+      "source_files": {
+        "integration": {
+          "file": "single32-n11-integration.json",
+          "sha256": "4138ed92c0cb7c3e36e570371a28677cd2257089dfe46b34f701e0967f0ac2ed"
+        },
+        "minpoly": {
+          "file": "single32-n11-minpoly.json",
+          "sha256": "6c55b3fdcaf064d19130145233ec570ce88ea93bfe12475e3507798477d6a958"
+        }
+      }
+    },
+    {
+      "n": 12,
+      "run_id": "single32-n12",
+      "proof_engine": "DGC v62-G",
+      "minpoly_engine": "MinPoly v15",
+      "proof_code_identity": "radius-code-gmp-v1",
+      "minpoly_code_identity": "minpoly-code-v15",
+      "elapsed_seconds": "39.43044621099999",
+      "score": "1110",
+      "score_scope": "benchmark_score",
+      "logical_cores": 32,
+      "test_date_utc": "2026-10-01",
+      "observations": 1,
+      "radius_stage_seconds": "18.070017639",
+      "minpoly_stage_seconds": "36.65152137400001",
+      "stage_overlap_seconds": "15.303621024999998",
+      "sha256": "35d604a5ea1b1fe5c52c30337743c1a8142b69827023284f9597e1ca9cb8f947",
+      "hash_matches": true,
+      "verification_scope": "Same coefficients and intersecting certified root intervals as the independently checked latest run; public fingerprint recomputed during publication preparation. No new solver run or mathematical review.",
+      "source_files": {
+        "integration": {
+          "file": "single32-n12-integration.json",
+          "sha256": "fb6304ddc904c6f754c8081d298b5a410df809822273f2b196cb0f8e3d588cfb"
+        },
+        "minpoly": {
+          "file": "single32-n12-minpoly.json",
+          "sha256": "91cecfe19652fb6ef2af99702cad3ade37deff0ce50035670aac8c56b4727766"
+        }
+      }
+    },
+    {
+      "n": 14,
+      "run_id": "single32-n14",
+      "proof_engine": "DGC v62-G",
+      "minpoly_engine": "MinPoly v15",
+      "proof_code_identity": "radius-code-gmp-v1",
+      "minpoly_code_identity": "minpoly-code-v15",
+      "elapsed_seconds": "37.841599591999994",
+      "score": "1116",
+      "score_scope": "benchmark_score",
+      "logical_cores": 32,
+      "test_date_utc": "2026-10-01",
+      "observations": 1,
+      "radius_stage_seconds": "18.714731570999987",
+      "minpoly_stage_seconds": "34.55828425300001",
+      "stage_overlap_seconds": "15.450390749999997",
+      "sha256": "f880691b49037d01702a2850c2caf09864193649b08323795a68c495bfa38b63",
+      "hash_matches": true,
+      "verification_scope": "Same coefficients and intersecting certified root intervals as the independently checked latest run; public fingerprint recomputed during publication preparation. No new solver run or mathematical review.",
+      "source_files": {
+        "integration": {
+          "file": "single32-n14-integration.json",
+          "sha256": "0b1773fca95a205e0877df5f5678b57b92fdb2fb33fb07f80a9b3842a289bedb"
+        },
+        "minpoly": {
+          "file": "single32-n14-minpoly.json",
+          "sha256": "de43a66bc6954a73d649c23b80274c71e61065d2d7ae9aa3781a8a75071dc8f5"
+        }
+      }
+    },
+    {
+      "n": 16,
+      "run_id": "single32-n16",
+      "proof_engine": "DGC v62-G",
+      "minpoly_engine": "MinPoly v15",
+      "proof_code_identity": "radius-code-gmp-v1",
+      "minpoly_code_identity": "minpoly-code-v15",
+      "elapsed_seconds": "190.73810526800003",
+      "score": "882",
+      "score_scope": "benchmark_score",
+      "logical_cores": 32,
+      "test_date_utc": "2026-10-01",
+      "observations": 1,
+      "radius_stage_seconds": "111.13614425",
+      "minpoly_stage_seconds": "79.55937927499997",
+      "stage_overlap_seconds": "0",
+      "sha256": "09c2f624ea43b59f78cd405155c969ad5a3ba05e934386c3670a25cc73e3dd3e",
+      "hash_matches": true,
+      "verification_scope": "Same coefficients and intersecting certified root intervals as the independently checked latest run; public fingerprint recomputed during publication preparation. No new solver run or mathematical review.",
+      "source_files": {
+        "integration": {
+          "file": "single32-n16-integration.json",
+          "sha256": "48b97800ab38d657634a1381f3389df02a7030a551461603f2d02bbdd5a4b490"
+        },
+        "minpoly": {
+          "file": "single32-n16-minpoly.json",
+          "sha256": "7cf2b2754c6ec79ab1bb059d39c12a47c492ee577f4ada94f5cac507e43adba9"
+        }
+      }
+    },
+    {
+      "n": 19,
+      "run_id": "single32-n19",
+      "proof_engine": "DGC v62-G",
+      "minpoly_engine": "MinPoly v15",
+      "proof_code_identity": "radius-code-gmp-v1",
+      "minpoly_code_identity": "minpoly-code-v15",
+      "elapsed_seconds": "43.13655970899998",
+      "score": "1097",
+      "score_scope": "benchmark_score",
+      "logical_cores": 32,
+      "test_date_utc": "2026-10-01",
+      "observations": 1,
+      "radius_stage_seconds": "43.12023045800004",
+      "minpoly_stage_seconds": "17.545131149999975",
+      "stage_overlap_seconds": "17.545131149999975",
+      "sha256": "7ead184fdc6f594d545b571276c44c23a261d93d22f69d78e799f69d6b684e7a",
+      "hash_matches": true,
+      "verification_scope": "Same coefficients and intersecting certified root intervals as the independently checked latest run; public fingerprint recomputed during publication preparation. No new solver run or mathematical review.",
+      "source_files": {
+        "integration": {
+          "file": "single32-n19-integration.json",
+          "sha256": "191462206b2957e0eb1d6def30cd9f61d30e910da0b2e3b2a40f87834d585c90"
+        },
+        "minpoly": {
+          "file": "single32-n19-minpoly.json",
+          "sha256": "42cf29058c4898eb52e6cf74d77f5a3f26b9eda1e4adf02ee2a2ffa129ede297"
+        }
+      }
+    },
+    {
+      "n": 22,
+      "run_id": "single32-n22",
+      "proof_engine": "DGC v62-G",
+      "minpoly_engine": "MinPoly v15",
+      "proof_code_identity": "radius-code-gmp-v1",
+      "minpoly_code_identity": "minpoly-code-v15",
+      "elapsed_seconds": "82.36961490100003",
+      "score": "1003",
+      "score_scope": "benchmark_score",
+      "logical_cores": 32,
+      "test_date_utc": "2026-10-01",
+      "observations": 1,
+      "radius_stage_seconds": "82.27507200900004",
+      "minpoly_stage_seconds": "62.34916500600002",
+      "stage_overlap_seconds": "62.34916500600002",
+      "sha256": "b50156a62469fc3acf589550f64b0a9a672bfa73c38d3d9ab60fb3922c88205d",
+      "hash_matches": true,
+      "verification_scope": "Same coefficients and intersecting certified root intervals as the independently checked latest run; public fingerprint recomputed during publication preparation. No new solver run or mathematical review.",
+      "source_files": {
+        "integration": {
+          "file": "single32-n22-integration.json",
+          "sha256": "56f573d6fcb6c63ed28cdaadf6c0dd174da9b15505b9815dd3ed0ff5fec18bbf"
+        },
+        "minpoly": {
+          "file": "single32-n22-minpoly.json",
+          "sha256": "a9f435a6fc2c0b209656693f596a593eeca8f67c4fddbfafcedc5ebc33a9f7d5"
+        }
+      }
+    },
+    {
+      "n": 25,
+      "run_id": "single32-n25",
+      "proof_engine": "DGC v62-G",
+      "minpoly_engine": "MinPoly v15",
+      "proof_code_identity": "radius-code-gmp-v1",
+      "minpoly_code_identity": "minpoly-code-v15",
+      "elapsed_seconds": "189.333344023",
+      "score": "883",
+      "score_scope": "benchmark_score",
+      "logical_cores": 32,
+      "test_date_utc": "2026-10-01",
+      "observations": 1,
+      "radius_stage_seconds": "189.24998095299998",
+      "minpoly_stage_seconds": "36.095503936",
+      "stage_overlap_seconds": "36.095503936",
+      "sha256": "2cf89430e0f746fabd1f84298f3449cb9f755a8c3d41a198b2881dd042d06e12",
+      "hash_matches": true,
+      "verification_scope": "Same coefficients and intersecting certified root intervals as the independently checked latest run; public fingerprint recomputed during publication preparation. No new solver run or mathematical review.",
+      "source_files": {
+        "integration": {
+          "file": "single32-n25-integration.json",
+          "sha256": "3c1e224d74b364ba5e9bc5738cf1a19ef7756b12f2f08bc6809c5134244c688b"
+        },
+        "minpoly": {
+          "file": "single32-n25-minpoly.json",
+          "sha256": "f293663cdb37b53910bbfd1a64e61cbbd0aa1afdd305f60142761cb49017afcb"
+        }
+      }
+    },
+    {
+      "n": 26,
+      "run_id": "single32-n26",
+      "proof_engine": "DGC v62-G",
+      "minpoly_engine": "MinPoly v15",
+      "proof_code_identity": "radius-code-gmp-v1",
+      "minpoly_code_identity": "minpoly-code-v15",
+      "elapsed_seconds": "445.21964570800003",
+      "score": "760",
+      "score_scope": "benchmark_score",
+      "logical_cores": 32,
+      "test_date_utc": "2026-10-01",
+      "observations": 1,
+      "radius_stage_seconds": "303.37139938200005",
+      "minpoly_stage_seconds": "429.44483781200006",
+      "stage_overlap_seconds": "287.6529133060001",
+      "sha256": "668e35b36865e692e27ee2377a1dd970d0836c06821140867e4e0962e7b9108e",
+      "hash_matches": true,
+      "verification_scope": "Same coefficients and intersecting certified root intervals as the independently checked latest run; public fingerprint recomputed during publication preparation. No new solver run or mathematical review.",
+      "source_files": {
+        "integration": {
+          "file": "single32-n26-integration.json",
+          "sha256": "91ee995d372a32764a31a37256912e6f3791e5126a4a05033216c053bb73fe28"
+        },
+        "minpoly": {
+          "file": "single32-n26-minpoly.json",
+          "sha256": "0870f404bab4744d21850625c2316e31e5bc957d8224151a1d330ac3a30a59f6"
+        }
+      }
+    }
+  ],
+  "latest_batch_elapsed_seconds_including_postchecks": "1161.364478641",
+  "development_time": null,
+  "cost": null,
+  "limitations": [
+    "n25 The global optimality proof was accepted by local project review; this run’s score and fingerprint match do not themselves verify a proof.",
+    "n26 The global optimality proof was accepted by local project review; independent review of the minimal-polynomial source remains pending, and the score does not replace that review.",
+    "Existing source admission/classification trust retained; no new independent mathematical review or formal proof.",
+    "Single observations across different versions/core limits; not controlled model or speedup rankings.",
+    "No algorithm source, polynomial coefficients, radius value, root interval or complete proof package published."
+  ],
+  "score_interpretation": "Same benchmark formula and score scale as model tests; higher is better. Starting conditions, algorithm versions and hardware are recorded separately."
+}

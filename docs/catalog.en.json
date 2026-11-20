@@ -1,0 +1,193 @@
+{
+  "schema": "diskcover-public-catalog-v1",
+  "title": "Unit Disk Covering Benchmark",
+  "language": "en",
+  "alternate_catalogs": {
+    "zh-CN": "catalog.zh.json",
+    "en": "catalog.json"
+  },
+  "public_record_submissions": "closed",
+  "fingerprint_script_url": "diskcover_answer.py",
+  "protocol_url": "protocol.en.txt",
+  "report_prompt_url": "report-prompt.en.txt",
+  "pagination": {
+    "page_size": 12,
+    "page_count": 2,
+    "pages": [
+      {
+        "number": 1,
+        "page_url": "index.html",
+        "n": [
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22
+        ]
+      },
+      {
+        "number": 2,
+        "page_url": "index-page-2.html",
+        "n": [
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30
+        ]
+      }
+    ]
+  },
+  "problems": [
+    {
+      "n": 11,
+      "page_url": "n11.html",
+      "problem_json_url": "problems/n11.json",
+      "reference_hash_available": true,
+      "reference_status": "published"
+    },
+    {
+      "n": 12,
+      "page_url": "n12.html",
+      "problem_json_url": "problems/n12.json",
+      "reference_hash_available": true,
+      "reference_status": "published"
+    },
+    {
+      "n": 13,
+      "page_url": "n13.html",
+      "problem_json_url": "problems/n13.json",
+      "reference_hash_available": false,
+      "reference_status": "not_published"
+    },
+    {
+      "n": 14,
+      "page_url": "n14.html",
+      "problem_json_url": "problems/n14.json",
+      "reference_hash_available": true,
+      "reference_status": "published"
+    },
+    {
+      "n": 15,
+      "page_url": "n15.html",
+      "problem_json_url": "problems/n15.json",
+      "reference_hash_available": false,
+      "reference_status": "not_published"
+    },
+    {
+      "n": 16,
+      "page_url": "n16.html",
+      "problem_json_url": "problems/n16.json",
+      "reference_hash_available": true,
+      "reference_status": "published"
+    },
+    {
+      "n": 17,
+      "page_url": "n17.html",
+      "problem_json_url": "problems/n17.json",
+      "reference_hash_available": false,
+      "reference_status": "not_published"
+    },
+    {
+      "n": 18,
+      "page_url": "n18.html",
+      "problem_json_url": "problems/n18.json",
+      "reference_hash_available": false,
+      "reference_status": "not_published"
+    },
+    {
+      "n": 19,
+      "page_url": "n19.html",
+      "problem_json_url": "problems/n19.json",
+      "reference_hash_available": true,
+      "reference_status": "published"
+    },
+    {
+      "n": 20,
+      "page_url": "n20.html",
+      "problem_json_url": "problems/n20.json",
+      "reference_hash_available": false,
+      "reference_status": "not_published"
+    },
+    {
+      "n": 21,
+      "page_url": "n21.html",
+      "problem_json_url": "problems/n21.json",
+      "reference_hash_available": false,
+      "reference_status": "not_published"
+    },
+    {
+      "n": 22,
+      "page_url": "n22.html",
+      "problem_json_url": "problems/n22.json",
+      "reference_hash_available": true,
+      "reference_status": "published"
+    },
+    {
+      "n": 23,
+      "page_url": "n23.html",
+      "problem_json_url": "problems/n23.json",
+      "reference_hash_available": false,
+      "reference_status": "not_published"
+    },
+    {
+      "n": 24,
+      "page_url": "n24.html",
+      "problem_json_url": "problems/n24.json",
+      "reference_hash_available": false,
+      "reference_status": "not_published"
+    },
+    {
+      "n": 25,
+      "page_url": "n25.html",
+      "problem_json_url": "problems/n25.json",
+      "reference_hash_available": true,
+      "reference_status": "published"
+    },
+    {
+      "n": 26,
+      "page_url": "n26.html",
+      "problem_json_url": "problems/n26.json",
+      "reference_hash_available": true,
+      "reference_status": "source_review_pending"
+    },
+    {
+      "n": 27,
+      "page_url": "n27.html",
+      "problem_json_url": "problems/n27.json",
+      "reference_hash_available": true,
+      "reference_status": "published"
+    },
+    {
+      "n": 28,
+      "page_url": "n28.html",
+      "problem_json_url": "problems/n28.json",
+      "reference_hash_available": false,
+      "reference_status": "not_published"
+    },
+    {
+      "n": 29,
+      "page_url": "n29.html",
+      "problem_json_url": "problems/n29.json",
+      "reference_hash_available": false,
+      "reference_status": "not_published"
+    },
+    {
+      "n": 30,
+      "page_url": "n30.html",
+      "problem_json_url": "problems/n30.json",
+      "reference_hash_available": true,
+      "reference_status": "published"
+    }
+  ]
+}

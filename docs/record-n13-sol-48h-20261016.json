@@ -1,0 +1,103 @@
+{
+  "schema": "diskcover-public-test-reports-v1",
+  "n": 13,
+  "report_scope": "Retrospective n=13 failed-run records, each based on its own evidence; publication does not rerun mathematics.",
+  "records_comparable": false,
+  "records": [
+    {
+      "record_id": "n13-sol-48h-20261016",
+      "test_id": "T_20261016T173348Z_01a145c6",
+      "model": "gpt-6.1 sol/max",
+      "model_id": "gpt-6.1-sol",
+      "reasoning_effort": "max",
+      "test_date_utc": "2026-10-16",
+      "report_date": "2026-10-20",
+      "status": "not_completed",
+      "failure_reason": "The radius minimal polynomial and its required checks were not obtained by the user-set cumulative 48-hour Goal stop.",
+      "runs": 1,
+      "score": 0,
+      "score_scope": "retrospective_failure_score_under_existing_incomplete_rule; not_a_same_condition_48h_ranking",
+      "score_execution": {
+        "status": "not_completed",
+        "score": "0",
+        "reference_seconds": "21600",
+        "elapsed_seconds": null,
+        "budget_seconds": "43200",
+        "budget_specified": false,
+        "n": 13,
+        "fixed_12_hour_limit_applies": true,
+        "scoring_version": "diskcover-log-score-v1",
+        "score_formula": "round_half_up(200 + 100 * log2(reference_time_seconds / elapsed_seconds))",
+        "score_rounding": "decimal_ROUND_HALF_UP_integer",
+        "deadline_inclusive": true,
+        "completion_independently_verified": false
+      },
+      "elapsed_seconds": null,
+      "valid_completion_elapsed_seconds": null,
+      "goal_cumulative_seconds": 172968,
+      "goal_limit_seconds": 172800,
+      "goal_after_limit_administration_seconds": 168,
+      "natural_elapsed_seconds": "322036.940",
+      "timing_scope": "Goal cumulative usage and natural elapsed since initial user request are distinct; neither is a successful completion time.",
+      "formal_ranking": false,
+      "records_comparable": false,
+      "paid_cost": null,
+      "goal_tokens_used": 27056095,
+      "thread_token_usage": {
+        "input_tokens": 607259143,
+        "cached_input_tokens": 585713664,
+        "output_tokens": 6355222,
+        "total_tokens": 613614365,
+        "counter_scope": "thread cumulative, separate from Goal tokens"
+      },
+      "hardware": {
+        "cpu": "AMD Ryzen 9 8945HX with Radeon Graphics",
+        "ram_gib": 32,
+        "memory_type": "DDR5",
+        "observation_scope": "Full CPU name and RAM details observed during archiving; historical logs also identify the CPU model; not a test-start hardware snapshot."
+      },
+      "tools": [
+        "Python",
+        "SageMath",
+        "local Wolfram",
+        "Windows",
+        "Ubuntu/WSL"
+      ],
+      "process_summary": [
+        "Modeling",
+        "Variable reduction",
+        "Elimination",
+        "Testing",
+        "Algorithm optimization",
+        "Memory reduction"
+      ],
+      "results": {
+        "exact_center_definitions_saved": true,
+        "closed_disk_coverage_records_saved": true,
+        "external_global_proof_connection_saved": true,
+        "minimal_polynomial_obtained": false,
+        "required_checks_for_actual_minimal_polynomial_completed": false
+      },
+      "external_sources": [
+        {
+          "title": "VonEquinox/DiskCoveringSolve cover13 proof bundle",
+          "url": "https://github.com/VonEquinox/DiskCoveringSolve/tree/main/cover13/proof_bundle",
+          "scope": "Existing external work checked and connected during the test; not independently discovered from scratch."
+        }
+      ],
+      "source_restrictions": "No preexisting local materials, skills or other local answers; public sources and task-generated files allowed.",
+      "separate_local_archive": {
+        "archive_id": "A_20261020_N13_SOL_48H_V1",
+        "public_items": 6130,
+        "export_status": "partial_public_fields_export",
+        "public_download_in_this_publication": false
+      },
+      "mathematics_resumed_for_publication": false,
+      "goal_status": "paused",
+      "prompt_artifacts": [],
+      "report_url": "record-n13-sol-48h-20261016.zh.html",
+      "report_url_en": "record-n13-sol-48h-20261016.html",
+      "input_description_scope": "Only summarized source restrictions are published; the original user prompt and conversation remain in the separate local archive."
+    }
+  ]
+}

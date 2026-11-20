@@ -1,0 +1,35 @@
+{
+  "schema": "diskcover-public-test-reports-v1",
+  "n": 27,
+  "report_scope": "One completed, self-reported model test with reference fingerprint match and local replay",
+  "records_comparable": false,
+  "records": [
+    {
+      "model": "gpt-6.2 astra/max",
+      "model_id": "gpt-6.2-astra",
+      "reasoning_effort": "max",
+      "elapsed_seconds": "13955",
+      "score": 263,
+      "runs": 1,
+      "status": "reported",
+      "acceptance_status": "accepted_reference_fingerprint_match",
+      "verification_status": "local_computer_assisted_proof_replayed",
+      "model_identity_status": "verified_original_test_turn_context",
+      "timing_scope": "original_goal_elapsed_including_replay_and_archive_integrity_check_of_proof_package",
+      "score_scope": "benchmark_score",
+      "test_date_utc": "2026-11-20",
+      "report_url": "record-n27-astra62-20261120.zh.html",
+      "report_url_en": "record-n27-astra62-20261120.html",
+      "record_id": "n27-astra62-20261120",
+      "test_id": "T_20261120T021526Z_01a1f6bc",
+      "paid_cost": null,
+      "formal_ranking": false,
+      "records_comparable": false,
+      "test_limit_seconds": 43200,
+      "reference_hash_match": true,
+      "proof_verification": "local_replay",
+      "goal_tokens_used": 1268181,
+      "prompt_artifacts": []
+    }
+  ]
+}

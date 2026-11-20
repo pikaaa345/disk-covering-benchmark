@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="zh-CN" data-page="protocol">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>答案指纹协议 · 单位圆盘覆盖测试</title>
+  <script src="language.js"></script>
+  <script src="navigation.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="alternate" hreflang="zh-CN" href="protocol.zh.html"><link rel="alternate" hreflang="en" href="protocol.html">
+  <script src="vendor/marked.js" defer></script>
+  <script src="vendor/dompurify.js" defer></script>
+  <script src="math-config.js" defer></script>
+  <script src="vendor/mathjax-tex-svg-full.js" defer></script>
+  <script src="prompt-render.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header" data-menu-open="false"><div class="site-header-inner"><a class="site-brand" href="index.zh.html" title="返回网站首页" aria-label="返回网站首页"><svg class="site-brand-mark" viewBox="0 0 32 32" aria-hidden="true" fill="none"><circle cx="16" cy="16" r="14.3" stroke="currentColor" stroke-width="1.5"/><g stroke="currentColor" stroke-width="1.1" opacity=".65"><circle cx="11" cy="12" r="8"/><circle cx="21" cy="12" r="8"/><circle cx="16" cy="21" r="8"/></g></svg><span class="site-brand-copy"><span class="site-brand-title">AI圆盘测试</span><span class="site-brand-subtitle">模型研究级数学能力测试</span></span></a><button class="site-menu-toggle" type="button" aria-controls="site-menu" aria-expanded="false" aria-label="打开导航菜单" data-open-label="打开导航菜单" data-close-label="关闭导航菜单" hidden><svg class="menu-icon-open" viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14"/></svg><svg class="menu-icon-close" viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15"/></svg><span>菜单</span></button><div class="site-menu-panel" id="site-menu"><nav class="site-navigation" aria-label="主要导航"><a class="site-nav-link" href="index.zh.html">题目</a><a class="site-nav-link" href="guide.zh.html" aria-current="true">测试指南</a><a class="site-nav-link" href="scoring.zh.html">评分</a><a class="site-nav-link" href="records.zh.html">测试记录</a><a class="site-nav-link" href="about.zh.html">关于项目</a></nav><div class="site-header-actions"><a class="repository-link" href="https://github.com/pikaaa345/disk-covering-benchmark" aria-label="打开 GitHub 仓库">GitHub 仓库<svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13"/></svg></a><nav class="language-switch" aria-label="语言"><a href="protocol.html?lang=en" data-language="en" lang="en">English</a><a href="protocol.zh.html?lang=zh" data-language="zh" lang="zh-CN" aria-current="page">中文</a></nav></div></div></div></header>
+<main>
+  <script id="page-config" type="application/json">{"language":"zh","referenceSha256":null}</script>
+  <p class="back"><a href="index.zh.html">单位圆盘覆盖测试</a> · <a href="about.zh.html">项目说明</a></p>
+  <div class="prompt-heading"><h1>答案指纹协议</h1><div><button id="copy-prompt" class="copy">复制全文</button><span id="copy-status" class="status" role="status"></span></div></div>
+  <div id="prompt-markdown" class="markdown-body" data-article="true" data-format="text"><pre class="prompt-fallback">单位圆盘覆盖 benchmark：自测答案提交协议 v1
+
+定位
+发布者公布题面、运行条件、标准答案哈希和自身实测成绩。
+其他人自行测试、核对答案并报告结果。耗时属于自报信息。
+协议核对答案指纹，不验证数学证明、模型身份或运行时间。
+本版不要求上传大型证明包；证明材料可自行保留。
+
+所需环境
+Python 3.9 或更新版本；仅使用标准库，没有第三方依赖。
+
+输入
+1. n：正整数。
+2. coefficients.json：UTF-8 JSON 整数数组。
+   顺序是常数项、一次项、二次项……最高次项。
+   即按幂次从低到高排列，不是把系数按数值大小排序。
+   中间零系数必须保留，不可写浮点数或科学计数法。
+3. 半径：高精度十进制文本，建议给出至少 30—40 位小数。
+   如果很接近舍入边界，需要更多精度；脚本无法验证输入精度。
+
+规范化
+删除最高次端多余的零，除以全部系数的最大公因数，
+再把最高次项调整为正数。常数多项式拒绝。
+输入者须提交最小多项式；脚本不证明不可约性或全局最优性。
+半径必须在 [0,1]，按 ROUND_HALF_UP 四舍五入，固定为小数点后
+20 位（不是 20 位有效数字）；保留所有末尾零，不经过 float。
+
+哈希对象
+包含 protocol、n、coefficients、radius 四个字段的 JSON 对象。
+protocol 固定为 diskcover-minpoly-v1。
+JSON 键按字母顺序排列，无多余空格，无 BOM，无末尾换行。
+系数是 JSON 整数；radius 是带 20 位小数的 JSON 字符串。
+对上述 JSON 的 UTF-8 字节计算 SHA-256，输出小写十六进制。
+这是本协议自定义的精确整数 JSON 编码；不要经由 JavaScript
+Number 解析后重新编码巨大系数。以本脚本输出为准。
+
+执行
+python diskcover_answer.py --n 11 --coefficients coefficients.json --radius 你的高精度半径
+
+比对
+python diskcover_answer.py --n 11 --coefficients coefficients.json --radius 你的高精度半径 --expected-sha256 发布者公布的64位哈希
+
+匹配时 matches_reference 为 true，退出码为 0。
+不匹配时为 false，退出码为 1；输入错误退出码为 2。
+脚本同时输出规范化数据与实际参与哈希的 canonical_json。
+
+发布者与参测者
+双方必须使用同一协议版本和脚本生成指纹。
+发布者应从自己已核对的最小多项式与足够精确的半径生成标准哈希。
+建议参测者报告：题目、协议版本、答案哈希、模型及推理设置、
+起始材料、允许工具、计算机配置、实际耗时、费用、测试次数。
+是否联网，以及是否使用已有候选、求解代码或答案，也应说明。
+
+成绩
+分数 = ROUND_HALF_UP(200 + 100 × log2(21600 / T))，T 为实际用时（秒）。
+分数越高越好：6小时200分，用时每减半加100分；3分钟891分。
+最后采用 ROUND_HALF_UP 四舍五入至整数。失败或超时计0分；未测试不记0分。
+n≤30 的时限为12小时（43200秒）：恰好在截止时刻有效完成为100分，
+超时后完成仍为0分。若约定更短预算，还须满足该预算；n&gt;30 的时限另定。
+本版的“有效答案”表示指纹匹配，不表示独立完成了全局证明。
+只有额外核验对应证明材料后，才能另标注“完整证明已核验”。
+
+解释边界
+20 位半径是固定展示与指纹字段，不是数学上的唯一根证明。
+不同实根可能在 20 位舍入后相同；如要严格区分，需另核验
+根隔离区间或在新协议中加入实根序号。
+高精度近似和完整最小多项式指纹共同用于核对答案；小数位数
+本身不能保证结果经过证明，也不能防止复制公开答案。
+公开标准哈希适合自行核对；本协议不提供防作弊排名保证。
+
+版本规则
+字段、排序、半径舍入、位数或编码发生变化，必须升级协议版本。
+不要把不同版本的哈希直接比较。</pre></div>
+  <pre id="test-prompt" hidden>单位圆盘覆盖 benchmark：自测答案提交协议 v1
+
+定位
+发布者公布题面、运行条件、标准答案哈希和自身实测成绩。
+其他人自行测试、核对答案并报告结果。耗时属于自报信息。
+协议核对答案指纹，不验证数学证明、模型身份或运行时间。
+本版不要求上传大型证明包；证明材料可自行保留。
+
+所需环境
+Python 3.9 或更新版本；仅使用标准库，没有第三方依赖。
+
+输入
+1. n：正整数。
+2. coefficients.json：UTF-8 JSON 整数数组。
+   顺序是常数项、一次项、二次项……最高次项。
+   即按幂次从低到高排列，不是把系数按数值大小排序。
+   中间零系数必须保留，不可写浮点数或科学计数法。
+3. 半径：高精度十进制文本，建议给出至少 30—40 位小数。
+   如果很接近舍入边界，需要更多精度；脚本无法验证输入精度。
+
+规范化
+删除最高次端多余的零，除以全部系数的最大公因数，
+再把最高次项调整为正数。常数多项式拒绝。
+输入者须提交最小多项式；脚本不证明不可约性或全局最优性。
+半径必须在 [0,1]，按 ROUND_HALF_UP 四舍五入，固定为小数点后
+20 位（不是 20 位有效数字）；保留所有末尾零，不经过 float。
+
+哈希对象
+包含 protocol、n、coefficients、radius 四个字段的 JSON 对象。
+protocol 固定为 diskcover-minpoly-v1。
+JSON 键按字母顺序排列，无多余空格，无 BOM，无末尾换行。
+系数是 JSON 整数；radius 是带 20 位小数的 JSON 字符串。
+对上述 JSON 的 UTF-8 字节计算 SHA-256，输出小写十六进制。
+这是本协议自定义的精确整数 JSON 编码；不要经由 JavaScript
+Number 解析后重新编码巨大系数。以本脚本输出为准。
+
+执行
+python diskcover_answer.py --n 11 --coefficients coefficients.json --radius 你的高精度半径
+
+比对
+python diskcover_answer.py --n 11 --coefficients coefficients.json --radius 你的高精度半径 --expected-sha256 发布者公布的64位哈希
+
+匹配时 matches_reference 为 true，退出码为 0。
+不匹配时为 false，退出码为 1；输入错误退出码为 2。
+脚本同时输出规范化数据与实际参与哈希的 canonical_json。
+
+发布者与参测者
+双方必须使用同一协议版本和脚本生成指纹。
+发布者应从自己已核对的最小多项式与足够精确的半径生成标准哈希。
+建议参测者报告：题目、协议版本、答案哈希、模型及推理设置、
+起始材料、允许工具、计算机配置、实际耗时、费用、测试次数。
+是否联网，以及是否使用已有候选、求解代码或答案，也应说明。
+
+成绩
+分数 = ROUND_HALF_UP(200 + 100 × log2(21600 / T))，T 为实际用时（秒）。
+分数越高越好：6小时200分，用时每减半加100分；3分钟891分。
+最后采用 ROUND_HALF_UP 四舍五入至整数。失败或超时计0分；未测试不记0分。
+n≤30 的时限为12小时（43200秒）：恰好在截止时刻有效完成为100分，
+超时后完成仍为0分。若约定更短预算，还须满足该预算；n&gt;30 的时限另定。
+本版的“有效答案”表示指纹匹配，不表示独立完成了全局证明。
+只有额外核验对应证明材料后，才能另标注“完整证明已核验”。
+
+解释边界
+20 位半径是固定展示与指纹字段，不是数学上的唯一根证明。
+不同实根可能在 20 位舍入后相同；如要严格区分，需另核验
+根隔离区间或在新协议中加入实根序号。
+高精度近似和完整最小多项式指纹共同用于核对答案；小数位数
+本身不能保证结果经过证明，也不能防止复制公开答案。
+公开标准哈希适合自行核对；本协议不提供防作弊排名保证。
+
+版本规则
+字段、排序、半径舍入、位数或编码发生变化，必须升级协议版本。
+不要把不同版本的哈希直接比较。</pre>
+  <p><a href="protocol.txt" download>下载原文</a></p>
+</main></body>
+</html>

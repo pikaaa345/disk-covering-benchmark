@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="zh-CN" data-page="record-n25-astra62-max-20261120">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>n=25 · gpt-6.2 astra/max 测试报告 · 单位圆盘覆盖测试</title>
+  <script src="language.js"></script>
+  <script src="navigation.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="alternate" hreflang="zh-CN" href="record-n25-astra62-max-20261120.zh.html"><link rel="alternate" hreflang="en" href="record-n25-astra62-max-20261120.html">
+  <link rel="alternate" type="application/json" href="record-n25-astra62-max-20261120.json">
+  <script src="vendor/marked.js" defer></script>
+  <script src="vendor/dompurify.js" defer></script>
+  <script src="math-config.js" defer></script>
+  <script src="vendor/mathjax-tex-svg-full.js" defer></script>
+  <script src="prompt-render.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header" data-menu-open="false"><div class="site-header-inner"><a class="site-brand" href="index.zh.html" title="返回网站首页" aria-label="返回网站首页"><svg class="site-brand-mark" viewBox="0 0 32 32" aria-hidden="true" fill="none"><circle cx="16" cy="16" r="14.3" stroke="currentColor" stroke-width="1.5"/><g stroke="currentColor" stroke-width="1.1" opacity=".65"><circle cx="11" cy="12" r="8"/><circle cx="21" cy="12" r="8"/><circle cx="16" cy="21" r="8"/></g></svg><span class="site-brand-copy"><span class="site-brand-title">AI圆盘测试</span><span class="site-brand-subtitle">模型研究级数学能力测试</span></span></a><button class="site-menu-toggle" type="button" aria-controls="site-menu" aria-expanded="false" aria-label="打开导航菜单" data-open-label="打开导航菜单" data-close-label="关闭导航菜单" hidden><svg class="menu-icon-open" viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14"/></svg><svg class="menu-icon-close" viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15"/></svg><span>菜单</span></button><div class="site-menu-panel" id="site-menu"><nav class="site-navigation" aria-label="主要导航"><a class="site-nav-link" href="index.zh.html">题目</a><a class="site-nav-link" href="guide.zh.html">测试指南</a><a class="site-nav-link" href="scoring.zh.html">评分</a><a class="site-nav-link" href="records.zh.html" aria-current="true">测试记录</a><a class="site-nav-link" href="about.zh.html">关于项目</a></nav><div class="site-header-actions"><a class="repository-link" href="https://github.com/pikaaa345/disk-covering-benchmark" aria-label="打开 GitHub 仓库">GitHub 仓库<svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13"/></svg></a><nav class="language-switch" aria-label="语言"><a href="record-n25-astra62-max-20261120.html?lang=en" data-language="en" lang="en">English</a><a href="record-n25-astra62-max-20261120.zh.html?lang=zh" data-language="zh" lang="zh-CN" aria-current="page">中文</a></nav></div></div></div></header>
+<main>
+  <script id="page-config" type="application/json">{"language":"zh","referenceSha256":null}</script>
+  <p class="back"><a href="index.zh.html">单位圆盘覆盖测试</a> · <a href="n25.zh.html">n = 25</a></p>
+  <div class="prompt-heading"><h1>n=25 · gpt-6.2 astra/max 测试报告</h1><div><button id="copy-prompt" class="copy">复制全文</button><span id="copy-status" class="status" role="status"></span></div></div>
+  <div id="prompt-markdown" class="markdown-body" data-article="true" data-format="markdown"><pre class="prompt-fallback"># n=25 · gpt-6.2 astra/max
+
+本次得分 **478**，计分自然耗时 **3,140 秒**（52 分 20 秒）。
+
+### 证明来源与本次模型工作
+
+候选构型来自 [Friedman 公开表](https://erich-friedman.github.io/packing/circovcir/)，归于 Jeremy Tan。下界借鉴[公开的 20 圆盘证明](https://github.com/VonEquinox/DiskCoveringSolve/blob/089584973f41e6374ce110f6e5b5ee456df19352/cover20/docs/r20_proof_zh.md)，为本题建立内环归约、穷举、刚性核对与整数证书。
+
+### 任务要求与判定标准
+
+[n=25 题面](n25.zh.html)要求半径的最小多项式、精确构型、整个闭圆盘的覆盖、任意构型的全局下界，以及可复算的辅助证明材料。求解时使用公开网络资料和本次工作目录内的文件。
+
+### 测试信息与时间口径
+
+| 项目 | 记录 |
+|---|---|
+| 测试编号 | T_20261120T010001Z_01a1f677 |
+| 测试时限 | 按基准规则为 43,200 秒 |
+| 计分用时 | 3,140 秒，起止为 2026-11-20 01:00:01 与 01:52:21 UTC |
+| Goal 单独计时 | 3,139 秒 |
+
+### 计算条件与使用量
+
+| 项目 | 记录范围 |
+|---|---|
+| 模型 | 原始回合环境记录为 gpt-6.2-astra，max |
+| 精确重放 | Windows x86-64，Python 3.13.13，MinGW-w64 GCC 13.2.0，24 个工作线程 |
+| Goal 计量 | 460,391 token |
+| 截至测试末答的 thread 计量 | 输入 15,683,540，其中缓存 15,322,624，输出 103,734，总计 15,787,274 |
+| 费用 | 不可取得 |
+
+### 主要研究阶段
+
+| 阶段 | 工作 | 实际结果 |
+|---|---|---|
+| 00:22 前 | 精确构型和整个闭圆盘覆盖 | 代数构型、三角形及圆帽证明 |
+| 约 00:22–00:43 | 穷尽全局下界 | Voronoi 归约、内环筛选、整数力证书及刚性 |
+| 约 00:43–00:52 | 干净重放与打包 | 完整重放 216.098 秒，已计入成绩用时 |
+
+### 路线变化与主要困难
+
+全局下界必须排除非对称摆法的连续位置区间。接近等号的区域使用单独的精确刚性论证。
+
+### 验证、交付与限制
+
+最终重放重新生成枚举，核查 8,583,814 个保留记录和 8,624,620 个严格力证书，未决数为零，并检验 146 阶刚性矩阵。答案指纹与题页参考值一致。书面证明与精确重放是本次记录的数学依据。
+
+### 档案与可下载记录
+
+[record-n25-astra62-max-20261120.json](record-n25-astra62-max-20261120.json) · [Markdown](record-n25-astra62-max-20261120.zh.md) · [History](n25-astra62-max-20261120-history.json)
+</pre></div>
+  <pre id="test-prompt" hidden># n=25 · gpt-6.2 astra/max
+
+本次得分 **478**，计分自然耗时 **3,140 秒**（52 分 20 秒）。
+
+### 证明来源与本次模型工作
+
+候选构型来自 [Friedman 公开表](https://erich-friedman.github.io/packing/circovcir/)，归于 Jeremy Tan。下界借鉴[公开的 20 圆盘证明](https://github.com/VonEquinox/DiskCoveringSolve/blob/089584973f41e6374ce110f6e5b5ee456df19352/cover20/docs/r20_proof_zh.md)，为本题建立内环归约、穷举、刚性核对与整数证书。
+
+### 任务要求与判定标准
+
+[n=25 题面](n25.zh.html)要求半径的最小多项式、精确构型、整个闭圆盘的覆盖、任意构型的全局下界，以及可复算的辅助证明材料。求解时使用公开网络资料和本次工作目录内的文件。
+
+### 测试信息与时间口径
+
+| 项目 | 记录 |
+|---|---|
+| 测试编号 | T_20261120T010001Z_01a1f677 |
+| 测试时限 | 按基准规则为 43,200 秒 |
+| 计分用时 | 3,140 秒，起止为 2026-11-20 01:00:01 与 01:52:21 UTC |
+| Goal 单独计时 | 3,139 秒 |
+
+### 计算条件与使用量
+
+| 项目 | 记录范围 |
+|---|---|
+| 模型 | 原始回合环境记录为 gpt-6.2-astra，max |
+| 精确重放 | Windows x86-64，Python 3.13.13，MinGW-w64 GCC 13.2.0，24 个工作线程 |
+| Goal 计量 | 460,391 token |
+| 截至测试末答的 thread 计量 | 输入 15,683,540，其中缓存 15,322,624，输出 103,734，总计 15,787,274 |
+| 费用 | 不可取得 |
+
+### 主要研究阶段
+
+| 阶段 | 工作 | 实际结果 |
+|---|---|---|
+| 00:22 前 | 精确构型和整个闭圆盘覆盖 | 代数构型、三角形及圆帽证明 |
+| 约 00:22–00:43 | 穷尽全局下界 | Voronoi 归约、内环筛选、整数力证书及刚性 |
+| 约 00:43–00:52 | 干净重放与打包 | 完整重放 216.098 秒，已计入成绩用时 |
+
+### 路线变化与主要困难
+
+全局下界必须排除非对称摆法的连续位置区间。接近等号的区域使用单独的精确刚性论证。
+
+### 验证、交付与限制
+
+最终重放重新生成枚举，核查 8,583,814 个保留记录和 8,624,620 个严格力证书，未决数为零，并检验 146 阶刚性矩阵。答案指纹与题页参考值一致。书面证明与精确重放是本次记录的数学依据。
+
+### 档案与可下载记录
+
+[record-n25-astra62-max-20261120.json](record-n25-astra62-max-20261120.json) · [Markdown](record-n25-astra62-max-20261120.zh.md) · [History](n25-astra62-max-20261120-history.json)
+</pre>
+</main></body>
+</html>

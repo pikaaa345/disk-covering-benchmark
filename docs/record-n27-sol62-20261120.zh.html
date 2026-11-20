@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="zh-CN" data-page="record-n27-sol62-20261120">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>n=27 · gpt-6.2 sol/max 测试报告 · 单位圆盘覆盖测试</title>
+  <script src="language.js"></script>
+  <script src="navigation.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="alternate" hreflang="zh-CN" href="record-n27-sol62-20261120.zh.html"><link rel="alternate" hreflang="en" href="record-n27-sol62-20261120.html">
+  <link rel="alternate" type="application/json" href="record-n27-sol62-20261120.json">
+  <script src="vendor/marked.js" defer></script>
+  <script src="vendor/dompurify.js" defer></script>
+  <script src="math-config.js" defer></script>
+  <script src="vendor/mathjax-tex-svg-full.js" defer></script>
+  <script src="prompt-render.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header" data-menu-open="false"><div class="site-header-inner"><a class="site-brand" href="index.zh.html" title="返回网站首页" aria-label="返回网站首页"><svg class="site-brand-mark" viewBox="0 0 32 32" aria-hidden="true" fill="none"><circle cx="16" cy="16" r="14.3" stroke="currentColor" stroke-width="1.5"/><g stroke="currentColor" stroke-width="1.1" opacity=".65"><circle cx="11" cy="12" r="8"/><circle cx="21" cy="12" r="8"/><circle cx="16" cy="21" r="8"/></g></svg><span class="site-brand-copy"><span class="site-brand-title">AI圆盘测试</span><span class="site-brand-subtitle">模型研究级数学能力测试</span></span></a><button class="site-menu-toggle" type="button" aria-controls="site-menu" aria-expanded="false" aria-label="打开导航菜单" data-open-label="打开导航菜单" data-close-label="关闭导航菜单" hidden><svg class="menu-icon-open" viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14"/></svg><svg class="menu-icon-close" viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15"/></svg><span>菜单</span></button><div class="site-menu-panel" id="site-menu"><nav class="site-navigation" aria-label="主要导航"><a class="site-nav-link" href="index.zh.html">题目</a><a class="site-nav-link" href="guide.zh.html">测试指南</a><a class="site-nav-link" href="scoring.zh.html">评分</a><a class="site-nav-link" href="records.zh.html" aria-current="true">测试记录</a><a class="site-nav-link" href="about.zh.html">关于项目</a></nav><div class="site-header-actions"><a class="repository-link" href="https://github.com/pikaaa345/disk-covering-benchmark" aria-label="打开 GitHub 仓库">GitHub 仓库<svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13"/></svg></a><nav class="language-switch" aria-label="语言"><a href="record-n27-sol62-20261120.html?lang=en" data-language="en" lang="en">English</a><a href="record-n27-sol62-20261120.zh.html?lang=zh" data-language="zh" lang="zh-CN" aria-current="page">中文</a></nav></div></div></div></header>
+<main>
+  <script id="page-config" type="application/json">{"language":"zh","referenceSha256":null}</script>
+  <p class="back"><a href="index.zh.html">单位圆盘覆盖测试</a> · <a href="n27.zh.html">n = 27</a></p>
+  <div class="prompt-heading"><h1>n=27 · gpt-6.2 sol/max 测试报告</h1><div><button id="copy-prompt" class="copy">复制全文</button><span id="copy-status" class="status" role="status"></span></div></div>
+  <div id="prompt-markdown" class="markdown-body" data-article="true" data-format="markdown"><pre class="prompt-fallback">### 证明来源与本次模型工作
+
+本次运行推导了解答并在工作区内核验。数值搜索使用了[公开非最优示意图](https://pikaaa345.github.io/disk-covering-benchmark/assets/n27.svg)，几何核验参考了[公开的 20 圆盘证明](https://github.com/VonEquinox/DiskCoveringSolve/blob/089584973f41e6374ce110f6e5b5ee456df19352/cover20/docs/r20_proof_zh.md)。
+
+### 任务要求与判定标准
+
+任务要求半径最小多项式、有理根隔离区间、精确圆心、闭圆盘覆盖与全局最优性证明。测试允许公开来源，禁止使用本地技能或工作区外预存的本地资料。
+
+### 测试信息与时间口径
+
+| 项目 | 记录 |
+|---|---|
+| 测试编号 | T_20261120T060952Z_01a1f793 |
+| 模型 | gpt-6.2 sol/max |
+| 测试时限 | 12 小时 |
+| 计分用时 | 13,054 秒（3 小时 37 分 34 秒），依据已完成的 Goal |
+| 成绩 | 273 |
+
+### 计算条件与使用量
+
+| 项目 | 记录范围 |
+|---|---|
+| 计算环境 | Windows x86-64 工作区和本机计算 |
+| Goal 用量 | 1,252,000 token |
+| 账单 | 不可取得 |
+
+### 主要研究阶段
+
+| 阶段 | 工作 | 实际结果 |
+|---|---|---|
+| 几何 | 构造并验证覆盖，检查全局下界 | 工作区内的精确几何检查通过 |
+| 代数 | 恢复半径多项式并验证所识别的根 | 工作区内的精确代数检查通过 |
+
+### 路线变化与主要困难
+
+数值搜索给出候选后，转入多项式与几何情形的精确验证。
+
+### 验证、交付与限制
+
+答案指纹与参考值一致。本次运行保留了精确构型、根隔离区间、闭圆盘覆盖和全局最优性的本地核验证据。
+
+### 档案与可下载记录
+
+证明和复核材料保留于本地测试档案。[结构化记录](record-n27-sol62-20261120.json) · [报告源文件](record-n27-sol62-20261120.zh.md) · [机器可读历史](n27-sol62-20261120-history.json)
+</pre></div>
+  <pre id="test-prompt" hidden>### 证明来源与本次模型工作
+
+本次运行推导了解答并在工作区内核验。数值搜索使用了[公开非最优示意图](https://pikaaa345.github.io/disk-covering-benchmark/assets/n27.svg)，几何核验参考了[公开的 20 圆盘证明](https://github.com/VonEquinox/DiskCoveringSolve/blob/089584973f41e6374ce110f6e5b5ee456df19352/cover20/docs/r20_proof_zh.md)。
+
+### 任务要求与判定标准
+
+任务要求半径最小多项式、有理根隔离区间、精确圆心、闭圆盘覆盖与全局最优性证明。测试允许公开来源，禁止使用本地技能或工作区外预存的本地资料。
+
+### 测试信息与时间口径
+
+| 项目 | 记录 |
+|---|---|
+| 测试编号 | T_20261120T060952Z_01a1f793 |
+| 模型 | gpt-6.2 sol/max |
+| 测试时限 | 12 小时 |
+| 计分用时 | 13,054 秒（3 小时 37 分 34 秒），依据已完成的 Goal |
+| 成绩 | 273 |
+
+### 计算条件与使用量
+
+| 项目 | 记录范围 |
+|---|---|
+| 计算环境 | Windows x86-64 工作区和本机计算 |
+| Goal 用量 | 1,252,000 token |
+| 账单 | 不可取得 |
+
+### 主要研究阶段
+
+| 阶段 | 工作 | 实际结果 |
+|---|---|---|
+| 几何 | 构造并验证覆盖，检查全局下界 | 工作区内的精确几何检查通过 |
+| 代数 | 恢复半径多项式并验证所识别的根 | 工作区内的精确代数检查通过 |
+
+### 路线变化与主要困难
+
+数值搜索给出候选后，转入多项式与几何情形的精确验证。
+
+### 验证、交付与限制
+
+答案指纹与参考值一致。本次运行保留了精确构型、根隔离区间、闭圆盘覆盖和全局最优性的本地核验证据。
+
+### 档案与可下载记录
+
+证明和复核材料保留于本地测试档案。[结构化记录](record-n27-sol62-20261120.json) · [报告源文件](record-n27-sol62-20261120.zh.md) · [机器可读历史](n27-sol62-20261120-history.json)
+</pre>
+</main></body>
+</html>

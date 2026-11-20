@@ -1,0 +1,116 @@
+{
+  "schema": "diskcover-public-algorithm-case-run-v1",
+  "record_scope": "AI + human research and algorithm optimization + local computer; not independent foundation-model performance",
+  "selection_scope": {
+    "accepted_observations_checked": 40,
+    "archives": [
+      "DGC-radius-minpoly-integration-20260930",
+      "DGC-joint-fourcases-20261001",
+      "DGC-eight-coldstart-20261001-32core"
+    ],
+    "selection_rule": "Minimum measured complete pipeline time per n in these explicitly checked archives. Not a statistical guarantee or exhaustive all-project history audit.",
+    "scope_note": "Selection metadata describes the shared archive audit; run entries in this file are limited to n=14."
+  },
+  "hardware": {
+    "cpu": "AMD Ryzen 9 8945HX with Radeon Graphics",
+    "host_memory_generation": "DDR5",
+    "host_memory_gib": 32,
+    "host_logical_processors": 32,
+    "execution_location": "Local daily Ubuntu under WSL2",
+    "wsl_memtotal_kib": 15968388,
+    "snapshot_scope": "Queried before the latest eight-case batch; shared host record for earlier selected runs, not a separate task-start snapshot for each earlier run."
+  },
+  "environment": {
+    "sage": "10.7",
+    "python": "3.12.3",
+    "installed_during_run": [],
+    "solver_source_public": false
+  },
+  "algorithm_versions": {
+    "DGC v62-G": {
+      "base": "DGC v62-F",
+      "internal_name": "radius-code-gmp-v1",
+      "variant": "GMP exact rational arithmetic for local certificate verification"
+    },
+    "latest_controller": "joint v15; eight-case/32-core scope extension only",
+    "minpoly_versions": [
+      "v15"
+    ]
+  },
+  "timing_scope": "Per-case controller start with input n through radius and minpoly consumers, final same-root binding and saved result. Hash and post-solve reference checks excluded. Overlapping stages are not added.",
+  "score_formula": "ROUND_HALF_UP(200 + 100 * log2(21600 / elapsed_seconds))",
+  "best_recorded_runs": [
+    {
+      "n": 14,
+      "run_id": "joint-v15-overlap-gmp-24-n14",
+      "proof_engine": "DGC v62-G",
+      "minpoly_engine": "MinPoly v15",
+      "proof_code_identity": "radius-code-gmp-v1",
+      "minpoly_code_identity": "minpoly-code-v15",
+      "elapsed_seconds": "32.44493790999999",
+      "score": "1138",
+      "score_scope": "benchmark_score",
+      "logical_cores": 24,
+      "test_date_utc": "2026-10-01",
+      "observations": 1,
+      "radius_stage_seconds": "15.598630556000003",
+      "minpoly_stage_seconds": "29.664690261999993",
+      "stage_overlap_seconds": "12.832765946999999",
+      "sha256": "f880691b49037d01702a2850c2caf09864193649b08323795a68c495bfa38b63",
+      "hash_matches": true,
+      "verification_scope": "Same coefficients and intersecting certified root intervals as the independently checked latest run; public fingerprint recomputed during publication preparation. No new solver run or mathematical review.",
+      "source_files": {
+        "integration": {
+          "file": "joint-v15-overlap-gmp-24-n14-integration.json",
+          "sha256": "44ca62721c25da3c949f7b96bcd831c13662ee9985c67a2bb2b323230f76644b"
+        },
+        "minpoly": {
+          "file": "joint-v15-overlap-gmp-24-n14-minpoly.json",
+          "sha256": "af44ab6b7fa09d733a67907369968b8a06acd284b4be79d37169bd577579985f"
+        }
+      }
+    }
+  ],
+  "latest_32core_runs": [
+    {
+      "n": 14,
+      "run_id": "single32-n14",
+      "proof_engine": "DGC v62-G",
+      "minpoly_engine": "MinPoly v15",
+      "proof_code_identity": "radius-code-gmp-v1",
+      "minpoly_code_identity": "minpoly-code-v15",
+      "elapsed_seconds": "37.841599591999994",
+      "score": "1116",
+      "score_scope": "benchmark_score",
+      "logical_cores": 32,
+      "test_date_utc": "2026-10-01",
+      "observations": 1,
+      "radius_stage_seconds": "18.714731570999987",
+      "minpoly_stage_seconds": "34.55828425300001",
+      "stage_overlap_seconds": "15.450390749999997",
+      "sha256": "f880691b49037d01702a2850c2caf09864193649b08323795a68c495bfa38b63",
+      "hash_matches": true,
+      "verification_scope": "Same coefficients and intersecting certified root intervals as the independently checked latest run; public fingerprint recomputed during publication preparation. No new solver run or mathematical review.",
+      "source_files": {
+        "integration": {
+          "file": "single32-n14-integration.json",
+          "sha256": "0b1773fca95a205e0877df5f5678b57b92fdb2fb33fb07f80a9b3842a289bedb"
+        },
+        "minpoly": {
+          "file": "single32-n14-minpoly.json",
+          "sha256": "de43a66bc6954a73d649c23b80274c71e61065d2d7ae9aa3781a8a75071dc8f5"
+        }
+      }
+    }
+  ],
+  "development_time": null,
+  "cost": null,
+  "limitations": [
+    "Existing source admission/classification trust retained; no new independent mathematical review or formal proof.",
+    "Single observations across different versions/core limits; not controlled model or speedup rankings.",
+    "No algorithm source, polynomial coefficients, radius value, root interval or complete proof package published."
+  ],
+  "score_interpretation": "Same benchmark formula and score scale as model tests; higher is better. Starting conditions, algorithm versions and hardware are recorded separately.",
+  "n": 14,
+  "reference_status": "published"
+}

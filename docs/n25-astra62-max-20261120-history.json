@@ -1,0 +1,33 @@
+{
+  "schema": "diskcover-public-test-reports-v1",
+  "n": 25,
+  "report_scope": "One reported model run",
+  "records_comparable": false,
+  "records": [
+    {
+      "model": "gpt-6.2 astra/max",
+      "model_id": "gpt-6.2-astra",
+      "reasoning_effort": "max",
+      "elapsed_seconds": "3140",
+      "score": 478,
+      "runs": 1,
+      "status": "reported",
+      "timing_scope": "goal_creation_to_completion_natural_interval",
+      "model_identity_status": "original_turn_context",
+      "verification_status": "same_run_clean_exact_replay",
+      "test_date_utc": "2026-11-20",
+      "score_scope": "benchmark_score",
+      "acceptance_status": "submitted_exact_proof_with_same_run_replay",
+      "report_url": "record-n25-astra62-max-20261120.zh.html",
+      "report_url_en": "record-n25-astra62-max-20261120.html",
+      "record_id": "n25-astra62-max-20261120",
+      "test_id": "T_20261120T010001Z_01a1f677",
+      "original_budget_seconds": null,
+      "benchmark_time_limit_seconds": 43200,
+      "main_system_accumulated_seconds": 3139,
+      "formal_ranking": false,
+      "private_proof_package_public": false,
+      "prompt_artifacts": []
+    }
+  ]
+}
