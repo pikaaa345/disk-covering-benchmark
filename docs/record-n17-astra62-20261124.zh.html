@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="zh-CN" data-page="record-n17-astra62-20261124">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>n=17 · gpt-6.2-astra/max 测试报告 · 单位圆盘覆盖测试</title>
+  <script src="language.js"></script>
+  <script src="navigation.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="alternate" hreflang="zh-CN" href="record-n17-astra62-20261124.zh.html"><link rel="alternate" hreflang="en" href="record-n17-astra62-20261124.html">
+  <link rel="alternate" type="application/json" href="record-n17-astra62-20261124.json">
+  <script src="vendor/marked.js" defer></script>
+  <script src="vendor/dompurify.js" defer></script>
+  <script src="math-config.js" defer></script>
+  <script src="vendor/mathjax-tex-svg-full.js" defer></script>
+  <script src="prompt-render.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header" data-menu-open="false"><div class="site-header-inner"><a class="site-brand" href="index.zh.html" title="返回网站首页" aria-label="返回网站首页"><svg class="site-brand-mark" viewBox="0 0 32 32" aria-hidden="true" fill="none"><circle cx="16" cy="16" r="14.3" stroke="currentColor" stroke-width="1.5"/><g stroke="currentColor" stroke-width="1.1" opacity=".65"><circle cx="11" cy="12" r="8"/><circle cx="21" cy="12" r="8"/><circle cx="16" cy="21" r="8"/></g></svg><span class="site-brand-copy"><span class="site-brand-title">AI圆盘测试</span><span class="site-brand-subtitle">模型研究级数学能力测试</span></span></a><button class="site-menu-toggle" type="button" aria-controls="site-menu" aria-expanded="false" aria-label="打开导航菜单" data-open-label="打开导航菜单" data-close-label="关闭导航菜单" hidden><svg class="menu-icon-open" viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14"/></svg><svg class="menu-icon-close" viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15"/></svg><span>菜单</span></button><div class="site-menu-panel" id="site-menu"><nav class="site-navigation" aria-label="主要导航"><a class="site-nav-link" href="index.zh.html">题目</a><a class="site-nav-link" href="guide.zh.html">测试指南</a><a class="site-nav-link" href="scoring.zh.html">评分</a><a class="site-nav-link" href="records.zh.html" aria-current="true">测试记录</a><a class="site-nav-link" href="about.zh.html">关于项目</a></nav><div class="site-header-actions"><a class="repository-link" href="https://github.com/pikaaa345/disk-covering-benchmark" aria-label="打开 GitHub 仓库">GitHub 仓库<svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13"/></svg></a><nav class="language-switch" aria-label="语言"><a href="record-n17-astra62-20261124.html?lang=en" data-language="en" lang="en">English</a><a href="record-n17-astra62-20261124.zh.html?lang=zh" data-language="zh" lang="zh-CN" aria-current="page">中文</a></nav></div></div></div></header>
+<main>
+  <script id="page-config" type="application/json">{"language":"zh","referenceSha256":null}</script>
+  <p class="back"><a href="index.zh.html">单位圆盘覆盖测试</a> · <a href="n17.zh.html">n = 17</a></p>
+  <div class="prompt-heading"><h1>n=17 · gpt-6.2-astra/max 测试报告</h1><div><button id="copy-prompt" class="copy">复制全文</button><span id="copy-status" class="status" role="status"></span></div></div>
+  <div id="prompt-markdown" class="markdown-body" data-article="true" data-format="markdown"><pre class="prompt-fallback">本次测试中，gpt-6.2-astra/max **求出了最优半径**，给出了 17 个精确圆心、整个单位闭圆盘的覆盖证明和全局最优性证明。12 小时时限内，模型**未求出最小多项式**，未能确定其实际次数或列出全部整数系数。按题目要求，本次得分为 **0（未完成）**。
+
+### 证明来源与本次模型工作
+
+原运行使用[公开 Cover17 证书](https://github.com/VonEquinox/DiskCoveringSolve/tree/089584973f41e6374ce110f6e5b5ee456df19352/cover17)建立全局下界，报告复跑了全部七个验证阶段，并提交了所给构型覆盖整个闭圆盘的论证。
+
+### 任务要求与判定标准
+
+题目要求提交最优半径的规范化不可约最小多项式及其逐项整数系数、有理根隔离区间、精确圆心、整个闭圆盘的覆盖证明，以及对任意 17 圆心构型的全局最优性证明。
+
+### 测试信息与时间口径
+
+| 项目 | 记录 |
+| --- | --- |
+| 测试编号 | T_20261124T075812Z_01a20c8f |
+| 测试时限 | 原 Goal 计时 43,200 秒 |
+| 计分用时 | 限时内未完成有效提交 |
+| 自然经过时间 | 从建立 Goal 到最终答复为 170,579.140 秒，含暂停 |
+| Goal 最后读数 | 43,262 秒，含结束时的状态检查 |
+
+### 计算条件与使用量
+
+| 项目 | 记录范围 |
+| --- | --- |
+| 模型 | gpt-6.2-astra/max |
+| 资料限制 | 用户要求求解期间禁用本地 Skill，禁止读取原工作区外的本地资料 |
+| 实际账单 | 无可登记值 |
+
+### 主要研究阶段
+
+| 阶段 | 工作 | 实际结果 |
+| --- | --- | --- |
+| 构型确定 | 用代数方程及隔离数据指定候选构型 | 得到 17 个精确圆心和经认证的半径区间 |
+| 覆盖与下界 | 将整盘覆盖归约到 969 个候选点的检查，并复跑 Cover17 的七个阶段 | 证明候选构型覆盖整个闭盘，并排除更小半径 |
+| 最小多项式 | 对接触方程组作代数约化，估计次数并检验低次整数关系 | 得到次数上下界、有理隔离区间和形式化的系数表达式，实际次数与完整系数表仍未求得 |
+
+### 路线变化与主要困难
+
+几何部分完成后，模型把计算转向消元与系数恢复。到时限结束，计算只推进到次数约束、根隔离和系数的形式表达，仍无法按题目要求逐项写出整数系数。
+
+### 验证、交付与限制
+
+以上为原运行的提交范围及其报告的复算情况。此次提交未完成，按规则计 0 分。本报告未发布参考指纹。
+
+### 档案与可下载记录
+
+[机器可读成绩](record-n17-astra62-20261124.json) · [中文报告](record-n17-astra62-20261124.zh.md) · [运行历史](n17-astra62-20261124-history.json)
+</pre></div>
+  <pre id="test-prompt" hidden>本次测试中，gpt-6.2-astra/max **求出了最优半径**，给出了 17 个精确圆心、整个单位闭圆盘的覆盖证明和全局最优性证明。12 小时时限内，模型**未求出最小多项式**，未能确定其实际次数或列出全部整数系数。按题目要求，本次得分为 **0（未完成）**。
+
+### 证明来源与本次模型工作
+
+原运行使用[公开 Cover17 证书](https://github.com/VonEquinox/DiskCoveringSolve/tree/089584973f41e6374ce110f6e5b5ee456df19352/cover17)建立全局下界，报告复跑了全部七个验证阶段，并提交了所给构型覆盖整个闭圆盘的论证。
+
+### 任务要求与判定标准
+
+题目要求提交最优半径的规范化不可约最小多项式及其逐项整数系数、有理根隔离区间、精确圆心、整个闭圆盘的覆盖证明，以及对任意 17 圆心构型的全局最优性证明。
+
+### 测试信息与时间口径
+
+| 项目 | 记录 |
+| --- | --- |
+| 测试编号 | T_20261124T075812Z_01a20c8f |
+| 测试时限 | 原 Goal 计时 43,200 秒 |
+| 计分用时 | 限时内未完成有效提交 |
+| 自然经过时间 | 从建立 Goal 到最终答复为 170,579.140 秒，含暂停 |
+| Goal 最后读数 | 43,262 秒，含结束时的状态检查 |
+
+### 计算条件与使用量
+
+| 项目 | 记录范围 |
+| --- | --- |
+| 模型 | gpt-6.2-astra/max |
+| 资料限制 | 用户要求求解期间禁用本地 Skill，禁止读取原工作区外的本地资料 |
+| 实际账单 | 无可登记值 |
+
+### 主要研究阶段
+
+| 阶段 | 工作 | 实际结果 |
+| --- | --- | --- |
+| 构型确定 | 用代数方程及隔离数据指定候选构型 | 得到 17 个精确圆心和经认证的半径区间 |
+| 覆盖与下界 | 将整盘覆盖归约到 969 个候选点的检查，并复跑 Cover17 的七个阶段 | 证明候选构型覆盖整个闭盘，并排除更小半径 |
+| 最小多项式 | 对接触方程组作代数约化，估计次数并检验低次整数关系 | 得到次数上下界、有理隔离区间和形式化的系数表达式，实际次数与完整系数表仍未求得 |
+
+### 路线变化与主要困难
+
+几何部分完成后，模型把计算转向消元与系数恢复。到时限结束，计算只推进到次数约束、根隔离和系数的形式表达，仍无法按题目要求逐项写出整数系数。
+
+### 验证、交付与限制
+
+以上为原运行的提交范围及其报告的复算情况。此次提交未完成，按规则计 0 分。本报告未发布参考指纹。
+
+### 档案与可下载记录
+
+[机器可读成绩](record-n17-astra62-20261124.json) · [中文报告](record-n17-astra62-20261124.zh.md) · [运行历史](n17-astra62-20261124-history.json)
+</pre>
+</main></body>
+</html>

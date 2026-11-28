@@ -1,0 +1,23 @@
+{
+  "schema": "diskcover-public-test-reports-v1",
+  "n": 17,
+  "report_scope": "One historical model run that reached its 12-hour Goal limit with the minimal polynomial coefficient list incomplete",
+  "records_comparable": false,
+  "records": [
+    {
+      "model": "gpt-6.2-astra/max",
+      "status": "not_completed",
+      "score": 0,
+      "elapsed_seconds": null,
+      "score_scope": "benchmark_score",
+      "report_url": "record-n17-astra62-20261124.zh.html",
+      "report_url_en": "record-n17-astra62-20261124.html",
+      "record_id": "n17-astra62-20261124",
+      "test_id": "T_20261124T075812Z_01a20c8f",
+      "test_date_utc": "2026-11-24",
+      "goal_limit_seconds": 43200,
+      "goal_final_observed_seconds": 43262,
+      "prompt_artifacts": []
+    }
+  ]
+}

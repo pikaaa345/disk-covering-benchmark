@@ -1,0 +1,27 @@
+{
+  "schema": "diskcover-public-test-reports-v1",
+  "n": 11,
+  "report_scope": "Single-run 11-disk benchmark result with request-to-delivery timing",
+  "records_comparable": false,
+  "records": [
+    {
+      "model": "gpt-6.2-sol/max",
+      "status": "reported",
+      "score": 460,
+      "elapsed_seconds": "3563.858",
+      "verification_status": "reference_hash_match_and_exact_certificate_replay",
+      "score_scope": "benchmark_score",
+      "acceptance_status": "solver_delivered_and_replayed_certificates",
+      "test_date_utc": "2026-11-22",
+      "report_url": "record-n11-sol62-20261122.zh.html",
+      "report_url_en": "record-n11-sol62-20261122.html",
+      "record_id": "n11-sol62-20261122",
+      "test_id": "T_20261122T181834Z_01a2047a",
+      "request_received_utc": "2026-11-22T18:18:34.060Z",
+      "final_delivery_utc": "2026-11-22T19:17:57.918Z",
+      "natural_elapsed_seconds": "3563.858",
+      "runtime_turn_ms": 3566701,
+      "prompt_artifacts": []
+    }
+  ]
+}

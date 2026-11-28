@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="zh-CN" data-page="record-n11-sol62-20261122">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>n=11 · gpt-6.2-sol/max 测试报告 · 单位圆盘覆盖测试</title>
+  <script src="language.js"></script>
+  <script src="navigation.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="alternate" hreflang="zh-CN" href="record-n11-sol62-20261122.zh.html"><link rel="alternate" hreflang="en" href="record-n11-sol62-20261122.html">
+  <link rel="alternate" type="application/json" href="record-n11-sol62-20261122.json">
+  <script src="vendor/marked.js" defer></script>
+  <script src="vendor/dompurify.js" defer></script>
+  <script src="math-config.js" defer></script>
+  <script src="vendor/mathjax-tex-svg-full.js" defer></script>
+  <script src="prompt-render.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header" data-menu-open="false"><div class="site-header-inner"><a class="site-brand" href="index.zh.html" title="返回网站首页" aria-label="返回网站首页"><svg class="site-brand-mark" viewBox="0 0 32 32" aria-hidden="true" fill="none"><circle cx="16" cy="16" r="14.3" stroke="currentColor" stroke-width="1.5"/><g stroke="currentColor" stroke-width="1.1" opacity=".65"><circle cx="11" cy="12" r="8"/><circle cx="21" cy="12" r="8"/><circle cx="16" cy="21" r="8"/></g></svg><span class="site-brand-copy"><span class="site-brand-title">AI圆盘测试</span><span class="site-brand-subtitle">模型研究级数学能力测试</span></span></a><button class="site-menu-toggle" type="button" aria-controls="site-menu" aria-expanded="false" aria-label="打开导航菜单" data-open-label="打开导航菜单" data-close-label="关闭导航菜单" hidden><svg class="menu-icon-open" viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14"/></svg><svg class="menu-icon-close" viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15"/></svg><span>菜单</span></button><div class="site-menu-panel" id="site-menu"><nav class="site-navigation" aria-label="主要导航"><a class="site-nav-link" href="index.zh.html">题目</a><a class="site-nav-link" href="guide.zh.html">测试指南</a><a class="site-nav-link" href="scoring.zh.html">评分</a><a class="site-nav-link" href="records.zh.html" aria-current="true">测试记录</a><a class="site-nav-link" href="about.zh.html">关于项目</a></nav><div class="site-header-actions"><a class="repository-link" href="https://github.com/pikaaa345/disk-covering-benchmark" aria-label="打开 GitHub 仓库">GitHub 仓库<svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13"/></svg></a><nav class="language-switch" aria-label="语言"><a href="record-n11-sol62-20261122.html?lang=en" data-language="en" lang="en">English</a><a href="record-n11-sol62-20261122.zh.html?lang=zh" data-language="zh" lang="zh-CN" aria-current="page">中文</a></nav></div></div></div></header>
+<main>
+  <script id="page-config" type="application/json">{"language":"zh","referenceSha256":null}</script>
+  <p class="back"><a href="index.zh.html">单位圆盘覆盖测试</a> · <a href="n11.zh.html">n = 11</a></p>
+  <div class="prompt-heading"><h1>n=11 · gpt-6.2-sol/max 测试报告</h1><div><button id="copy-prompt" class="copy">复制全文</button><span id="copy-status" class="status" role="status"></span></div></div>
+  <div id="prompt-markdown" class="markdown-body" data-article="true" data-format="markdown"><pre class="prompt-fallback">### 证明来源与本次模型工作
+
+本次重跑[固定提交的公开覆盖与全局排除证书](https://github.com/VonEquinox/DiskCoveringSolve/tree/089584973f41e6374ce110f6e5b5ee456df19352/cover11)，独立核对拓扑枚举，补验跨证书条件，并用精确运算验证半径最小多项式与隔离区间。
+
+### 任务要求与判定标准
+
+[十一圆盘题](n11.html?lang=zh)要求精确半径和确定的圆心组、整个闭单位圆盘的覆盖证明、全局下界，以及可复现的验证资料。测试使用在线公开资料与任务工作区内的文件。
+
+### 测试信息与时间口径
+
+| 项目 | 记录 |
+| --- | --- |
+| 测试编号 | T_20261122T181834Z_01a2047a |
+| 测试时限 | 12 小时 |
+| 计分用时 | 从收到请求到完成交付，3,563.858 秒 |
+| 自然经过时间 | 3,563.858 秒，即 59 分 23.858 秒 |
+| 收到请求与完成交付 | 2026-11-22 13:18:34.060 至 14:17:57.918，纽约时间 |
+| 运行轮次指标 | 3,566.701 秒，包含用户消息抵达前的预启动 |
+
+原始用户消息与同轮完成交付事件的时间戳相减得到计分用时，按现行公式得 **460 分**。后续的十二圆盘任务和归档工作发生在本轮结束之后。
+
+### 计算条件与使用量
+
+| 项目 | 记录范围 |
+| --- | --- |
+| 模型 | GPT-6.2-Sol / max |
+| 环境 | Windows，使用整数及有理数精确运算 |
+| 独立的 n=11 Goal 用量与提供方账单 | 不可取得 |
+
+### 主要研究阶段
+
+| 阶段 | 工作 | 实际结果 |
+| --- | --- | --- |
+| 几何 | 精确重放、独立拓扑枚举 | 交付中验证连续覆盖与全局排除 |
+| 代数 | 精确消元、不可约性和根隔离 | 验证最小多项式，规范化答案指纹与题页相符 |
+| 交付 | 完整证明、精确圆心组、系数及复现资料 | 三份交付物入测试档案 |
+
+### 路线变化与主要困难
+
+几何部分沿用公开证书，另行补验几何构型与隔离代数根之间的对应。
+
+### 验证、交付与限制
+
+答案指纹与公布参考相符。此次执行的精确检查和范围记录在本次单次测试交付的证明和复现包中。
+
+### 档案与可下载记录
+
+[结构化测试记录](record-n11-sol62-20261122.json) · [中文报告](record-n11-sol62-20261122.zh.md) · [机器可读历史](n11-sol62-20261122-history.json)。
+</pre></div>
+  <pre id="test-prompt" hidden>### 证明来源与本次模型工作
+
+本次重跑[固定提交的公开覆盖与全局排除证书](https://github.com/VonEquinox/DiskCoveringSolve/tree/089584973f41e6374ce110f6e5b5ee456df19352/cover11)，独立核对拓扑枚举，补验跨证书条件，并用精确运算验证半径最小多项式与隔离区间。
+
+### 任务要求与判定标准
+
+[十一圆盘题](n11.html?lang=zh)要求精确半径和确定的圆心组、整个闭单位圆盘的覆盖证明、全局下界，以及可复现的验证资料。测试使用在线公开资料与任务工作区内的文件。
+
+### 测试信息与时间口径
+
+| 项目 | 记录 |
+| --- | --- |
+| 测试编号 | T_20261122T181834Z_01a2047a |
+| 测试时限 | 12 小时 |
+| 计分用时 | 从收到请求到完成交付，3,563.858 秒 |
+| 自然经过时间 | 3,563.858 秒，即 59 分 23.858 秒 |
+| 收到请求与完成交付 | 2026-11-22 13:18:34.060 至 14:17:57.918，纽约时间 |
+| 运行轮次指标 | 3,566.701 秒，包含用户消息抵达前的预启动 |
+
+原始用户消息与同轮完成交付事件的时间戳相减得到计分用时，按现行公式得 **460 分**。后续的十二圆盘任务和归档工作发生在本轮结束之后。
+
+### 计算条件与使用量
+
+| 项目 | 记录范围 |
+| --- | --- |
+| 模型 | GPT-6.2-Sol / max |
+| 环境 | Windows，使用整数及有理数精确运算 |
+| 独立的 n=11 Goal 用量与提供方账单 | 不可取得 |
+
+### 主要研究阶段
+
+| 阶段 | 工作 | 实际结果 |
+| --- | --- | --- |
+| 几何 | 精确重放、独立拓扑枚举 | 交付中验证连续覆盖与全局排除 |
+| 代数 | 精确消元、不可约性和根隔离 | 验证最小多项式，规范化答案指纹与题页相符 |
+| 交付 | 完整证明、精确圆心组、系数及复现资料 | 三份交付物入测试档案 |
+
+### 路线变化与主要困难
+
+几何部分沿用公开证书，另行补验几何构型与隔离代数根之间的对应。
+
+### 验证、交付与限制
+
+答案指纹与公布参考相符。此次执行的精确检查和范围记录在本次单次测试交付的证明和复现包中。
+
+### 档案与可下载记录
+
+[结构化测试记录](record-n11-sol62-20261122.json) · [中文报告](record-n11-sol62-20261122.zh.md) · [机器可读历史](n11-sol62-20261122-history.json)。
+</pre>
+</main></body>
+</html>

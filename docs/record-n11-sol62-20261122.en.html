@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en" data-page="record-n11-sol62-20261122">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>n=11 · gpt-6.2-sol/max test report · Unit Disk Covering Benchmark</title>
+  <script src="language.js"></script>
+  <script src="navigation.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="alternate" hreflang="zh-CN" href="record-n11-sol62-20261122.zh.html"><link rel="alternate" hreflang="en" href="record-n11-sol62-20261122.html">
+  <link rel="alternate" type="application/json" href="record-n11-sol62-20261122.json">
+  <script src="vendor/marked.js" defer></script>
+  <script src="vendor/dompurify.js" defer></script>
+  <script src="math-config.js" defer></script>
+  <script src="vendor/mathjax-tex-svg-full.js" defer></script>
+  <script src="prompt-render.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header" data-menu-open="false"><div class="site-header-inner"><a class="site-brand" href="index.html" title="Go to home page" aria-label="Go to home page"><svg class="site-brand-mark" viewBox="0 0 32 32" aria-hidden="true" fill="none"><circle cx="16" cy="16" r="14.3" stroke="currentColor" stroke-width="1.5"/><g stroke="currentColor" stroke-width="1.1" opacity=".65"><circle cx="11" cy="12" r="8"/><circle cx="21" cy="12" r="8"/><circle cx="16" cy="21" r="8"/></g></svg><span class="site-brand-copy"><span class="site-brand-title">AI Disk Benchmark</span><span class="site-brand-subtitle">Research-Level Mathematical Ability Test for Models</span></span></a><button class="site-menu-toggle" type="button" aria-controls="site-menu" aria-expanded="false" aria-label="Open navigation menu" data-open-label="Open navigation menu" data-close-label="Close navigation menu" hidden><svg class="menu-icon-open" viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14"/></svg><svg class="menu-icon-close" viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15"/></svg><span>Menu</span></button><div class="site-menu-panel" id="site-menu"><nav class="site-navigation" aria-label="Main navigation"><a class="site-nav-link" href="index.html">Problems</a><a class="site-nav-link" href="guide.html">Guide</a><a class="site-nav-link" href="scoring.html">Scoring</a><a class="site-nav-link" href="records.html" aria-current="true">Records</a><a class="site-nav-link" href="about.html">About</a></nav><div class="site-header-actions"><a class="repository-link" href="https://github.com/pikaaa345/disk-covering-benchmark" aria-label="Open GitHub repository">GitHub<svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13"/></svg></a><nav class="language-switch" aria-label="Language"><a href="record-n11-sol62-20261122.html?lang=en" data-language="en" lang="en" aria-current="page">English</a><a href="record-n11-sol62-20261122.zh.html?lang=zh" data-language="zh" lang="zh-CN">中文</a></nav></div></div></div></header>
+<main>
+  <script id="page-config" type="application/json">{"language":"en","referenceSha256":null}</script>
+  <p class="back"><a href="index.html">Unit Disk Covering Benchmark</a> · <a href="n11.html">n = 11</a></p>
+  <div class="prompt-heading"><h1>n=11 · gpt-6.2-sol/max test report</h1><div><button id="copy-prompt" class="copy">Copy full prompt</button><span id="copy-status" class="status" role="status"></span></div></div>
+  <div id="prompt-markdown" class="markdown-body" data-article="true" data-format="markdown"><pre class="prompt-fallback">### Proof sources and the model&#x27;s contribution
+
+The model replayed the [pinned public covering and global exclusion certificates](https://github.com/VonEquinox/DiskCoveringSolve/tree/089584973f41e6374ce110f6e5b5ee456df19352/cover11), independently checked the topology enumeration, audited links among the certificates, and verified the radius polynomial and the isolating interval by exact arithmetic.
+
+### Task and acceptance standard
+
+The [11-disk problem](n11.html?lang=en) calls for an exact radius and a definite center tuple, continuous coverage, a global lower bound, and reproducible verification. The test used public online sources and task-local files.
+
+### Test information and timing
+
+| Item | Record |
+| --- | --- |
+| Test ID | T_20261122T181834Z_01a2047a |
+| Time limit | 12 hours |
+| Scored elapsed time | 3,563.858 s, from request receipt to final delivery |
+| Natural elapsed time | 3,563.858 s |
+| Request and delivery | November 22, 2026, 13:18:34.060 to 14:17:57.918 New York time |
+| Runtime turn duration | 3,566.701 s, including startup before the user message |
+
+The score is **460**. The elapsed time is the difference between the user message timestamp and the same turn&#x27;s completion event. Subsequent work on the 12-disk problem and archiving took place outside these endpoints.
+
+### Computing conditions and usage
+
+| Item | Recorded scope |
+| --- | --- |
+| Model | GPT-6.2-Sol / max |
+| Environment | Windows with exact integer and rational computation |
+| Separate n=11 Goal usage and provider billing | Unavailable |
+
+### Main research phases
+
+| Phase | Work | Recorded result |
+| --- | --- | --- |
+| Geometry | Exact replay and independent topology census | Full covering and global exclusions verified in the submission |
+| Algebra | Exact elimination, root isolation, and irreducibility | Minimal polynomial certified and normalized answer fingerprint matched |
+| Delivery | Proof, exact centers, coefficients, and reproducible evidence | Three files preserved in the test archive |
+
+### Changes of emphasis and difficulties
+
+The run reused the public geometric certificates and added checks for the bridge from the geometry to the isolated algebraic radius.
+
+### Verification, deliverables and limitations
+
+The fingerprint matched the published reference. The archived proof and verification package document the scope of the exact checks performed for this single run.
+
+### Archive and downloadable records
+
+[Structured test record](record-n11-sol62-20261122.json) · [English report](record-n11-sol62-20261122.en.md) · [Machine-readable history](n11-sol62-20261122-history.json).
+</pre></div>
+  <pre id="test-prompt" hidden>### Proof sources and the model&#x27;s contribution
+
+The model replayed the [pinned public covering and global exclusion certificates](https://github.com/VonEquinox/DiskCoveringSolve/tree/089584973f41e6374ce110f6e5b5ee456df19352/cover11), independently checked the topology enumeration, audited links among the certificates, and verified the radius polynomial and the isolating interval by exact arithmetic.
+
+### Task and acceptance standard
+
+The [11-disk problem](n11.html?lang=en) calls for an exact radius and a definite center tuple, continuous coverage, a global lower bound, and reproducible verification. The test used public online sources and task-local files.
+
+### Test information and timing
+
+| Item | Record |
+| --- | --- |
+| Test ID | T_20261122T181834Z_01a2047a |
+| Time limit | 12 hours |
+| Scored elapsed time | 3,563.858 s, from request receipt to final delivery |
+| Natural elapsed time | 3,563.858 s |
+| Request and delivery | November 22, 2026, 13:18:34.060 to 14:17:57.918 New York time |
+| Runtime turn duration | 3,566.701 s, including startup before the user message |
+
+The score is **460**. The elapsed time is the difference between the user message timestamp and the same turn&#x27;s completion event. Subsequent work on the 12-disk problem and archiving took place outside these endpoints.
+
+### Computing conditions and usage
+
+| Item | Recorded scope |
+| --- | --- |
+| Model | GPT-6.2-Sol / max |
+| Environment | Windows with exact integer and rational computation |
+| Separate n=11 Goal usage and provider billing | Unavailable |
+
+### Main research phases
+
+| Phase | Work | Recorded result |
+| --- | --- | --- |
+| Geometry | Exact replay and independent topology census | Full covering and global exclusions verified in the submission |
+| Algebra | Exact elimination, root isolation, and irreducibility | Minimal polynomial certified and normalized answer fingerprint matched |
+| Delivery | Proof, exact centers, coefficients, and reproducible evidence | Three files preserved in the test archive |
+
+### Changes of emphasis and difficulties
+
+The run reused the public geometric certificates and added checks for the bridge from the geometry to the isolated algebraic radius.
+
+### Verification, deliverables and limitations
+
+The fingerprint matched the published reference. The archived proof and verification package document the scope of the exact checks performed for this single run.
+
+### Archive and downloadable records
+
+[Structured test record](record-n11-sol62-20261122.json) · [English report](record-n11-sol62-20261122.en.md) · [Machine-readable history](n11-sol62-20261122-history.json).
+</pre>
+</main></body>
+</html>

@@ -1,0 +1,519 @@
+{
+  "schema": "diskcover-public-test-reports-v1",
+  "n": 13,
+  "report_scope": "Retrospective n=13 failed-run records, each based on its own evidence; publication does not rerun mathematics.",
+  "records_comparable": false,
+  "records": [
+    {
+      "record_id": "n13-codex-20261001",
+      "model": "gpt-6 astra/max",
+      "model_id": "gpt-6-astra",
+      "reasoning_effort": "max",
+      "model_identity_evidence": "User-authorized retrospective inspection: all 14 original-Goal turn_context records identify gpt-6-astra / max, with matching configuration settings.",
+      "test_date_utc": "2026-10-01",
+      "report_date": "2026-10-02",
+      "status": "not_completed",
+      "failure_reason": "No complete valid result satisfying all n=13 requirements by the original 43200-second deadline.",
+      "runs": 1,
+      "elapsed_seconds": "43200",
+      "main_natural_seconds": "43200",
+      "timing_scope": "Original goal creation to the fixed deadline; elapsed_seconds is the observation window of a failed run, not a completion time.",
+      "valid_completion_elapsed_seconds": null,
+      "main_system_accumulated_seconds": "27555",
+      "system_timing_endpoint": "Frozen goal counter when marked blocked, at original T+12:01:59.",
+      "original_budget_seconds": "43200",
+      "within_original_time_budget": false,
+      "valid_result_within_original_time_budget": false,
+      "research_worker_closed_relative_seconds": 43118,
+      "all_searches_terminal_confirmed_relative_seconds": 43007,
+      "goal_marked_blocked_relative_seconds": 43319,
+      "original_record_natural_seconds_to_blocked": 43319,
+      "natural_seconds_from_original_start_to_report_cutoff": 52697,
+      "report_cutoff_relative": "T+14:38:17",
+      "timeline_clock": "natural_elapsed_since_original_goal_creation",
+      "timing_notes": [
+        "Original scoring observation window: 12 hours. Research worker closed at T+11:58:38.",
+        "The 119 seconds after the deadline through goal blocking were status checks and administration, not resumed mathematical computation.",
+        "The supplemental system counter is 7 hours 39 minutes 15 seconds; it is not natural elapsed time.",
+        "No reliable full decomposition of the difference between natural and system time is available; no pause duration is invented.",
+        "The report cutoff includes the interval after the original research ended and this separately requested report; it is not active solve time."
+      ],
+      "additional_tasks": {
+        "report_generation_requested_separately": true,
+        "report_task_start": "Original separate report request, recovered from original-thread request timestamp.",
+        "precise_report_request_timestamp_recorded": true,
+        "report_task_elapsed_seconds": "1004.270",
+        "report_task_timing_scope": "original_report_request_to_original_report_response",
+        "intertask_gap_included_in_report_task_elapsed": false,
+        "included_in_main_score_time": false,
+        "mathematical_compute_restarted": false,
+        "revision_task_start": "Separate request to revise to n=11 Astra format.",
+        "revision_evidence_cutoff_relative": "V+00:21:14",
+        "revision_evidence_cutoff_seconds": "1274.260",
+        "revision_cutoff_is_not_completed_publication_duration": true
+      },
+      "score": 0,
+      "score_scope": "benchmark_failure_score",
+      "strict_original_task_score": 0,
+      "strict_original_task_acceptance": "failed_no_complete_valid_result_by_deadline",
+      "formal_ranking": false,
+      "completion_independently_verified": false,
+      "answer_protocol": "diskcover-minpoly-v1",
+      "score_protocol": "diskcover-log-score-v1",
+      "reference_seconds": "21600",
+      "reference_seconds_scope": "Default demonstration value required by the scoring CLI; not asserted to be an opening frozen n=13 reference.",
+      "n13_frozen_reference_time_seconds": null,
+      "scoring_version": "diskcover-log-score-v1",
+      "score_formula": "round_half_up(200 + 100 * log2(reference_time_seconds / elapsed_seconds))",
+      "score_rounding": "decimal_ROUND_HALF_UP_integer",
+      "failure_score_independent_of_reference_seconds": true,
+      "benchmark_commit_for_post_hoc_validation": "b6cde6540abcf4dfc54a77979e5a7517d3f971cb",
+      "benchmark_commit_at_original_start": null,
+      "scoring_contract_frozen": false,
+      "deadline_inclusive": true,
+      "score_execution": {
+        "exit_code": 0,
+        "python": "/usr/bin/python3",
+        "args": [
+          "--n",
+          "13",
+          "--reference-seconds",
+          "21600",
+          "--elapsed-seconds",
+          "43200",
+          "--budget-seconds",
+          "43200",
+          "--status",
+          "not_completed"
+        ],
+        "public_source_sha256": "4b2a1eb4640e6524772c8d8592bf6b41ba292dc3e3520829b679016d3fb32977",
+        "execution_mode": "fresh_public_source_in_memory_no_local_research_reads",
+        "executed_during_report_preparation": true,
+        "output_file": "n13-score-output.json",
+        "source_file": "official-score.py",
+        "mathematical_proof_verified_by_score_script": false,
+        "public_output_url": "https://github.com/pikaaa345/disk-covering-benchmark/blob/main/results/n13-score-output.json"
+      },
+      "answer_check": {
+        "protocol": "diskcover-minpoly-v1",
+        "expected_sha256": null,
+        "reference_status": "not_published",
+        "sha256": null,
+        "matches_reference": null,
+        "executed": false,
+        "reason": "The radius minimal polynomial coefficient list was not obtained. No fabricated coefficient list or fingerprint was submitted.",
+        "current_public_reference_checked_at_commit": "b6cde6540abcf4dfc54a77979e5a7517d3f971cb"
+      },
+      "mathematics": {
+        "submission": "incomplete_no_complete_proof_package",
+        "radius_minimal_polynomial_all_coefficients_submitted": false,
+        "irreducibility_certified": false,
+        "univariate_root_isolation_and_radius_association_submitted": false,
+        "exact_ordered_centers_final_submission": false,
+        "reused_public_continuous_coverage_material": true,
+        "reused_public_global_lower_bound_material": true,
+        "full_original_contract_completed": false,
+        "geometry_or_global_proof_replayed_again_in_report_task": false,
+        "independent_external_proof_review": false
+      },
+      "acceptance": [
+        {
+          "requirement": 1,
+          "name": "半径最小多项式、不可约性及有理隔离区间",
+          "status": "not_completed",
+          "evidence": "No accepted polynomial candidate or full coefficient list."
+        },
+        {
+          "requirement": 2,
+          "name": "唯一指定有序13圆心的有限精确代数数据",
+          "status": "research_progress_not_complete_final_submission",
+          "evidence": "Root-box, symmetry and reduced-system work recorded; no final integrated exact submission with the required radius polynomial."
+        },
+        {
+          "requirement": 3,
+          "name": "整个闭圆盘的连续覆盖",
+          "status": "external_material_review_and_original_replay_only",
+          "evidence": "Existing public proof/certificates reviewed during the solve; not a new from-scratch discovery or a new replay in this report."
+        },
+        {
+          "requirement": 4,
+          "name": "涵盖一般构型及退化情形的全局下界",
+          "status": "external_material_review_and_original_replay_only",
+          "evidence": "Existing public topology, exclusion and rigidity materials reused; full n=13 final contract still unmet."
+        },
+        {
+          "requirement": 5,
+          "name": "完整实际代码、输入、证书和核验交付",
+          "status": "not_completed",
+          "evidence": "No integrated final proof package covering all requirements submitted."
+        }
+      ],
+      "verification": {
+        "historical_public_manifest_entries_checked": 28,
+        "historical_public_replay_reported_exit_code": 0,
+        "historical_public_replay_reported_seconds": "12.59",
+        "historical_replay_evidence_scope": "Original-thread progress messages and tool receipts reviewed retrospectively; mathematical proof not rerun during revision.",
+        "later_fresh_public_files_received_in_memory": 40,
+        "later_fresh_manifest_entries_checked": 28,
+        "public_topology_orbits_reported": 308198,
+        "public_metric_exclusions_reported": 306437,
+        "public_non_candidate_topologies_reported": 1760,
+        "public_candidate_topologies_reported": 1,
+        "exact_pipeline_controls_recorded": [
+          "81*x^4-2 synthetic lattice relation control",
+          "cyclic-5 finite-field Groebner basis comparison"
+        ],
+        "numerical_geometry_stress_control_identity_count": 84,
+        "numerical_geometry_stress_control_is_exact_n13_certificate": false,
+        "full_math_pipeline_rerun_during_report_preparation": false,
+        "official_benchmark_synthetic_self_check_rerun_in_report": false,
+        "revision_model_and_timeline_metadata_reviewed": true,
+        "full_math_pipeline_rerun_during_report_revision": false,
+        "historical_full_replay_receipt_relative_seconds": 2346
+      },
+      "searches": [
+        {
+          "label": "recovery_t512_1572864",
+          "target": "radius_squared",
+          "maximum_degree_tested": 512,
+          "precision_bits": 1572864,
+          "lattice_rows": 705,
+          "eligible_rows_tested": 513,
+          "independent_extra_precision_bits": 32768,
+          "passed_extra_precision": 0,
+          "reported_run_seconds": "12717.631",
+          "wrapper_exit_code": 124,
+          "exit_code_note": "Complete basis rows were received despite the timeout-wrapper status; this was used only for candidate filtering, not represented as exit-code-0 completion."
+        },
+        {
+          "label": "primitive_f128_262144",
+          "target": "reduced_geometric_parameter_f",
+          "maximum_degree_tested": 128,
+          "precision_bits": 262144,
+          "lattice_rows": 257,
+          "eligible_rows_tested": 129,
+          "independent_extra_precision_bits": 16384,
+          "passed_extra_precision": 0,
+          "reported_run_seconds": "891.674",
+          "exit_code": 0
+        },
+        {
+          "label": "primitive_f256_from128",
+          "target": "reduced_geometric_parameter_f",
+          "maximum_degree_tested": 256,
+          "precision_bits": 262144,
+          "lattice_rows": 0,
+          "passed_extra_precision": 0,
+          "reported_run_seconds": "479.666",
+          "exit_code": 124
+        }
+      ],
+      "phases": [
+        {
+          "start_relative_seconds": 0,
+          "end_relative_seconds": 2346,
+          "approximate_duration_seconds": 2346,
+          "activity_zh": "获取、审查外部证明、调整枚举依赖和重新获取同版输入；并行约化。",
+          "outcome_zh": "完整重放退出码0，最小多项式未完成。",
+          "activity_en": "Acquire/review proof, adjust enumeration, reacquire fixed inputs; reduced-system work overlaps.",
+          "outcome_en": "Full-replay exit 0, minimal polynomial missing.",
+          "evidence_scope": "original_thread_timestamped_progress_or_tool_receipt; no_new_mathematical_replay",
+          "endpoints_are_progress_or_receipt_times": true
+        },
+        {
+          "start_relative_seconds": 2346,
+          "end_relative_seconds": 5350,
+          "approximate_duration_seconds": 3004,
+          "activity_zh": "对称性、菱形关系、约束映射和38变量根证书。",
+          "outcome_zh": "报告根证书和原根盒连接通过，无合格多项式。",
+          "activity_en": "Symmetry/rhombus/mapping checks and reduced root certificate.",
+          "outcome_en": "Root certification and original-root connection reported passed, no polynomial.",
+          "evidence_scope": "original_thread_timestamped_progress_or_tool_receipt; no_new_mathematical_replay",
+          "endpoints_are_progress_or_receipt_times": true
+        },
+        {
+          "start_relative_seconds": 5350,
+          "end_relative_seconds": 14002,
+          "approximate_duration_seconds": 8652,
+          "activity_zh": "分块格搜索、参数化、分支替换和内存实验。",
+          "outcome_zh": "原题未完成，落盘日志／脚本读取被拒绝。",
+          "activity_en": "Lattice, parametrization, branch and memory experiments.",
+          "outcome_en": "Incomplete problem work; stored-log read denied.",
+          "evidence_scope": "original_thread_timestamped_progress_or_tool_receipt; no_new_mathematical_replay",
+          "endpoints_are_progress_or_receipt_times": true
+        },
+        {
+          "start_relative_seconds": 14002,
+          "end_relative_seconds": 24389,
+          "approximate_duration_seconds": 10387,
+          "activity_zh": "内存输入、实时输出、方程化简及退化排除。",
+          "outcome_zh": "Magma提交被拒绝，发现括号输入错误，受影响运行作废。",
+          "activity_en": "Memory/live-output work, reductions and degeneracy exclusions.",
+          "outcome_en": "Magma submission denied; input error found, affected runs discarded.",
+          "evidence_scope": "original_thread_timestamped_progress_or_tool_receipt; no_new_mathematical_replay",
+          "endpoints_are_progress_or_receipt_times": true
+        },
+        {
+          "start_relative_seconds": 24389,
+          "end_relative_seconds": 29473,
+          "approximate_duration_seconds": 5084,
+          "activity_zh": "展开输入、有限域和p进探索及控制，进程崩溃后恢复。",
+          "outcome_zh": "无目标分支关联或多项式；从公开输入恢复。",
+          "activity_en": "Expanded input, finite-field/p-adic controls; crash recovery.",
+          "outcome_en": "No target association/polynomial; public-input restoration.",
+          "evidence_scope": "original_thread_timestamped_progress_or_tool_receipt; no_new_mathematical_replay",
+          "endpoints_are_progress_or_receipt_times": true
+        },
+        {
+          "start_relative_seconds": 29473,
+          "end_relative_seconds": 34675,
+          "approximate_duration_seconds": 5202,
+          "activity_zh": "最终512次搜索、消元和SBA控制，缩小辅助任务。",
+          "outcome_zh": "332条辅助关系数值筛选通过，有保护消元在运行。",
+          "activity_en": "Final 512-degree search, elimination/SBA controls and smaller jobs.",
+          "outcome_en": "332 auxiliary numerical screenings; guarded elimination running.",
+          "evidence_scope": "original_thread_timestamped_progress_or_tool_receipt; no_new_mathematical_replay",
+          "endpoints_are_progress_or_receipt_times": true
+        },
+        {
+          "start_relative_seconds": 34675,
+          "end_relative_seconds": 42821,
+          "approximate_duration_seconds": 8146,
+          "activity_zh": "主搜索和辅助参数搜索、恢复控制、中间式约简。",
+          "outcome_zh": "主搜索返回124，513条候选未通过；辅助128次候选也未通过。",
+          "activity_en": "Main/auxiliary searches, recovery controls and reductions.",
+          "outcome_en": "Main return 124, 513 rejected candidates; auxiliary candidates also rejected.",
+          "evidence_scope": "original_thread_timestamped_progress_or_tool_receipt; no_new_mathematical_replay",
+          "endpoints_are_progress_or_receipt_times": true
+        },
+        {
+          "start_relative_seconds": 42821,
+          "end_relative_seconds": 43118,
+          "approximate_duration_seconds": 297,
+          "activity_zh": "最后辅助搜索超时，核对所有搜索终止并关闭进程。",
+          "outcome_zh": "无基输出；计算停止，关闭退出码0，无完整证明。",
+          "activity_en": "Final auxiliary timeout, stop audit and worker closure.",
+          "outcome_en": "No basis; computation stopped, worker exit 0, no complete proof.",
+          "evidence_scope": "original_thread_timestamped_progress_or_tool_receipt; no_new_mathematical_replay",
+          "endpoints_are_progress_or_receipt_times": true
+        },
+        {
+          "start_relative_seconds": 43118,
+          "end_relative_seconds": 43200,
+          "approximate_duration_seconds": 82,
+          "activity_zh": "保持计算停止，最终答复报告失败，核对原截止。",
+          "outcome_zh": "截止内无完整有效结果。",
+          "activity_en": "Keep stopped, final failure response and deadline check.",
+          "outcome_en": "No valid complete result by deadline.",
+          "evidence_scope": "original_thread_timestamped_progress_or_tool_receipt; no_new_mathematical_replay",
+          "endpoints_are_progress_or_receipt_times": true
+        },
+        {
+          "start_relative_seconds": 43200,
+          "end_relative_seconds": 43319,
+          "approximate_duration_seconds": 119,
+          "activity_zh": "仅核对时钟、失败和连续阻碍。",
+          "outcome_zh": "Goal设为blocked，未恢复研究。",
+          "activity_en": "Clock/failure/blocker checks only.",
+          "outcome_en": "Goal blocked, research not resumed.",
+          "evidence_scope": "original_thread_timestamped_progress_or_tool_receipt; no_new_mathematical_replay",
+          "endpoints_are_progress_or_receipt_times": true
+        }
+      ],
+      "provenance": {
+        "used_existing_public_construction_and_solver_certificates": true,
+        "public_solver_commit": "089584973f41e6374ce110f6e5b5ee456df19352",
+        "public_solver_url": "https://github.com/VonEquinox/DiskCoveringSolve/tree/089584973f41e6374ce110f6e5b5ee456df19352/cover13",
+        "from_scratch_independent_discovery": false,
+        "starting_materials": "The user's goal prompt and supplied environment facts; public sources subsequently retrieved.",
+        "benchmark_materials_used_for_report_not_original_discovery": true,
+        "original_public_source_found_by_relative_seconds": 300,
+        "exact_first_discovery_time_recorded": false
+      },
+      "hardware": {
+        "measurement_scope": "Current hardware queried during report preparation; no opening hardware snapshot is available.",
+        "cpu": "AMD Ryzen 9 8945HX with Radeon Graphics",
+        "physical_cores": 16,
+        "logical_processors": 32,
+        "memory_generation": "DDR5",
+        "memory_generation_evidence": "Current SMBIOSMemoryType=34=0x22; DMTF DSP0134 3.8.0 Table 77.",
+        "memory_gib": 32,
+        "physical_memory_bytes": 34359738368,
+        "original_task_start_hardware_snapshot": null
+      },
+      "tools": {
+        "execution_location": "local_Ubuntu_WSL",
+        "remote_mathematical_compute_used": false,
+        "preinstalled": [
+          {
+            "name": "SageMath",
+            "version": "10.7",
+            "used": true,
+            "scope": "Exact polynomial/finite-field arithmetic and high-precision candidate computations; version retained in the research record."
+          },
+          {
+            "name": "Python in Sage environment",
+            "version": null,
+            "used": true,
+            "scope": "Numerical and exact orchestration; historical precise Python version not established here."
+          },
+          {
+            "name": "Singular",
+            "version": null,
+            "used": true,
+            "scope": "Intermediate polynomial ideal reduction; no final n=13 elimination certificate."
+          }
+        ],
+        "obtained_during_task": [
+          {
+            "name": "flatter",
+            "commit": "d2b8026f29b4a69e987b15d4b240f8a5053275d3",
+            "source": "https://github.com/keeganryan/flatter",
+            "used": true,
+            "scope": "Integer lattice basis reduction for candidate relations."
+          },
+          {
+            "name": "msolve",
+            "version": "0.10.1",
+            "source": "https://github.com/algebraic-solving/msolve",
+            "used": true,
+            "scope": "Polynomial system elimination and finite-field Groebner basis experiments."
+          },
+          {
+            "name": "Custom F4 checkpoint/compaction and SBA exploration code",
+            "version": null,
+            "used": true,
+            "scope": "Discovery experiments with synthetic controls; no complete final n=13 Groebner basis certified."
+          }
+        ],
+        "report_scoring_python": "3.12.3",
+        "report_scoring_python_version_is_opening_snapshot": false,
+        "historical_core_libraries": "Sage exact integer/rational/polynomial/finite-field and high-precision real arithmetic; full dependency versions not recorded.",
+        "report_score_dependencies": "Python standard library argparse, json, math, decimal"
+      },
+      "resources": {
+        "money_budget": null,
+        "money_spent": null,
+        "money_evidence": "not recorded",
+        "goal_token_counter": 2778511,
+        "goal_token_counter_definition": {
+          "label_zh": "Codex Goal 累计计数",
+          "label_en": "Codex Goal cumulative counter",
+          "owner": "Codex Goal",
+          "industry_standard_metric": false,
+          "verified_reference_implementation": "Codex 0.159.2",
+          "reference_formula": "input_tokens - cached_input_tokens + output_tokens",
+          "reasoning_tokens": "included in output_tokens; do not add again",
+          "scope": "Goal-accounted usage increments; not whole-chat total, billed tokens or monetary cost",
+          "version_note": "Historical versions follow their own implementation.",
+          "reference_source_url": "https://github.com/openai/codex/blob/rust-v0.159.2/codex-rs/ext/goal/src/accounting.rs#L527-L532"
+        },
+        "billed_tokens": null,
+        "time_budget_seconds": 43200
+      },
+      "subagents_used_in_original_solve": false,
+      "resource_rules": {
+        "prohibited_by_original_user": "Preexisting local materials, skills, other chats and archived chats; strict WSL file-access wording remained in force.",
+        "full_os_level_access_audit_available": false,
+        "comprehensive_resource_compliance_certified": false,
+        "prior_approval_denials": [
+          {
+            "action": "Read newly generated local logs/scripts and subsequent metadata attempt",
+            "stated_reason": "The approval reviewer interpreted the user's prohibition as excluding stored local files; no explicit additional authorization was provided.",
+            "additional_authorization_received": false
+          },
+          {
+            "action": "Submit in-memory polynomial equations to the public Magma service",
+            "stated_reason": "Internet access permission was not interpreted as authorization to transfer potentially sensitive research data to that third-party calculator.",
+            "additional_authorization_received": false
+          },
+          {
+            "action": "Large parallel-memory resource expansion",
+            "stated_reason": "Risk of memory exhaustion and interruption of other computation.",
+            "resolved_by": "Smaller single auxiliary jobs with own-process memory guards."
+          }
+        ],
+        "later_n12_publisher_clarification_not_retroactively_assumed_for_this_run": true,
+        "score_zero_does_not_depend_on_resource_rule_adjudication": true
+      },
+      "prompt_artifacts": [
+        {
+          "kind": "original_goal_objective",
+          "original_text_file": "n13-goal-objective.original.txt",
+          "source": "Frozen get_goal objective; exact user goal text without a chat-log export.",
+          "sha256": "dfc86a8ff759f6c54ceda6cdaaef5b6f5165b307b00b3bf0eedf1d57ec48fe74",
+          "original_text_url": "reports/n13-codex-main-prompt.original.txt"
+        }
+      ],
+      "limitations": [
+        "No complete radius minimal polynomial, irreducibility proof, rational isolating interval association or integrated final proof package.",
+        "A failed numerical relation search does not prove a degree bound, algebraic impossibility or transcendence.",
+        "Historical proof replay and checks were not re-executed during report preparation.",
+        "No opening benchmark commit, opening hardware snapshot or monetary evidence; original model identity has now been checked from runtime metadata.",
+        "No full OS-level resource-access audit. No formal ranking claim.",
+        "Original result remains a failure; report preparation and official score execution after the deadline do not alter it."
+      ],
+      "deliverables": [
+        "n13-test-report.zh.md",
+        "n13-test-record.json",
+        "n13-score-output.json",
+        "official-score.py",
+        "n13-goal-objective.original.txt",
+        "n13-task-prompt.snapshot.md",
+        "n13-report-sources.json"
+      ],
+      "source_report": {
+        "filename": "record-n13-codex-20261001.zh.md",
+        "sha256": "cbe275e9c041407778c43ab968ada3a300af462d78da97d1429f46985ca6d677",
+        "public_version": "published_report_with_web_links",
+        "full_proof_archive_public": false,
+        "original_local_report_sha256": "67d0074efb0b1028023a631ee146def6ecb8a5ab5a8a1f26f6b8e81352e3605f"
+      },
+      "model_display_note": "原Goal阶段14条一致的运行元数据已核对为gpt-6-astra／max。",
+      "model_display_note_en": "All 14 original-Goal runtime contexts consistently identify gpt-6-astra / max.",
+      "report_urls": {
+        "zh": "record-n13-codex-20261001.zh.html",
+        "en": "record-n13-codex-20261001.html"
+      },
+      "task_prompt_reference": {
+        "kind": "n13_task_post_hoc_public_snapshot",
+        "original_text_file": "n13-task-prompt.snapshot.md",
+        "source_commit": "b6cde6540abcf4dfc54a77979e5a7517d3f971cb",
+        "sha256": "40a8449594a695b1aabc1b21e894606fd7e70bb4191b252d02f44e09759e07c7",
+        "not_certified_as_original_opening_version": true
+      },
+      "publication": {
+        "authorized_by_user": true,
+        "original_score_unchanged": true,
+        "mathematics_replayed_for_publication": false
+      },
+      "published_artifacts": {
+        "zh": "record-n13-codex-20261001.zh.html",
+        "en": "record-n13-codex-20261001.html",
+        "record": "record-n13-codex-20261001.json",
+        "original_prompt": "reports/n13-codex-main-prompt.original.txt",
+        "score_output": "https://github.com/pikaaa345/disk-covering-benchmark/blob/main/results/n13-score-output.json"
+      },
+      "model_identity_status": "verified_from_original_thread_runtime_metadata",
+      "original_report_cutoff_relative_seconds": 45029,
+      "original_report_cutoff_relative": "T+12:30:29",
+      "model_identity_verification": {
+        "source": "original_thread_turn_context_runtime_metadata",
+        "user_authorized_retrospective_review": true,
+        "matching_contexts": 14,
+        "all_contexts_consistent": true,
+        "reporting_models_not_substituted": true,
+        "private_transcript_published": false
+      },
+      "report_revision": {
+        "date": "2026-10-02",
+        "format_reference": "record-n11-astra-20260930",
+        "model_corrected": true,
+        "previous_model_display": "codex/unknown",
+        "timeline_reconstructed_from_original_thread": true,
+        "math_restarted": false,
+        "original_score_unchanged": true
+      }
+    }
+  ]
+}

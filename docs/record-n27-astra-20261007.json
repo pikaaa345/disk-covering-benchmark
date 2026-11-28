@@ -1,0 +1,90 @@
+{
+  "schema": "diskcover-public-test-reports-v1",
+  "n": 27,
+  "report_scope": "Single failed-run retrospective report; mathematical answers and internal solving details withheld.",
+  "records_comparable": false,
+  "records": [
+    {
+      "record_id": "n27-astra-20261007",
+      "test_id": "T_20261007T025113Z_01a11444",
+      "model": "gpt-6 astra/max",
+      "model_id": "gpt-6-astra",
+      "reasoning_effort": "max",
+      "model_identity_evidence": "All 12 original-test turn_context records agree; retrospective inspection explicitly authorized by the user.",
+      "test_date_utc": "2026-10-07",
+      "report_date": "2026-10-08",
+      "status": "not_completed",
+      "failure_reason": "No complete unconditional global optimality proof by the original 12-hour deadline; all requirements not met.",
+      "runs": 1,
+      "score": "0",
+      "score_scope": "benchmark_failure_score",
+      "acceptance_status": "failed_no_complete_valid_result_by_deadline",
+      "elapsed_seconds": "43200",
+      "timing_scope": "fixed_deadline_observation_window_not_completion_time",
+      "valid_completion_elapsed_seconds": null,
+      "main_system_accumulated_seconds": "32939",
+      "natural_seconds_through_failure_confirmation": "46481.201",
+      "timeline_clock": "natural_elapsed_since_original_goal_creation",
+      "original_budget_seconds": "43200",
+      "valid_result_within_original_time_budget": false,
+      "failure_confirmation_relative": "T+12:54:41",
+      "goal_accounting_counter": 2435247,
+      "cost": null,
+      "answer_sha256": null,
+      "answer_hash_matches": null,
+      "formal_ranking": false,
+      "hardware": {
+        "cpu": "AMD Ryzen 9 8945HX with Radeon Graphics",
+        "memory_ddr": "DDR5",
+        "memory_gib": 32,
+        "logical_processors": 32,
+        "evidence_scope": "current reporting-time CIM query, not a task-start snapshot"
+      },
+      "verification_scope": "Retrospective assessment of saved partial verification; no new mathematical proof replay; official failure scoring executed.",
+      "requirements": {
+        "optimal_radius_identification": "incomplete",
+        "candidate_exact_center_data": "saved_original_verified_materials",
+        "candidate_full_disk_coverage": "saved_original_verified_materials",
+        "unconditional_global_optimality": "incomplete",
+        "complete_final_proof_package": "incomplete"
+      },
+      "score_output": {
+        "status": "not_completed",
+        "score": "0",
+        "reference_seconds": "21600",
+        "elapsed_seconds": "43200",
+        "budget_seconds": "43200",
+        "budget_specified": true,
+        "n": 27,
+        "fixed_12_hour_limit_applies": true,
+        "scoring_version": "diskcover-log-score-v1",
+        "score_formula": "round_half_up(200 + 100 * log2(reference_time_seconds / elapsed_seconds))",
+        "score_rounding": "decimal_ROUND_HALF_UP_integer",
+        "deadline_inclusive": true,
+        "completion_independently_verified": false
+      },
+      "prompt_artifacts": [
+        {
+          "original_text_url": "reports/n27-astra-main-prompt.original.txt",
+          "sha256": "9e8a7bf974f55ae5f11ebf168c6ec44552467b9741397c4e96a1d9a2eb9f3e9f",
+          "preserve_original_bytes": true
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://pikaaa345.github.io/disk-covering-benchmark/n27.html?lang=en",
+          "use": "Original benchmark task"
+        },
+        {
+          "url": "https://github.com/VonEquinox/DiskCoveringSolve/tree/089584973f41e6374ce110f6e5b5ee456df19352",
+          "use": "Public background and program reference, not a complete delivered n27 proof"
+        }
+      ],
+      "additional_tasks": {
+        "reporting_and_publication_separate": true,
+        "included_in_successful_completion_time": false,
+        "mathematical_compute_restarted": false
+      }
+    }
+  ]
+}

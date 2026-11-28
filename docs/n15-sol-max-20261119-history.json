@@ -1,0 +1,37 @@
+{
+  "schema": "diskcover-public-test-reports-v1",
+  "n": 15,
+  "report_scope": "One self-reported twelve-hour test with matching reference fingerprint and original verification logs.",
+  "records_comparable": false,
+  "records": [
+    {
+      "model": "gpt-6.2 sol/max",
+      "status": "reported",
+      "score": 207,
+      "elapsed_seconds": 20567.922,
+      "time_limit_label": "12h",
+      "acceptance_status": "self_reported_completed",
+      "verification_status": "reference_fingerprint_match; original_verifier_logs_reviewed",
+      "report_url": "record-n15-sol-max-20261119.zh.html",
+      "report_url_en": "record-n15-sol-max-20261119.html",
+      "record_id": "n15-sol-max-20261119",
+      "test_id": "T_20261119T104331Z_01a1f367",
+      "model_id": "gpt-6.2-sol",
+      "reasoning_effort": "max",
+      "test_date_utc": "2026-11-19",
+      "runs": 1,
+      "test_limit_seconds": 43200,
+      "reference_seconds": 21600,
+      "timing_scope": "Original Codex task start to task completion, 20567.922 seconds.",
+      "score_scope": "Self-reported completion scored under diskcover-log-score-v1.",
+      "formal_ranking": false,
+      "paid_cost": null,
+      "answer_verification": {
+        "protocol": "diskcover-minpoly-v1",
+        "fingerprint_matches": true,
+        "sha256": "27d58d1f801408165315e66d2d9fcc823b76aa5531581432c84c31dbbe163335"
+      },
+      "prompt_artifacts": []
+    }
+  ]
+}

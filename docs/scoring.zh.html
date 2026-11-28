@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="zh-CN" data-page="scoring">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>计分与计时 · 单位圆盘覆盖测试</title>
+  <script src="language.js"></script>
+  <script src="navigation.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="alternate" hreflang="zh-CN" href="scoring.zh.html"><link rel="alternate" hreflang="en" href="scoring.html">
+  <script src="vendor/marked.js" defer></script>
+  <script src="vendor/dompurify.js" defer></script>
+  <script src="math-config.js" defer></script>
+  <script src="vendor/mathjax-tex-svg-full.js" defer></script>
+  <script src="prompt-render.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header" data-menu-open="false"><div class="site-header-inner"><a class="site-brand" href="index.zh.html" title="返回网站首页" aria-label="返回网站首页"><svg class="site-brand-mark" viewBox="0 0 32 32" aria-hidden="true" fill="none"><circle cx="16" cy="16" r="14.3" stroke="currentColor" stroke-width="1.5"/><g stroke="currentColor" stroke-width="1.1" opacity=".65"><circle cx="11" cy="12" r="8"/><circle cx="21" cy="12" r="8"/><circle cx="16" cy="21" r="8"/></g></svg><span class="site-brand-copy"><span class="site-brand-title">AI圆盘测试</span><span class="site-brand-subtitle">模型研究级数学能力测试</span></span></a><button class="site-menu-toggle" type="button" aria-controls="site-menu" aria-expanded="false" aria-label="打开导航菜单" data-open-label="打开导航菜单" data-close-label="关闭导航菜单" hidden><svg class="menu-icon-open" viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14"/></svg><svg class="menu-icon-close" viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15"/></svg><span>菜单</span></button><div class="site-menu-panel" id="site-menu"><nav class="site-navigation" aria-label="主要导航"><a class="site-nav-link" href="index.zh.html">题目</a><a class="site-nav-link" href="guide.zh.html">测试指南</a><a class="site-nav-link" href="scoring.zh.html" aria-current="page">评分</a><a class="site-nav-link" href="records.zh.html">测试记录</a><a class="site-nav-link" href="about.zh.html">关于项目</a></nav><div class="site-header-actions"><a class="repository-link" href="https://github.com/pikaaa345/disk-covering-benchmark" aria-label="打开 GitHub 仓库">GitHub 仓库<svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13"/></svg></a><nav class="language-switch" aria-label="语言"><a href="scoring.html?lang=en" data-language="en" lang="en">English</a><a href="scoring.zh.html?lang=zh" data-language="zh" lang="zh-CN" aria-current="page">中文</a></nav></div></div></div></header>
+<main>
+  <script id="page-config" type="application/json">{"language":"zh","referenceSha256":null}</script>
+  <p class="back"><a href="index.zh.html">单位圆盘覆盖测试</a> · <a href="about.zh.html">项目说明</a></p>
+  <div class="prompt-heading"><h1>计分与计时</h1><div><button id="copy-prompt" class="copy">复制全文</button><span id="copy-status" class="status" role="status"></span></div></div>
+  <div id="prompt-markdown" class="markdown-body" data-article="true" data-format="markdown"><pre class="prompt-fallback"># 计分与计时
+
+当前为历史演示方案，尚未冻结可用于正式比较的统一测试合同。
+
+## 评分标准与基准线
+
+**分数越高越好。当前 n=11 历史展示采用6小时（21600秒）作为参考时间：6小时有效完成＝200分；用时减半加100分，用时翻倍减100分。**
+
+$$
+S=\operatorname{RoundHalfUp}\!\left(200+100\log_2\frac{T_{\mathrm{ref}}}{T}\right).
+$$
+
+$T_{\mathrm{ref}}$ 是该题事先公布的参考时间，$T$ 是取得符合约定验收要求的有效结果的实际用时，两者单位相同。分数按 `ROUND_HALF_UP` 四舍五入为整数，不封顶。每道题以其公布的参考时间为准；6小时基准不代表每个 n 都同样困难，也不自动成为其他题目的正式基准。
+
+### 时间—分数对照表（参考时间6小时）
+
+下表是假设有效完成的公式换算，不是模型实测成绩；若该次测试约定了更短预算，还须满足该预算。
+
+| 有效完成用时 | 分数 |
+|---|---:|
+| 12小时 | 100 |
+| 9小时 | 142 |
+| 7小时 | 178 |
+| 6小时30分钟 | 188 |
+| 6小时（基准线） | 200 |
+| 3小时 | 300 |
+| 2小时 | 358 |
+| 1小时 | 458 |
+| 30分钟 | 558 |
+| 10分钟 | 717 |
+| 5分钟 | 817 |
+| 3分钟 | 891 |
+| 1分钟 | 1049 |
+| 超过12小时；失败或在截止时刻内无有效结果 | 0 |
+| 未测试 | 未测试 |
+
+**恰好12小时有效完成：100分；超过12小时，即使后来完成也为0分。**
+
+## n≤30 的固定时限
+
+每道 n≤30 的题目时限为12小时（43200秒）。超过12小时仍未取得符合该题验收要求的有效结果，计0分；超时后完成仍计0分。截止时刻包含在允许用时内，即有效完成时间 T≤43200秒。未测试保持“未测试”，不记0分。此规则在每道题页面和机器可读数据中显示，未来新增 n≤30 的页面自动沿用；n&gt;30 的时限另行确定。
+
+## 同一题的效率指数
+
+完成条件满足且在预算内完成时，S = RoundHalfUp(200 + 100 × log₂(T_ref / T))。两种时间用相同单位，T必须为正；输出按 ROUND_HALF_UP 四舍五入为整数。越快越高，不封顶。T_ref 是预先冻结的尺度，不是题目难度的自动估计。
+
+| 状态 | 显示 |
+|---|---|
+| 按合同完成且在预算内 | 效率指数 |
+| 失败或超时 | 0，同时标注原因 |
+| 未测试 | 未测试 |
+| 哈希未发布 | 可记录过程和自算指纹，匹配状态为待核对 |
+| 历史记录未满足当前合同或计时口径不同 | 历史演示，不进入正式排名 |
+
+脚本不会判断完成条件或证明是否有效。发布者须先判断，再填写状态。答案匹配和完整证明的验收是两种不同合同，不能合并排名。
+
+~~~text
+python tools/score.py --n 11 --reference-seconds 21600 --elapsed-seconds 180 --status completed
+~~~
+
+示例得891，属于算式演示。n≤30 自动执行12小时上限；省略 `--n` 也默认12小时。`--budget-seconds` 可设置更短预算，不能延长 n≤30 的上限。显式传入 n&gt;30 时不自动指定预算，须按该题合同填写。脚本不认证完成条件。
+
+## 时间口径
+
+正式测试宜从任务投递到取得全部验收交付物计自然经过时间，包含模型思考、程序运行、等待与核验。任务系统累计耗时单独保留，不能冒充自然经过时间。
+
+独立追加任务单独计时；若是完成同一验收所必需的阶段，应按相同时间口径汇总，排除两任务间空档，不混用系统累计时间和自然时间。并行程序的运行时间不能相加当作总任务时间。数学交付完成时间与指纹核对完成时间分别记录，合同应明确分数截止到哪个节点。
+
+测试允许只运行一次。记录次数、费用和失败，不强制昂贵的十次平均；只有一次结果时，不能推断成功率或几十分钟差距的统计显著性。
+
+## 发布前仍需确定
+
+每题的标准哈希、完成条件、参考时间、起止节点、允许起始材料与工具、联网规则、硬件与成本披露；n&gt;30 的最长预算另定。跨题汇总与多次运行策略以后另定；当前不生成跨 n 或跨成本综合分数。</pre></div>
+  <pre id="test-prompt" hidden># 计分与计时
+
+当前为历史演示方案，尚未冻结可用于正式比较的统一测试合同。
+
+## 评分标准与基准线
+
+**分数越高越好。当前 n=11 历史展示采用6小时（21600秒）作为参考时间：6小时有效完成＝200分；用时减半加100分，用时翻倍减100分。**
+
+$$
+S=\operatorname{RoundHalfUp}\!\left(200+100\log_2\frac{T_{\mathrm{ref}}}{T}\right).
+$$
+
+$T_{\mathrm{ref}}$ 是该题事先公布的参考时间，$T$ 是取得符合约定验收要求的有效结果的实际用时，两者单位相同。分数按 `ROUND_HALF_UP` 四舍五入为整数，不封顶。每道题以其公布的参考时间为准；6小时基准不代表每个 n 都同样困难，也不自动成为其他题目的正式基准。
+
+### 时间—分数对照表（参考时间6小时）
+
+下表是假设有效完成的公式换算，不是模型实测成绩；若该次测试约定了更短预算，还须满足该预算。
+
+| 有效完成用时 | 分数 |
+|---|---:|
+| 12小时 | 100 |
+| 9小时 | 142 |
+| 7小时 | 178 |
+| 6小时30分钟 | 188 |
+| 6小时（基准线） | 200 |
+| 3小时 | 300 |
+| 2小时 | 358 |
+| 1小时 | 458 |
+| 30分钟 | 558 |
+| 10分钟 | 717 |
+| 5分钟 | 817 |
+| 3分钟 | 891 |
+| 1分钟 | 1049 |
+| 超过12小时；失败或在截止时刻内无有效结果 | 0 |
+| 未测试 | 未测试 |
+
+**恰好12小时有效完成：100分；超过12小时，即使后来完成也为0分。**
+
+## n≤30 的固定时限
+
+每道 n≤30 的题目时限为12小时（43200秒）。超过12小时仍未取得符合该题验收要求的有效结果，计0分；超时后完成仍计0分。截止时刻包含在允许用时内，即有效完成时间 T≤43200秒。未测试保持“未测试”，不记0分。此规则在每道题页面和机器可读数据中显示，未来新增 n≤30 的页面自动沿用；n&gt;30 的时限另行确定。
+
+## 同一题的效率指数
+
+完成条件满足且在预算内完成时，S = RoundHalfUp(200 + 100 × log₂(T_ref / T))。两种时间用相同单位，T必须为正；输出按 ROUND_HALF_UP 四舍五入为整数。越快越高，不封顶。T_ref 是预先冻结的尺度，不是题目难度的自动估计。
+
+| 状态 | 显示 |
+|---|---|
+| 按合同完成且在预算内 | 效率指数 |
+| 失败或超时 | 0，同时标注原因 |
+| 未测试 | 未测试 |
+| 哈希未发布 | 可记录过程和自算指纹，匹配状态为待核对 |
+| 历史记录未满足当前合同或计时口径不同 | 历史演示，不进入正式排名 |
+
+脚本不会判断完成条件或证明是否有效。发布者须先判断，再填写状态。答案匹配和完整证明的验收是两种不同合同，不能合并排名。
+
+~~~text
+python tools/score.py --n 11 --reference-seconds 21600 --elapsed-seconds 180 --status completed
+~~~
+
+示例得891，属于算式演示。n≤30 自动执行12小时上限；省略 `--n` 也默认12小时。`--budget-seconds` 可设置更短预算，不能延长 n≤30 的上限。显式传入 n&gt;30 时不自动指定预算，须按该题合同填写。脚本不认证完成条件。
+
+## 时间口径
+
+正式测试宜从任务投递到取得全部验收交付物计自然经过时间，包含模型思考、程序运行、等待与核验。任务系统累计耗时单独保留，不能冒充自然经过时间。
+
+独立追加任务单独计时；若是完成同一验收所必需的阶段，应按相同时间口径汇总，排除两任务间空档，不混用系统累计时间和自然时间。并行程序的运行时间不能相加当作总任务时间。数学交付完成时间与指纹核对完成时间分别记录，合同应明确分数截止到哪个节点。
+
+测试允许只运行一次。记录次数、费用和失败，不强制昂贵的十次平均；只有一次结果时，不能推断成功率或几十分钟差距的统计显著性。
+
+## 发布前仍需确定
+
+每题的标准哈希、完成条件、参考时间、起止节点、允许起始材料与工具、联网规则、硬件与成本披露；n&gt;30 的最长预算另定。跨题汇总与多次运行策略以后另定；当前不生成跨 n 或跨成本综合分数。</pre>
+  
+</main></body>
+</html>

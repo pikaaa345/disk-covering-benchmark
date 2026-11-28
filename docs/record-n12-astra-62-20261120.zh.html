@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="zh-CN" data-page="record-n12-astra-62-20261120">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>n=12 · gpt-6.2 astra/max 测试报告 · 单位圆盘覆盖测试</title>
+  <script src="language.js"></script>
+  <script src="navigation.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="alternate" hreflang="zh-CN" href="record-n12-astra-62-20261120.zh.html"><link rel="alternate" hreflang="en" href="record-n12-astra-62-20261120.html">
+  <link rel="alternate" type="application/json" href="record-n12-astra-62-20261120.json">
+  <script src="vendor/marked.js" defer></script>
+  <script src="vendor/dompurify.js" defer></script>
+  <script src="math-config.js" defer></script>
+  <script src="vendor/mathjax-tex-svg-full.js" defer></script>
+  <script src="prompt-render.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header" data-menu-open="false"><div class="site-header-inner"><a class="site-brand" href="index.zh.html" title="返回网站首页" aria-label="返回网站首页"><svg class="site-brand-mark" viewBox="0 0 32 32" aria-hidden="true" fill="none"><circle cx="16" cy="16" r="14.3" stroke="currentColor" stroke-width="1.5"/><g stroke="currentColor" stroke-width="1.1" opacity=".65"><circle cx="11" cy="12" r="8"/><circle cx="21" cy="12" r="8"/><circle cx="16" cy="21" r="8"/></g></svg><span class="site-brand-copy"><span class="site-brand-title">AI圆盘测试</span><span class="site-brand-subtitle">模型研究级数学能力测试</span></span></a><button class="site-menu-toggle" type="button" aria-controls="site-menu" aria-expanded="false" aria-label="打开导航菜单" data-open-label="打开导航菜单" data-close-label="关闭导航菜单" hidden><svg class="menu-icon-open" viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14"/></svg><svg class="menu-icon-close" viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15"/></svg><span>菜单</span></button><div class="site-menu-panel" id="site-menu"><nav class="site-navigation" aria-label="主要导航"><a class="site-nav-link" href="index.zh.html">题目</a><a class="site-nav-link" href="guide.zh.html">测试指南</a><a class="site-nav-link" href="scoring.zh.html">评分</a><a class="site-nav-link" href="records.zh.html" aria-current="true">测试记录</a><a class="site-nav-link" href="about.zh.html">关于项目</a></nav><div class="site-header-actions"><a class="repository-link" href="https://github.com/pikaaa345/disk-covering-benchmark" aria-label="打开 GitHub 仓库">GitHub 仓库<svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13"/></svg></a><nav class="language-switch" aria-label="语言"><a href="record-n12-astra-62-20261120.html?lang=en" data-language="en" lang="en">English</a><a href="record-n12-astra-62-20261120.zh.html?lang=zh" data-language="zh" lang="zh-CN" aria-current="page">中文</a></nav></div></div></div></header>
+<main>
+  <script id="page-config" type="application/json">{"language":"zh","referenceSha256":null}</script>
+  <p class="back"><a href="index.zh.html">单位圆盘覆盖测试</a> · <a href="n12.zh.html">n = 12</a></p>
+  <div class="prompt-heading"><h1>n=12 · gpt-6.2 astra/max 测试报告</h1><div><button id="copy-prompt" class="copy">复制全文</button><span id="copy-status" class="status" role="status"></span></div></div>
+  <div id="prompt-markdown" class="markdown-body" data-article="true" data-format="markdown"><pre class="prompt-fallback"># n=12 · gpt-6.2 astra/max 测试报告
+
+[返回 n=12 题目](n12.zh.html?lang=zh) · [测试记录](records.zh.html)
+
+本次测试要求确定用十二个全等闭圆盘覆盖单位闭圆盘的最小半径。模型在十二小时时限内交付计算机辅助证明包，提交的答案指纹与公开参考匹配。按历史效率公式计 **671 分**。
+
+### 证明来源与本次模型工作
+
+本次复用了 VonEquinox 在提交 `089584973f41e6374ce110f6e5b5ee456df19352` 发布的构型和几何证书，并重放全部八个验证模块。模型另外推导最小多项式，并以独立的精确计算核验不可约性、根隔离和三角剖分计数。[公开几何证明包](https://github.com/VonEquinox/DiskCoveringSolve/tree/089584973f41e6374ce110f6e5b5ee456df19352/cover12)
+
+### 任务要求与判定标准
+
+题目要求给出最优半径的本原整数最小多项式、有理隔离区间及根的识别证明、十二个精确有序圆心、连续覆盖与任意圆心组下界。依赖计算的证明还须交付代码、证书和重放结果。测试允许网络资料和当次工作目录内的材料。用户禁止使用已有本地研究资料及技能。[完整题面](n12.zh.html?lang=zh)
+
+### 测试信息与时间口径
+
+| 项目 | 记录 |
+| --- | --- |
+| 测试编号 | `T_20261120T001824Z_01a1f651` |
+| 模型 | 原求解回合记录为 `gpt-6.2-astra / max` |
+| 测试日期（UTC） | 2026-11-20 |
+| 测试时限 | 12 小时 |
+| 独立测试次数 | 1 次 |
+| 测试启动（UTC） | 00:18:24.237 |
+| 最终答复完成（UTC） | 00:32:11.024 |
+| 计分用时 | 自然经过 826.787 秒，即 13 分 46.787 秒 |
+| Goal 运行计量 | 782 秒 |
+| 网站成绩 | **671 分** |
+| 实际费用 | 未取得 |
+
+计分以六小时为基准，采用原始测试启动与答复完成事件之间的间隔。归档与网站发布另计。正式比较合同仍未统一冻结。
+
+### 计算条件与使用量
+
+| 项目 | 记录范围 |
+| --- | --- |
+| 运行环境 | Windows x64 上的 Codex Desktop，CPython 3.13.13 |
+| 计算口径 | Python 精确整数、有理数运算，以及符号与有限域核验 |
+| Goal 用量 | 原求解 Goal 为 167,040 token |
+| 测试完成时的线程累计用量 | 输入 3,802,240，其中缓存输入 3,664,384。输出 33,344，总计 3,835,584 token |
+
+### 主要研究阶段
+
+| 阶段 | 工作 | 结果 |
+| --- | --- | --- |
+| 资料与构型 | 读取原题与公开几何证书 | 获得精确有序圆心与代数根盒 |
+| 覆盖与全局下界 | 重放八个模块，验证连续覆盖并排除更小覆盖 | 核验 31 个三角形、9 个圆弓形及 38,208 个拓扑轨道 |
+| 半径代数 | 消去构型参数，隔离半径根并证明不可约性 | 得到 37 次最小多项式和有理隔离区间 |
+| 独立复核 | 递推剖分数量并核对答案指纹 | 独立计数一致，指纹与参考匹配 |
+
+### 路线变化与问题
+
+检索工具未能直接打开原题链接。随后以直接请求读取公开题页，并随档案保存当时下载的英文题面。几何重放与多项式推导分别执行。探索脚本曾遇到导入路径问题，修复后完成了最终代数核验。
+
+### 验证、交付与限制
+
+原交付包含数学归约、精确圆心、多项式全部系数、根隔离、代码及证书。日志记录了全部拓扑类别的精确检查，也包括最后一个轨道上的能量下界证明。官方脚本核验的字段为系数序列与舍入后的半径。数学依据见证明包及其重放日志。
+
+### 归档与可下载记录
+
+项目档案保存可取得的对话、运行元数据和原证明包。网站提供测试报告与机器可读记录。对话按可取得的运行字段作部分导出。
+
+[机器可读记录](record-n12-astra-62-20261120.json) · [报告 Markdown](record-n12-astra-62-20261120.zh.md) · [n=12 本次记录索引](n12-astra-62-20261120-history.json)
+</pre></div>
+  <pre id="test-prompt" hidden># n=12 · gpt-6.2 astra/max 测试报告
+
+[返回 n=12 题目](n12.zh.html?lang=zh) · [测试记录](records.zh.html)
+
+本次测试要求确定用十二个全等闭圆盘覆盖单位闭圆盘的最小半径。模型在十二小时时限内交付计算机辅助证明包，提交的答案指纹与公开参考匹配。按历史效率公式计 **671 分**。
+
+### 证明来源与本次模型工作
+
+本次复用了 VonEquinox 在提交 `089584973f41e6374ce110f6e5b5ee456df19352` 发布的构型和几何证书，并重放全部八个验证模块。模型另外推导最小多项式，并以独立的精确计算核验不可约性、根隔离和三角剖分计数。[公开几何证明包](https://github.com/VonEquinox/DiskCoveringSolve/tree/089584973f41e6374ce110f6e5b5ee456df19352/cover12)
+
+### 任务要求与判定标准
+
+题目要求给出最优半径的本原整数最小多项式、有理隔离区间及根的识别证明、十二个精确有序圆心、连续覆盖与任意圆心组下界。依赖计算的证明还须交付代码、证书和重放结果。测试允许网络资料和当次工作目录内的材料。用户禁止使用已有本地研究资料及技能。[完整题面](n12.zh.html?lang=zh)
+
+### 测试信息与时间口径
+
+| 项目 | 记录 |
+| --- | --- |
+| 测试编号 | `T_20261120T001824Z_01a1f651` |
+| 模型 | 原求解回合记录为 `gpt-6.2-astra / max` |
+| 测试日期（UTC） | 2026-11-20 |
+| 测试时限 | 12 小时 |
+| 独立测试次数 | 1 次 |
+| 测试启动（UTC） | 00:18:24.237 |
+| 最终答复完成（UTC） | 00:32:11.024 |
+| 计分用时 | 自然经过 826.787 秒，即 13 分 46.787 秒 |
+| Goal 运行计量 | 782 秒 |
+| 网站成绩 | **671 分** |
+| 实际费用 | 未取得 |
+
+计分以六小时为基准，采用原始测试启动与答复完成事件之间的间隔。归档与网站发布另计。正式比较合同仍未统一冻结。
+
+### 计算条件与使用量
+
+| 项目 | 记录范围 |
+| --- | --- |
+| 运行环境 | Windows x64 上的 Codex Desktop，CPython 3.13.13 |
+| 计算口径 | Python 精确整数、有理数运算，以及符号与有限域核验 |
+| Goal 用量 | 原求解 Goal 为 167,040 token |
+| 测试完成时的线程累计用量 | 输入 3,802,240，其中缓存输入 3,664,384。输出 33,344，总计 3,835,584 token |
+
+### 主要研究阶段
+
+| 阶段 | 工作 | 结果 |
+| --- | --- | --- |
+| 资料与构型 | 读取原题与公开几何证书 | 获得精确有序圆心与代数根盒 |
+| 覆盖与全局下界 | 重放八个模块，验证连续覆盖并排除更小覆盖 | 核验 31 个三角形、9 个圆弓形及 38,208 个拓扑轨道 |
+| 半径代数 | 消去构型参数，隔离半径根并证明不可约性 | 得到 37 次最小多项式和有理隔离区间 |
+| 独立复核 | 递推剖分数量并核对答案指纹 | 独立计数一致，指纹与参考匹配 |
+
+### 路线变化与问题
+
+检索工具未能直接打开原题链接。随后以直接请求读取公开题页，并随档案保存当时下载的英文题面。几何重放与多项式推导分别执行。探索脚本曾遇到导入路径问题，修复后完成了最终代数核验。
+
+### 验证、交付与限制
+
+原交付包含数学归约、精确圆心、多项式全部系数、根隔离、代码及证书。日志记录了全部拓扑类别的精确检查，也包括最后一个轨道上的能量下界证明。官方脚本核验的字段为系数序列与舍入后的半径。数学依据见证明包及其重放日志。
+
+### 归档与可下载记录
+
+项目档案保存可取得的对话、运行元数据和原证明包。网站提供测试报告与机器可读记录。对话按可取得的运行字段作部分导出。
+
+[机器可读记录](record-n12-astra-62-20261120.json) · [报告 Markdown](record-n12-astra-62-20261120.zh.md) · [n=12 本次记录索引](n12-astra-62-20261120-history.json)
+</pre>
+</main></body>
+</html>

@@ -1,0 +1,37 @@
+{
+  "schema": "diskcover-public-test-reports-v1",
+  "n": 15,
+  "report_scope": "One self-reported twelve-hour benchmark run with a matching answer fingerprint and recorded certificate replay.",
+  "records_comparable": false,
+  "records": [
+    {
+      "model": "gpt-6.2 astra/max",
+      "status": "reported",
+      "score": 261,
+      "elapsed_seconds": 14127,
+      "time_limit_label": "12h",
+      "acceptance_status": "self_reported_completed",
+      "verification_status": "reference_fingerprint_match; submitted_certificate_replayed",
+      "report_url": "record-n15-astra-max-20261119.zh.html",
+      "report_url_en": "record-n15-astra-max-20261119.html",
+      "record_id": "n15-astra-max-20261119",
+      "test_id": "T_20261119T030604Z_01a1f1c4",
+      "model_id": "gpt-6.2-astra",
+      "reasoning_effort": "max",
+      "test_date_utc": "2026-11-19",
+      "runs": 1,
+      "test_limit_seconds": 43200,
+      "reference_seconds": 21600,
+      "timing_scope": "Solving Goal elapsed time. Natural thread wall time was 14162.982 seconds.",
+      "score_scope": "Self-reported completion scored under diskcover-log-score-v1.",
+      "formal_ranking": false,
+      "paid_cost": null,
+      "answer_verification": {
+        "protocol": "diskcover-minpoly-v1",
+        "fingerprint_matches": true,
+        "sha256": "27d58d1f801408165315e66d2d9fcc823b76aa5531581432c84c31dbbe163335"
+      },
+      "prompt_artifacts": []
+    }
+  ]
+}

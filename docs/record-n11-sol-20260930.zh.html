@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="zh-CN" data-page="record-n11-sol-20260930">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>n=11 · gpt-6.1 sol/max 测试报告 · 单位圆盘覆盖测试</title>
+  <script src="language.js"></script>
+  <script src="navigation.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="alternate" hreflang="zh-CN" href="record-n11-sol-20260930.zh.html"><link rel="alternate" hreflang="en" href="record-n11-sol-20260930.html">
+  <link rel="alternate" type="application/json" href="record-n11-sol-20260930.json">
+  <script src="vendor/marked.js" defer></script>
+  <script src="vendor/dompurify.js" defer></script>
+  <script src="math-config.js" defer></script>
+  <script src="vendor/mathjax-tex-svg-full.js" defer></script>
+  <script src="prompt-render.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header" data-menu-open="false"><div class="site-header-inner"><a class="site-brand" href="index.zh.html" title="返回网站首页" aria-label="返回网站首页"><svg class="site-brand-mark" viewBox="0 0 32 32" aria-hidden="true" fill="none"><circle cx="16" cy="16" r="14.3" stroke="currentColor" stroke-width="1.5"/><g stroke="currentColor" stroke-width="1.1" opacity=".65"><circle cx="11" cy="12" r="8"/><circle cx="21" cy="12" r="8"/><circle cx="16" cy="21" r="8"/></g></svg><span class="site-brand-copy"><span class="site-brand-title">AI圆盘测试</span><span class="site-brand-subtitle">模型研究级数学能力测试</span></span></a><button class="site-menu-toggle" type="button" aria-controls="site-menu" aria-expanded="false" aria-label="打开导航菜单" data-open-label="打开导航菜单" data-close-label="关闭导航菜单" hidden><svg class="menu-icon-open" viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14"/></svg><svg class="menu-icon-close" viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15"/></svg><span>菜单</span></button><div class="site-menu-panel" id="site-menu"><nav class="site-navigation" aria-label="主要导航"><a class="site-nav-link" href="index.zh.html">题目</a><a class="site-nav-link" href="guide.zh.html">测试指南</a><a class="site-nav-link" href="scoring.zh.html">评分</a><a class="site-nav-link" href="records.zh.html" aria-current="true">测试记录</a><a class="site-nav-link" href="about.zh.html">关于项目</a></nav><div class="site-header-actions"><a class="repository-link" href="https://github.com/pikaaa345/disk-covering-benchmark" aria-label="打开 GitHub 仓库">GitHub 仓库<svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13"/></svg></a><nav class="language-switch" aria-label="语言"><a href="record-n11-sol-20260930.html?lang=en" data-language="en" lang="en">English</a><a href="record-n11-sol-20260930.zh.html?lang=zh" data-language="zh" lang="zh-CN" aria-current="page">中文</a></nav></div></div></div></header>
+<main>
+  <script id="page-config" type="application/json">{"language":"zh","referenceSha256":null}</script>
+  <p class="back"><a href="index.zh.html">单位圆盘覆盖测试</a> · <a href="n11.zh.html">n = 11</a></p>
+  <div class="prompt-heading"><h1>n=11 · gpt-6.1 sol/max 测试报告</h1><div><button id="copy-prompt" class="copy">复制全文</button><span id="copy-status" class="status" role="status"></span></div></div>
+  <div id="prompt-markdown" class="markdown-body" data-article="true" data-format="markdown"><pre class="prompt-fallback"># n=11 · gpt-6.1 sol/max 测试报告
+
+[返回 n=11](n11.zh.html) · [测试记录目录](records.zh.html)
+
+本次测试发生于 2026-09-30（UTC），最初限时 60 分钟且未按时完成，之后获准继续研究。原题只要求非零整系数多项式，当前题面另要求最小多项式及不可约性证明；历史记录不自动视为当前题面的正式通过。下文依据已有报告与日志整理，本次网页更新未重新运行数学证明。最优半径、系数、根隔离端点和证明包仍未公开。
+
+### 已有证明的来源与本次模型工作
+
+**本次使用了网上已有的、可复核的 n=11 最优半径计算机辅助证明材料。候选构型、全盘覆盖证书和排除任意更优构型的全局最优性证书，来自外部项目，并非该模型在本次测试中独立发现。**
+
+来源是 [VonEquinox / DiskCoveringSolve 的固定版本证明包](https://github.com/VonEquinox/DiskCoveringSolve/tree/089584973f41e6374ce110f6e5b5ee456df19352/cover11/proof_bundle)，提交 `089584973f41e6374ce110f6e5b5ee456df19352`。取得的材料包括 110 元 KKT 候选根证书、全盘覆盖证明、一般构型的 Voronoi 约化与完整组合枚举，以及应力、连续分支和局部下界证书及验证代码。这里复用了整套最优性证明材料，不只是参考一个数值候选；原仓库的完成声明本身不作为证明，历史记录另有实际重放结果。
+
+本次模型完成的是检索、审查和重放已有材料，补全显式半径多项式、圆心代数数据及其与已认证根的严格连接，并整理交付。因此，这条记录展示的是使用外部已有证明后的研究与代数补全表现，不能表述为模型从零独立发现了完整最优性证明。
+
+SOL 至迟在 T+00:58:13 保存首轮收据时已取得该来源的176个公开文件，核对哈希并运行通过十四项验证。首次找到和取得材料的精确时刻未记录；首个58分13秒还包含整数关系搜索等工作，不能全部算成纯验证用时。首轮十四项顺序检查的程序计时合计约14分12秒；最后一轮约14分1秒。它们不包含全部下载、装载和审查开销，也不能相加充当任务总用时。后续主要补足显式代数数据与严格连接；这份原交付尚未认证不可约性。
+
+### 任务与时间
+
+| 口径 | 记录 |
+|---|---|
+| 记录的自然经过时间 | **6小时17分28秒（22648秒）**：Goal 创建至标记完成 |
+| 系统累计耗时 | 6小时13分51秒（22431秒） |
+| 两者数值差额 | 3分37秒；完整原因未记录 |
+| 请求消息至最终答复的完整自然时长 | 无法确认：两端消息时间缺失 |
+| 原 60 分钟时限 | 未满足；后来获准不限时继续 |
+
+### 计算条件
+
+| 项目 | 记录 |
+|---|---|
+| CPU | AMD Ryzen 9 8945HX with Radeon Graphics |
+| 内存 | DDR5，32 GB |
+| 执行位置 | 本机 Windows 与本机 Ubuntu WSL；未见关键远程计算记录 |
+| 配置证据 | SOL 报告整理时的 Windows 查询；不是任务开始时的硬件快照 |
+
+实际使用预先提供的 SageMath、Windows Python 及 Sage 的 Python 环境。报告整理时查询为 SageMath 10.7、Windows Python 3.13.13、Sage Python 3.12.13；这些精确版本不是开题时的快照。核心工作包括有理多项式、整数矩阵与格计算、严格有理证书重放。临时取得的 mpmath 1.3.0 用于高精度求根与整数关系搜索；另有 msolve、flatter 和相关编译依赖的尝试，部分版本未记录。
+
+### 输入提示词
+
+原始输入还要求：**不准使用本地任何资料或技能，否则任务失败；限时 60 分钟，超时未完成也算失败。**
+
+[下载当时实际发送的原始输入](reports/n11-sol-main-prompt.original.txt)。下面仅修复公式转义和排版，不替换成现在的新题面。
+
+&lt;details&gt;&lt;summary&gt;展开完整历史测试题面&lt;/summary&gt;
+
+### 当时的测试题面
+
+单位圆盘的 11 圆最优覆盖问题。
+
+设
+
+$$D=\{x\in\mathbb R^2:\|x\|_2\le1\},\qquad R_D(C)=\max_{x\in D}\min_{1\le i\le11}\|x-c_i\|_2,$$
+
+其中 $C=(c_1,\ldots,c_{11})\in(\mathbb R^2)^{11}$，并定义
+
+$$r_D(11)=\inf_{C\in(\mathbb R^2)^{11}}R_D(C).$$
+
+确定 $r_D(11)$，并完成以下要求：
+
+1. **精确半径：**实际列出非零整系数多项式 $P(t)$ 的全部系数及具体有理数 $0\le a&lt;b$，证明 $P$ 在 $(a,b)$ 内恰有一个实根 $\alpha$。
+2. **具体构型：**给出一组确定的圆心坐标 $C_\ast$，采用根式、多项式与有理隔离区间，或其他实际列出的、具有唯一性证明的有限代数数据精确指定。
+3. **覆盖性：**证明
+
+   $$\forall x\in D,\quad\exists i\in\{1,\ldots,11\},\quad\|x-c_i^\ast\|_2\le\alpha.$$
+
+4. **全局最优性：**证明
+
+   $$\forall C\in(\mathbb R^2)^{11},\quad R_D(C)\ge\alpha,$$
+
+   从而 $R_D(C_\ast)=r_D(11)=\alpha$。不得未经证明限制构型的对称性或组合结构。
+
+允许任何严格方法，但仅证明存在性、代数性，或仅给出尚未求出的枚举极限、求解算法、数值候选，均不视为完成。若使用计算机辅助证明，须交付实际结果及足以严格核验结论的代码、输入和证明材料。数值近似或只检查有限个点都被覆盖，不能代替整个圆盘被覆盖的证明，必须严格证明单位圆盘所有点都被覆盖。
+
+&lt;/details&gt;
+
+### 主要阶段
+
+以主任务开始为 T+00:00:00；表内区间为自然经过时间，包含等待与并行工作。
+
+| 相对自然时间 | 区间长度（约） | 主要工作与阶段末状态 |
+|---|---|---|
+| T+00:00:00—T+00:58:13 | 0小时58分13秒 | 网上取得已有的完整最优性证明材料、首轮复核与低次整数关系搜索。已有全盘覆盖与全局最优性证明来自 DiskCoveringSolve，并非模型独立发现；176个公开文件哈希已核对，十四项验证通过，但缺显式一元多项式，限时未完成。 |
+| T+00:58:13—T+03:05:30 | 2小时7分17秒 | 限时续作、缩减系统与根连接。第三小时补充包保存：覆盖与根连接推进，仍标记未完成。 |
+| T+03:05:30—T+05:03:21 | 1小时57分51秒 | 高精度求根与整数格关系识别。半径多项式数据保存；这不是首次发现关系的精确时刻。 |
+| T+05:03:21—T+05:22:03 | 0小时18分42秒 | 圆心代数表达与唯一根对应。根证书、坐标表达及连接证书依次保存。 |
+| T+05:22:03—T+05:56:20 | 0小时34分17秒 | 并行重放外部全局证明、集成新增代数核验和交付修正。外部已有全局证明的完整重放结果与新增代数集成材料保存；新增代码错误修正后通过。 |
+| T+05:56:20—T+06:17:28 | 0小时21分8秒 | 补充说明已有一般构型约化与局部下界，审计和打包。补全外部证明适用依据的说明，并非重新独立发现全局证明；证明包修订后，Goal标记完成，最终答复时刻未记录。 |
+
+这里以报告中可核验的文件保存节点划分区间；它们表示何时材料已经保存，不表示首次发现结果的时刻。中间存在并行工作，不能把区间名称当作精确的活动工时分配。
+
+### 路线变化与问题
+
+首轮低次整数关系搜索没有交付所需多项式，消元也未成功；后来转向高精度求根和整数格识别，再用精确余式及唯一根连接认证。曾错误中断待输入的计算进程，导致未导出的内存数据丢失；随后重算并及时导出。原报告未记录这个错误的精确自然时刻，不能编出耗时损失。交付期还修正了代码缩进错误和较长中文输入的传输问题。
+
+### 验证、交付与限制
+
+历史报告记录全局十四项重放、全盘覆盖、代数表达和唯一根连接的认证结果。公开候选与全局证书属于外部已有工作，本次新增显式单变量数据、代数构型、认证连接及实际重放。原多项式未在这份历史报告中认证不可约性，因此不能把原任务完成写成现在最小多项式题面的正式通过。
+
+原证明与输入包保存在本地，本次仅整理报告。报告整理时曾核对清单、ZIP 与已保存结果，但没有重新全量重放全局证明。本网页也不公开数学答案或证明包。
+
+整理依据：`research_work_report_zh.md`，原报告 SHA256：`c31a953e82ccaa56ecc0f03caf3031ef01f354f4be5779ea1e9968df9fa0972c`。原报告含答案，未公开原文。
+
+## 可下载记录
+
+[本次测试的机器记录](record-n11-sol-20260930.json) · [本报告 Markdown](record-n11-sol-20260930.zh.md)
+</pre></div>
+  <pre id="test-prompt" hidden># n=11 · gpt-6.1 sol/max 测试报告
+
+[返回 n=11](n11.zh.html) · [测试记录目录](records.zh.html)
+
+本次测试发生于 2026-09-30（UTC），最初限时 60 分钟且未按时完成，之后获准继续研究。原题只要求非零整系数多项式，当前题面另要求最小多项式及不可约性证明；历史记录不自动视为当前题面的正式通过。下文依据已有报告与日志整理，本次网页更新未重新运行数学证明。最优半径、系数、根隔离端点和证明包仍未公开。
+
+### 已有证明的来源与本次模型工作
+
+**本次使用了网上已有的、可复核的 n=11 最优半径计算机辅助证明材料。候选构型、全盘覆盖证书和排除任意更优构型的全局最优性证书，来自外部项目，并非该模型在本次测试中独立发现。**
+
+来源是 [VonEquinox / DiskCoveringSolve 的固定版本证明包](https://github.com/VonEquinox/DiskCoveringSolve/tree/089584973f41e6374ce110f6e5b5ee456df19352/cover11/proof_bundle)，提交 `089584973f41e6374ce110f6e5b5ee456df19352`。取得的材料包括 110 元 KKT 候选根证书、全盘覆盖证明、一般构型的 Voronoi 约化与完整组合枚举，以及应力、连续分支和局部下界证书及验证代码。这里复用了整套最优性证明材料，不只是参考一个数值候选；原仓库的完成声明本身不作为证明，历史记录另有实际重放结果。
+
+本次模型完成的是检索、审查和重放已有材料，补全显式半径多项式、圆心代数数据及其与已认证根的严格连接，并整理交付。因此，这条记录展示的是使用外部已有证明后的研究与代数补全表现，不能表述为模型从零独立发现了完整最优性证明。
+
+SOL 至迟在 T+00:58:13 保存首轮收据时已取得该来源的176个公开文件，核对哈希并运行通过十四项验证。首次找到和取得材料的精确时刻未记录；首个58分13秒还包含整数关系搜索等工作，不能全部算成纯验证用时。首轮十四项顺序检查的程序计时合计约14分12秒；最后一轮约14分1秒。它们不包含全部下载、装载和审查开销，也不能相加充当任务总用时。后续主要补足显式代数数据与严格连接；这份原交付尚未认证不可约性。
+
+### 任务与时间
+
+| 口径 | 记录 |
+|---|---|
+| 记录的自然经过时间 | **6小时17分28秒（22648秒）**：Goal 创建至标记完成 |
+| 系统累计耗时 | 6小时13分51秒（22431秒） |
+| 两者数值差额 | 3分37秒；完整原因未记录 |
+| 请求消息至最终答复的完整自然时长 | 无法确认：两端消息时间缺失 |
+| 原 60 分钟时限 | 未满足；后来获准不限时继续 |
+
+### 计算条件
+
+| 项目 | 记录 |
+|---|---|
+| CPU | AMD Ryzen 9 8945HX with Radeon Graphics |
+| 内存 | DDR5，32 GB |
+| 执行位置 | 本机 Windows 与本机 Ubuntu WSL；未见关键远程计算记录 |
+| 配置证据 | SOL 报告整理时的 Windows 查询；不是任务开始时的硬件快照 |
+
+实际使用预先提供的 SageMath、Windows Python 及 Sage 的 Python 环境。报告整理时查询为 SageMath 10.7、Windows Python 3.13.13、Sage Python 3.12.13；这些精确版本不是开题时的快照。核心工作包括有理多项式、整数矩阵与格计算、严格有理证书重放。临时取得的 mpmath 1.3.0 用于高精度求根与整数关系搜索；另有 msolve、flatter 和相关编译依赖的尝试，部分版本未记录。
+
+### 输入提示词
+
+原始输入还要求：**不准使用本地任何资料或技能，否则任务失败；限时 60 分钟，超时未完成也算失败。**
+
+[下载当时实际发送的原始输入](reports/n11-sol-main-prompt.original.txt)。下面仅修复公式转义和排版，不替换成现在的新题面。
+
+&lt;details&gt;&lt;summary&gt;展开完整历史测试题面&lt;/summary&gt;
+
+### 当时的测试题面
+
+单位圆盘的 11 圆最优覆盖问题。
+
+设
+
+$$D=\{x\in\mathbb R^2:\|x\|_2\le1\},\qquad R_D(C)=\max_{x\in D}\min_{1\le i\le11}\|x-c_i\|_2,$$
+
+其中 $C=(c_1,\ldots,c_{11})\in(\mathbb R^2)^{11}$，并定义
+
+$$r_D(11)=\inf_{C\in(\mathbb R^2)^{11}}R_D(C).$$
+
+确定 $r_D(11)$，并完成以下要求：
+
+1. **精确半径：**实际列出非零整系数多项式 $P(t)$ 的全部系数及具体有理数 $0\le a&lt;b$，证明 $P$ 在 $(a,b)$ 内恰有一个实根 $\alpha$。
+2. **具体构型：**给出一组确定的圆心坐标 $C_\ast$，采用根式、多项式与有理隔离区间，或其他实际列出的、具有唯一性证明的有限代数数据精确指定。
+3. **覆盖性：**证明
+
+   $$\forall x\in D,\quad\exists i\in\{1,\ldots,11\},\quad\|x-c_i^\ast\|_2\le\alpha.$$
+
+4. **全局最优性：**证明
+
+   $$\forall C\in(\mathbb R^2)^{11},\quad R_D(C)\ge\alpha,$$
+
+   从而 $R_D(C_\ast)=r_D(11)=\alpha$。不得未经证明限制构型的对称性或组合结构。
+
+允许任何严格方法，但仅证明存在性、代数性，或仅给出尚未求出的枚举极限、求解算法、数值候选，均不视为完成。若使用计算机辅助证明，须交付实际结果及足以严格核验结论的代码、输入和证明材料。数值近似或只检查有限个点都被覆盖，不能代替整个圆盘被覆盖的证明，必须严格证明单位圆盘所有点都被覆盖。
+
+&lt;/details&gt;
+
+### 主要阶段
+
+以主任务开始为 T+00:00:00；表内区间为自然经过时间，包含等待与并行工作。
+
+| 相对自然时间 | 区间长度（约） | 主要工作与阶段末状态 |
+|---|---|---|
+| T+00:00:00—T+00:58:13 | 0小时58分13秒 | 网上取得已有的完整最优性证明材料、首轮复核与低次整数关系搜索。已有全盘覆盖与全局最优性证明来自 DiskCoveringSolve，并非模型独立发现；176个公开文件哈希已核对，十四项验证通过，但缺显式一元多项式，限时未完成。 |
+| T+00:58:13—T+03:05:30 | 2小时7分17秒 | 限时续作、缩减系统与根连接。第三小时补充包保存：覆盖与根连接推进，仍标记未完成。 |
+| T+03:05:30—T+05:03:21 | 1小时57分51秒 | 高精度求根与整数格关系识别。半径多项式数据保存；这不是首次发现关系的精确时刻。 |
+| T+05:03:21—T+05:22:03 | 0小时18分42秒 | 圆心代数表达与唯一根对应。根证书、坐标表达及连接证书依次保存。 |
+| T+05:22:03—T+05:56:20 | 0小时34分17秒 | 并行重放外部全局证明、集成新增代数核验和交付修正。外部已有全局证明的完整重放结果与新增代数集成材料保存；新增代码错误修正后通过。 |
+| T+05:56:20—T+06:17:28 | 0小时21分8秒 | 补充说明已有一般构型约化与局部下界，审计和打包。补全外部证明适用依据的说明，并非重新独立发现全局证明；证明包修订后，Goal标记完成，最终答复时刻未记录。 |
+
+这里以报告中可核验的文件保存节点划分区间；它们表示何时材料已经保存，不表示首次发现结果的时刻。中间存在并行工作，不能把区间名称当作精确的活动工时分配。
+
+### 路线变化与问题
+
+首轮低次整数关系搜索没有交付所需多项式，消元也未成功；后来转向高精度求根和整数格识别，再用精确余式及唯一根连接认证。曾错误中断待输入的计算进程，导致未导出的内存数据丢失；随后重算并及时导出。原报告未记录这个错误的精确自然时刻，不能编出耗时损失。交付期还修正了代码缩进错误和较长中文输入的传输问题。
+
+### 验证、交付与限制
+
+历史报告记录全局十四项重放、全盘覆盖、代数表达和唯一根连接的认证结果。公开候选与全局证书属于外部已有工作，本次新增显式单变量数据、代数构型、认证连接及实际重放。原多项式未在这份历史报告中认证不可约性，因此不能把原任务完成写成现在最小多项式题面的正式通过。
+
+原证明与输入包保存在本地，本次仅整理报告。报告整理时曾核对清单、ZIP 与已保存结果，但没有重新全量重放全局证明。本网页也不公开数学答案或证明包。
+
+整理依据：`research_work_report_zh.md`，原报告 SHA256：`c31a953e82ccaa56ecc0f03caf3031ef01f354f4be5779ea1e9968df9fa0972c`。原报告含答案，未公开原文。
+
+## 可下载记录
+
+[本次测试的机器记录](record-n11-sol-20260930.json) · [本报告 Markdown](record-n11-sol-20260930.zh.md)
+</pre>
+</main></body>
+</html>

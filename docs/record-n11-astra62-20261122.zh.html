@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="zh-CN" data-page="record-n11-astra62-20261122">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>n=11 · gpt-6.2-astra/max 测试报告 · 单位圆盘覆盖测试</title>
+  <script src="language.js"></script>
+  <script src="navigation.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="alternate" hreflang="zh-CN" href="record-n11-astra62-20261122.zh.html"><link rel="alternate" hreflang="en" href="record-n11-astra62-20261122.html">
+  <link rel="alternate" type="application/json" href="record-n11-astra62-20261122.json">
+  <script src="vendor/marked.js" defer></script>
+  <script src="vendor/dompurify.js" defer></script>
+  <script src="math-config.js" defer></script>
+  <script src="vendor/mathjax-tex-svg-full.js" defer></script>
+  <script src="prompt-render.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header" data-menu-open="false"><div class="site-header-inner"><a class="site-brand" href="index.zh.html" title="返回网站首页" aria-label="返回网站首页"><svg class="site-brand-mark" viewBox="0 0 32 32" aria-hidden="true" fill="none"><circle cx="16" cy="16" r="14.3" stroke="currentColor" stroke-width="1.5"/><g stroke="currentColor" stroke-width="1.1" opacity=".65"><circle cx="11" cy="12" r="8"/><circle cx="21" cy="12" r="8"/><circle cx="16" cy="21" r="8"/></g></svg><span class="site-brand-copy"><span class="site-brand-title">AI圆盘测试</span><span class="site-brand-subtitle">模型研究级数学能力测试</span></span></a><button class="site-menu-toggle" type="button" aria-controls="site-menu" aria-expanded="false" aria-label="打开导航菜单" data-open-label="打开导航菜单" data-close-label="关闭导航菜单" hidden><svg class="menu-icon-open" viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14"/></svg><svg class="menu-icon-close" viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15"/></svg><span>菜单</span></button><div class="site-menu-panel" id="site-menu"><nav class="site-navigation" aria-label="主要导航"><a class="site-nav-link" href="index.zh.html">题目</a><a class="site-nav-link" href="guide.zh.html">测试指南</a><a class="site-nav-link" href="scoring.zh.html">评分</a><a class="site-nav-link" href="records.zh.html" aria-current="true">测试记录</a><a class="site-nav-link" href="about.zh.html">关于项目</a></nav><div class="site-header-actions"><a class="repository-link" href="https://github.com/pikaaa345/disk-covering-benchmark" aria-label="打开 GitHub 仓库">GitHub 仓库<svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13"/></svg></a><nav class="language-switch" aria-label="语言"><a href="record-n11-astra62-20261122.html?lang=en" data-language="en" lang="en">English</a><a href="record-n11-astra62-20261122.zh.html?lang=zh" data-language="zh" lang="zh-CN" aria-current="page">中文</a></nav></div></div></div></header>
+<main>
+  <script id="page-config" type="application/json">{"language":"zh","referenceSha256":null}</script>
+  <p class="back"><a href="index.zh.html">单位圆盘覆盖测试</a> · <a href="n11.zh.html">n = 11</a></p>
+  <div class="prompt-heading"><h1>n=11 · gpt-6.2-astra/max 测试报告</h1><div><button id="copy-prompt" class="copy">复制全文</button><span id="copy-status" class="status" role="status"></span></div></div>
+  <div id="prompt-markdown" class="markdown-body" data-article="true" data-format="markdown"><pre class="prompt-fallback">### 证明来源与本次模型工作
+
+本次从公开英文题面出发，使用通用数值工具和精确算术构造覆盖并验证证明。原测试没有调用本地 Skill，也没有读取工作区外的已有解题材料。
+
+### 任务要求与判定标准
+
+时限为 12 小时。任务要求精确给出覆盖单位闭圆盘的 11 个圆心，证明连续覆盖和全局下界，并提交半径本身不可约的最小多项式及有理隔离区间。
+
+### 测试信息与时间口径
+
+| 项目 | 记录 |
+| --- | --- |
+| 测试编号 | T_20261122T181958Z_01a2047c |
+| 模型 | gpt-6.2-astra/max |
+| 测试时限 | 12 小时 |
+| 计分用时 | 原测试 Goal 完成记录为 6,333 秒 |
+| 自然经过时间 | 首次模型设置事件到最终答复经过 6,353.322 秒 |
+| 得分 | 377 |
+
+### 计算条件与使用量
+
+| 项目 | 记录范围 |
+| --- | --- |
+| 环境 | 64 位 Windows，Python 3.13.13 和 GCC 13.2.0 |
+| 复算 | 八个工作进程用时 186.33 秒 |
+| Goal 用量 | 原测试 Goal 计量为 753,078 tokens |
+| 费用 | 账单金额不可取得 |
+
+### 主要研究阶段
+
+| 阶段 | 工作 | 实际结果 |
+| --- | --- | --- |
+| 构型 | 搜索数值候选并用有理区间夹住接触方程的精确解 | 给定区间盒中存在唯一解 |
+| 几何 | 用 Voronoi 区域验证覆盖，穷尽更优覆盖必须满足的接触图 | 全部图的分支检查均已闭合 |
+| 代数 | 消元得到半径多项式，用带系数界的精确模运算验证判别式恒等式 | 完成不可约性验证及实根唯一隔离 |
+
+### 路线变化与主要困难
+
+数值搜索找出了候选构型。全局下界需要覆盖任意圆心位置及退化情形。证明将这一部分归约为有限类接触图，再用精确区间检查排除所有可能严格更优的覆盖。
+
+### 验证、交付与限制
+
+按项目协议计算的答案 SHA-256 与现有参考指纹一致。原交付用冻结输入完整复算了验证程序，重新得到全部多项式系数，接触图检查未留未决分支。
+
+### 档案与可下载记录
+
+按测试编号保存的本地档案包含证明、系数表、精确构型、复算日志及可取得的测试对话。
+
+[公开 JSON](record-n11-astra62-20261122.json) · [中文报告](record-n11-astra62-20261122.zh.md) · [记录历史](n11-astra62-20261122-history.json)
+</pre></div>
+  <pre id="test-prompt" hidden>### 证明来源与本次模型工作
+
+本次从公开英文题面出发，使用通用数值工具和精确算术构造覆盖并验证证明。原测试没有调用本地 Skill，也没有读取工作区外的已有解题材料。
+
+### 任务要求与判定标准
+
+时限为 12 小时。任务要求精确给出覆盖单位闭圆盘的 11 个圆心，证明连续覆盖和全局下界，并提交半径本身不可约的最小多项式及有理隔离区间。
+
+### 测试信息与时间口径
+
+| 项目 | 记录 |
+| --- | --- |
+| 测试编号 | T_20261122T181958Z_01a2047c |
+| 模型 | gpt-6.2-astra/max |
+| 测试时限 | 12 小时 |
+| 计分用时 | 原测试 Goal 完成记录为 6,333 秒 |
+| 自然经过时间 | 首次模型设置事件到最终答复经过 6,353.322 秒 |
+| 得分 | 377 |
+
+### 计算条件与使用量
+
+| 项目 | 记录范围 |
+| --- | --- |
+| 环境 | 64 位 Windows，Python 3.13.13 和 GCC 13.2.0 |
+| 复算 | 八个工作进程用时 186.33 秒 |
+| Goal 用量 | 原测试 Goal 计量为 753,078 tokens |
+| 费用 | 账单金额不可取得 |
+
+### 主要研究阶段
+
+| 阶段 | 工作 | 实际结果 |
+| --- | --- | --- |
+| 构型 | 搜索数值候选并用有理区间夹住接触方程的精确解 | 给定区间盒中存在唯一解 |
+| 几何 | 用 Voronoi 区域验证覆盖，穷尽更优覆盖必须满足的接触图 | 全部图的分支检查均已闭合 |
+| 代数 | 消元得到半径多项式，用带系数界的精确模运算验证判别式恒等式 | 完成不可约性验证及实根唯一隔离 |
+
+### 路线变化与主要困难
+
+数值搜索找出了候选构型。全局下界需要覆盖任意圆心位置及退化情形。证明将这一部分归约为有限类接触图，再用精确区间检查排除所有可能严格更优的覆盖。
+
+### 验证、交付与限制
+
+按项目协议计算的答案 SHA-256 与现有参考指纹一致。原交付用冻结输入完整复算了验证程序，重新得到全部多项式系数，接触图检查未留未决分支。
+
+### 档案与可下载记录
+
+按测试编号保存的本地档案包含证明、系数表、精确构型、复算日志及可取得的测试对话。
+
+[公开 JSON](record-n11-astra62-20261122.json) · [中文报告](record-n11-astra62-20261122.zh.md) · [记录历史](n11-astra62-20261122-history.json)
+</pre>
+</main></body>
+</html>

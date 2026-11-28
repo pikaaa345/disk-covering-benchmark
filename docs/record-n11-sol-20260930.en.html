@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en" data-page="record-n11-sol-20260930">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>n=11 · gpt-6.1 sol/max test report · Unit Disk Covering Benchmark</title>
+  <script src="language.js"></script>
+  <script src="navigation.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="alternate" hreflang="zh-CN" href="record-n11-sol-20260930.zh.html"><link rel="alternate" hreflang="en" href="record-n11-sol-20260930.html">
+  <link rel="alternate" type="application/json" href="record-n11-sol-20260930.json">
+  <script src="vendor/marked.js" defer></script>
+  <script src="vendor/dompurify.js" defer></script>
+  <script src="math-config.js" defer></script>
+  <script src="vendor/mathjax-tex-svg-full.js" defer></script>
+  <script src="prompt-render.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header" data-menu-open="false"><div class="site-header-inner"><a class="site-brand" href="index.html" title="Go to home page" aria-label="Go to home page"><svg class="site-brand-mark" viewBox="0 0 32 32" aria-hidden="true" fill="none"><circle cx="16" cy="16" r="14.3" stroke="currentColor" stroke-width="1.5"/><g stroke="currentColor" stroke-width="1.1" opacity=".65"><circle cx="11" cy="12" r="8"/><circle cx="21" cy="12" r="8"/><circle cx="16" cy="21" r="8"/></g></svg><span class="site-brand-copy"><span class="site-brand-title">AI Disk Benchmark</span><span class="site-brand-subtitle">Research-Level Mathematical Ability Test for Models</span></span></a><button class="site-menu-toggle" type="button" aria-controls="site-menu" aria-expanded="false" aria-label="Open navigation menu" data-open-label="Open navigation menu" data-close-label="Close navigation menu" hidden><svg class="menu-icon-open" viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14"/></svg><svg class="menu-icon-close" viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15"/></svg><span>Menu</span></button><div class="site-menu-panel" id="site-menu"><nav class="site-navigation" aria-label="Main navigation"><a class="site-nav-link" href="index.html">Problems</a><a class="site-nav-link" href="guide.html">Guide</a><a class="site-nav-link" href="scoring.html">Scoring</a><a class="site-nav-link" href="records.html" aria-current="true">Records</a><a class="site-nav-link" href="about.html">About</a></nav><div class="site-header-actions"><a class="repository-link" href="https://github.com/pikaaa345/disk-covering-benchmark" aria-label="Open GitHub repository">GitHub<svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13"/></svg></a><nav class="language-switch" aria-label="Language"><a href="record-n11-sol-20260930.html?lang=en" data-language="en" lang="en" aria-current="page">English</a><a href="record-n11-sol-20260930.zh.html?lang=zh" data-language="zh" lang="zh-CN">中文</a></nav></div></div></div></header>
+<main>
+  <script id="page-config" type="application/json">{"language":"en","referenceSha256":null}</script>
+  <p class="back"><a href="index.html">Unit Disk Covering Benchmark</a> · <a href="n11.html">n = 11</a></p>
+  <div class="prompt-heading"><h1>n=11 · gpt-6.1 sol/max test report</h1><div><button id="copy-prompt" class="copy">Copy full prompt</button><span id="copy-status" class="status" role="status"></span></div></div>
+  <div id="prompt-markdown" class="markdown-body" data-article="true" data-format="markdown"><pre class="prompt-fallback"># n=11 · gpt-6.1 sol/max test report
+
+[Back to n=11](n11.html) · [Test record index](records.html)
+
+This test took place on 2026-09-30 (UTC). It missed the original 60-minute deadline and continued with authorization. The original problem required a nonzero integer polynomial; the current problem additionally requires the minimal polynomial and an irreducibility proof. This historical record is not automatically a formal pass under the current problem. This website update summarizes existing reports and logs and does not rerun the mathematical proof. The optimal radius, coefficients, isolating endpoints and proof packages remain withheld.
+
+### Existing proof reused and work performed in this test
+
+**This test used an existing, independently replayable computer-assisted proof package for the optimal n=11 radius, found online. The candidate configuration, full-disk coverage certificates and global optimality certificates excluding every better configuration came from external work; they were not independently discovered by this model during the test.**
+
+The source was the [fixed-version proof bundle in VonEquinox / DiskCoveringSolve](https://github.com/VonEquinox/DiskCoveringSolve/tree/089584973f41e6374ce110f6e5b5ee456df19352/cover11/proof_bundle), commit `089584973f41e6374ce110f6e5b5ee456df19352`. It supplied a 110-variable KKT candidate-root certificate, full-disk coverage, a Voronoi reduction for general configurations and exhaustive combinatorial enumeration, together with stress, continuous-branch and local-bound certificates and verification code. This reused a complete optimality proof package, rather than merely a numerical candidate. The original repository&#x27;s completion claim was not itself taken as proof; the historical record contains actual replay results.
+
+The model&#x27;s work was to find, review and replay those materials, recover an explicit radius polynomial and algebraic center data, prove their connection to the certified root, and prepare the delivery. This record therefore measures research and algebraic completion using an existing external proof; it does not demonstrate discovery of a complete optimality proof from scratch.
+
+By the first receipt saved at T+00:58:13, SOL had obtained 176 public files from this source, checked their hashes and passed fourteen verification checks. The exact first-discovery and acquisition times are not recorded. The first 58 min 13 s also included integer-relation searches and other work, so it is not pure verification time. The first fourteen sequential checks totalled about 14 min 12 s of program time; the final round totalled about 14 min 1 s. These exclude all acquisition, loading and review overhead and must not be added to obtain task elapsed time. Later work chiefly supplied explicit algebraic data and certified connections; the original delivery did not certify irreducibility.
+
+### Task and timing
+
+| Timing basis | Record |
+|---|---|
+| Recorded natural elapsed time | **6 h 17 min 28 s (22648 s)**, from Goal creation to completion |
+| System accumulated time | 6 h 13 min 51 s (22431 s) |
+| Numerical difference | 3 min 37 s; its complete cause is not recorded |
+| Full request-to-final-response elapsed time | Cannot be confirmed; both message endpoints are unavailable |
+| Original 60-minute deadline | Missed; later authorized to continue without a time limit |
+
+### Computing environment
+
+| Item | Record |
+|---|---|
+| CPU | AMD Ryzen 9 8945HX with Radeon Graphics |
+| Memory | DDR5, 32 GB |
+| Execution location | Local Windows and local Ubuntu WSL; no recorded key remote computation |
+| Configuration evidence | Windows queries during preparation of the SOL report; not a task-start hardware snapshot |
+
+The provided SageMath, Windows Python and Sage Python environments were used. Queries during report preparation returned SageMath 10.7, Windows Python 3.13.13 and Sage Python 3.12.13; these exact versions are not task-start snapshots. Core work included rational polynomials, integer matrices and lattices, and exact rational certificate replay. mpmath 1.3.0 was obtained during the task for high-precision roots and integer-relation searches. There were also msolve, flatter and compilation-dependency attempts; some versions are not recorded.
+
+### Input prompt
+
+The actual input also required: **do not use any local materials or skills; violating this rule fails the task. The deadline is 60 minutes, and failure to finish by then counts as failure.**
+
+[Download the exact original input, in Chinese](reports/n11-sol-main-prompt.original.txt). The statement below is an English translation, not the current revised problem.
+
+&lt;details&gt;&lt;summary&gt;Expand the complete historical problem statement&lt;/summary&gt;
+
+### Historical problem statement
+
+Determine the optimal radius for covering the unit disk with eleven congruent disks.
+
+Let
+
+$$D=\{x\in\mathbb R^2:\|x\|_2\le1\},\qquad R_D(C)=\max_{x\in D}\min_{1\le i\le11}\|x-c_i\|_2,$$
+
+where $C=(c_1,\ldots,c_{11})\in(\mathbb R^2)^{11}$, and define
+
+$$r_D(11)=\inf_{C\in(\mathbb R^2)^{11}}R_D(C).$$
+
+Determine $r_D(11)$ and meet all four requirements:
+
+1. **Exact radius:** explicitly list every coefficient of a nonzero integer polynomial $P(t)$ and specific rational numbers $0\le a&lt;b$. Prove that $P$ has exactly one real root $\alpha$ in $(a,b)$.
+2. **Explicit configuration:** specify a fixed set of centers $C_\ast$ by radicals, polynomials with rational isolating intervals, or other explicitly listed finite algebraic data with a uniqueness proof.
+3. **Coverage:** prove
+
+   $$\forall x\in D,\quad\exists i\in\{1,\ldots,11\},\quad\|x-c_i^\ast\|_2\le\alpha.$$
+
+4. **Global optimality:** prove
+
+   $$\forall C\in(\mathbb R^2)^{11},\quad R_D(C)\ge\alpha,$$
+
+   and hence $R_D(C_\ast)=r_D(11)=\alpha$. Do not assume symmetry or a combinatorial structure without proof.
+
+Any rigorous method is allowed. Existence, algebraicity, unfinished enumeration, a proposed algorithm, or a numerical candidate alone does not complete the task. Computer-assisted proofs must include actual results and the code, inputs and proof materials needed for rigorous verification. Numerical approximations and checks of finitely many sample points cannot establish coverage of the entire disk.
+
+&lt;/details&gt;
+
+### Main stages
+
+T+00:00:00 is the start of the main task. The intervals are natural elapsed time, including waits and parallel work.
+
+| Relative natural time | Interval length (approx.) | Main work and status at the endpoint |
+|---|---|---|
+| T+00:00:00–T+00:58:13 | 0 h 58 min 13 s | Obtain an existing complete optimality proof package online, perform first replay and low-degree integer-relation searches. The existing full-disk coverage and global optimality proof came from DiskCoveringSolve, not independent model discovery. Hashes of 176 public files were checked and fourteen checks passed, but the explicit univariate polynomial was missing and the original deadline was missed. |
+| T+00:58:13–T+03:05:30 | 2 h 7 min 17 s | Continued work, a reduced system and root connection. A later supplementary package was saved: coverage and root connections progressed, still incomplete. |
+| T+03:05:30–T+05:03:21 | 1 h 57 min 51 s | High-precision root computation and lattice relation searches. Polynomial data were saved; this is not a measured first-discovery time. |
+| T+05:03:21–T+05:22:03 | 0 h 18 min 42 s | Algebraic center expressions and unique-root correspondence. Root, coordinate and connection certificates were saved in sequence. |
+| T+05:22:03–T+05:56:20 | 0 h 34 min 17 s | Replay the external global proof in parallel, integrate new algebraic checks and fix delivery errors. Full replay results for the existing external global proof and new integrated algebraic materials were saved; implementation errors were fixed before successful checks. |
+| T+05:56:20–T+06:17:28 | 0 h 21 min 8 s | Explain the existing general-configuration reduction and local bound, audit and package. Clarify why the external proof applies, rather than independently rediscovering its global proof. The package was revised and the Goal marked complete; the final-response timestamp is unavailable. |
+
+The intervals are bounded by verifiable file-save nodes from the report. They indicate when materials had been saved, not the moment of first discovery. Work overlapped; these labels are not measured allocations of activity time.
+
+### Changes of route and problems
+
+Early low-degree integer-relation searches and elimination did not produce the required polynomial. The successful route used high-precision roots and lattice identification, followed by exact remainders and a unique-root connection. An incorrect interruption of a process awaiting input lost unexported in-memory data; the work was recomputed with timely exports. Its exact natural-time point is unavailable, so no time loss is invented. Indentation and long Chinese-input transmission errors were also fixed during delivery.
+
+### Verification, delivery and limits
+
+The historical report records fourteen global replay checks, full-disk coverage, algebraic expressions and a certified unique-root connection. The candidate and global certificates came from existing external work; this test added explicit univariate data, an algebraic configuration, certified connections and actual replay. This historical report did not certify irreducibility, so completion of its original task is not a formal pass of today&#x27;s minimal-polynomial problem.
+
+The original proof and input packages remain local. Report preparation checked manifests, ZIP files and saved results, without repeating the full global proof. This webpage also withholds mathematical answers and proof packages.
+
+Source: `research_work_report_zh.md`, original-report SHA256: `c31a953e82ccaa56ecc0f03caf3031ef01f354f4be5779ea1e9968df9fa0972c`. The original contains answers and is not published verbatim.
+
+[Back to the top](#)
+
+## Downloadable records
+
+[Machine-readable record for this test](record-n11-sol-20260930.json) · [Report Markdown](record-n11-sol-20260930.en.md)
+</pre></div>
+  <pre id="test-prompt" hidden># n=11 · gpt-6.1 sol/max test report
+
+[Back to n=11](n11.html) · [Test record index](records.html)
+
+This test took place on 2026-09-30 (UTC). It missed the original 60-minute deadline and continued with authorization. The original problem required a nonzero integer polynomial; the current problem additionally requires the minimal polynomial and an irreducibility proof. This historical record is not automatically a formal pass under the current problem. This website update summarizes existing reports and logs and does not rerun the mathematical proof. The optimal radius, coefficients, isolating endpoints and proof packages remain withheld.
+
+### Existing proof reused and work performed in this test
+
+**This test used an existing, independently replayable computer-assisted proof package for the optimal n=11 radius, found online. The candidate configuration, full-disk coverage certificates and global optimality certificates excluding every better configuration came from external work; they were not independently discovered by this model during the test.**
+
+The source was the [fixed-version proof bundle in VonEquinox / DiskCoveringSolve](https://github.com/VonEquinox/DiskCoveringSolve/tree/089584973f41e6374ce110f6e5b5ee456df19352/cover11/proof_bundle), commit `089584973f41e6374ce110f6e5b5ee456df19352`. It supplied a 110-variable KKT candidate-root certificate, full-disk coverage, a Voronoi reduction for general configurations and exhaustive combinatorial enumeration, together with stress, continuous-branch and local-bound certificates and verification code. This reused a complete optimality proof package, rather than merely a numerical candidate. The original repository&#x27;s completion claim was not itself taken as proof; the historical record contains actual replay results.
+
+The model&#x27;s work was to find, review and replay those materials, recover an explicit radius polynomial and algebraic center data, prove their connection to the certified root, and prepare the delivery. This record therefore measures research and algebraic completion using an existing external proof; it does not demonstrate discovery of a complete optimality proof from scratch.
+
+By the first receipt saved at T+00:58:13, SOL had obtained 176 public files from this source, checked their hashes and passed fourteen verification checks. The exact first-discovery and acquisition times are not recorded. The first 58 min 13 s also included integer-relation searches and other work, so it is not pure verification time. The first fourteen sequential checks totalled about 14 min 12 s of program time; the final round totalled about 14 min 1 s. These exclude all acquisition, loading and review overhead and must not be added to obtain task elapsed time. Later work chiefly supplied explicit algebraic data and certified connections; the original delivery did not certify irreducibility.
+
+### Task and timing
+
+| Timing basis | Record |
+|---|---|
+| Recorded natural elapsed time | **6 h 17 min 28 s (22648 s)**, from Goal creation to completion |
+| System accumulated time | 6 h 13 min 51 s (22431 s) |
+| Numerical difference | 3 min 37 s; its complete cause is not recorded |
+| Full request-to-final-response elapsed time | Cannot be confirmed; both message endpoints are unavailable |
+| Original 60-minute deadline | Missed; later authorized to continue without a time limit |
+
+### Computing environment
+
+| Item | Record |
+|---|---|
+| CPU | AMD Ryzen 9 8945HX with Radeon Graphics |
+| Memory | DDR5, 32 GB |
+| Execution location | Local Windows and local Ubuntu WSL; no recorded key remote computation |
+| Configuration evidence | Windows queries during preparation of the SOL report; not a task-start hardware snapshot |
+
+The provided SageMath, Windows Python and Sage Python environments were used. Queries during report preparation returned SageMath 10.7, Windows Python 3.13.13 and Sage Python 3.12.13; these exact versions are not task-start snapshots. Core work included rational polynomials, integer matrices and lattices, and exact rational certificate replay. mpmath 1.3.0 was obtained during the task for high-precision roots and integer-relation searches. There were also msolve, flatter and compilation-dependency attempts; some versions are not recorded.
+
+### Input prompt
+
+The actual input also required: **do not use any local materials or skills; violating this rule fails the task. The deadline is 60 minutes, and failure to finish by then counts as failure.**
+
+[Download the exact original input, in Chinese](reports/n11-sol-main-prompt.original.txt). The statement below is an English translation, not the current revised problem.
+
+&lt;details&gt;&lt;summary&gt;Expand the complete historical problem statement&lt;/summary&gt;
+
+### Historical problem statement
+
+Determine the optimal radius for covering the unit disk with eleven congruent disks.
+
+Let
+
+$$D=\{x\in\mathbb R^2:\|x\|_2\le1\},\qquad R_D(C)=\max_{x\in D}\min_{1\le i\le11}\|x-c_i\|_2,$$
+
+where $C=(c_1,\ldots,c_{11})\in(\mathbb R^2)^{11}$, and define
+
+$$r_D(11)=\inf_{C\in(\mathbb R^2)^{11}}R_D(C).$$
+
+Determine $r_D(11)$ and meet all four requirements:
+
+1. **Exact radius:** explicitly list every coefficient of a nonzero integer polynomial $P(t)$ and specific rational numbers $0\le a&lt;b$. Prove that $P$ has exactly one real root $\alpha$ in $(a,b)$.
+2. **Explicit configuration:** specify a fixed set of centers $C_\ast$ by radicals, polynomials with rational isolating intervals, or other explicitly listed finite algebraic data with a uniqueness proof.
+3. **Coverage:** prove
+
+   $$\forall x\in D,\quad\exists i\in\{1,\ldots,11\},\quad\|x-c_i^\ast\|_2\le\alpha.$$
+
+4. **Global optimality:** prove
+
+   $$\forall C\in(\mathbb R^2)^{11},\quad R_D(C)\ge\alpha,$$
+
+   and hence $R_D(C_\ast)=r_D(11)=\alpha$. Do not assume symmetry or a combinatorial structure without proof.
+
+Any rigorous method is allowed. Existence, algebraicity, unfinished enumeration, a proposed algorithm, or a numerical candidate alone does not complete the task. Computer-assisted proofs must include actual results and the code, inputs and proof materials needed for rigorous verification. Numerical approximations and checks of finitely many sample points cannot establish coverage of the entire disk.
+
+&lt;/details&gt;
+
+### Main stages
+
+T+00:00:00 is the start of the main task. The intervals are natural elapsed time, including waits and parallel work.
+
+| Relative natural time | Interval length (approx.) | Main work and status at the endpoint |
+|---|---|---|
+| T+00:00:00–T+00:58:13 | 0 h 58 min 13 s | Obtain an existing complete optimality proof package online, perform first replay and low-degree integer-relation searches. The existing full-disk coverage and global optimality proof came from DiskCoveringSolve, not independent model discovery. Hashes of 176 public files were checked and fourteen checks passed, but the explicit univariate polynomial was missing and the original deadline was missed. |
+| T+00:58:13–T+03:05:30 | 2 h 7 min 17 s | Continued work, a reduced system and root connection. A later supplementary package was saved: coverage and root connections progressed, still incomplete. |
+| T+03:05:30–T+05:03:21 | 1 h 57 min 51 s | High-precision root computation and lattice relation searches. Polynomial data were saved; this is not a measured first-discovery time. |
+| T+05:03:21–T+05:22:03 | 0 h 18 min 42 s | Algebraic center expressions and unique-root correspondence. Root, coordinate and connection certificates were saved in sequence. |
+| T+05:22:03–T+05:56:20 | 0 h 34 min 17 s | Replay the external global proof in parallel, integrate new algebraic checks and fix delivery errors. Full replay results for the existing external global proof and new integrated algebraic materials were saved; implementation errors were fixed before successful checks. |
+| T+05:56:20–T+06:17:28 | 0 h 21 min 8 s | Explain the existing general-configuration reduction and local bound, audit and package. Clarify why the external proof applies, rather than independently rediscovering its global proof. The package was revised and the Goal marked complete; the final-response timestamp is unavailable. |
+
+The intervals are bounded by verifiable file-save nodes from the report. They indicate when materials had been saved, not the moment of first discovery. Work overlapped; these labels are not measured allocations of activity time.
+
+### Changes of route and problems
+
+Early low-degree integer-relation searches and elimination did not produce the required polynomial. The successful route used high-precision roots and lattice identification, followed by exact remainders and a unique-root connection. An incorrect interruption of a process awaiting input lost unexported in-memory data; the work was recomputed with timely exports. Its exact natural-time point is unavailable, so no time loss is invented. Indentation and long Chinese-input transmission errors were also fixed during delivery.
+
+### Verification, delivery and limits
+
+The historical report records fourteen global replay checks, full-disk coverage, algebraic expressions and a certified unique-root connection. The candidate and global certificates came from existing external work; this test added explicit univariate data, an algebraic configuration, certified connections and actual replay. This historical report did not certify irreducibility, so completion of its original task is not a formal pass of today&#x27;s minimal-polynomial problem.
+
+The original proof and input packages remain local. Report preparation checked manifests, ZIP files and saved results, without repeating the full global proof. This webpage also withholds mathematical answers and proof packages.
+
+Source: `research_work_report_zh.md`, original-report SHA256: `c31a953e82ccaa56ecc0f03caf3031ef01f354f4be5779ea1e9968df9fa0972c`. The original contains answers and is not published verbatim.
+
+[Back to the top](#)
+
+## Downloadable records
+
+[Machine-readable record for this test](record-n11-sol-20260930.json) · [Report Markdown](record-n11-sol-20260930.en.md)
+</pre>
+</main></body>
+</html>

@@ -1,0 +1,30 @@
+{
+  "schema": "diskcover-public-test-reports-v1",
+  "n": 27,
+  "report_scope": "One model test with local mathematical verification",
+  "records_comparable": false,
+  "records": [
+    {
+      "model": "gpt-6.2 sol/max",
+      "status": "reported",
+      "score": 273,
+      "elapsed_seconds": 13054,
+      "report_url": "record-n27-sol62-20261120.zh.html",
+      "report_url_en": "record-n27-sol62-20261120.html",
+      "record_id": "n27-sol62-20261120",
+      "test_date": "2026-11-20",
+      "reference_match": true,
+      "test_id": "T_20261120T060952Z_01a1f793",
+      "score_scope": "benchmark_score",
+      "prompt_artifacts": [],
+      "test_date_utc": "2026-11-20",
+      "model_id": "gpt-6.2-sol",
+      "reasoning_effort": "max",
+      "runs": 1,
+      "timing_scope": "original_completed_goal_elapsed",
+      "acceptance_status": "accepted_reference_fingerprint_match",
+      "verification_status": "exact_algebraic_and_geometric_checks_in_test_workspace",
+      "model_identity_status": "verified_original_test_turn_context"
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="zh-CN" data-page="record-n27-astra62-20261120">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>n=27 · gpt-6.2 astra/max 测试报告 · 单位圆盘覆盖测试</title>
+  <script src="language.js"></script>
+  <script src="navigation.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="alternate" hreflang="zh-CN" href="record-n27-astra62-20261120.zh.html"><link rel="alternate" hreflang="en" href="record-n27-astra62-20261120.html">
+  <link rel="alternate" type="application/json" href="record-n27-astra62-20261120.json">
+  <script src="vendor/marked.js" defer></script>
+  <script src="vendor/dompurify.js" defer></script>
+  <script src="math-config.js" defer></script>
+  <script src="vendor/mathjax-tex-svg-full.js" defer></script>
+  <script src="prompt-render.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header" data-menu-open="false"><div class="site-header-inner"><a class="site-brand" href="index.zh.html" title="返回网站首页" aria-label="返回网站首页"><svg class="site-brand-mark" viewBox="0 0 32 32" aria-hidden="true" fill="none"><circle cx="16" cy="16" r="14.3" stroke="currentColor" stroke-width="1.5"/><g stroke="currentColor" stroke-width="1.1" opacity=".65"><circle cx="11" cy="12" r="8"/><circle cx="21" cy="12" r="8"/><circle cx="16" cy="21" r="8"/></g></svg><span class="site-brand-copy"><span class="site-brand-title">AI圆盘测试</span><span class="site-brand-subtitle">模型研究级数学能力测试</span></span></a><button class="site-menu-toggle" type="button" aria-controls="site-menu" aria-expanded="false" aria-label="打开导航菜单" data-open-label="打开导航菜单" data-close-label="关闭导航菜单" hidden><svg class="menu-icon-open" viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14"/></svg><svg class="menu-icon-close" viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15"/></svg><span>菜单</span></button><div class="site-menu-panel" id="site-menu"><nav class="site-navigation" aria-label="主要导航"><a class="site-nav-link" href="index.zh.html">题目</a><a class="site-nav-link" href="guide.zh.html">测试指南</a><a class="site-nav-link" href="scoring.zh.html">评分</a><a class="site-nav-link" href="records.zh.html" aria-current="true">测试记录</a><a class="site-nav-link" href="about.zh.html">关于项目</a></nav><div class="site-header-actions"><a class="repository-link" href="https://github.com/pikaaa345/disk-covering-benchmark" aria-label="打开 GitHub 仓库">GitHub 仓库<svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13"/></svg></a><nav class="language-switch" aria-label="语言"><a href="record-n27-astra62-20261120.html?lang=en" data-language="en" lang="en">English</a><a href="record-n27-astra62-20261120.zh.html?lang=zh" data-language="zh" lang="zh-CN" aria-current="page">中文</a></nav></div></div></div></header>
+<main>
+  <script id="page-config" type="application/json">{"language":"zh","referenceSha256":null}</script>
+  <p class="back"><a href="index.zh.html">单位圆盘覆盖测试</a> · <a href="n27.zh.html">n = 27</a></p>
+  <div class="prompt-heading"><h1>n=27 · gpt-6.2 astra/max 测试报告</h1><div><button id="copy-prompt" class="copy">复制全文</button><span id="copy-status" class="status" role="status"></span></div></div>
+  <div id="prompt-markdown" class="markdown-body" data-article="true" data-format="markdown"><pre class="prompt-fallback">### 证明来源与本次模型工作
+
+本次测试使用公开题面，并查阅公开数学资料。候选构型、精确证书及验证代码均在本次工作区生成。公开的二十圆盘证明为三角剖分枚举提供了方法参考。[二十圆盘公开证明](https://raw.githubusercontent.com/VonEquinox/DiskCoveringSolve/main/cover20/docs/r20_proof_zh.md)
+
+### 任务要求与判定标准
+
+题目要求给出精确构型、证明单位闭圆盘的覆盖、求不可约最小多项式并隔离其根，以及证明全局下界。本次答案指纹与题站参考值一致，测评分按本次完成用时计算。
+
+### 测试信息与时间口径
+
+| 项目 | 记录 |
+| --- | --- |
+| 测试编号 | T_20261120T021526Z_01a1f6bc |
+| 模型 | gpt-6.2-astra，max 推理档位，来自原始运行上下文 |
+| 测试日期 | 2026 年 11 月 20 日（UTC） |
+| 测试时限 | 12 小时 |
+| 计分用时 | Goal 完成用时 13,955 秒（3 小时 52 分 35 秒） |
+| 结果 | 时限内完成，指纹匹配，自报测评分 263 |
+
+### 计算条件与使用量
+
+| 项目 | 记录范围 |
+| --- | --- |
+| 运行环境 | Windows、Python、g++，运行可用 32 个逻辑处理器 |
+| Goal 用量 | 1,268,181 token |
+| 实际费用 | 未取得 |
+| 本地输入 | 本次工作区生成或获取的文件 |
+| 技能 | 测试期间本地 skill 调用为零 |
+
+### 主要研究阶段
+
+| 阶段 | 工作 | 实际结果 |
+| --- | --- | --- |
+| 构型 | 构造并核验精确覆盖 | 本地核验覆盖整个闭圆盘 |
+| 代数 | 计算半径最小多项式并隔离实根 | 本地核验多项式和精确圆心定义 |
+| 全局下界 | 枚举容许的几何情形并核验排除证书 | 本地复算覆盖全部枚举情形 |
+
+### 路线变化与主要困难
+
+先得到候选构型并核对指纹，再证明无额外对称约束的全局下界。最后对剩余情形做计算核验，并从源码重跑枚举。
+
+### 验证、交付与限制
+
+本次运行内完成了覆盖构造、代数对应和计算机辅助全局下界的复算。公开记录展示指纹核对结果，并将证明状态标为本次运行内复算。精确答案、计算源码和证书保存在本地档案中。
+
+### 档案与可下载记录
+
+[结构化成绩](record-n27-astra62-20261120.json) · [中文报告源码](record-n27-astra62-20261120.zh.md) · [机器可读记录](n27-astra62-20261120-history.json)
+</pre></div>
+  <pre id="test-prompt" hidden>### 证明来源与本次模型工作
+
+本次测试使用公开题面，并查阅公开数学资料。候选构型、精确证书及验证代码均在本次工作区生成。公开的二十圆盘证明为三角剖分枚举提供了方法参考。[二十圆盘公开证明](https://raw.githubusercontent.com/VonEquinox/DiskCoveringSolve/main/cover20/docs/r20_proof_zh.md)
+
+### 任务要求与判定标准
+
+题目要求给出精确构型、证明单位闭圆盘的覆盖、求不可约最小多项式并隔离其根，以及证明全局下界。本次答案指纹与题站参考值一致，测评分按本次完成用时计算。
+
+### 测试信息与时间口径
+
+| 项目 | 记录 |
+| --- | --- |
+| 测试编号 | T_20261120T021526Z_01a1f6bc |
+| 模型 | gpt-6.2-astra，max 推理档位，来自原始运行上下文 |
+| 测试日期 | 2026 年 11 月 20 日（UTC） |
+| 测试时限 | 12 小时 |
+| 计分用时 | Goal 完成用时 13,955 秒（3 小时 52 分 35 秒） |
+| 结果 | 时限内完成，指纹匹配，自报测评分 263 |
+
+### 计算条件与使用量
+
+| 项目 | 记录范围 |
+| --- | --- |
+| 运行环境 | Windows、Python、g++，运行可用 32 个逻辑处理器 |
+| Goal 用量 | 1,268,181 token |
+| 实际费用 | 未取得 |
+| 本地输入 | 本次工作区生成或获取的文件 |
+| 技能 | 测试期间本地 skill 调用为零 |
+
+### 主要研究阶段
+
+| 阶段 | 工作 | 实际结果 |
+| --- | --- | --- |
+| 构型 | 构造并核验精确覆盖 | 本地核验覆盖整个闭圆盘 |
+| 代数 | 计算半径最小多项式并隔离实根 | 本地核验多项式和精确圆心定义 |
+| 全局下界 | 枚举容许的几何情形并核验排除证书 | 本地复算覆盖全部枚举情形 |
+
+### 路线变化与主要困难
+
+先得到候选构型并核对指纹，再证明无额外对称约束的全局下界。最后对剩余情形做计算核验，并从源码重跑枚举。
+
+### 验证、交付与限制
+
+本次运行内完成了覆盖构造、代数对应和计算机辅助全局下界的复算。公开记录展示指纹核对结果，并将证明状态标为本次运行内复算。精确答案、计算源码和证书保存在本地档案中。
+
+### 档案与可下载记录
+
+[结构化成绩](record-n27-astra62-20261120.json) · [中文报告源码](record-n27-astra62-20261120.zh.md) · [机器可读记录](n27-astra62-20261120-history.json)
+</pre>
+</main></body>
+</html>

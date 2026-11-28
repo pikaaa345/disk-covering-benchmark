@@ -1,0 +1,40 @@
+{
+  "schema": "diskcover-public-problem-v2",
+  "problem_id": "diskcover-n23",
+  "n": 23,
+  "title": "Optimal Covering of the Unit Disk with 23 Disks",
+  "language": "en",
+  "page_url": "n23.html",
+  "prompt_url": "prompts/n23.en.md",
+  "alternate_pages": {
+    "zh-CN": "n23.zh.html",
+    "en": "n23.html"
+  },
+  "protocol": "diskcover-minpoly-v1",
+  "protocol_url": "protocol.en.txt",
+  "fingerprint_script_url": "diskcover_answer.py",
+  "report_prompt_url": "report-prompt.en.txt",
+  "reference_sha256": null,
+  "reference_status": "not_published",
+  "reference_note": "A reference optimal configuration and its radius are available; the exact globally optimal radius passed the project’s independent review on 2026-09-26. The radius’s minimal polynomial and reference fingerprint have not yet been published.",
+  "reference_time_seconds": "21600",
+  "scoring_version": "diskcover-log-score-v1",
+  "score_formula": "round_half_up(200 + 100 * log2(reference_time_seconds / elapsed_seconds))",
+  "score_rounding": "decimal_ROUND_HALF_UP_integer",
+  "score_direction": "higher_is_better",
+  "time_limit_seconds": "43200",
+  "deadline_inclusive": true,
+  "timeout_score": "0",
+  "late_completion_score": "0",
+  "not_tested_score": null,
+  "scoring_rule": "Time limit: 12 hours (43200 seconds). If no valid result meeting this problem's acceptance criteria is obtained within 12 hours, the score is 0; completion after the deadline also scores 0. Completion within 12 hours, including the deadline, is scored as S = round(200 + 100 × log₂(reference time / elapsed time)); higher is better. An untested run is not scored as 0.",
+  "scoring_status": "demo_reference_not_frozen",
+  "public_record_submissions": "closed",
+  "answer_disclosure": "fingerprint_only",
+  "configuration": {
+    "image": "assets/n23.svg",
+    "caption": "Covering illustration: non-optimal configuration, display only"
+  },
+  "records_note": "No model test scores have been published. A reference optimal configuration and its radius are available; the exact globally optimal radius passed the project’s independent review on 2026-09-26.",
+  "records": []
+}
